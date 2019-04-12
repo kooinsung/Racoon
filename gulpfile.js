@@ -9,7 +9,7 @@ var gulp = require('gulp'),
     gulpRename = require('gulp-rename'),
     gulpInsert = require('gulp-insert'),
     gulpCopy = require('gulp-copy'),
-    gulpInclude = require('gulp-file-include'),
+    gulpHtmlInclude = require('gulp-html-tag-include'),
     gulpReload = require('gulp-server-livereload'),
     gulpImageMin = require('gulp-image'),
     gulpNewer = require('gulp-newer'),
@@ -24,23 +24,23 @@ var paths = {
     dest: 'dist'
   },
   styles: {
-    file: 'src/css/**/*',
-    src: 'src/css',
-    dest: 'dist/css'
+    file: 'src/assets/css/**/*',
+    src: 'src/assets/css',
+    dest: 'dist/assets/css'
   },
   scripts: {
-    file: 'src/js/**/*',
-    src: 'src/js',
-    dest: 'dist/js'
+    file: 'src/assets/js/**/*',
+    src: 'src/assets/js',
+    dest: 'dist/assets/js'
   },
   images: {
-    file: 'src/images/**/*',
-    src: 'src/images',
-    dest: 'dist/images'
+    file: 'src/asset/images/**/*',
+    src: 'src/assets/images',
+    dest: 'dist/assets/images'
   },
   html: {
     file: 'src/html/**/*.html',
-    include: 'src/include',
+    include: 'src/include/**/*.html',
     src: 'src/html',
     dest: 'dist/html'
   }
@@ -95,15 +95,11 @@ function html() {
   return gulp.src(paths.html.file)
   .pipe(gulpClean(paths.html.dest))
   .pipe(gulpNewer(paths.html.dest))
-  .pipe(gulpInclude({
-    prefix: '@@',
-    basepath: '@file'
-  }))
+  .pipe(gulpHtmlInclude())
   .pipe(gulpHtmlReplace({
-    'css': '../css/all.min.css',
-    'js': '../js/all.min.js'
+    'css': '../assets/css/all.min.css',
+    'js': '../assets/js/all.min.js'
   }))
-
   .pipe(gulpHtmlBeautify({
     "indent_size": 2
   }))
@@ -115,7 +111,7 @@ function html() {
 function webServer() {
   return gulp.src(paths.root.dest)
   .pipe(gulpReload({
-    port: 9999,
+    port: 1234,
     livereload: true,
     open: true,
     defaultFile: '/html/index.html',
@@ -124,15 +120,14 @@ function webServer() {
 
 //delete
 function clean() {
-  return del([paths.styles.dest + '/css', paths.styles.dest + '/js', paths.html.dest + '/*.html']);
+  return del([paths.styles.dest + '/assets/css', paths.styles.dest + '/assets/js', paths.html.dest + '/*.html']);
 }
 
 function watch() {
-  gulp.watch(paths.html.include + '/*.html', html);
-  gulp.watch(paths.html.file, html);
-  gulp.watch(paths.scripts.file, scripts);
   gulp.watch(paths.styles.file, styles);
+  gulp.watch(paths.scripts.file, scripts);
   gulp.watch(paths.images.file, images);
+  gulp.watch(paths.html.file, html);
 }
 
 // var build = gulp.parallel(clean, styles, scripts, images, html, watch);
