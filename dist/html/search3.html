@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="viewport"
+        content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="Description" content="">
+  <meta property="og:title" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <link rel="shortcut icon" href="" type="image/x-icon">
+  <link rel="stylesheet" href="../assets/css/all.min.css">
+
+</head>
+
+<body class="sub">
+<header class="header">
+  <button type="button" class="header__back">back</button>
+  <strong class="header__tit">항공권 검색</strong>
+</header>
+
+<div class="container">
+  <div class="content">
+    <div class="search-trips-form">
+      <div class="search-trips-form__check-trips">
+          <span class="search-trips-form__check-trip-item">
+            <input type="radio" id="rt" checked="checked">
+            <label for="rt">왕복</label>
+          </span>
+        <span class="search-trips-form__check-trip-item">
+            <input type="radio" id="ow">
+            <label for="ow">편도</label>
+          </span>
+      </div>
+      <div class="search-trips-form__row">
+        <div class="search-trips-form__col">
+            <span class="search-trips-form__input search-trips-form__input-dep">
+              <input type="text" placeholder="어디서 출발하시나요?" value="인천">
+            </span>
+        </div>
+        <div class="search-trips-form__col">
+            <span class="search-trips-form__input search-trips-form__input">
+              <input type="text" placeholder="어디에 도착하시나요?" value="홍콩">
+            </span>
+        </div>
+      </div>
+      <div class="search-trips-form__row">
+        <div class="search-trips-form__col">
+            <span class="search-trips-form__input search-trips-form__input-date">
+              <input type="text" placeholder="가는 날짜" value="4월 9일 (화)">
+            </span>
+        </div>
+        <div class="search-trips-form__col">
+            <span class="search-trips-form__input search-trips-form__input-date">
+              <input type="text" placeholder="오는 날짜" value="4월 12일 (금)">
+            </span>
+        </div>
+      </div>
+    </div>
+    <div class="util-menus">
+      <ul>
+        <li><a href="">정렬</a></li>
+        <li><a href="" class="is-actived">필터</a></li>
+      </ul>
+      <ul>
+        <li><a href="">항공권 가격</a></li>
+        <li><a href="">예상 가격
+          <button type="button" class="noti">?</button>
+        </a></li>
+      </ul>
+    </div>
+    <div class="info-tips">
+      <div class="info-tips__txts">
+        <strong>위탁 수하물, 기내식 포함 여부를<br>
+          가는편, 오는편 선택해주세요.</strong>
+        최저가 포함 예상 가격을 알려드려요!<br>
+        수하물 1개, 기내식 밥 한 끼 기준입니다.
+      </div>
+      <div class="info-tips__checks">
+        <dl>
+          <dt>수하물</dt>
+          <dd class="bag">
+            <input type="checkbox" id="check-bag">
+            <label for="check-bag">bag</label>
+          </dd>
+          <dd>
+            <input type="checkbox" id="check-dep1">
+            <label for="check-dep1">가는편</label>
+          </dd>
+          <dd>
+            <input type="checkbox" id="check-arr1">
+            <label for="check-arr1">오는편</label>
+          </dd>
+        </dl>
+        <dl>
+          <dt>기내식</dt>
+          <dd class="meal">
+            <input type="checkbox" id="check-meal">
+            <label for="check-meal">meal</label>
+          </dd>
+          <dd>
+            <input type="checkbox" id="check-dep2">
+            <label for="check-dep2">가는편</label>
+          </dd>
+          <dd>
+            <input type="checkbox" id="check-arr2">
+            <label for="check-arr2">오는편</label>
+          </dd>
+        </dl>
+      </div>
+    </div>
+    <div class="search-result">
+      <div class="search-result__item">
+        <h2 class="search-result__item-airline">제주항공</h2>
+        <div class="search-result__item-infos">
+          <div class="search-result__item-info1">
+            <div class="summary-group">
+              <div class="summary1">
+                <strong class="logo"><img src="../assets/images/img_7c.png" alt=""></strong>
+                <div>
+                  <span class="time">09:55 - 12:35</span>
+                  <span class="seat">(좌석 너비/길이)</span>
+                </div>
+              </div>
+              <div class="summary2">
+                ICN-HKG, 직항, 3시간 40분<br>
+                보잉737, 수하물 없음
+              </div>
+            </div>
+            <div class="summary-group">
+              <div class="summary1">
+                <strong class="logo"><img src="../assets/images/img_7c.png" alt=""></strong>
+                <div>
+                  <span class="time">09:55 - 12:35</span>
+                  <span class="seat">(좌석 너비/길이)</span>
+                </div>
+              </div>
+              <div class="summary2">
+                ICN-HKG, 직항, 3시간 40분<br>
+                보잉737, 수하물 없음
+              </div>
+            </div>
+          </div>
+          <div class="search-result__item-info2">
+            <ul class="opts">
+              <li class="bag">bag</li>
+              <li class="meal">meal</li>
+            </ul>
+            <div class="price">
+              <strong>\221,300</strong>
+              <strong>\331,300</strong>
+            </div>
+            <div class="bts">
+              <button type="button">바로 예약</button>
+              <button type="button">상세 보기</button>
+            </div>
+          </div>
+        </div>
+        <div class="search-result__item-util">
+          <button type="button" class="like is-actived">좋아요 <em>10</em>개</button>
+          <button type="button" class="share">share</button>
+        </div>
+      </div>
+      <div class="search-result__item">
+        <h2 class="search-result__item-airline">제주항공</h2>
+        <div class="search-result__item-infos">
+          <div class="search-result__item-info1">
+            <div class="summary-group">
+              <div class="summary1">
+                <strong class="logo"><img src="../assets/images/img_7c.png" alt=""></strong>
+                <div>
+                  <span class="time">09:55 - 12:35</span>
+                  <span class="seat">(좌석 너비/길이)</span>
+                </div>
+              </div>
+              <div class="summary2">
+                ICN-HKG, 직항, 3시간 40분<br>
+                보잉737, 수하물 없음
+              </div>
+            </div>
+            <div class="summary-group">
+              <div class="summary1">
+                <strong class="logo"><img src="../assets/images/img_7c.png" alt=""></strong>
+                <div>
+                  <span class="time">09:55 - 12:35</span>
+                  <span class="seat">(좌석 너비/길이)</span>
+                </div>
+              </div>
+              <div class="summary2">
+                ICN-HKG, 직항, 3시간 40분<br>
+                보잉737, 수하물 없음
+              </div>
+            </div>
+          </div>
+          <div class="search-result__item-info2">
+            <ul class="opts">
+              <li class="bag">bag</li>
+              <li class="meal">meal</li>
+            </ul>
+            <div class="price">
+              <strong>\221,300</strong>
+              <strong>\331,300</strong>
+            </div>
+            <div class="bts">
+              <button type="button">바로 예약</button>
+              <button type="button">상세 보기</button>
+            </div>
+          </div>
+        </div>
+        <div class="search-result__item-util">
+          <button type="button" class="like">좋아요 <em>10</em>개</button>
+          <button type="button" class="share">share</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="../assets/js/all.min.js"></script>
+
+
+<div class="in-layer">
+  <ul>
+    <li>
+      <strong>
+        <button type="button">경유</button>
+      </strong>
+    </li>
+    <li>
+      <strong>
+        <button type="button">가는편 출발 시간대</button>
+      </strong>
+    </li>
+    <li>
+      <strong>
+        <button type="button">오는편 출발 시간대</button>
+      </strong>
+    </li>
+    <li>
+      <strong>
+        <button type="button">총 비행 시간</button>
+      </strong>
+    </li>
+    <li>
+      <strong>
+        <button type="button">항공사</button>
+      </strong>
+    </li>
+  </ul>
+</div>
+
+<div class="util-dims"></div>
+</body>
+
+</html>
