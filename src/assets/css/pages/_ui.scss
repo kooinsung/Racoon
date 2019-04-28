@@ -1,0 +1,196 @@
+.search-trips-form {
+  background: #00a64e;
+  padding: 20px;
+  font-size: 0;
+
+  &__check-trips {
+    margin-bottom: 14px;
+  }
+
+  &__check-trip-item {
+    display: inline-block;
+    height: 20px;
+    margin-right: 15px;
+
+    input {
+      opacity: 0;
+      position: absolute;
+
+      & + label {
+        display: inline-block;
+        font-size: 14px;
+        line-height: 20px;
+        color: #0b704e;
+        padding-left: 26px;
+        background: url('#{$base-img-path}/ico_check-off.png') left center no-repeat;
+        background-size: 21px 20px;
+      }
+
+      &:checked {
+        & + label {
+          color: #fff;
+          background: url('#{$base-img-path}/ico_check-on.png') left center no-repeat;
+          background-size: 21px 20px;
+        }
+      }
+    }
+  }
+
+  &__row {
+    height: 44px;
+    margin-bottom: 16px;
+  }
+
+  &__col {
+    width: 50%;
+    display: inline-block;
+
+    &:first-child {
+      span {
+        margin-right: 6px;
+      }
+    }
+
+    &:last-child {
+      span {
+        margin-left: 6px;
+      }
+    }
+  }
+
+  &__input {
+    position: relative;
+    display: block;
+
+    &:before {
+      content: '';
+      width: 43px;
+      height: 44px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    input {
+      width: 100%;
+      height: 44px;
+      font-size: 14px;
+      text-indent: 43px;
+      @include placeholder() {
+        color: #000;
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__input-dep {
+    &:before {
+      background: url('#{$base-img-path}/ico_dep.png') center center no-repeat;
+      background-size: 22px 18px;
+    }
+  }
+
+  &__input-arr {
+    &:before {
+      background: url('#{$base-img-path}/ico_arr.png') center center no-repeat;
+      background-size: 20px 20px;
+    }
+  }
+
+  &__input-date {
+    &:before {
+      background: url('#{$base-img-path}/ico_cal.png') center center no-repeat;
+      background-size: 18px 21px;
+    }
+  }
+
+  &__input-seat-count {
+    &:before {
+      background: url('#{$base-img-path}/ico_seat-count.png') center center no-repeat;
+      background-size: 22px 17px;
+    }
+  }
+
+  &__input-seat {
+    &:before {
+      background: url('#{$base-img-path}/ico_seat.png') center center no-repeat;
+      background-size: 18px 17px;
+    }
+  }
+
+  &__bt {
+    button {
+      width: 100%;
+      height: 48px;
+      line-height: 48px;
+      border-radius: 48px;
+      text-align: center;
+      font-size: 16px;
+      color: #fff;
+      font-weight: 700;
+      background: #0b704e;
+    }
+  }
+
+  &__tips {
+    position: relative;
+    font-size: 12px;
+    color: #fff;
+    margin-top: 25px;
+    padding-left: 56px;
+    background: url('#{$base-img-path}/ico_set.png') left center no-repeat;
+    background-size: 44px 25px;
+  }
+}
+
+.quick {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 1px solid #d1d1d1;
+  font-size: 0;
+
+  li {
+    display: inline-block;
+    width: 33.33%;
+  }
+
+  a {
+    position: relative;
+    display: block;
+    height: 53px;
+    font-size: 8px;
+    color: #a5a5a5;
+    text-align: center;
+  }
+
+  span {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+  }
+
+  &__srch {
+    a {
+      background: url('#{$base-img-path}/ico_srch-on.png') center 10px no-repeat;
+      background-size: 18px 18px;
+    }
+  }
+
+  &__special-price {
+    a {
+      background: url('#{$base-img-path}/ico_specialprice-off.png') center 10px no-repeat;
+      background-size: 20px 21px;
+    }
+  }
+
+  &__profile {
+    a {
+      background: url('#{$base-img-path}/ico_profile-off.png') center 12px no-repeat;
+      background-size: 16px 17px;
+    }
+  }
+}

@@ -1,8 +1,8 @@
-@import "utils/variables";
-@import "utils/functions";
-@import "utils/mixins";
-@import "base/reset";
-@import "base/fonts";
+@import "utils/_variables.scss";
+@import "utils/functions.scss";
+@import "utils/mixins.scss";
+@import "base/reset.scss";
+@import "base/fonts.scss";
 //@import
 //'verndors/jquery.ui';
 //@import
@@ -10,7 +10,7 @@
 //'ui/carousel',
 //'ui/cover',
 //'ui/dropdown';
-@import "layout/header";
-@import "layout/footer";
-@import "pages/main";
-@import "pages/sub";
+@import "layout/header.scss";
+@import "layout/footer.scss";
+@import "pages/ui.scss";
+//@import "pages/sub";

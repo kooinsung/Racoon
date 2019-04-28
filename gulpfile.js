@@ -54,7 +54,7 @@ function styles() {
   .pipe(gulpCopy(paths.root.dest, {prefix: 1}))
   .pipe(gulpWait(1000))
   .pipe(gulpSass({outputStyle: 'compact'}).on('error', gulpSass.logError))
-  .pipe(gulpInsert.prepend('@charset "UTF-8";\n'))
+  // .pipe(gulpInsert.prepend('@charset "UTF-8";\n'))
   .pipe(gulp.dest(paths.styles.dest))
   .pipe(gulpConcat('all.min.css'))
   .pipe(gulpRename({
@@ -86,7 +86,7 @@ function scripts() {
 //images
 function images() {
   return gulp.src(paths.images.file)
-  .pipe(gulpClean(paths.images.dest))
+  // .pipe(gulpClean(paths.images.dest))
   .pipe(gulpNewer(paths.images.dest))
   .pipe(gulpImageMin())
   .pipe(gulp.dest(paths.images.dest))
@@ -114,7 +114,8 @@ function html() {
 
 //delete
 function clean() {
-  return del([paths.styles.dest + '/assets/css', paths.styles.dest + '/assets/js', paths.html.dest + '/*.html']);
+  // return del([paths.root.dest + '/assets/css', paths.root.dest + '/assets/js', paths.root.dest + '/assets/images', paths.root.dest + '/*.html']);
+  return del([paths.root.dest + '/assets/css', paths.root.dest + '/assets/js', paths.root.dest + '/*.html']);
 }
 
 //watch
@@ -133,6 +134,7 @@ function watch() {
 }
 
 // var build = gulp.parallel(clean, styles, scripts, images, html, watch);
+// var build = gulp.series(clean, styles, scripts, imgs, html, watch);
 var build = gulp.series(clean, styles, scripts, images, html, watch);
 
 gulp.task(build);

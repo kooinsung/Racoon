@@ -1,3 +1,21 @@
+/// Mixin helper placeholder
+/// @access private
+/// @param {String} $property
+@mixin placeholder {
+  &.placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
 /// Mixin helper to output vendor-prefixed CSS
 /// @access private
 /// @author HugoGiraudel
@@ -270,14 +288,14 @@
 }
 
 
-/// Given the location of a webfont, will generate a font-face declaration with multiple file formats.
+/// Given the location of a webfont, will generate a fonts-face declaration with multiple file formats.
 /// @access public
-/// @param {String} $font-name - Font family name
+/// @param {String} $fonts-name - Font family name
 /// @param {String} $file-name - File name (no extension)
 /// @param {String | Number} $weight [normal] - Font weight
 /// @param {String} $style [normal] - Font style
 /// @example scss - Usage
-///   @include font-face('gotham', '/fonts/gotham');
+///   @include fonts-face('gotham', '/fonts/gotham');
 @mixin font-face($font-name, $file-name, $weight: normal, $style: normal) {
   @font-face {
     font-family: quote($font-name);
@@ -292,17 +310,17 @@
 }
 
 
-/// Given a font size in pixels, reproduces that font size in rems.
+/// Given a fonts size in pixels, reproduces that fonts size in rems.
 /// @access public
 /// @param {Length} $size - Font size
 /// @example scss - Usage
 ///   .foo {
-///     @include font-size(16px);
+///     @include fonts-size(16px);
 ///   }
 /// @example css - Result
 ///   .foo {
-///     font-size: 16px;
-///     font-size: 1rem;
+///     fonts-size: 16px;
+///     fonts-size: 1rem;
 ///   }
 @mixin font-size($size) {
   @if unitless($size) {
