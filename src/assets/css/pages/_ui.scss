@@ -2,7 +2,7 @@
   background: #00a64e;
   padding: 20px;
   font-size: 0;
-
+  //@include fonts-size(0px);
   &__check-trips {
     margin-bottom: 14px;
   }
@@ -146,13 +146,14 @@
 }
 
 .quick {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  border: 1px solid #d1d1d1;
+  z-index: 50;
+  border-top: 1px solid #d1d1d1;
   font-size: 0;
-
+  background: #fff;
   li {
     display: inline-block;
     width: 33.33%;
@@ -201,18 +202,18 @@
   font-size: 0;
   overflow: hidden;
   border-bottom: 1px solid #d8d8d8;
-
   ul {
     display: inline-block;
-
     &:first-child {
       float: left;
 
+      li {
+        margin-left: 10px;
+      }
       a {
         padding: 0 17px;
       }
     }
-
     &:last-child {
       float: right;
 
@@ -221,19 +222,29 @@
       }
     }
   }
-
   li {
     position: relative;
     display: inline-block;
+    vertical-align: top;
     text-align: center;
+    height: 40px;
   }
-
   a {
     display: block;
     font-size: 12px;
     color: #0b704e;
     height: 40px;
     line-height: 40px;
+
+    &.is-actived {
+      position: relative;
+      z-index: 100;
+      background: #fff;
+      height: 24px;
+      line-height: 24px;
+      border-radius: 24px;
+      margin-top: 8px;
+    }
   }
 
   .noti {
@@ -548,6 +559,174 @@
   }
 }
 
+.util-dims {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(96, 96, 96, .7);
+}
+
+.in-layer {
+  position: absolute;
+  top: 240px;
+  left: 10px;
+  right: 10px;
+  background: #fff;
+  border-radius: 10px;
+  z-index: 100;
+
+  &__sort {
+    margin: 0 10px;
+
+    li {
+      padding: 15px 0;
+      border-top: 1px solid #d1d1d1;
+
+      &:first-child {
+        border-top: 0;
+      }
+    }
+
+    input {
+      opacity: 0;
+      position: absolute;
+
+      & + label {
+        display: inline-block;
+        font-size: 14px;
+        line-height: 21px;
+        color: #000;
+        padding-left: 33px;
+        background: url('#{$base-img-path}/ico_check2-off.png') left top no-repeat;
+        background-size: 20px 21px;
+
+        strong {
+          display: block;
+          line-height: 150%;
+          font-size: 10px;
+          margin-top: 5px;
+        }
+
+        span {
+          font-weight: 700;
+        }
+      }
+
+      &:checked {
+        & + label {
+          color: #0b704e;
+          background: url('#{$base-img-path}/ico_check2-on.png') left top no-repeat;
+          background-size: 20px 21px;
+        }
+      }
+    }
+  }
+}
+
+.layers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 100;
+
+  &__header {
+
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 56px;
+    height: 45px;
+    background: url('#{$base-img-path}/ico_close.png') center center no-repeat;
+    background-size: 14px 15px;
+  }
+
+  &__tit {
+    display: block;
+    line-height: 45px;
+    text-align: center;
+    font-size: 14px;
+    color: #0b704e;
+  }
+
+  &__form {
+    .search-trips-form {
+      ::-webkit-input-placeholder {
+        color: #a5a5a5;
+      }
+
+      &__row {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  &__result {
+    padding-bottom: 10px;
+
+    ul {
+      margin: 7px 20px 0 20px;
+    }
+
+    li {
+      border-bottom: 1px solid #d1d1d1;
+
+      &.latest {
+        a {
+          background: url('#{$base-img-path}/ico_time.png') right center no-repeat;
+          background-size: 18px 18px;
+        }
+      }
+    }
+
+    a {
+      display: block;
+      font-size: 14px;
+      height: 44px;
+      line-height: 44px;
+    }
+  }
+
+  &__toggle {
+    a {
+      background: url('#{$base-img-path}/ico_toggle-off.png') right center no-repeat;
+      background-size: 13px 9px;
+    }
+
+    &--active {
+      a {
+        background: url('#{$base-img-path}/ico_toggle-on.png') right center no-repeat;
+        background-size: 13px 9px;
+      }
+    }
+  }
+
+  &__toggle-depth {
+    border-top: 1px solid #d1d1d1;
+
+    ul {
+      margin: 0;
+    }
+
+    li {
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    a {
+      padding-left: 40px;
+      background: none;
+    }
+  }
+}
 .sub {
   background: #f9f9f9;
 
