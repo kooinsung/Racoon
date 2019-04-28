@@ -13,4 +13,22 @@
     background: url('#{$base-img-path}/img_logo.png') center center no-repeat;
     background-size: 116px 24px;
   }
+
+  &__back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 56px;
+    height: 45px;
+    background: url('#{$base-img-path}/ico_back.png') center center no-repeat;
+    background-size: 16px 17px;
+  }
+
+  &__tit {
+    display: block;
+    line-height: 45px;
+    text-align: center;
+    font-size: 14px;
+    color: #0b704e;
+  }
 }
