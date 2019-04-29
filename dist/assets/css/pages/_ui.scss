@@ -1,8 +1,8 @@
 .search-trips-form {
   background: #00a64e;
   padding: 20px;
-  font-size: 0;
-  //@include fonts-size(0px);
+  //font-size: 0;
+  @include font-size(0px);
   &__check-trips {
     margin-bottom: 14px;
   }

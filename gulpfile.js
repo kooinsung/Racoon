@@ -10,12 +10,13 @@ var gulp = require('gulp'),
     gulpRename = require('gulp-rename'),
     gulpInsert = require('gulp-insert'),
     gulpCopy = require('gulp-copy'),
-    gulpImageMin = require('gulp-image'),
+    gulpImageMin = require('gulp-imagemin'),
     gulpNewer = require('gulp-newer'),
     gulpHtmlReplace = require('gulp-html-replace'),
     gulpCount = require('gulp-count'),
     gulpEmptyLine = require('gulp-remove-empty-lines'),
     gulpClean = require('gulp-dest-clean'),
+    gulpPlumber = require('gulp-plumber'),
     browserSync = require('browser-sync').create(),
     del = require('del');
 
@@ -25,7 +26,7 @@ var paths = {
     dest: 'dist'
   },
   styles: {
-    file: 'src/assets/css/**/*',
+    file: 'src/assets/css/**/*.scss',
     src: 'src/assets/css',
     dest: 'dist/assets/css'
   },
@@ -35,8 +36,8 @@ var paths = {
     dest: 'dist/assets/js'
   },
   images: {
-    file: 'src/asset/images/**/*',
-    src: 'src/assets/images',
+    file: 'src/assets/images/**/*',
+    src: 'src/assets/image',
     dest: 'dist/assets/images'
   },
   html: {
@@ -50,10 +51,15 @@ var paths = {
 //css
 function styles() {
   return gulp.src(paths.styles.file)
+  .pipe(gulpPlumber())
   .pipe(gulpClean(paths.styles.dest))
   .pipe(gulpCopy(paths.root.dest, {prefix: 1}))
-  .pipe(gulpWait(1000))
-  .pipe(gulpSass({outputStyle: 'compact'}).on('error', gulpSass.logError))
+  .pipe(gulpWait(500))
+  // .pipe(gulpSass({outputStyle: 'compact'}).on('error', gulpSass.logError))
+  .pipe(gulpSass({
+    outputStyle: 'compact',
+    includePaths: ['src/assets/css/']
+  }))
   // .pipe(gulpInsert.prepend('@charset "UTF-8";\n'))
   .pipe(gulp.dest(paths.styles.dest))
   .pipe(gulpConcat('all.min.css'))
@@ -74,6 +80,7 @@ function styles() {
 //js
 function scripts() {
   return gulp.src(paths.scripts.file)
+  .pipe(gulpPlumber())
   .pipe(gulpClean(paths.scripts.dest))
   .pipe(gulpCopy(paths.root.dest, {prefix: 1}))
   .pipe(gulpUglify())
@@ -86,7 +93,8 @@ function scripts() {
 //images
 function images() {
   return gulp.src(paths.images.file)
-  // .pipe(gulpClean(paths.images.dest))
+  .pipe(gulpPlumber())
+  .pipe(gulpClean(paths.images.dest))
   .pipe(gulpNewer(paths.images.dest))
   .pipe(gulpImageMin())
   .pipe(gulp.dest(paths.images.dest))
@@ -96,6 +104,7 @@ function images() {
 //html include
 function html() {
   return gulp.src(paths.html.file)
+  .pipe(gulpPlumber())
   .pipe(gulpClean(paths.html.dest))
   .pipe(gulpNewer(paths.html.dest))
   .pipe(gulpHtmlInclude())
@@ -114,8 +123,8 @@ function html() {
 
 //delete
 function clean() {
-  // return del([paths.root.dest + '/assets/css', paths.root.dest + '/assets/js', paths.root.dest + '/assets/images', paths.root.dest + '/*.html']);
   return del([paths.root.dest + '/assets/css', paths.root.dest + '/assets/js', paths.root.dest + '/*.html']);
+  //return del([paths.root.dest + '/assets/css', paths.root.dest + '/assets/js', paths.root.dest + '/*.html']);
 }
 
 //watch
@@ -134,7 +143,6 @@ function watch() {
 }
 
 // var build = gulp.parallel(clean, styles, scripts, images, html, watch);
-// var build = gulp.series(clean, styles, scripts, imgs, html, watch);
 var build = gulp.series(clean, styles, scripts, images, html, watch);
 
 gulp.task(build);
