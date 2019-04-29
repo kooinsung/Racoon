@@ -1,8 +1,7 @@
 .search-trips-form {
   background: #00a64e;
   padding: 20px;
-  //font-size: 0;
-  @include font-size(0px);
+  font-size: 0;
   &__check-trips {
     margin-bottom: 14px;
   }
@@ -13,8 +12,7 @@
     margin-right: 15px;
 
     input {
-      opacity: 0;
-      position: absolute;
+      @include position(absolute);
 
       & + label {
         display: inline-block;
@@ -59,16 +57,16 @@
   }
 
   &__input {
-    position: relative;
+    @include position(relative);
     display: block;
-    border-radius: 3px;
+    @include border-radius(3px);
     overflow: hidden;
 
     &:before {
       content: '';
       width: 43px;
       height: 44px;
-      position: absolute;
+      @include position(absolute, $top: 0px, $left: 0px);
       top: 0;
       left: 0;
     }
@@ -125,7 +123,7 @@
       width: 100%;
       height: 48px;
       line-height: 48px;
-      border-radius: 48px;
+      @include border-radius(48px);
       text-align: center;
       font-size: 16px;
       color: #fff;
@@ -135,7 +133,7 @@
   }
 
   &__tips {
-    position: relative;
+    @include position(relative);
     font-size: 12px;
     color: #fff;
     margin-top: 25px;
@@ -146,13 +144,13 @@
 }
 
 .quick {
-  position: absolute;
+  @include position(absolute);
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 50;
   border-top: 1px solid #d1d1d1;
-  font-size: 0;
+  font-size: 0px;
   background: #fff;
   li {
     display: inline-block;
@@ -160,7 +158,7 @@
   }
 
   a {
-    position: relative;
+    @include position(relative);
     display: block;
     height: 53px;
     font-size: 8px;
@@ -171,9 +169,7 @@
   span {
     text-align: center;
     width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 8px;
+    @include position(absolute, $bottom: 0px, $left: 0px);
   }
 
   &__srch {
@@ -199,7 +195,7 @@
 }
 
 .util-menus {
-  font-size: 0;
+  font-size: 0px;
   overflow: hidden;
   border-bottom: 1px solid #d8d8d8;
   ul {
@@ -223,7 +219,7 @@
     }
   }
   li {
-    position: relative;
+    @include position(relative);
     display: inline-block;
     vertical-align: top;
     text-align: center;
@@ -237,12 +233,12 @@
     line-height: 40px;
 
     &.is-actived {
-      position: relative;
+      @include position(relative);
       z-index: 100;
       background: #fff;
       height: 24px;
       line-height: 24px;
-      border-radius: 24px;
+      @include border-radius(24px);
       margin-top: 8px;
     }
   }
@@ -258,6 +254,7 @@
 
 .info-tips {
   position: relative;
+  @include position(relative);
   padding: 0 20px 8px 20px;
   overflow: hidden;
   border-bottom: 1px solid #e3e3e3;
@@ -266,9 +263,7 @@
   box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.1);
 
   &__txts {
-    position: absolute;
-    top: 25px;
-    left: 20px;
+    @include position(absolute, $top: 25px, $left: 20px);
     font-size: 12px;
     color: #606060;
     line-height: 150%;
@@ -284,10 +279,10 @@
   &__checks {
     float: right;
     padding: 10px 0 0 0;
-    font-size: 0;
+    font-size: 0px;
 
     dl {
-      position: relative;
+      @include position(relative);
       display: inline-block;
       text-align: center;
 
@@ -296,10 +291,7 @@
 
         &:after {
           content: '';
-          position: absolute;
-          top: 0;
-          bottom: 4px;
-          right: 0;
+          @include position(absolute, $top: 0px, $bottom: 0px, $right: 0px);
           width: 1px;
           background: #d1d1d1;
         }
@@ -320,7 +312,7 @@
 
       input {
         opacity: 0;
-        position: absolute;
+        @include position(absolute);
 
         & + label {
           width: 34px;
@@ -331,8 +323,8 @@
           color: #a5a5a5;
           text-align: center;
           border: 1px solid #d1d1d1;
-          border-radius: 3px;
-          box-sizing: border-box;
+          @include border-radius(3px);
+          @include box-sizing(border-box);
         }
 
         &:checked {
@@ -389,7 +381,7 @@
 
   &__item {
     background: #fff;
-    border-radius: 5px;
+    @include border-radius(5px);
     margin-bottom: 10px;
     -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
@@ -402,11 +394,11 @@
   }
 
   &__item-infos {
-    position: relative;
+    @include position(relative);
   }
 
   &__item-info1 {
-    position: relative;
+    @include position(relative);
 
     .summary-group {
       padding: 10px 10px;
@@ -426,7 +418,7 @@
       }
 
       .seat {
-        position: relative;
+        @include position(relative);
         padding-left: 16px;
         font-size: 10px;
         color: #606060;
@@ -449,9 +441,7 @@
   }
 
   &__item-info2 {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    @include position(absolute, $top: 10px, $right: 10px);
     text-align: right;
 
     .opts {
@@ -506,7 +496,7 @@
         height: 41px;
         line-height: 41px;
         color: #fff;
-        border-radius: 5px;
+        @include border-radius(5px);
         text-align: center;
         font-size: 12px;
         font-weight: 700;
@@ -526,7 +516,7 @@
   }
 
   &__item-util {
-    position: relative;
+    @include position(relative);
     border-top: 1px solid #e5e5e5;
     height: 30px;
 
@@ -547,9 +537,7 @@
       }
 
       &.share {
-        position: absolute;
-        top: 0;
-        right: 0;
+        @include position(absolute, $top: 0px, $right: 0px);
         width: 35px;
         height: 30px;
         background: url('#{$base-img-path}/ico_share.png') center center no-repeat;
@@ -560,21 +548,14 @@
 }
 
 .util-dims {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  @include position(fixed, $top: 0px, $left: 0px, $bottom: 0px, $right: 0px);
   background: rgba(96, 96, 96, .7);
 }
 
 .in-layer {
-  position: absolute;
-  top: 240px;
-  left: 10px;
-  right: 10px;
+  @include position(absolute, $top: 240px, $left: 0px, $right: 10px);
   background: #fff;
-  border-radius: 10px;
+  @include border-radius(10px);
   z-index: 100;
 
   &__sort {
@@ -592,6 +573,7 @@
     input {
       opacity: 0;
       position: absolute;
+      @include position(absolute);
 
       & + label {
         display: inline-block;
@@ -626,11 +608,7 @@
 }
 
 .layers {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  @include position(absolute, $top: 0px, $left: 0px, $right: 0px, $bottom: 0px);
   background: #fff;
   z-index: 100;
 
@@ -639,9 +617,7 @@
   }
 
   &__close {
-    position: absolute;
-    top: 0;
-    left: 0;
+    @include position(absolute, $top: 0px, $left: 0px);
     width: 56px;
     height: 45px;
     background: url('#{$base-img-path}/ico_close.png') center center no-repeat;
@@ -658,7 +634,7 @@
 
   &__form {
     .search-trips-form {
-      ::-webkit-input-placeholder {
+      @include placeholder() {
         color: #a5a5a5;
       }
 
@@ -741,7 +717,7 @@
     }
 
     &__input {
-      position: relative;
+      @include position(relative);
       display: block;
 
       &:before {

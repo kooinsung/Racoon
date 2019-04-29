@@ -150,6 +150,22 @@
   @include prefix(border-bottom-left-radius, $bottom-left-radius, 'webkit' 'moz');
 }
 
+/// short border-radius helpers
+/// @access public
+/// @param {Length} $radius - radius
+/// @example scss - Usage
+///   .foo {
+///     @include border-radius(1px);
+///   }
+/// @example css - Result
+///   .foo {
+///     -webkit-border-radius: 1px;
+///     -moz-border-radius: 1px;
+///   }
+@mixin border-radius($radius) {
+  @include prefix(border-radius, $radius, 'webkit' 'moz');
+}
+
 
 /// Box-sizing helper
 /// @access public
@@ -164,7 +180,7 @@
 ///     box-sizing: border-box;
 ///   }
 @mixin box-sizing($type) {
-  @include prefix(box-sizing, $type, 'moz');
+  @include prefix(box-sizing, $type, 'webkit' 'moz');
 }
 
 
