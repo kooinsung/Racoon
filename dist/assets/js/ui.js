@@ -580,39 +580,11 @@ var main = (function () {
       $(".side_txt_set").removeClass("page01 page02 page03 page04 page05 white gray");
       $(".side_txt_set").addClass("white page01");
     } else if (pg == 3) {
-      page = 3;
-      $(".pagination ul").removeClass("gray");
-      $(".pagination ul").addClass("white");
-      $(".pagination ul li").eq(2).addClass("on_sky");
 
-      $(".logo_set, .arrow_set").removeClass("bk").addClass("wh");
-      $(".side_txt_set").removeClass("page01 page02 page03 page04 page05 white gray");
-      $(".side_txt_set").addClass("gray page02");
     } else if (pg == 4) {
-      page = 4;
-      index = 3;
-      $(".pagination ul").removeClass("white");
-      $(".pagination ul").addClass("gray");
-      $(".pagination ul li").eq(3).addClass("on_black");
 
-      $(".logo_set, .arrow_set").removeClass("wh").addClass("bk");
-      $(".side_txt_set").removeClass("page01 page02 page03 page04 page05 white gray");
-      $(".side_txt_set").addClass("gray page03");
     } else if (pg == 5) {
-      page = 5;
-      index = 4;
 
-      if ($(".pagination ul").hasClass("gray")) {
-        $(".pagination ul").removeClass("gray");
-        $(".pagination ul").addClass("white");
-      }
-
-      $(".pagination ul li").eq(4).addClass("on_black");
-
-      $(".logo_set, .arrow_set").removeClass("wh").addClass("bk");
-      $(".arrow_set").fadeIn();
-      $(".side_txt_set").removeClass("page01 page02 page03 page04 page05 white");
-      $(".side_txt_set").addClass("gray page04");
     } else if (pg == 6) {
       page = 6;
       index = 5;
