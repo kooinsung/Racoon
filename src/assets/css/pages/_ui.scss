@@ -553,14 +553,13 @@
 }
 
 .in-layer {
-  @include position(absolute, $top: 240px, $left: 0px, $right: 10px);
+  @include position(absolute, $top: 240px, $left: 10px, $right: 10px);
   background: #fff;
   @include border-radius(10px);
   z-index: 100;
 
   &__sort {
     margin: 0 10px;
-
     li {
       padding: 15px 0;
       border-top: 1px solid #d1d1d1;
@@ -572,7 +571,6 @@
 
     input {
       opacity: 0;
-      position: absolute;
       @include position(absolute);
 
       & + label {
@@ -603,6 +601,90 @@
           background-size: 20px 21px;
         }
       }
+    }
+  }
+
+  &__filter {
+    margin: 0 10px;
+    padding: 10px 0;
+    font-size: 0;
+  }
+
+  &__filter-group {
+    padding: 15px 0;
+    border-top: 1px solid #d1d1d1;
+
+    &:first-child {
+      border-top: 0;
+    }
+  }
+
+  &__filter-tit {
+    @include position(relative);
+    width: 100%;
+    text-align: left;
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    background: url('#{$base-img-path}/ico_toggle-off.png') right center no-repeat;
+    background-size: 13px 8px;
+
+    &.active {
+      background: url('#{$base-img-path}/ico_toggle-on.png') right center no-repeat;
+      background-size: 13px 8px;
+    }
+  }
+
+  &__filter-inner {
+    @include position(relative);
+  }
+
+  &__filter4 {
+    padding-top: 10px;
+    min-height: 24px;
+  }
+
+  &__filter-item {
+    margin-top: 12px;
+
+    input {
+      opacity: 0;
+      @include position(absolute);
+
+      & + label {
+        display: inline-block;
+        font-size: 12px;
+        line-height: 21px;
+        color: #000;
+        padding-left: 33px;
+        background: url('#{$base-img-path}/ico_check2-off.png') left top no-repeat;
+        background-size: 20px 21px;
+      }
+
+      &:checked {
+        & + label {
+          background: url('#{$base-img-path}/ico_check2-on.png') left top no-repeat;
+          background-size: 20px 21px;
+        }
+      }
+    }
+  }
+
+  &__filter-row-price {
+    @include position(absolute, $top: -25px, $right: 40px);
+
+    strong {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    li {
+      font-size: 12px;
+      line-height: 21px;
+      margin-top: 12px;
     }
   }
 }

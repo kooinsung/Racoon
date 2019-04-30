@@ -4,13 +4,13 @@
 @import 'base/reset';
 @import 'base/fonts';
 //@import
-//'verndors/jquery.ui';
+@import 'vendors/jquery-ui';
 //@import
 //'ui/buttons',
 //'ui/carousel',
 //'ui/cover',
 //'ui/dropdown';
-@import 'layout/_footer';
+@import 'layout/footer';
 @import 'layout/header';
 @import 'pages/ui';
 //@import "pages/sub";

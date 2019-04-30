@@ -2,9 +2,6 @@
 <html lang="ko">
 <head>
   <include src="../include/meta.html"></include>
-  <!-- build:css -->
-  <link rel="stylesheet" href="../assets/css/all.min.css">
-  <!-- endbuild -->
 </head>
 
 <body class="sub">
@@ -209,40 +206,122 @@
 
 <include src="../include/footer.html"></include>
 
-<!-- build:js -->
-<link rel="stylesheet" href="../assets/js/all.min.js">
-<!-- endbuild -->
-
 <div class="in-layer">
-  <ul>
-    <li>
-      <strong>
-        <button type="button">경유</button>
-      </strong>
+  <ul class="in-layer__filter">
+    <li class="in-layer__filter-group">
+      <button type="button" class="in-layer__filter-tit">경유</button>
+      <div class="in-layer__filter-inner">
+        <ul class="in-layer__filter1">
+          <li class="in-layer__filter-item">
+            <input type="checkbox" id="f1-1">
+            <label for="f1-1">직항</label>
+          </li>
+          <li class="in-layer__filter-item">
+            <input type="checkbox" id="f1-2">
+            <label for="f1-2">1번 경유</label>
+          </li>
+          <li class="in-layer__filter-item">
+            <input type="checkbox" id="f1-3">
+            <label for="f1-3">2번 경유 이상</label>
+          </li>
+        </ul>
+        <div class="in-layer__filter-row-price">
+          <strong>최저가</strong>
+          <ul>
+            <li>\221,300</li>
+            <li>\350,000</li>
+            <li>\800,000</li>
+          </ul>
+        </div>
+      </div>
     </li>
-    <li>
-      <strong>
-        <button type="button">가는편 출발 시간대</button>
-      </strong>
+    <li class="in-layer__filter-group">
+      <button type="button" class="in-layer__filter-tit">가는편 출발 시간대</button>
+      <div class="in-layer__filter-inner">
+        <ul class="in-layer__filter2">
+          <li class="in-layer__filter-item">
+            <input type="checkbox" id="f2-1">
+            <label for="f2-1">이른 아침 (00:00 - 04:59)</label>
+          </li>
+          <li class="in-layer__filter-item">
+            <input type="checkbox" id="f2-2">
+            <label for="f2-2">아침 (05:00 - 11:59)</label>
+          </li>
+          <li class="in-layer__filter-item">
+            <input type="checkbox" id="f2-3">
+            <label for="f2-3">오후 (12:00 - 17:59)</label>
+          </li>
+          <li class="in-layer__filter-item">
+            <input type="checkbox" id="f2-4">
+            <label for="f2-4">저녁 (18:00 - 23:59)</label>
+          </li>
+        </ul>
+      </div>
     </li>
-    <li>
-      <strong>
-        <button type="button">오는편 출발 시간대</button>
-      </strong>
+    <li class="in-layer__filter-group">
+      <button type="button" class="in-layer__filter-tit">오는편 출발 시간대</button>
+      <div class="in-layer__filter-inner">
+        <ul class="in-layer__filter3">
+          <li class="in-layer__filter-item">
+            <input type="checkbox" id="f3-1">
+            <label for="f3-1">이른 아침 (00:00 - 04:59)</label>
+          </li>
+          <li class="in-layer__filter-item">
+            <input type="checkbox" id="f3-2">
+            <label for="f3-2">아침 (05:00 - 11:59)</label>
+          </li>
+          <li class="in-layer__filter-item">
+            <input type="checkbox" id="f3-3">
+            <label for="f3-3">오후 (12:00 - 17:59)</label>
+          </li>
+          <li class="in-layer__filter-item">
+            <input type="checkbox" id="f3-4">
+            <label for="f3-4">저녁 (18:00 - 23:59)</label>
+          </li>
+        </ul>
+      </div>
     </li>
-    <li>
-      <strong>
-        <button type="button">총 비행 시간</button>
-      </strong>
+    <li class="in-layer__filter-group">
+      <button type="button" class="in-layer__filter-tit">총 비행 시간</button>
+      <div class="in-layer__filter-inner">
+        <div class="in-layer__filter4">
+          <div id="slider"></div>
+
+        </div>
+      </div>
     </li>
-    <li>
-      <strong>
-        <button type="button">항공사</button>
-      </strong>
+    <li class="in-layer__filter-group">
+      <button type="button" class="in-layer__filter-tit">항공사</button>
+      <div class="in-layer__filter-inner">
+        <ul class="in-layer__filter5">
+          <li class="in-layer__filter-item">
+            <input type="checkbox" id="f5-1">
+            <label for="f5-1">항공사명</label>
+          </li>
+          <li class="in-layer__filter-item">
+            <input type="checkbox" id="f5-2">
+            <label for="f5-2">항공사명</label>
+          </li>
+          <li class="in-layer__filter-item">
+            <input type="checkbox" id="f5-3">
+            <label for="f5-3">항공사명</label>
+          </li>
+        </ul>
+        <div class="in-layer__filter-row-price">
+          <strong>최저가</strong>
+          <ul>
+            <li>\221,300</li>
+            <li>\350,000</li>
+            <li>\800,000</li>
+          </ul>
+        </div>
+      </div>
     </li>
   </ul>
 </div>
 
 <div class="util-dims"></div>
+
+<include src="../include/scripts.html"></include>
 </body>
 </html>
