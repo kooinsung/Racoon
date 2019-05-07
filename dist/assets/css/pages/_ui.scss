@@ -784,6 +784,90 @@
       background: none;
     }
   }
+
+  &__calendars {
+    .ui-datepicker {
+      padding: 0;
+    }
+
+    .ui-datepicker-header {
+      a {
+        display: none;
+      }
+
+      .ui-datepicker-title {
+        text-align: left;
+        margin: 0;
+        font-size: 14px;
+        font-weight: 700;
+        color: #00a64e;
+
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+
+    .ui-datepicker-calendar {
+      thead {
+        display: none;
+      }
+
+      tbody {
+        td {
+          text-align: center;
+          font-size: 14px;
+          color: #000;
+          padding: 0;
+
+          .ui-state-default {
+            box-sizing: border-box;
+            //width:30px;
+            height: 30px;
+            line-height: 30px;
+            margin: 0 auto;
+            display: block;
+            text-align: center;
+            font-size: 14px;
+            color: #000;
+            padding: 0;
+          }
+        }
+      }
+    }
+
+    .ui-state-selected-range {
+      &.ui-red-start {
+        .ui-state-default {
+          font-weight: 700;
+          color: #00a64e;
+          background: none;
+          border-radius: 30px;
+          border: 3px solid #00a64e;
+        }
+      }
+
+      &.ui-red-end {
+        .ui-state-default {
+          font-weight: 700;
+          color: #00a64e;
+          background: none;
+          border-radius: 30px;
+          border: 3px solid #00a64e;
+        }
+      }
+
+      .ui-state-default {
+        background: #484;
+      }
+    }
+
+    .ui-datepicker-group {
+      border: 1px solid red;
+      float: none;
+    }
+
+  }
 }
 .sub {
   background: #f9f9f9;

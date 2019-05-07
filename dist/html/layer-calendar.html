@@ -112,10 +112,12 @@
             </span>
           </div>
         </div>
+        <div class="search-trips-form__row">
+
+        </div>
       </div>
       <div class="layers__calendars">
         <div id="calendars-inline-stage">
-
 
         </div>
       </div>
@@ -124,8 +126,6 @@
 
   <script src="../assets/js/jquery-1.12.4.js"></script>
   <script src="../assets/js/jquery-ui.js"></script>
-  <script src="../assets/js/moment-with-locales.js"></script>
-  <script src="../assets/js/jquery.datePicker.js"></script>
   <link rel="stylesheet" href="../assets/js/ui.js">
 
   <script>
@@ -147,12 +147,47 @@
         }
       });
 
-      $('#dep-range').datePicker({
-        stage: '#calendars-inline-stage',
-        inline: true,
+      $("#calendars-inline-stage").datepicker({
         minDate: 0,
-        monthCount: 10,
-        range: '#arr-range'
+        numberOfMonths: [8, 1],
+        dateFormat: "MM dd일 (DD)",
+        beforeShowDay: function (date) {
+          var date1 = $.datepicker.parseDate("MM dd일 (DD)", $("#dep-range").val());
+          var date2 = $.datepicker.parseDate("MM dd일 (DD)", $("#arr-range").val());
+
+          if (date1 && date && (date1.getTime() == date.getTime())) {
+            return [true, 'ui-state-selected-range ui-red-start', ''];
+          }
+          if (date2 && date && (date2.getTime() == date.getTime())) {
+            return [true, 'ui-state-selected-range ui-red-end', ''];
+          }
+
+          if (date >= date1 && date <= date2) {
+            return [true, 'ui-state-selected-range', ''];
+          }
+          var d = date.getTime();
+
+          return [true, '', ''];
+          //return [true, date1 && ((date.getTime() == date1.getTime()) || (date2 && date >= date1 && date <= date2)) ? "dp-highlight" : ""];/
+        },
+        onSelect: function (dateText, inst) {
+          var date1 = $.datepicker.parseDate("MM dd일 (DD)", $("#dep-range").val());
+          var date2 = $.datepicker.parseDate("MM dd일 (DD)", $("#arr-range").val());
+          var selectedDate = $.datepicker.parseDate("MM dd일 (DD)", dateText);
+
+          if (!date1 || date2) {
+            $("#dep-range").val(dateText);
+            $("#arr-range").val("");
+            $(this).datepicker();
+          } else if (selectedDate < date1) {
+            $("#arr-range").val($("#dep-range").val());
+            $("#dep-range").val(dateText);
+            $(this).datepicker();
+          } else {
+            $("#arr-range").val(dateText);
+            $(this).datepicker();
+          }
+        }
       });
     });
   </script>
