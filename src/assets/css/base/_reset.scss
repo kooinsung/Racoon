@@ -108,3 +108,11 @@ legend, .blind {
   clip: rect(1px, 1px, 1px, 1px);
   @include size(1px);
 }
+
+.pl10 {
+  padding-left: 10px !important;
+}
+
+.center {
+  text-align: center !important;
+}

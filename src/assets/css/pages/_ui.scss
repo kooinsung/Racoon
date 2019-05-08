@@ -23,7 +23,7 @@
       @include position(absolute, $top: -9999px, $left: -9999px);
 
       & + label {
-        position: relative;
+        @include position(relative);
         display: inline-block;
         font-size: 14px;
         line-height: 20px;
@@ -280,7 +280,6 @@
 }
 
 .info-tips {
-  position: relative;
   @include position(relative);
   padding: 0 20px 8px 20px;
   overflow: hidden;
@@ -855,7 +854,7 @@
 
       tbody {
         td {
-          position: relative;
+          @include position(relative);
           text-align: center;
           font-size: 14px;
           color: #000;
@@ -863,7 +862,7 @@
           height: 30px;
 
           .ui-state-default {
-            position: relative;
+            @include position(relative);
             z-index: 3;
             display: block;
             height: 20px;
@@ -886,13 +885,11 @@
       &.ui-range-start {
         &:before {
           content: '';
-          position: absolute;
-          top: 50%;
-          left: 50%;
+          @include position(absolute, $top: 50%, $left: 50%);
+          @include border-radius(50px);
           z-index: 2;
           width: 30px;
           height: 30px;
-          border-radius: 30px;
           margin: -15px 0 0 -15px;
           border: 3px solid #00a64e;
           box-sizing: border-box;
@@ -901,9 +898,7 @@
 
         &:after {
           content: '';
-          position: absolute;
-          top: 50%;
-          right: 0;
+          @include position(absolute, $top: 50%, $right: 0px);
           z-index: 1;
           width: 50%;
           height: 20px;
@@ -920,9 +915,7 @@
       &.ui-range-end {
         &:before {
           content: '';
-          position: absolute;
-          top: 50%;
-          left: 50%;
+          @include position(absolute, $top: 50%, $left: 50%);
           z-index: 2;
           width: 30px;
           height: 30px;
@@ -935,9 +928,7 @@
 
         &:after {
           content: '';
-          position: absolute;
-          top: 50%;
-          left: 0;
+          @include position(absolute, $top: 50%, $left: 0px);
           z-index: 1;
           width: 50%;
           height: 20px;
@@ -986,6 +977,270 @@
   }
 }
 
+.details {
+  padding: 0 0 20px 0;
+
+  &__items {
+    background: #fff;
+    padding: 0 10px 10px 10px;
+    -webkit-box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  &__item {
+  }
+
+  &__item-tit {
+    @include position(relative);
+    padding: 15px 10px 10px 10px;
+
+    p {
+      font-size: 14px;
+      color: #606060;
+
+      strong {
+        font-weight: 700;
+        color: #000;
+      }
+    }
+
+    em {
+      @include position(absolute, $bottom: 10px, $right: 10px);
+      font-size: 10px;
+      color: #606060;
+    }
+  }
+
+  &__item-view {
+    border: 1px solid #d1d1d1;
+    overflow: hidden;
+    @include border-radius(10px);
+  }
+
+  &__item-toggle {
+    @include position(relative);
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+    color: #3c9800;
+    height: 50px;
+    line-height: 50px;
+
+    &:after {
+      content: '';
+      width: 13px;
+      height: 8px;
+      display: inline-block;
+      margin-left: 5px;
+      background: url('#{$base-img-path}/ico_toggle-off.png') right center no-repeat;
+      background-size: 13px 8px;
+    }
+
+    &.active {
+      &:after {
+        background: url('#{$base-img-path}/ico_toggle-on.png') right center no-repeat;
+        background-size: 13px 8px;
+      }
+    }
+  }
+
+  &__item-detail {
+    background: #00a64e;
+    font-size: 0;
+    padding: 5px 0;
+
+    li {
+      font-size: 12px;
+      color: #fff;
+      height: 19px;
+      line-height: 19px;
+      padding: 10px 0 10px 10px;
+    }
+
+    .ico {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 10px;
+      width: 19px;
+      height: 19px;
+      background: #fff;
+    }
+  }
+
+  &__price {
+    background: #fff;
+    margin: 12px 10px;
+    //overflow:hidden;
+    @include border-radius(10px);
+    -webkit-box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &__price-default {
+    table {
+      width: 100%;
+
+      th {
+        font-size: 14px;
+        font-weight: 700;
+        text-align: left;
+        padding: 15px 0 10px 0;
+      }
+    }
+  }
+
+  &__price-opt {
+    .opt-check {
+      display: block;
+
+      input {
+        @include position(absolute, $top: -9999px, $left: -9999px);
+
+        & + label {
+          @include position(relative);
+          display: inline-block;
+          width: 18px;
+          height: 18px;
+          font-size: 14px;
+          line-height: 18px;
+          color: #0b704e;
+          background: url('#{$base-img-path}/ico_check3-off.png') left center no-repeat;
+          background-size: 18px 18px;
+          cursor: pointer;
+        }
+
+        &:checked {
+          & + label {
+            color: #fff;
+            background: url('#{$base-img-path}/ico_check3-on.png') left center no-repeat;
+            background-size: 18px 18px;
+          }
+        }
+      }
+    }
+
+    .seat-radio {
+      display: block;
+
+      input {
+        @include position(absolute, $top: -9999px, $left: -9999px);
+
+        & + label {
+          @include position(relative);
+          display: block;
+          height: 16px;
+          font-size: 12px;
+          padding: 12px 0 12px 32px;
+          color: #000;
+          background: url('#{$base-img-path}/ico_check2-off.png') 10px center no-repeat;
+          background-size: 16px 16px;
+          cursor: pointer;
+        }
+
+        &:checked {
+          & + label {
+            color: #000;
+            background: url('#{$base-img-path}/ico_check2-on.png') 10px center no-repeat;
+            background-size: 16px 16px;
+          }
+        }
+      }
+    }
+
+    table {
+      width: 100%;
+
+      th {
+        color: #fff;
+        font-size: 12px;
+        font-weight: 700;
+        text-align: left;
+        background: #00a64e;
+        height: 40px;
+      }
+
+      td {
+        @include position(relative);
+        font-size: 12px;
+        color: #000;
+        text-align: left;
+        height: 40px;
+
+        button {
+          width: 100%;
+          font-size: 12px;
+          color: #000;
+          text-align: left;
+
+          &.link {
+            height: 40px;
+            background: url('#{$base-img-path}/ico_arrow.png') 90% center no-repeat;
+            background-size: 9px 12px;
+          }
+
+          &.toggle {
+            @include position(relative);
+            width: 100%;
+            height: 40px;
+            background: url('#{$base-img-path}/ico_toggle-off.png') right center no-repeat;
+            background-size: 13px 8px;
+
+            &.active {
+              background: url('#{$base-img-path}/ico_toggle-on.png') right center no-repeat;
+              background-size: 13px 8px;
+            }
+          }
+        }
+
+        .small-layer {
+          @include position(absolute, $top: 35px, $left: 0px);
+          @include border-radius(3px);
+          z-index: 10;
+          background: #fff;
+          overflow: hidden;
+          -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
+
+          li {
+            min-width: 150px;
+            border-top: 1px solid #d1d1d1;
+
+            &:first-child {
+              border-top: 0;
+            }
+          }
+        }
+      }
+
+      tfoot {
+        th, td {
+          border-top: 1px solid #d1d1d1;
+          font-size: 14px;
+          font-weight: 700;
+          text-align: left;
+          background: #fff;
+          color: #000;
+          height: auto;
+          padding: 10px 0 15px 0;
+        }
+      }
+    }
+  }
+
+  &__bt {
+    button {
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      background: #00a64e;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      @include border-radius(50px);
+    }
+  }
+}
 
 .sub {
   background: #f9f9f9;

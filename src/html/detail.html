@@ -9,39 +9,245 @@
 
 <div class="container">
   <div class="content">
-    <div class="detail-info">
-      <div class="detail-info__item">
-        <div class="detail-info__item-tit">
-          <p><strong>가는편</strong> 2019년 4월 9일 (화)</p>
-          <em>현지 시간</em>
+    <div class="details">
+      <div class="details__items">
+        <div class="details__item">
+          <div class="details__item-tit">
+            <p><strong>가는편</strong> 2019년 4월 9일 (화)</p>
+            <em>현지 시간</em>
+          </div>
+          <div class="details__item-view">
+            <div class="details__item-airline">
+              <span class="thumb"><img src="../assets/images/img_7c.png" alt=""></span>제주항공 7C 2101
+            </div>
+            <div class="details__item-sdu">
+              <div class="sdu-dep">
+                <strong class="three-code">ICN</strong>
+                <span class="time">오전 9:55</span>
+              </div>
+              <div class="sdu-info">
+                <span class="info1">보잉 737</span>
+                <span class="info2">직항, 3시간 40분</span>
+              </div>
+              <div class="sdu-arr">
+                <strong class="three-code">HKG</strong>
+                <span class="time">오후 12:35</span>
+              </div>
+            </div>
+            <button type="button" class="details__item-toggle active">자세한 정보</button>
+            <div class="details__item-detail">
+              <ul>
+                <li><span class="ico i1"></span>B737</li>
+                <li><span class="ico i2"></span>표준 3-3 구조</li>
+                <li><span class="ico i3"></span>Wifi 없음</li>
+                <li><span class="ico i4"></span>기기 스트리밍 제공 가능성 있음</li>
+                <li><span class="ico i5"></span>평균 이하 레그룸 (74CM)</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="detail-info__item-view">
-          <div class="detail-info__item-airline">
-            <span class="thumb"><img src="../assets/images/img_7c.png" alt=""></span>제주항공 7C 2101
+        <div class="details__item">
+          <div class="details__item-tit">
+            <p><strong>오는편</strong> 2019년 4월 12일 (화)</p>
+            <em>현지 시간</em>
           </div>
-          <div class="detail-info__item-sdu">
-            <div class="sdu-dep">
-              <strong class="three-code">ICN</strong>
-              <span class="time">오전 9:55</span>
+          <div class="details__item-view">
+            <div class="details__item-airline">
+              <span class="thumb"><img src="../assets/images/img_7c.png" alt=""></span>제주항공 7C 2101
             </div>
-            <div class="sdu-info">
-              <span class="info1">보잉 737</span>
-              <span class="info2">직항, 3시간 40분</span>
+            <div class="details__item-sdu">
+              <div class="sdu-dep">
+                <strong class="three-code">HKG</strong>
+                <span class="time">오후 1:35</span>
+              </div>
+              <div class="sdu-info">
+                <span class="info1">보잉 737</span>
+                <span class="info2">직항, 3시간 40분</span>
+              </div>
+              <div class="sdu-arr">
+                <strong class="three-code">ICN</strong>
+                <span class="time">오후 6:15</span>
+              </div>
             </div>
-            <div class="sdu-arr">
-              <strong class="three-code">HKG</strong>
-              <span class="time">오후 12:35</span>
+            <button type="button" class="details__item-toggle">자세한 정보</button>
+            <div class="details__item-detail" style="display:none;">
+              <ul>
+                <li><span class="ico i1"></span>B737</li>
+                <li><span class="ico i2"></span>표준 3-3 구조</li>
+                <li><span class="ico i3"></span>Wifi 없음</li>
+                <li><span class="ico i4"></span>기기 스트리밍 제공 가능성 있음</li>
+                <li><span class="ico i5"></span>평균 이하 레그룸 (74CM)</li>
+              </ul>
             </div>
-          </div>
-          <button type="button" class="detail-info__item-toggle">자세한 정보</button>
-          <div class="detail-info__item-detail">
-            <ul>
-              <li>
-                
-              </li>
-            </ul>
           </div>
         </div>
+      </div>
+      <div class="details__price">
+        <div class="details__price-default">
+          <table>
+            <colgroup>
+              <col style="width:105px;">
+              <col>
+              <col>
+              <col style="width:150px;">
+            </colgroup>
+            <thead>
+            <tr>
+              <th colspan="3" class="pl10">기본 항공권 가격</th>
+              <th>\221,300</th>
+            </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="details__price-opt">
+          <table>
+            <colgroup>
+              <col style="width:105px;">
+              <col>
+              <col>
+              <col style="width:150px;">
+            </colgroup>
+            <thead>
+            <tr>
+              <th class="pl10">부가 서비스</th>
+              <th class="center">가는편</th>
+              <th class="center">오는편</th>
+              <th>예상 가격</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td class="pl10">기내 수화물</td>
+              <td class="center">
+                <span class="opt-check">
+                  <input type="checkbox" id="in-bag-checks1">
+                  <label for="in-bag-checks1">&nbsp</label>
+                </span>
+              </td>
+              <td class="center">
+                <span class="opt-check">
+                  <input type="checkbox" id="in-bag-checks2">
+                  <label for="in-bag-checks2">&nbsp</label>
+                </span>
+              </td>
+              <td>
+                <button type="button" class="link">10kg까지 무료</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="pl10">위탁 수화물</td>
+              <td class="center">
+                <span class="opt-check">
+                  <input type="checkbox" id="out-bag-checks1">
+                  <label for="out-bag-checks1">&nbsp</label>
+                </span>
+              </td>
+              <td class="center">
+                <span class="opt-check">
+                  <input type="checkbox" id="out-bag-checks2">
+                  <label for="out-bag-checks2">&nbsp</label>
+                </span>
+              </td>
+              <td>
+                <button type="button" class="link">\80,000</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="pl10">기내식</td>
+              <td class="center">
+                <span class="opt-check">
+                  <input type="checkbox" id="meal-checks1">
+                  <label for="meal-checks1">&nbsp</label>
+                </span>
+              </td>
+              <td class="center">
+                <span class="opt-check">
+                  <input type="checkbox" id="meal-checks2">
+                  <label for="meal-checks2">&nbsp</label>
+                </span>
+              </td>
+              <td>
+                <button type="button" class="link">\30,000</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="pl10">
+                <button type="button" class="toggle">좌석 사전 구매</button>
+                <div class="small-layer">
+                  <ul>
+                    <li>
+                      <span class="seat-radio">
+                        <input type="radio" id="seat-radio1" name="se-radio">
+                        <label for="seat-radio1">앞 좌석 / 비상구 좌석</label>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="seat-radio">
+                        <input type="radio" id="seat-radio2" name="se-radio">
+                        <label for="seat-radio2">A</label>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="seat-radio">
+                        <input type="radio" id="seat-radio3" name="se-radio">
+                        <label for="seat-radio3">B</label>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="seat-radio">
+                        <input type="radio" id="seat-radio4" name="se-radio">
+                        <label for="seat-radio4">C</label>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+              <td class="center">
+                <span class="opt-check">
+                  <input type="checkbox" id="seat-checks1">
+                  <label for="seat-checks1">&nbsp</label>
+                </span>
+              </td>
+              <td class="center">
+                <span class="opt-check">
+                  <input type="checkbox" id="seat-checks2">
+                  <label for="seat-checks2">&nbsp</label>
+                </span>
+              </td>
+              <td>
+                <button type="button" class="link">\0</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="pl10">마일리지/포인트</td>
+              <td class="center">
+                <span class="opt-check">
+                  <input type="checkbox" id="point-checks1">
+                  <label for="point-checks1">&nbsp</label>
+                </span>
+              </td>
+              <td class="center">
+                <span class="opt-check">
+                  <input type="checkbox" id="point-checks2">
+                  <label for="point-checks2">&nbsp</label>
+                </span>
+              </td>
+              <td>
+                <button type="button" class="link"><em>리플레쉬</em>포인트 50P</button>
+              </td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+              <th colspan="3" class="pl10">합계</th>
+              <td>\331,300</td>
+            </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+      <div class="details__bt">
+        <button type="button" class="">계속 예약하기</button>
       </div>
     </div>
   </div>
