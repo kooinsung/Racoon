@@ -1,7 +1,15 @@
+.container {
+  padding-top: 45px;
+}
+
 .search-trips-form {
   background: #00a64e;
   padding: 20px;
   font-size: 0;
+
+  &__default {
+  }
+
   &__check-trips {
     margin-bottom: 14px;
   }
@@ -141,6 +149,24 @@
     background: url('#{$base-img-path}/ico_set.png') left center no-repeat;
     background-size: 44px 25px;
   }
+
+  &__minimized {
+    text-align: center;
+    display: none;
+
+    strong {
+      display: block;
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    span {
+      font-size: 10px;
+      color: #fff;
+    }
+  }
 }
 
 .quick {
@@ -198,6 +224,7 @@
   font-size: 0px;
   overflow: hidden;
   border-bottom: 1px solid #d8d8d8;
+  background: #fff;
   ul {
     display: inline-block;
     &:first-child {
@@ -207,14 +234,13 @@
         margin-left: 10px;
       }
       a {
-        padding: 0 17px;
+        padding: 0 15px;
       }
     }
     &:last-child {
       float: right;
-
       a {
-        padding: 0 27px;
+        padding: 0 25px;
       }
     }
   }
@@ -234,7 +260,7 @@
 
     &.is-actived {
       @include position(relative);
-      z-index: 100;
+      z-index: 300;
       background: #fff;
       height: 24px;
       line-height: 24px;
@@ -549,6 +575,7 @@
 
 .util-dims {
   @include position(fixed, $top: 0px, $left: 0px, $bottom: 0px, $right: 0px);
+  z-index: 200;
   background: rgba(96, 96, 96, .7);
 }
 
@@ -556,7 +583,7 @@
   @include position(absolute, $top: 240px, $left: 10px, $right: 10px);
   background: #fff;
   @include border-radius(10px);
-  z-index: 100;
+  z-index: 300;
 
   &__sort {
     margin: 0 10px;
@@ -643,6 +670,17 @@
   &__filter4 {
     padding-top: 10px;
     min-height: 24px;
+    padding-left: 12px;
+    padding-right: 12px;
+
+    .time {
+      font-size: 12px;
+      margin-top: 20px;
+
+      span {
+        font-size: 12px;
+      }
+    }
   }
 
   &__filter-item {
@@ -784,7 +822,170 @@
       background: none;
     }
   }
+
+  &__calendars {
+
+    .ui-datepicker {
+      padding: 0;
+    }
+
+    .ui-datepicker-header {
+      a {
+        display: none;
+      }
+
+      .ui-datepicker-title {
+        text-align: left;
+        margin: 0;
+        font-size: 14px;
+        font-weight: 700;
+        color: #00a64e;
+
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+
+    .ui-datepicker-calendar {
+      thead {
+        display: none;
+      }
+
+      tbody {
+        td {
+          position: relative;
+          text-align: center;
+          font-size: 14px;
+          color: #000;
+          padding: 2px 0;
+          height: 30px;
+
+          .ui-state-default {
+            position: relative;
+            z-index: 3;
+            display: block;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #000;
+            padding: 0;
+            box-sizing: border-box;
+          }
+        }
+      }
+    }
+
+    .ui-state-selected-range {
+      .ui-state-default {
+        background: #cceddc;
+      }
+
+      &.ui-range-start {
+        &:before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          z-index: 2;
+          width: 30px;
+          height: 30px;
+          border-radius: 30px;
+          margin: -15px 0 0 -15px;
+          border: 3px solid #00a64e;
+          box-sizing: border-box;
+          background: #fff;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 0;
+          z-index: 1;
+          width: 50%;
+          height: 20px;
+          background: #cceddc;
+          @include transform(translateY(-10px));
+        }
+        .ui-state-default {
+          background: transparent;
+          color: #00a64e;
+          font-weight: 700;
+        }
+      }
+
+      &.ui-range-end {
+        &:before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          z-index: 2;
+          width: 30px;
+          height: 30px;
+          border-radius: 30px;
+          margin: -15px 0 0 -15px;
+          border: 3px solid #00a64e;
+          box-sizing: border-box;
+          background: #fff;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 0;
+          z-index: 1;
+          width: 50%;
+          height: 20px;
+          background: #cceddc;
+          @include transform(translateY(-10px));
+        }
+
+        .ui-state-default {
+          background: transparent;
+          color: #00a64e;
+          font-weight: 700;
+        }
+      }
+
+    }
+
+
+    .ui-datepicker-group {
+      float: none;
+      margin: 20px 20px 0 20px;
+
+      table {
+        width: 100%;
+        margin: 0;
+      }
+    }
+
+  }
+
+  &__calendars-week {
+    padding: 0 20px;
+    border-top: 1px solid #e1e1e1;
+    -webkit-box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.1);
+
+    table {
+      width: 100%;
+
+      th {
+        font-size: 10px;
+        text-align: center;
+        height: 40px;
+        box-sizing: border-box;
+      }
+    }
+  }
 }
+
+
 .sub {
   background: #f9f9f9;
 
@@ -811,6 +1012,41 @@
         height: 32px;
         text-indent: 0;
       }
+    }
+  }
+
+  &.scrolling {
+    .content {
+      padding-top: 248px;
+    }
+
+    .search-trips-form {
+      position: fixed;
+      top: 45px;
+      left: 0;
+      right: 0;
+      z-index: 30;
+      padding: 10px 20px 10px 20px;
+
+      &__default {
+        display: none;
+      }
+
+      &__minimized {
+        display: block !important;
+      }
+    }
+
+    .util-menus {
+      position: fixed;
+      top: 103px;
+      left: 0;
+      right: 0;
+      z-index: 40;
+    }
+
+    .in-layer {
+      top: 355px;
     }
   }
 }
