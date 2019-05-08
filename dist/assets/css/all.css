@@ -244,7 +244,7 @@ input.ui-button::-moz-focus-inner, button.ui-button::-moz-focus-inner { border: 
 
 .ui-slider-horizontal { height: 6px; background: #00a64e; }
 
-.ui-slider-horizontal .ui-slider-handle { top: -10px; }
+.ui-slider-horizontal .ui-slider-handle { top: -10px; margin-left: -12px; }
 
 .ui-slider-horizontal .ui-slider-range { top: 0; height: 100%; }
 
@@ -262,13 +262,15 @@ input.ui-button::-moz-focus-inner, button.ui-button::-moz-focus-inner { border: 
 
 .ui-slider-vertical .ui-slider-range-max { top: 0; }
 
-.header { height: 45px; border-bottom: 1px solid #0b704e; }
+.header { position: fixed; top: 0; right: 0; left: 0; z-index: 200; height: 45px; background: #fff; border-bottom: 1px solid #0b704e; box-sizing: border-box; }
 
 .header__logo { position: absolute; top: 10px; left: 50%; width: 116px; height: 24px; margin: 0 0 0 -58px; font-size: 0; background: url("../images/img_logo.png") center center no-repeat; background-size: 116px 24px; }
 
 .header__back { position: absolute; top: 0; left: 0; width: 56px; height: 45px; background: url("../images/ico_back.png") center center no-repeat; background-size: 16px 17px; }
 
 .header__tit { display: block; line-height: 45px; text-align: center; font-size: 14px; color: #0b704e; }
+
+.container { padding-top: 45px; }
 
 .search-trips-form { background: #00a64e; padding: 20px; font-size: 0; }
 
@@ -318,6 +320,12 @@ input.ui-button::-moz-focus-inner, button.ui-button::-moz-focus-inner { border: 
 
 .search-trips-form__tips { position: relative; font-size: 12px; color: #fff; margin-top: 25px; padding-left: 56px; background: url("../images/ico_set.png") left center no-repeat; background-size: 44px 25px; }
 
+.search-trips-form__minimized { text-align: center; display: none; }
+
+.search-trips-form__minimized strong { display: block; font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 5px; }
+
+.search-trips-form__minimized span { font-size: 10px; color: #fff; }
+
 .quick { position: absolute; bottom: 0; left: 0; right: 0; z-index: 50; border-top: 1px solid #d1d1d1; font-size: 0px; background: #fff; }
 
 .quick li { display: inline-block; width: 33.33%; }
@@ -332,7 +340,7 @@ input.ui-button::-moz-focus-inner, button.ui-button::-moz-focus-inner { border: 
 
 .quick__profile a { background: url("../images/ico_profile-off.png") center 12px no-repeat; background-size: 16px 17px; }
 
-.util-menus { font-size: 0px; overflow: hidden; border-bottom: 1px solid #d8d8d8; }
+.util-menus { font-size: 0px; overflow: hidden; border-bottom: 1px solid #d8d8d8; background: #fff; }
 
 .util-menus ul { display: inline-block; }
 
@@ -340,17 +348,17 @@ input.ui-button::-moz-focus-inner, button.ui-button::-moz-focus-inner { border: 
 
 .util-menus ul:first-child li { margin-left: 10px; }
 
-.util-menus ul:first-child a { padding: 0 17px; }
+.util-menus ul:first-child a { padding: 0 15px; }
 
 .util-menus ul:last-child { float: right; }
 
-.util-menus ul:last-child a { padding: 0 27px; }
+.util-menus ul:last-child a { padding: 0 25px; }
 
 .util-menus li { position: relative; display: inline-block; vertical-align: top; text-align: center; height: 40px; }
 
 .util-menus a { display: block; font-size: 12px; color: #0b704e; height: 40px; line-height: 40px; }
 
-.util-menus a.is-actived { position: relative; z-index: 100; background: #fff; height: 24px; line-height: 24px; -webkit-border-radius: 24px; -moz-border-radius: 24px; border-radius: 24px; margin-top: 8px; }
+.util-menus a.is-actived { position: relative; z-index: 300; background: #fff; height: 24px; line-height: 24px; -webkit-border-radius: 24px; -moz-border-radius: 24px; border-radius: 24px; margin-top: 8px; }
 
 .util-menus .noti { display: inline-block; width: 15px; height: 16px; background: url("../images/ico_noti.png") left center no-repeat; background-size: 15px 16px; }
 
@@ -446,9 +454,9 @@ input.ui-button::-moz-focus-inner, button.ui-button::-moz-focus-inner { border: 
 
 .search-result__item-util button.share { position: absolute; top: 0px; right: 0px; width: 35px; height: 30px; background: url("../images/ico_share.png") center center no-repeat; background-size: 16px 18px; }
 
-.util-dims { position: fixed; top: 0px; right: 0px; bottom: 0px; left: 0px; background: rgba(96, 96, 96, 0.7); }
+.util-dims { position: fixed; top: 0px; right: 0px; bottom: 0px; left: 0px; z-index: 200; background: rgba(96, 96, 96, 0.7); }
 
-.in-layer { position: absolute; top: 240px; right: 10px; left: 10px; background: #fff; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; z-index: 100; }
+.in-layer { position: absolute; top: 240px; right: 10px; left: 10px; background: #fff; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; z-index: 300; }
 
 .in-layer__sort { margin: 0 10px; }
 
@@ -478,7 +486,11 @@ input.ui-button::-moz-focus-inner, button.ui-button::-moz-focus-inner { border: 
 
 .in-layer__filter-inner { position: relative; }
 
-.in-layer__filter4 { padding-top: 10px; min-height: 24px; }
+.in-layer__filter4 { padding-top: 10px; min-height: 24px; padding-left: 12px; padding-right: 12px; }
+
+.in-layer__filter4 .time { font-size: 12px; margin-top: 20px; }
+
+.in-layer__filter4 .time span { font-size: 12px; }
 
 .in-layer__filter-item { margin-top: 12px; }
 
@@ -542,17 +554,33 @@ input.ui-button::-moz-focus-inner, button.ui-button::-moz-focus-inner { border: 
 
 .layers__calendars .ui-datepicker-calendar thead { display: none; }
 
-.layers__calendars .ui-datepicker-calendar tbody td { text-align: center; font-size: 14px; color: #000; padding: 0; }
+.layers__calendars .ui-datepicker-calendar tbody td { position: relative; text-align: center; font-size: 14px; color: #000; padding: 2px 0; height: 30px; }
 
-.layers__calendars .ui-datepicker-calendar tbody td .ui-state-default { box-sizing: border-box; height: 30px; line-height: 30px; margin: 0 auto; display: block; text-align: center; font-size: 14px; color: #000; padding: 0; }
+.layers__calendars .ui-datepicker-calendar tbody td .ui-state-default { position: relative; z-index: 3; display: block; height: 20px; line-height: 20px; text-align: center; font-size: 14px; color: #000; padding: 0; box-sizing: border-box; }
 
-.layers__calendars .ui-state-selected-range.ui-red-start .ui-state-default { font-weight: 700; color: #00a64e; background: none; border-radius: 30px; border: 3px solid #00a64e; }
+.layers__calendars .ui-state-selected-range .ui-state-default { background: #cceddc; }
 
-.layers__calendars .ui-state-selected-range.ui-red-end .ui-state-default { font-weight: 700; color: #00a64e; background: none; border-radius: 30px; border: 3px solid #00a64e; }
+.layers__calendars .ui-state-selected-range.ui-range-start:before { content: ''; position: absolute; top: 50%; left: 50%; z-index: 2; width: 30px; height: 30px; border-radius: 30px; margin: -15px 0 0 -15px; border: 3px solid #00a64e; box-sizing: border-box; background: #fff; }
 
-.layers__calendars .ui-state-selected-range .ui-state-default { background: #484; }
+.layers__calendars .ui-state-selected-range.ui-range-start:after { content: ''; position: absolute; top: 50%; right: 0; z-index: 1; width: 50%; height: 20px; background: #cceddc; -webkit-transform: translateY(-10px); -ms-transform: translateY(-10px); transform: translateY(-10px); }
 
-.layers__calendars .ui-datepicker-group { border: 1px solid red; float: none; }
+.layers__calendars .ui-state-selected-range.ui-range-start .ui-state-default { background: transparent; color: #00a64e; font-weight: 700; }
+
+.layers__calendars .ui-state-selected-range.ui-range-end:before { content: ''; position: absolute; top: 50%; left: 50%; z-index: 2; width: 30px; height: 30px; border-radius: 30px; margin: -15px 0 0 -15px; border: 3px solid #00a64e; box-sizing: border-box; background: #fff; }
+
+.layers__calendars .ui-state-selected-range.ui-range-end:after { content: ''; position: absolute; top: 50%; left: 0; z-index: 1; width: 50%; height: 20px; background: #cceddc; -webkit-transform: translateY(-10px); -ms-transform: translateY(-10px); transform: translateY(-10px); }
+
+.layers__calendars .ui-state-selected-range.ui-range-end .ui-state-default { background: transparent; color: #00a64e; font-weight: 700; }
+
+.layers__calendars .ui-datepicker-group { float: none; margin: 20px 20px 0 20px; }
+
+.layers__calendars .ui-datepicker-group table { width: 100%; margin: 0; }
+
+.layers__calendars-week { padding: 0 20px; border-top: 1px solid #e1e1e1; -webkit-box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.1); box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.1); }
+
+.layers__calendars-week table { width: 100%; }
+
+.layers__calendars-week table th { font-size: 10px; text-align: center; height: 40px; box-sizing: border-box; }
 
 .sub { background: #f9f9f9; }
 
@@ -565,3 +593,15 @@ input.ui-button::-moz-focus-inner, button.ui-button::-moz-focus-inner { border: 
 .sub .search-trips-form__input:before { display: none; }
 
 .sub .search-trips-form__input input { text-align: center; height: 32px; text-indent: 0; }
+
+.sub.scrolling .content { padding-top: 248px; }
+
+.sub.scrolling .search-trips-form { position: fixed; top: 45px; left: 0; right: 0; z-index: 30; padding: 10px 20px 10px 20px; }
+
+.sub.scrolling .search-trips-form__default { display: none; }
+
+.sub.scrolling .search-trips-form__minimized { display: block !important; }
+
+.sub.scrolling .util-menus { position: fixed; top: 103px; left: 0; right: 0; z-index: 40; }
+
+.sub.scrolling .in-layer { top: 355px; }

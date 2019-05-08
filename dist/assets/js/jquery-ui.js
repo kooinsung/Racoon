@@ -16758,7 +16758,7 @@
     dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
     weekHeader: '주',
     // dateFormat: 'yymmdd',
-    firstDay: 1,
+    firstDay: 0,
     isRTL: false,
     showMonthAfterYear: true,
     yearSuffix: '년'

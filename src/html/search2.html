@@ -10,39 +10,45 @@
 <div class="container">
   <div class="content">
     <div class="search-trips-form">
-      <div class="search-trips-form__check-trips">
+      <div class="search-trips-form__default">
+        <div class="search-trips-form__check-trips">
+            <span class="search-trips-form__check-trip-item">
+              <input type="radio" id="rt" checked="checked">
+              <label for="rt">왕복</label>
+            </span>
           <span class="search-trips-form__check-trip-item">
-            <input type="radio" id="rt" checked="checked">
-            <label for="rt">왕복</label>
-          </span>
-        <span class="search-trips-form__check-trip-item">
-            <input type="radio" id="ow">
-            <label for="ow">편도</label>
-          </span>
+              <input type="radio" id="ow">
+              <label for="ow">편도</label>
+            </span>
+        </div>
+        <div class="search-trips-form__row">
+          <div class="search-trips-form__col">
+              <span class="search-trips-form__input search-trips-form__input-dep">
+                <input type="text" placeholder="어디서 출발하시나요?" value="인천">
+              </span>
+          </div>
+          <div class="search-trips-form__col">
+              <span class="search-trips-form__input search-trips-form__input">
+                <input type="text" placeholder="어디에 도착하시나요?" value="홍콩">
+              </span>
+          </div>
+        </div>
+        <div class="search-trips-form__row">
+          <div class="search-trips-form__col">
+              <span class="search-trips-form__input search-trips-form__input-date">
+                <input type="text" placeholder="가는 날짜" value="4월 9일 (화)">
+              </span>
+          </div>
+          <div class="search-trips-form__col">
+              <span class="search-trips-form__input search-trips-form__input-date">
+                <input type="text" placeholder="오는 날짜" value="4월 12일 (금)">
+              </span>
+          </div>
+        </div>
       </div>
-      <div class="search-trips-form__row">
-        <div class="search-trips-form__col">
-            <span class="search-trips-form__input search-trips-form__input-dep">
-              <input type="text" placeholder="어디서 출발하시나요?" value="인천">
-            </span>
-        </div>
-        <div class="search-trips-form__col">
-            <span class="search-trips-form__input search-trips-form__input">
-              <input type="text" placeholder="어디에 도착하시나요?" value="홍콩">
-            </span>
-        </div>
-      </div>
-      <div class="search-trips-form__row">
-        <div class="search-trips-form__col">
-            <span class="search-trips-form__input search-trips-form__input-date">
-              <input type="text" placeholder="가는 날짜" value="4월 9일 (화)">
-            </span>
-        </div>
-        <div class="search-trips-form__col">
-            <span class="search-trips-form__input search-trips-form__input-date">
-              <input type="text" placeholder="오는 날짜" value="4월 12일 (금)">
-            </span>
-        </div>
+      <div class="search-trips-form__minimized">
+        <strong>ICN - HKG</strong>
+        <span>4월 9일 (화) - 4월 12일 (금)</span>
       </div>
     </div>
     <div class="util-menus">

@@ -1,6 +1,13 @@
 .header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 200;
   height: 45px;
+  background: #fff;
   border-bottom: 1px solid #0b704e;
+  box-sizing: border-box;
 
   &__logo {
     position: absolute;

@@ -31,39 +31,45 @@
 <div class="container">
     <div class="content">
       <div class="search-trips-form">
-        <div class="search-trips-form__check-trips">
-          <span class="search-trips-form__check-trip-item">
-            <input type="radio" id="rt" checked="checked">
-            <label for="rt">왕복</label>
-          </span>
-          <span class="search-trips-form__check-trip-item">
-            <input type="radio" id="ow">
-            <label for="ow">편도</label>
-          </span>
+        <div class="search-trips-form__default">
+          <div class="search-trips-form__check-trips">
+            <span class="search-trips-form__check-trip-item">
+              <input type="radio" id="rt" checked="checked">
+              <label for="rt">왕복</label>
+            </span>
+            <span class="search-trips-form__check-trip-item">
+              <input type="radio" id="ow">
+              <label for="ow">편도</label>
+            </span>
+          </div>
+          <div class="search-trips-form__row">
+            <div class="search-trips-form__col">
+              <span class="search-trips-form__input search-trips-form__input-dep">
+                <input type="text" placeholder="어디서 출발하시나요?" value="인천">
+              </span>
+            </div>
+            <div class="search-trips-form__col">
+              <span class="search-trips-form__input search-trips-form__input">
+                <input type="text" placeholder="어디에 도착하시나요?" value="홍콩">
+              </span>
+            </div>
+          </div>
+          <div class="search-trips-form__row">
+            <div class="search-trips-form__col">
+              <span class="search-trips-form__input search-trips-form__input-date">
+                <input type="text" placeholder="가는 날짜" value="4월 9일 (화)">
+              </span>
+            </div>
+            <div class="search-trips-form__col">
+              <span class="search-trips-form__input search-trips-form__input-date">
+                <input type="text" placeholder="오는 날짜" value="4월 12일 (금)">
+              </span>
+            </div>
+          </div>
         </div>
-        <div class="search-trips-form__row">
-          <div class="search-trips-form__col">
-            <span class="search-trips-form__input search-trips-form__input-dep">
-              <input type="text" placeholder="어디서 출발하시나요?" value="인천">
-            </span>
-          </div>
-          <div class="search-trips-form__col">
-            <span class="search-trips-form__input search-trips-form__input">
-              <input type="text" placeholder="어디에 도착하시나요?" value="홍콩">
-            </span>
-          </div>
-        </div>
-        <div class="search-trips-form__row">
-          <div class="search-trips-form__col">
-            <span class="search-trips-form__input search-trips-form__input-date">
-              <input type="text" placeholder="가는 날짜" value="4월 9일 (화)">
-            </span>
-          </div>
-          <div class="search-trips-form__col">
-            <span class="search-trips-form__input search-trips-form__input-date">
-              <input type="text" placeholder="오는 날짜" value="4월 12일 (금)">
-            </span>
-          </div>
+        <div class="search-trips-form__minimized">
+          <strong>ICN - HKG</strong>
+          <span>4월 9일 (화) - 4월 12일 (금)</span>
         </div>
       </div>
       <div class="util-menus">
@@ -256,7 +262,73 @@
 
 <script>
   $(function () {
-    $("#slider").slider();
+    $(window).scroll(function () {
+      if ($(window).scrollTop() >= 145) {
+        $('body').addClass('scrolling');
+      } else {
+        $('body').removeClass('scrolling');
+      }
+    });
+
+    $("#slider").slider({
+      range: "max",
+      min: 1,
+      max: 14,
+      step: 0.5,
+
+      create: function (event, ui) {
+        // var v = $(this).slider('value');
+        //
+        // $(this).find('.ui-slider-handle').text(v);
+
+      },
+      slide: function (event, ui) {
+        // $( "#amount" ).val( ui.value );
+      }
+    });
+
+    $("#calendars-inline-stage").datepicker({
+      minDate: 0,
+      numberOfMonths: [8, 1],
+      dateFormat: "MM dd일 (DD)",
+      beforeShowDay: function (date) {
+        var date1 = $.datepicker.parseDate("MM dd일 (DD)", $("#dep-range").val());
+        var date2 = $.datepicker.parseDate("MM dd일 (DD)", $("#arr-range").val());
+
+        if (date1 && date && (date1.getTime() == date.getTime())) {
+          return [true, 'ui-state-selected-range ui-range-start', ''];
+        }
+        if (date2 && date && (date2.getTime() == date.getTime())) {
+          return [true, 'ui-state-selected-range ui-range-end', ''];
+        }
+
+        if (date >= date1 && date <= date2) {
+          return [true, 'ui-state-selected-range', ''];
+        }
+        var d = date.getTime();
+
+        return [true, '', ''];
+        //return [true, date1 && ((date.getTime() == date1.getTime()) || (date2 && date >= date1 && date <= date2)) ? "dp-highlight" : ""];/
+      },
+      onSelect: function (dateText, inst) {
+        var date1 = $.datepicker.parseDate("MM dd일 (DD)", $("#dep-range").val());
+        var date2 = $.datepicker.parseDate("MM dd일 (DD)", $("#arr-range").val());
+        var selectedDate = $.datepicker.parseDate("MM dd일 (DD)", dateText);
+
+        if (!date1 || date2) {
+          $("#dep-range").val(dateText);
+          $("#arr-range").val("");
+          $(this).datepicker();
+        } else if (selectedDate < date1) {
+          $("#arr-range").val($("#dep-range").val());
+          $("#dep-range").val(dateText);
+          $(this).datepicker();
+        } else {
+          $("#arr-range").val(dateText);
+          $(this).datepicker();
+        }
+      }
+    });
   });
 </script>
 </body>
