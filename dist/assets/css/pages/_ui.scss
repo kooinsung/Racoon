@@ -730,10 +730,12 @@
 .layers {
   @include position(absolute, $top: 0px, $left: 0px, $right: 0px, $bottom: 0px);
   background: #fff;
-  z-index: 100;
+  z-index: 400;
 
   &__header {
-
+    @include position(fixed, $top: 0px, $left: 0px, $right: 0px);
+    z-index: 400;
+    background: #fff;
   }
 
   &__close {
@@ -750,13 +752,16 @@
     text-align: center;
     font-size: 14px;
     color: #0b704e;
+
   }
 
   &__form {
     .search-trips-form {
+      @include position(fixed, $top: 45px, $left: 0px, $right: 0px);
       @include placeholder() {
         color: #a5a5a5;
       }
+      z-index: 400;
 
       &__row {
         margin-bottom: 0px;
@@ -824,7 +829,7 @@
   }
 
   &__calendars {
-
+    padding-top: 170px;
     .ui-datepicker {
       padding: 0;
     }
@@ -959,6 +964,9 @@
   }
 
   &__calendars-week {
+    @include position(fixed, $top: 129px, $left: 0px, $right: 0px);
+    z-index: 400;
+    background: #fff;
     padding: 0 20px;
     border-top: 1px solid #e1e1e1;
     -webkit-box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.1);
