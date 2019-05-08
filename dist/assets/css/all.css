@@ -27,9 +27,9 @@ fieldset { border: 0; vertical-align: top; }
 
 button { display: inline-block; font-size: 0; margin: 0; padding: 0; border: none; background: none; text-align: center; vertical-align: middle; white-space: nowrap; cursor: pointer; }
 
-select { padding: 0; margin: 0; border: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-appearance: none; appearance: none; -webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px; }
+select { padding: 0; margin: 0; border: 0; outline: none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-appearance: none; appearance: none; -webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px; }
 
-input[type=checkbox], input[type=radio], input[type=text], input[type=password], input[type=email] { padding: 0; margin: 0; border: 0; -webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-appearance: none; appearance: none; }
+input[type=checkbox], input[type=radio], input[type=text], input[type=password], input[type=email] { padding: 0; margin: 0; border: 0; outline: none; -webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-appearance: none; appearance: none; }
 
 legend, .blind { overflow: hidden; position: absolute; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; }
 
@@ -278,9 +278,9 @@ input.ui-button::-moz-focus-inner, button.ui-button::-moz-focus-inner { border: 
 
 .search-trips-form__check-trip-item { display: inline-block; height: 20px; margin-right: 15px; }
 
-.search-trips-form__check-trip-item input { position: absolute; }
+.search-trips-form__check-trip-item input { position: absolute; top: -9999px; left: -9999px; }
 
-.search-trips-form__check-trip-item input + label { display: inline-block; font-size: 14px; line-height: 20px; color: #0b704e; padding-left: 26px; background: url("../images/ico_check-off.png") left center no-repeat; background-size: 21px 20px; }
+.search-trips-form__check-trip-item input + label { position: relative; display: inline-block; font-size: 14px; line-height: 20px; color: #0b704e; padding-left: 26px; background: url("../images/ico_check-off.png") left center no-repeat; background-size: 21px 20px; }
 
 .search-trips-form__check-trip-item input:checked + label { color: #fff; background: url("../images/ico_check-on.png") left center no-repeat; background-size: 21px 20px; }
 

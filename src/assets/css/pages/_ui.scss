@@ -20,9 +20,10 @@
     margin-right: 15px;
 
     input {
-      @include position(absolute);
+      @include position(absolute, $top: -9999px, $left: -9999px);
 
       & + label {
+        position: relative;
         display: inline-block;
         font-size: 14px;
         line-height: 20px;
