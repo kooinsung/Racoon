@@ -771,7 +771,7 @@
 
   &__result {
     padding-bottom: 10px;
-
+    padding-top: 129px;
     ul {
       margin: 7px 20px 0 20px;
     }
@@ -986,8 +986,6 @@
 }
 
 .details {
-  padding: 0 0 20px 0;
-
   &__items {
     background: #fff;
     padding: 0 10px 10px 10px;
@@ -1023,6 +1021,92 @@
     border: 1px solid #d1d1d1;
     overflow: hidden;
     @include border-radius(10px);
+  }
+
+  &__item-airline {
+    position: relative;
+    line-height: 20px;
+    font-size: 12px;
+    padding-left: 27px;
+    margin: 15px 10px 0 10px;
+
+    .thumb {
+      @include position(absolute, $top: 0px, $left: 0px);
+      display: inline-block;
+      @include size(20px);
+
+      img {
+        @include size(20px);
+      }
+    }
+  }
+
+  &__item-sdu {
+    position: relative;
+    margin: 10px 0;
+
+    .sdu {
+      width: 90px;
+      @include center-h(34px);
+
+      &-dep {
+        left: 0;
+        text-align: right;
+      }
+
+      &-arr {
+        right: 0;
+        text-align: left;
+      }
+
+      .three-code {
+        font-size: 14px;
+        font-weight: 700;
+        display: block;
+      }
+
+      .time {
+        font-size: 14px;
+        font-weight: 700;
+        display: block;
+      }
+    }
+
+    .sdu-info {
+      @include position(relative);
+      margin: 0 100px 0 100px;
+      font-size: 10px;
+      color: #606060;
+      text-align: center;
+      background: url('#{$base-img-path}/ico_dotted.png') center center repeat-x;
+      background-size: 4px 2px;
+
+      &:before, &:after {
+        content: '';
+        @include size(4px);
+        @include border-radius(2px);
+        @include center-h(4px);
+        background: #a5a5a5;
+      }
+
+      &:before {
+        left: 0;
+      }
+
+      &:after {
+        right: 0;
+      }
+
+      .info1 {
+        display: block;
+        padding-bottom: 7px;
+      }
+
+      .info2 {
+        display: block;
+        padding-top: 7px;
+      }
+    }
   }
 
   &__item-toggle {
@@ -1236,16 +1320,149 @@
   }
 
   &__bt {
+    padding: 0 10px 20px 10px;
     button {
       width: 100%;
-      height: 50px;
-      line-height: 50px;
+      height: 48px;
+      line-height: 48px;
       text-align: center;
       background: #00a64e;
       color: #fff;
       font-size: 14px;
       font-weight: 700;
-      @include border-radius(50px);
+      @include border-radius(48px);
+    }
+  }
+
+  &__item-tips {
+    border-top: 1px solid #d1d1d1;
+    background: #f9f9f9;
+    padding: 20px 10px;
+
+    p {
+      @include position(relative);
+      font-size: 14px;
+      padding-left: 35px;
+      line-height: 150%;
+
+      span {
+        border: 1px solid red;
+        @include size(22px);
+        @include position(absolute, $top: 5px, $left: 0px);
+      }
+
+      img {
+        @include size(22px);
+      }
+    }
+
+    ul {
+      margin: 25px 0;
+    }
+
+    li {
+      font-size: 12px;
+      font-weight: 700;
+      color: #3c9800;
+      margin: 10px 20px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    button {
+      width: 100%;
+      height: 48px;
+      line-height: 48px;
+      text-align: center;
+      background: #3c9800;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      @include border-radius(48px);
+    }
+  }
+
+  &__bag {
+    @include position(relative);
+    padding: 20px 10px;
+    background: #fff;
+
+    .details__items {
+      padding: 0;
+      box-shadow: none !important;
+    }
+  }
+
+  &__bag-tit {
+    margin-bottom: 20px;
+    min-height: 70px;
+
+    .thumb {
+      border: 1px solid red;
+      @include position(absolute, $top: 20px, $left: 10px);
+      @include size(66px);
+    }
+
+    .txt {
+      font-size: 14px;
+      line-height: 130%;
+      margin-left: 80px;
+    }
+  }
+
+  &__bag-list {
+
+  }
+
+  &__meal-list {
+    .tit {
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .list {
+      font-size: 0;
+      margin: 20px 0 30px 0;
+
+      li {
+        display: inline-block;
+        width: 33.33%;
+      }
+
+      .in {
+        padding: 0 5px;
+      }
+
+      .name {
+        font-size: 10px;
+      }
+
+      .thumb {
+        display: block;
+        margin: 10px 0 5px 0;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .price {
+        font-size: 14px;
+      }
+    }
+
+    button {
+      width: 100%;
+      height: 48px;
+      line-height: 48px;
+      text-align: center;
+      background: #00a64e;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      @include border-radius(48px);
     }
   }
 }
@@ -1281,7 +1498,6 @@
 
   &.scrolling {
     .content {
-      padding-top: 248px;
     }
 
     .search-trips-form {
@@ -1306,7 +1522,19 @@
       top: 103px;
       left: 0;
       right: 0;
-      z-index: 40;
+      z-index: 210;
+      border-bottom: 1px solid #7d7d7d;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        background: rgba(96, 96, 96, .7);
+      }
     }
 
     .in-layer {

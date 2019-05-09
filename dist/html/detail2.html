@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="viewport"
+        content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="Description" content="">
+  <meta property="og:title" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <link rel="shortcut icon" href="" type="image/x-icon">
+  <link rel="stylesheet" href="../assets/css/all.min.css">
+
+</head>
+
+<body class="sub">
+<header class="header">
+  <button type="button" class="header__close">close</button>
+  <strong class="header__tit">기내 수하물 정보</strong>
+</header>
+
+<div class="container">
+  <div class="content">
+    <div class="details">
+      <div class="details__bag">
+        <div class="details__bag-tit">
+          <span class="thumb"><img src="" alt=""></span>
+          <p class="txt">기내 선반이나 좌석 밑에 수용가능한 3면 총합 115cm (가로 55cm,세로 40cm, 높이 20cm) 이하이고 무게가 10Kg이하인 1개의 휴대품은 무료
+          </p>
+        </div>
+        <div class="details__bag-list">
+          <strong>기내 휴대 가능 품목 리스트</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="../assets/js/jquery-1.12.4.js"></script>
+<script src="../assets/js/jquery-ui.js"></script>
+<link rel="stylesheet" href="../assets/js/ui.js">
+
+<script>
+  $(function () {
+    $(window).scroll(function () {
+      if ($(window).scrollTop() >= 45) {
+        $('body').addClass('scrolling');
+      } else {
+        $('body').removeClass('scrolling');
+      }
+    });
+
+    $("#slider").slider({
+      range: "max",
+      min: 1,
+      max: 14,
+      step: 1,
+      create: function (event, ui) {
+      },
+      slide: function (event, ui) {
+      }
+    });
+
+    $("#calendars-inline-stage").datepicker({
+      minDate: 0,
+      numberOfMonths: [8, 1],
+      dateFormat: "MM dd일 (DD)",
+      beforeShowDay: function (date) {
+        var date1 = $.datepicker.parseDate("MM dd일 (DD)", $("#dep-range").val());
+        var date2 = $.datepicker.parseDate("MM dd일 (DD)", $("#arr-range").val());
+
+        if (date1 && date && (date1.getTime() == date.getTime())) {
+          return [true, 'ui-state-selected-range ui-range-start', ''];
+        }
+        if (date2 && date && (date2.getTime() == date.getTime())) {
+          return [true, 'ui-state-selected-range ui-range-end', ''];
+        }
+
+        if (date >= date1 && date <= date2) {
+          return [true, 'ui-state-selected-range', ''];
+        }
+        var d = date.getTime();
+
+        return [true, '', ''];
+        //return [true, date1 && ((date.getTime() == date1.getTime()) || (date2 && date >= date1 && date <= date2)) ? "dp-highlight" : ""];/
+      },
+      onSelect: function (dateText, inst) {
+        var date1 = $.datepicker.parseDate("MM dd일 (DD)", $("#dep-range").val());
+        var date2 = $.datepicker.parseDate("MM dd일 (DD)", $("#arr-range").val());
+        var selectedDate = $.datepicker.parseDate("MM dd일 (DD)", dateText);
+
+        if (!date1 || date2) {
+          $("#dep-range").val(dateText);
+          $("#arr-range").val("");
+          $(this).datepicker();
+        } else if (selectedDate < date1) {
+          $("#arr-range").val($("#dep-range").val());
+          $("#dep-range").val(dateText);
+          $(this).datepicker();
+        } else {
+          $("#arr-range").val(dateText);
+          $(this).datepicker();
+        }
+      }
+    });
+  });
+</script>
+</body>
+
+</html>
