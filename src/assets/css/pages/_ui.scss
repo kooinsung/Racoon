@@ -157,11 +157,12 @@
 
     input {
       &:disabled {
+        color: #a5a5a5;
+        background: #fff;
+        opacity: 1 !important;
         @include placeholder() {
           color: #a5a5a5;
         }
-        color: #a5a5a5;
-        background: #fff !important;
       }
     }
   }
