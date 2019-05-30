@@ -161,7 +161,7 @@
           color: #a5a5a5;
         }
         color: #a5a5a5;
-        background: #fff;
+        background: #fff !important;
       }
     }
   }
@@ -228,7 +228,7 @@
 
     &:before {
       content: '';
-      @include position(absolute, $top: -9px, $left: 70px);
+      @include position(absolute, $top: -8px, $left: 70px);
       width: 18px;
       height: 9px;
       background: url('#{$base-img-path}/ico_angle.png') center center no-repeat;
