@@ -538,10 +538,7 @@ button.swiper-pagination-bullet { border: none; margin: 0; padding: 0; -webkit-b
 
 .search-trips-form__input-seat--disabled:before { background: #fff url("../images/ico_seat-disabled.svg") center center no-repeat; background-size: 18px 24px; }
 
-.search-trips-form__input-seat--disabled input:disabled {
-  color: #a5a5a5;
-  background: #fff !important;
-}
+.search-trips-form__input-seat--disabled input:disabled { color: #a5a5a5; background: #fff; opacity: 1 !important; }
 
 .search-trips-form__input-seat--disabled input:disabled.placeholder { color: #a5a5a5; }
 
@@ -565,16 +562,7 @@ button.swiper-pagination-bullet { border: none; margin: 0; padding: 0; -webkit-b
 
 .search-trips-form__seat-count-layer { position: absolute; top: 60px; right: 0px; left: 0px; z-index: 50; height: 207px; background: #fff; border-radius: 10px; -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2); box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2); }
 
-.search-trips-form__seat-count-layer:before {
-  content: '';
-  position: absolute;
-  top: -8px;
-  left: 70px;
-  width: 18px;
-  height: 9px;
-  background: url("../images/ico_angle.png") center center no-repeat;
-  background-size: 18px 9px;
-}
+.search-trips-form__seat-count-layer:before { content: ''; position: absolute; top: -8px; left: 70px; width: 18px; height: 9px; background: url("../images/ico_angle.png") center center no-repeat; background-size: 18px 9px; }
 
 .search-trips-form__seat-count-layer .dl-items dl { position: relative; border-bottom: 1px solid #d1d1d1; margin: 0 10px; height: 45px; }
 
