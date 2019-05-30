@@ -1,5 +1,6 @@
 <script src="../assets/js/jquery-1.12.4.js"></script>
 <script src="../assets/js/jquery-ui.js"></script>
+<script src="../assets/js/swiper.js"></script>
 <link rel="stylesheet" href="../assets/js/ui.js">
 
 <script>
@@ -10,6 +11,12 @@
       } else {
         $('body').removeClass('scrolling');
       }
+    });
+
+    var swiper = new Swiper('.banners__items .swiper-container', {
+      pagination: {
+        el: '.banners__items .swiper-pagination',
+      },
     });
 
     $("#slider").slider({

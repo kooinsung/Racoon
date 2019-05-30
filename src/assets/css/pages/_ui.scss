@@ -1,5 +1,6 @@
 .container {
   padding-top: 45px;
+  padding-bottom: 53px;
 }
 
 .search-trips-form {
@@ -26,24 +27,39 @@
         @include position(relative);
         display: inline-block;
         font-size: 14px;
-        line-height: 20px;
-        color: #0b704e;
-        padding-left: 26px;
-        background: url('#{$base-img-path}/ico_check-off.png') left center no-repeat;
-        background-size: 21px 20px;
+        line-height: 14px;
+        color: #fff;
+        padding-left: 22px;
+
+        &:before {
+          content: '';
+          @include position(absolute, $top: 0px, $left: 0px);
+          width: 14px;
+          height: 14px;
+          border-radius: 14px;
+          background: #fff;
+        }
       }
 
       &:checked {
         & + label {
           color: #fff;
-          background: url('#{$base-img-path}/ico_check-on.png') left center no-repeat;
-          background-size: 21px 20px;
+
+          &:after {
+            content: '';
+            @include position(absolute, $top: 3px, $left: 3px);
+            width: 8px;
+            height: 8px;
+            border-radius: 8px;
+            background: #00a64e;
+          }
         }
       }
     }
   }
 
   &__row {
+    @include position(relative);
     height: 44px;
     margin-bottom: 16px;
   }
@@ -56,11 +72,25 @@
       span {
         margin-right: 6px;
       }
+
+      .search-trips-form__input-date {
+        &:before {
+          background: url('#{$base-img-path}/ico_departure-date.svg') center center no-repeat;
+          background-size: 20px 22px;
+        }
+      }
     }
 
     &:last-child {
       span {
         margin-left: 6px;
+      }
+
+      .search-trips-form__input-date {
+        &:before {
+          background: url('#{$base-img-path}/ico_return-date.svg') center center no-repeat;
+          background-size: 20px 22px;
+        }
       }
     }
   }
@@ -76,8 +106,6 @@
       width: 43px;
       height: 44px;
       @include position(absolute, $top: 0px, $left: 0px);
-      top: 0;
-      left: 0;
     }
 
     input {
@@ -94,36 +122,47 @@
 
   &__input-dep {
     &:before {
-      background: url('#{$base-img-path}/ico_dep.png') center center no-repeat;
-      background-size: 22px 18px;
+      background: url('#{$base-img-path}/ico_dep.svg') center center no-repeat;
+      background-size: 26px 22px;
     }
   }
 
   &__input-arr {
     &:before {
-      background: url('#{$base-img-path}/ico_arr.png') center center no-repeat;
-      background-size: 20px 20px;
-    }
-  }
-
-  &__input-date {
-    &:before {
-      background: url('#{$base-img-path}/ico_cal.png') center center no-repeat;
-      background-size: 18px 21px;
+      background: url('#{$base-img-path}/ico_arr.svg') center center no-repeat;
+      background-size: 26px 22px;
     }
   }
 
   &__input-seat-count {
     &:before {
-      background: url('#{$base-img-path}/ico_seat-count.png') center center no-repeat;
-      background-size: 22px 17px;
+      background: url('#{$base-img-path}/ico_seat-count.svg') center center no-repeat;
+      background-size: 23px 21px;
     }
   }
 
   &__input-seat {
+
     &:before {
-      background: url('#{$base-img-path}/ico_seat.png') center center no-repeat;
-      background-size: 18px 17px;
+      background: url('#{$base-img-path}/ico_seat.svg') center center no-repeat;
+      background-size: 18px 24px;
+    }
+  }
+
+  &__input-seat--disabled {
+    &:before {
+      background: #fff url('#{$base-img-path}/ico_seat-disabled.svg') center center no-repeat;
+      background-size: 18px 24px;
+    }
+
+    input {
+      &:disabled {
+        @include placeholder() {
+          color: #a5a5a5;
+        }
+        color: #a5a5a5;
+        background: #fff;
+      }
     }
   }
 
@@ -135,9 +174,9 @@
       @include border-radius(48px);
       text-align: center;
       font-size: 16px;
-      color: #fff;
+      color: #0b6f55;
       font-weight: 700;
-      background: #0b704e;
+      background: #ffe155;
     }
   }
 
@@ -145,10 +184,19 @@
     @include position(relative);
     font-size: 12px;
     color: #fff;
-    margin-top: 25px;
-    padding-left: 56px;
-    background: url('#{$base-img-path}/ico_set.png') left center no-repeat;
-    background-size: 44px 25px;
+    padding: 15px 0 0 100px;
+    min-height: 44px;
+    line-height: 150%;
+
+    &:before {
+      content: '';
+      @include position(absolute, $top: 50%, $left: 0px);
+      width: 85px;
+      height: 44px;
+      margin-top: -22px;
+      background: url('#{$base-img-path}/ico_set.svg') left center no-repeat;
+      background-size: 85px 44px;
+    }
   }
 
   &__minimized {
@@ -168,14 +216,175 @@
       color: #fff;
     }
   }
+
+  &__seat-count-layer {
+    @include position(absolute, $top: 60px, $left: 0px, $right: 0px);
+    z-index: 50;
+    height: 207px;
+    background: #fff;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+
+    &:before {
+      content: '';
+      @include position(absolute, $top: -9px, $left: 70px);
+      width: 18px;
+      height: 9px;
+      background: url('#{$base-img-path}/ico_angle.png') center center no-repeat;
+      background-size: 18px 9px;
+    }
+
+    .dl-items {
+      dl {
+        @include position(relative);
+        border-bottom: 1px solid #d1d1d1;
+        margin: 0 10px;
+        height: 45px;
+      }
+
+      dt {
+        font-size: 14px;
+        color: #000;
+        line-height: 45px;
+
+        em {
+          font-size: 11px;
+          color: #606060;
+          margin-left: 3px;
+        }
+      }
+
+      dd {
+        @include position(absolute, $top: 0px, $right: 0px);
+        height: 45px;
+      }
+    }
+
+    .person-form {
+      @include position(relative);
+      width: 88px;
+      height: 23px;
+      margin-top: 10px;
+
+      button {
+        @include position(absolute, $top: 0px);
+        width: 22px;
+        height: 23px;
+
+        &.subtract {
+          left: 0;
+          background: url('#{$base-img-path}/ico_subtract.svg') center center no-repeat;
+          background-size: 22px 23px;
+        }
+
+        &.add {
+          right: 0;
+          background: url('#{$base-img-path}/ico_add.svg') center center no-repeat;
+          background-size: 22px 23px;
+        }
+      }
+
+      input {
+        display: block;
+        width: 44px;
+        height: 23px;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 14px;
+        color: #000;
+        @include placeholder() {
+          color: #000;
+        }
+      }
+    }
+
+    .success {
+      display: block;
+      width: 276px;
+      height: 40px;
+      margin: 15px auto 0 auto;
+      line-height: 40px;
+      text-align: center;
+      border: 1px solid #07a853;
+      box-sizing: border-box;
+      border-radius: 40px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #00a64e;
+    }
+  }
+}
+
+.banners {
+  padding: 15px 20px;
+  font-size: 0;
+
+  &__tit {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  &__link {
+    display: block;
+    margin: 0 20px;
+    overflow: hidden;
+    border-radius: 2px;
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  &__thumb {
+    display: block;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__txts {
+    padding: 10px;
+  }
+
+  &__airline {
+    display: block;
+    font-size: 12px;
+    color: #606060;
+  }
+
+  &__copy {
+    display: block;
+    font-size: 14px;
+    color: #606060;
+    margin: 3px 0 7px 0;
+  }
+
+  &__date {
+    display: block;
+    font-size: 10px;
+    color: #606060;
+  }
+
+  .swiper-pagination-bullet {
+    width: 5px;
+    height: 5px;
+    display: inline-block;
+    border-radius: 3px;
+    background: #d1d1d1;
+    opacity: 1;
+    margin: 15px 3px 0 3px !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #00a64e;
+    opacity: 1;
+  }
 }
 
 .quick {
-  @include position(absolute);
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 50;
+  @include position(fixed, $bottom: 0px, $left: 0px, $right: 0px);
+  z-index: 500;
   border-top: 1px solid #d1d1d1;
   font-size: 0px;
   background: #fff;
@@ -196,27 +405,28 @@
   span {
     text-align: center;
     width: 100%;
-    @include position(absolute, $bottom: 0px, $left: 0px);
+    font-size: 8px;
+    @include position(absolute, $bottom: 5px, $left: 0px);
   }
 
   &__srch {
     a {
-      background: url('#{$base-img-path}/ico_srch-on.png') center 10px no-repeat;
-      background-size: 18px 18px;
+      background: url('#{$base-img-path}/ico_srch-on.svg') center 9px no-repeat;
+      background-size: 23px 24px;
     }
   }
 
   &__special-price {
     a {
-      background: url('#{$base-img-path}/ico_specialprice-off.png') center 10px no-repeat;
-      background-size: 20px 21px;
+      background: url('#{$base-img-path}/ico_specialprice-off.svg') center 9px no-repeat;
+      background-size: 24px 24px;
     }
   }
 
   &__profile {
     a {
-      background: url('#{$base-img-path}/ico_profile-off.png') center 12px no-repeat;
-      background-size: 16px 17px;
+      background: url('#{$base-img-path}/ico_profile-off.svg') center 11px no-repeat;
+      background-size: 26px 21px;
     }
   }
 }
@@ -654,12 +864,12 @@
     font-size: 14px;
     font-weight: 700;
     margin-bottom: 8px;
-    background: url('#{$base-img-path}/ico_toggle-off.png') right center no-repeat;
-    background-size: 13px 8px;
+    background: url('#{$base-img-path}/ico_toggle-off.svg') 98% center no-repeat;
+    background-size: 14px 10px;
 
     &.active {
-      background: url('#{$base-img-path}/ico_toggle-on.png') right center no-repeat;
-      background-size: 13px 8px;
+      background: url('#{$base-img-path}/ico_toggle-on.svg') 98% center no-repeat;
+      background-size: 14px 10px;
     }
   }
 
@@ -797,14 +1007,14 @@
 
   &__toggle {
     a {
-      background: url('#{$base-img-path}/ico_toggle-off.png') right center no-repeat;
-      background-size: 13px 9px;
+      background: url('#{$base-img-path}/ico_toggle-off.svg') 98% center no-repeat;
+      background-size: 14px 10px;
     }
 
     &--active {
       a {
-        background: url('#{$base-img-path}/ico_toggle-on.png') right center no-repeat;
-        background-size: 13px 9px;
+        background: url('#{$base-img-path}/ico_toggle-on.svg') 98% center no-repeat;
+        background-size: 14px 10px;
       }
     }
   }
@@ -907,7 +1117,7 @@
           z-index: 1;
           width: 50%;
           height: 20px;
-          background: #cceddc;
+          background: #ffe155;
           @include transform(translateY(-10px));
         }
         .ui-state-default {
@@ -937,7 +1147,7 @@
           z-index: 1;
           width: 50%;
           height: 20px;
-          background: #cceddc;
+          background: #ffe155;
           @include transform(translateY(-10px));
         }
 
@@ -1124,14 +1334,14 @@
       height: 8px;
       display: inline-block;
       margin-left: 5px;
-      background: url('#{$base-img-path}/ico_toggle-off.png') right center no-repeat;
-      background-size: 13px 8px;
+      background: url('#{$base-img-path}/ico_toggle-off.svg') 99% center no-repeat;
+      background-size: 14px 10px;
     }
 
     &.active {
       &:after {
-        background: url('#{$base-img-path}/ico_toggle-on.png') right center no-repeat;
-        background-size: 13px 8px;
+        background: url('#{$base-img-path}/ico_toggle-on.svg') 99% center no-repeat;
+        background-size: 14px 10px;
       }
     }
   }
@@ -1274,12 +1484,12 @@
             @include position(relative);
             width: 100%;
             height: 40px;
-            background: url('#{$base-img-path}/ico_toggle-off.png') right center no-repeat;
-            background-size: 13px 8px;
+            background: url('#{$base-img-path}/ico_toggle-off.svg') 98% center no-repeat;
+            background-size: 14px 10px;
 
             &.active {
-              background: url('#{$base-img-path}/ico_toggle-on.png') right center no-repeat;
-              background-size: 13px 8px;
+              background: url('#{$base-img-path}/ico_toggle-on.svg') 98% center no-repeat;
+              background-size: 14px 10px;
             }
           }
         }

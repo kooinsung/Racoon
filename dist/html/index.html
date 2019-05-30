@@ -24,7 +24,7 @@
 
 <body class="main">
 <header class="header">
-    <h1 class=header__logo>RACOON</h1>
+  <h1 class=header__logo><a href="" class=header__logo-link>RACOON</a></h1>
 </header>
 
 <div class="container">
@@ -67,10 +67,45 @@
             <span class="search-trips-form__input search-trips-form__input-seat-count">
               <input type="text" placeholder="1명" value="1명">
             </span>
+            <div class="search-trips-form__seat-count-layer">
+              <div class="dl-items">
+                <dl>
+                  <dt>성인</dt>
+                  <dd>
+                    <div class="person-form">
+                      <button type="button" class="subtract">-</button>
+                      <input type="text" value="1" placeholder="">
+                      <button type="button" class="add">+</button>
+                    </div>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>아동 <em>만 2-17세</em></dt>
+                  <dd>
+                    <div class="person-form">
+                      <button type="button" class="subtract">-</button>
+                      <input type="text" value="0" placeholder="">
+                      <button type="button" class="add">+</button>
+                    </div>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>아동 <em>만 2세 미만</em></dt>
+                  <dd>
+                    <div class="person-form">
+                      <button type="button" class="subtract">-</button>
+                      <input type="text" value="0" placeholder="">
+                      <button type="button" class="add">+</button>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+              <button type="button" class="success">완료</button>
+            </div>
           </div>
           <div class="search-trips-form__col">
-            <span class="search-trips-form__input search-trips-form__input-seat">
-              <input type="text" placeholder="이코노미">
+            <span class="search-trips-form__input search-trips-form__input-seat search-trips-form__input-seat--disabled">
+              <input type="text" placeholder="이코노미" disabled="disabled">
             </span>
           </div>
         </div>
@@ -78,7 +113,38 @@
           <button type="button">항공권 검색 GO!</button>
         </div>
         <div class="search-trips-form__tips">
-          추가 수하물 15kg, 기내식 밥 한 끼 최저가가 포함된 예상 가격까지 라쿤이 알려드려요!
+          추가 수하물과 기내식 최저가가 포함된 예상 가격까지 라쿤이 알려드려요!
+        </div>
+      </div>
+
+      <div class="banners">
+        <strong class="banners__tit">특가 이벤트</strong>
+        <div class="banners__items">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="" class="banners__link">
+                  <span class="banners__thumb"><img src="../assets/images/img_banner.png" alt=""></span>
+                  <div class="banners__txts">
+                    <em class="banners__airline">항공사명</em>
+                    <strong class="banners__copy">이벤트 헤드 카피 </strong>
+                    <span class="banners__date">2019.07.01 - 2019.07.31</span>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="" class="banners__link">
+                  <span class="banners__thumb"><img src="../assets/images/img_banner.png" alt=""></span>
+                  <div class="banners__txts">
+                    <em class="banners__airline">항공사명</em>
+                    <strong class="banners__copy">이벤트 헤드 카피 </strong>
+                    <span class="banners__date">2019.07.01 - 2019.07.31</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
         </div>
       </div>
 
@@ -95,6 +161,7 @@
 
 <script src="../assets/js/jquery-1.12.4.js"></script>
 <script src="../assets/js/jquery-ui.js"></script>
+<script src="../assets/js/swiper.js"></script>
 <link rel="stylesheet" href="../assets/js/ui.js">
 
 <script>
@@ -105,6 +172,12 @@
       } else {
         $('body').removeClass('scrolling');
       }
+    });
+
+    var swiper = new Swiper('.banners__items .swiper-container', {
+      pagination: {
+        el: '.banners__items .swiper-pagination',
+      },
     });
 
     $("#slider").slider({
