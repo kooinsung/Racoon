@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="format-detection" content="telephone=no"/>
-  <meta name="viewport"
-        content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta http-equiv="Cache-Control" content="no-cache">
   <meta http-equiv="Pragma" content="no-cache">
@@ -72,7 +72,7 @@
           <span>4월 9일 (화) - 4월 12일 (금)</span>
         </div>
       </div>
-      <div class="util-menus">
+        <div class="filter-menus">
         <ul>
           <li><a href="" class="is-actived">정렬</a></li>
           <li><a href="">필터</a></li>
@@ -80,7 +80,7 @@
         <ul>
           <li><a href="">항공권 가격</a></li>
           <li><a href="">예상 가격
-            <button type="button" class="noti">?</button>
+              <button type="button" class="noti">?</button>
           </a></li>
         </ul>
       </div>
@@ -242,8 +242,8 @@
         <input type="radio" id="sort-type2" name="sort-type">
         <label for="sort-type2">
           라쿤 추천 가격
-          <strong>저비용 항공사의 경우, <span>부치는 가방</span>과 <span>기내식을</span> 따로 구매하게 되기도 해요. 라쿤이 알려드리는 추가 수하물과 기내식 비용까지 더한 예상 총 가격으로 정렬해 보세요. 추가
-            수하물은
+            <strong>저비용 항공사의 경우, <span>부치는 가방</span>과 <span>기내식을</span> 따로 구매하게 되기도 해요. 라쿤이 알려드리는 추가 수하물과 기내식 비용까지 더한 예상
+                총 가격으로 정렬해 보세요. 추가 수하물은
             15kg 사전 구매 가격, 기내식은 밥 한 끼 사전 구매 가격 최저가 기준으로 산정합니다.</strong>
         </label>
       </li>
@@ -258,72 +258,79 @@
 
 <script src="../assets/js/jquery-1.12.4.js"></script>
 <script src="../assets/js/jquery-ui.js"></script>
+<script src="../assets/js/swiper.js"></script>
 <link rel="stylesheet" href="../assets/js/ui.js">
 
 <script>
-  $(function () {
-    $(window).scroll(function () {
-      if ($(window).scrollTop() >= 45) {
-        $('body').addClass('scrolling');
-      } else {
-        $('body').removeClass('scrolling');
-      }
+    $(function () {
+        $(window).scroll(function () {
+            if ($(window).scrollTop() >= 45) {
+                $('body').addClass('scrolling');
+            } else {
+                $('body').removeClass('scrolling');
+            }
+        });
+
+        var swiper = new Swiper('.banners__items .swiper-container', {
+            pagination: {
+                el: '.banners__items .swiper-pagination',
+            },
+        });
+
+        $("#slider").slider({
+            range: "max",
+            min: 1,
+            max: 14,
+            step: 1,
+            create: function (event, ui) {
+            },
+            slide: function (event, ui) {
+            }
+        });
+
+        $("#calendars-inline-stage").datepicker({
+            minDate: 0,
+            numberOfMonths: [8, 1],
+            dateFormat: "MM dd일 (DD)",
+            beforeShowDay: function (date) {
+                var date1 = $.datepicker.parseDate("MM dd일 (DD)", $("#dep-range").val());
+                var date2 = $.datepicker.parseDate("MM dd일 (DD)", $("#arr-range").val());
+
+                if (date1 && date && (date1.getTime() == date.getTime())) {
+                    return [true, 'ui-state-selected-range ui-range-start', ''];
+                }
+                if (date2 && date && (date2.getTime() == date.getTime())) {
+                    return [true, 'ui-state-selected-range ui-range-end', ''];
+                }
+
+                if (date >= date1 && date <= date2) {
+                    return [true, 'ui-state-selected-range', ''];
+                }
+                var d = date.getTime();
+
+                return [true, '', ''];
+                //return [true, date1 && ((date.getTime() == date1.getTime()) || (date2 && date >= date1 && date <= date2)) ? "dp-highlight" : ""];/
+            },
+            onSelect: function (dateText, inst) {
+                var date1 = $.datepicker.parseDate("MM dd일 (DD)", $("#dep-range").val());
+                var date2 = $.datepicker.parseDate("MM dd일 (DD)", $("#arr-range").val());
+                var selectedDate = $.datepicker.parseDate("MM dd일 (DD)", dateText);
+
+                if (!date1 || date2) {
+                    $("#dep-range").val(dateText);
+                    $("#arr-range").val("");
+                    $(this).datepicker();
+                } else if (selectedDate < date1) {
+                    $("#arr-range").val($("#dep-range").val());
+                    $("#dep-range").val(dateText);
+                    $(this).datepicker();
+                } else {
+                    $("#arr-range").val(dateText);
+                    $(this).datepicker();
+                }
+            }
+        });
     });
-
-    $("#slider").slider({
-      range: "max",
-      min: 1,
-      max: 14,
-      step: 1,
-      create: function (event, ui) {
-      },
-      slide: function (event, ui) {
-      }
-    });
-
-    $("#calendars-inline-stage").datepicker({
-      minDate: 0,
-      numberOfMonths: [8, 1],
-      dateFormat: "MM dd일 (DD)",
-      beforeShowDay: function (date) {
-        var date1 = $.datepicker.parseDate("MM dd일 (DD)", $("#dep-range").val());
-        var date2 = $.datepicker.parseDate("MM dd일 (DD)", $("#arr-range").val());
-
-        if (date1 && date && (date1.getTime() == date.getTime())) {
-          return [true, 'ui-state-selected-range ui-range-start', ''];
-        }
-        if (date2 && date && (date2.getTime() == date.getTime())) {
-          return [true, 'ui-state-selected-range ui-range-end', ''];
-        }
-
-        if (date >= date1 && date <= date2) {
-          return [true, 'ui-state-selected-range', ''];
-        }
-        var d = date.getTime();
-
-        return [true, '', ''];
-        //return [true, date1 && ((date.getTime() == date1.getTime()) || (date2 && date >= date1 && date <= date2)) ? "dp-highlight" : ""];/
-      },
-      onSelect: function (dateText, inst) {
-        var date1 = $.datepicker.parseDate("MM dd일 (DD)", $("#dep-range").val());
-        var date2 = $.datepicker.parseDate("MM dd일 (DD)", $("#arr-range").val());
-        var selectedDate = $.datepicker.parseDate("MM dd일 (DD)", dateText);
-
-        if (!date1 || date2) {
-          $("#dep-range").val(dateText);
-          $("#arr-range").val("");
-          $(this).datepicker();
-        } else if (selectedDate < date1) {
-          $("#arr-range").val($("#dep-range").val());
-          $("#dep-range").val(dateText);
-          $(this).datepicker();
-        } else {
-          $("#arr-range").val(dateText);
-          $(this).datepicker();
-        }
-      }
-    });
-  });
 </script>
 </body>
 
