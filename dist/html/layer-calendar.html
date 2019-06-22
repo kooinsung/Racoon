@@ -132,6 +132,9 @@
       </div>
     </div>
   </div>
+  <div class="layers__calendars-selected">
+      <button type="button">선택 완료</button>
+  </div>
 
   <script src="../assets/js/jquery-1.12.4.js"></script>
   <script src="../assets/js/jquery-ui.js"></script>
@@ -139,37 +142,41 @@
   <link rel="stylesheet" href="../assets/js/ui.js">
 
   <script>
-    $(function() {
-        $(window).scroll(function () {
-        if ($(window).scrollTop() >= 45) {
-          $('body').addClass('scrolling');
-        } else {
-          $('body').removeClass('scrolling');
-        }
-      });
+    window.onscroll = function () {
+      var body = document.body;
+      if (window.pageYOffset > 45) {
+        body.classList.add("scrolling");
+        console.log("a");
+      } else {
+        body.classList.remove("scrolling");
+        console.log("b");
+      }
+    }
 
-        var swiper = new Swiper('.banners__items .swiper-container', {
-            pagination: {
-                el: '.banners__items .swiper-pagination',
-            },
-        });
+    $(function () {
+
+      var swiper = new Swiper('.banners__items .swiper-container', {
+        pagination: {
+          el: '.banners__items .swiper-pagination',
+        },
+      });
 
       $("#slider").slider({
         range: "max",
         min: 1,
         max: 14,
         step: 1,
-          create: function (event, ui) {
-          },
-          slide: function (event, ui) {
-          }
+        create: function (event, ui) {
+        },
+        slide: function (event, ui) {
+        }
       });
 
       $("#calendars-inline-stage").datepicker({
         minDate: 0,
         numberOfMonths: [8, 1],
         dateFormat: "MM dd일 (DD)",
-          beforeShowDay: function (date) {
+        beforeShowDay: function (date) {
           var date1 = $.datepicker.parseDate("MM dd일 (DD)", $("#dep-range").val());
           var date2 = $.datepicker.parseDate("MM dd일 (DD)", $("#arr-range").val());
 
@@ -188,7 +195,7 @@
           return [true, '', ''];
           //return [true, date1 && ((date.getTime() == date1.getTime()) || (date2 && date >= date1 && date <= date2)) ? "dp-highlight" : ""];/
         },
-          onSelect: function (dateText, inst) {
+        onSelect: function (dateText, inst) {
           var date1 = $.datepicker.parseDate("MM dd일 (DD)", $("#dep-range").val());
           var date2 = $.datepicker.parseDate("MM dd일 (DD)", $("#arr-range").val());
           var selectedDate = $.datepicker.parseDate("MM dd일 (DD)", dateText);

@@ -1403,6 +1403,7 @@
 
   &__calendars {
     padding-top: 170px;
+    padding-bottom: 100px;
     .ui-datepicker {
       padding: 0;
     }
@@ -1480,7 +1481,7 @@
           z-index: 1;
           width: 50%;
           height: 20px;
-          background: #ffe155;
+          background: #cceddc;
           @include transform(translateY(-10px));
         }
         .ui-state-default {
@@ -1510,7 +1511,7 @@
           z-index: 1;
           width: 50%;
           height: 20px;
-          background: #ffe155;
+          background: #cceddc;
           @include transform(translateY(-10px));
         }
 
@@ -1522,7 +1523,6 @@
       }
 
     }
-
 
     .ui-datepicker-group {
       float: none;
@@ -1554,6 +1554,28 @@
         height: 40px;
         box-sizing: border-box;
       }
+    }
+  }
+
+  &__calendars-selected {
+    @include position(fixed, $left: 0, $right: 0, $bottom: 0);
+    z-index: 500;
+    font-size: 0;
+    background: #fff;
+    padding: 12px 20px;
+    -webkit-box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px -2px 5px -1px rgba(0, 0, 0, 0.1);
+
+    button {
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 40px;
+      text-align: center;
+      background: #ffe155;
+      font-size: 14px;
+      font-weight: 700;
+      color: #0b6f55;
     }
   }
 }
@@ -1653,39 +1675,47 @@
 .details {
   &__items {
     background: #fff;
-    padding: 0 10px 10px 10px;
-    -webkit-box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.1);
+    padding-bottom: 15px;
+    //padding: 0 10px 10px 10px;
+    //-webkit-box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.1);
+    //box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.1);
   }
 
   &__item {
+    border: 1px solid #d1d1d1;
+    border-radius: 10px;
+    margin: 0 10px;
+    overflow: hidden;
   }
 
   &__item-tit {
     @include position(relative);
-    padding: 15px 10px 10px 10px;
+    padding: 15px 15px 10px 15px;
 
     p {
       font-size: 14px;
       color: #606060;
 
       strong {
+        font-size: 16px;
         font-weight: 700;
         color: #000;
+        margin-right: 5px;
       }
     }
 
     em {
-      @include position(absolute, $bottom: 10px, $right: 10px);
-      font-size: 10px;
+      @include position(absolute, $bottom: 10px, $right: 15px);
+      font-size: 12px;
       color: #606060;
     }
   }
 
   &__item-view {
-    border: 1px solid #d1d1d1;
+    //border: 1px solid #d1d1d1;
     overflow: hidden;
-    @include border-radius(10px);
+    //border-top-left-radius: 10px;
+    //border-top-right-radius: 10px;
   }
 
   &__item-airline {
@@ -1708,10 +1738,10 @@
 
   &__item-sdu {
     position: relative;
-    margin: 10px 0;
+    margin: 20px 0;
 
     .sdu {
-      width: 90px;
+      width: 100px;
       @include center-h(34px);
 
       &-dep {
@@ -1725,32 +1755,40 @@
       }
 
       .three-code {
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 700;
         display: block;
       }
 
       .time {
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 700;
         display: block;
+        margin-top: 5px;
       }
     }
 
-    .sdu-info {
+    .sdu-total-time {
       @include position(relative);
-      margin: 0 100px 0 100px;
+      margin: 0 110px 0 110px;
       font-size: 10px;
       color: #606060;
       text-align: center;
-      background: url('#{$base-img-path}/ico_dotted.png') center center repeat-x;
-      background-size: 4px 2px;
+      background: url('#{$base-img-path}/ico_line.png') center center repeat-x;
+
+      strong {
+        font-size: 14px;
+        color: #000;
+        display: inline-block;
+        background: #fff;
+        padding: 0 10px;
+      }
 
       &:before, &:after {
         content: '';
-        @include size(4px);
-        @include border-radius(2px);
-        @include center-h(4px);
+        @include size(3px);
+        @include border-radius(3px);
+        @include center-h(3px);
         background: #a5a5a5;
       }
 
@@ -1777,11 +1815,15 @@
   &__item-toggle {
     @include position(relative);
     text-align: center;
-    width: 100%;
+    display: block;
+    width: 100px;
     font-size: 12px;
-    color: #3c9800;
-    height: 50px;
-    line-height: 50px;
+    color: #0b6f55;
+    height: 24px;
+    border-radius: 24px;
+    line-height: 24px;
+    margin: 0 auto 13px auto;
+    background: #ffe155;
 
     &:after {
       content: '';
@@ -1802,13 +1844,15 @@
   }
 
   &__item-detail {
-    background: #00a64e;
+    background: #ffe155;
     font-size: 0;
     padding: 5px 0;
-
+    border-top: 1px solid #d1d1d1;
+    -webkit-box-shadow: inset 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
     li {
       font-size: 12px;
-      color: #fff;
+      color: #000;
       height: 19px;
       line-height: 19px;
       padding: 10px 0 10px 10px;
@@ -1821,58 +1865,393 @@
       width: 19px;
       height: 19px;
       background: #fff;
-    }
-  }
 
-  &__price {
-    background: #fff;
-    margin: 12px 10px;
-    //overflow:hidden;
-    @include border-radius(10px);
-    -webkit-box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.1);
-  }
+      &.i1 {
+        background: url('#{$base-img-path}/ico_flight2.svg') center center no-repeat;
+        background-size: 18px 16px;
+      }
 
-  &__price-default {
-    table {
-      width: 100%;
+      &.i2 {
+        background: url('#{$base-img-path}/ico_bag.svg') center center no-repeat;
+        background-size: 12px 18px;
+      }
 
-      th {
-        font-size: 14px;
-        font-weight: 700;
-        text-align: left;
-        padding: 15px 0 10px 0;
+      &.i3 {
+        background: url('#{$base-img-path}/ico_wifi.svg') center center no-repeat;
+        background-size: 19px 13px;
+      }
+
+      &.i4 {
+        background: url('#{$base-img-path}/ico_entertainment.svg') center center no-repeat;
+        background-size: 17px 12px;
+      }
+
+      &.i5 {
+        background: url('#{$base-img-path}/ico_seat2.svg') center center no-repeat;
+        background-size: 13px 17px;
       }
     }
   }
 
-  &__price-opt {
-    .opt-check {
+  &__item-vi {
+    background: #f9f9f9;
+    font-size: 14px;
+    font-weight: 700;
+    color: #00a64e;
+    text-align: center;
+    height: 42px;
+    line-height: 42px;
+    border-top: 1px solid #d1d1d1;
+    border-bottom: 1px solid #d1d1d1;
+  }
+
+  &__reservation {
+    @include border-radius(10px);
+    overflow: hidden;
+    margin: 0 10px;
+    background: #fff;
+    -webkit-box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &__reservation-info {
+    @include position(relative);
+    background: #00a64e;
+    padding: 18px 0;
+
+    &:before {
+      content: '';
+      @include position(absolute, $top: 50%, $left: 18px);
+      width: 41px;
+      height: 30px;
+      margin-top: -15px;
+    }
+
+    .txts {
+      color: #fff;
+      margin: 0 0 0 75px;
+
+      strong {
+        font-size: 16px;
+        font-weight: 700;
+        display: block;
+      }
+
+      span {
+        font-size: 11px;
+      }
+    }
+  }
+
+  &__reservation-list {
+    li {
+      @include position(relative);
+      min-height: 36px;
+      padding: 10px 0 10px 10px;
+      border-bottom: 1px solid #d1d1d1;
+    }
+
+    .txt {
+      em {
+        font-size: 12px;
+      }
+
+      strong {
+        display: block;
+        font-size: 18px;
+        font-weight: 700;
+        margin-top: 3px;
+      }
+    }
+
+    button {
+      @include position(absolute, $top: 50%, $right: 10px);
+      width: 122px;
+      height: 36px;
+      margin-top: -18px;
+      line-height: 36px;
+      @include border-radius(36px);
+      background: #00a64e;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+
+  &__reservation-tip {
+    strong {
       display: block;
+      padding: 0 10px;
+      height: 30px;
+      line-height: 30px;
+      font-size: 12px;
+      color: #00a64e;
 
-      input {
-        @include position(absolute, $top: -9999px, $left: -9999px);
+      &:after {
+        content: '';
+        display: inline-block;
+        vertical-align: top;
+        width: 15px;
+        height: 15px;
+        margin: 5px 0 0 5px;
+      }
+    }
 
-        & + label {
-          @include position(relative);
-          display: inline-block;
-          width: 18px;
-          height: 18px;
-          font-size: 14px;
-          line-height: 18px;
-          color: #0b704e;
-          background: url('#{$base-img-path}/ico_check3-off.png') left center no-repeat;
-          background-size: 18px 18px;
-          cursor: pointer;
-        }
+    p {
+      border-top: 1px solid #d1d1d1;
+      padding: 8px 10px;
+      line-height: 150%;
+      font-size: 12px;
+      background: #e8e8e8;
+      -webkit-box-shadow: inset 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
+      box-shadow: inset 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+  }
 
-        &:checked {
-          & + label {
-            color: #fff;
-            background: url('#{$base-img-path}/ico_check3-on.png') left center no-repeat;
-            background-size: 18px 18px;
+  &__price {
+    @include border-radius(10px);
+    overflow: hidden;
+    margin: 15px 10px 15px 10px;
+    background: #fff;
+    -webkit-box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &__price-tit {
+    @include position(relative);
+    font-size: 14px;
+    color: #fff;
+    line-height: 150%;
+    background: #00a64e;
+    padding: 17px 10px 17px 75px;
+
+    &:before {
+      content: '';
+      @include position(absolute, $top: 50%, $left: 16px);
+      width: 44px;
+      height: 34px;
+      margin-top: -17px;
+      background: url('#{$base-img-path}/ico_racoon.svg') center center no-repeat;
+      background-size: 44px 36px;
+    }
+
+    &:after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      transform: rotate(45deg);
+      background: #00a64e;
+      @include position(absolute, $bottom: -6px, $left: 33px);
+    }
+  }
+
+  &__price-opt {
+    table {
+      width: 100%;
+      text-align: left;
+
+      thead {
+        th {
+          &.center {
+            text-align: center;
+          }
+
+          &:first-child {
+            padding-left: 10px;
+          }
+
+          &:last-child {
+            padding-left: 10px;
           }
         }
+
+        .default {
+          th {
+            font-size: 14px;
+            font-weight: 700;
+            height: 40px;
+            padding-top: 5px;
+          }
+        }
+
+        .tit {
+          th {
+            font-size: 14px;
+            border-top: 1px solid #00a64e;
+            border-bottom: 1px solid #00a64e;
+            color: #00a64e;
+            height: 40px;
+          }
+        }
+      }
+
+      tfoot {
+        th {
+          padding-left: 10px;
+          font-size: 14px;
+          font-weight: 700;
+          height: 45px;
+          border-top: 1px solid #d1d1d1;
+
+          span {
+            display: inline-block;
+            @include position(relative);
+
+            &:after {
+              content: '';
+              display: inline-block;
+              vertical-align: top;
+              width: 15px;
+              height: 15px;
+              margin: 0 0 0 5px;
+            }
+          }
+        }
+
+        td {
+          padding-left: 10px;
+          font-size: 14px;
+          font-weight: 700;
+          height: 45px;
+          border-top: 1px solid #d1d1d1;
+        }
+      }
+
+      tbody {
+        td {
+          @include position(relative);
+          height: 45px;
+          font-size: 14px;
+
+          &:first-child {
+            padding-left: 10px;
+          }
+
+          &:last-child {
+            padding-left: 10px;
+          }
+
+          &.refresh {
+            color: #00a64e;
+          }
+
+          &.link {
+            &:after {
+              content: '';
+              @include position(absolute, $top: 50%, $right: 20px);
+              width: 9px;
+              height: 14px;
+              margin-top: -7px;
+              background: url('#{$base-img-path}/ico_right-arrow.svg') center center no-repeat;
+              background-size: 9px 14px;
+            }
+          }
+        }
+      }
+
+      .opt-check {
+        display: block;
+
+        input {
+          @include position(absolute, $top: -9999px, $left: -9999px);
+
+          & + label {
+            @include position(relative);
+            display: block;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            cursor: pointer;
+            margin: 0 auto;
+
+            &:before {
+              content: '';
+              @include position(absolute, $top: 0, $left: 0);
+              display: block;
+              width: 20px;
+              height: 20px;
+              border: 1px solid #00a64e;
+              box-sizing: border-box;
+              @include border-radius(20px);
+            }
+          }
+
+          &:checked {
+            & + label {
+              &:after {
+                content: '';
+                @include position(absolute, $top: 50%, $left: 50%);
+                display: block;
+                width: 12px;
+                height: 12px;
+                margin: -6px 0 0 -6px;
+                box-sizing: border-box;
+                background: #00a64e;
+                @include border-radius(12px);
+              }
+            }
+          }
+
+          &:disabled {
+            & + label {
+              &:before {
+                content: '';
+                border: 1px solid #d3d3d3;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .toggle {
+      @include position(relative);
+      padding-right: 25px;
+      display: inline-block;
+      font-size: 14px;
+      color: #000;
+      text-align: left;
+
+      background: url('#{$base-img-path}/ico_toggle-off.svg') 98% center no-repeat;
+      background-size: 14px 10px;
+
+      &.active {
+        background: url('#{$base-img-path}/ico_toggle-on.svg') 98% center no-repeat;
+        background-size: 14px 10px;
+      }
+    }
+
+    .small-layer {
+      @include position(absolute, $top: 35px, $left: 0px);
+      @include border-radius(3px);
+      z-index: 10;
+      background: #fff;
+      overflow: hidden;
+      -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
+      border: 1px solid #d1d1d1;
+
+      li {
+        min-width: 120px;
+        border-bottom: 1px solid #d1d1d1;
+
+        &:first-child {
+          border-top: 0;
+        }
+      }
+
+      button {
+        display: block;
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 30px;
+        text-align: center;
+        color: #00a64e;
+        border: 1px solid #00a64e;
+        font-size: 12px;
+        font-weight: 700;
+        margin: 12px auto;
       }
     }
 
@@ -1885,200 +2264,29 @@
         & + label {
           @include position(relative);
           display: block;
-          height: 16px;
+          height: 30px;
+          line-height: 30px;
+          padding: 0 0 0 10px;
           font-size: 12px;
-          padding: 12px 0 12px 32px;
           color: #000;
-          background: url('#{$base-img-path}/ico_check2-off.png') 10px center no-repeat;
-          background-size: 16px 16px;
           cursor: pointer;
         }
 
         &:checked {
           & + label {
-            color: #000;
-            background: url('#{$base-img-path}/ico_check2-on.png') 10px center no-repeat;
-            background-size: 16px 16px;
+            color: #00a64e;
           }
-        }
-      }
-    }
-
-    table {
-      width: 100%;
-
-      th {
-        color: #fff;
-        font-size: 12px;
-        font-weight: 700;
-        text-align: left;
-        background: #00a64e;
-        height: 40px;
-      }
-
-      td {
-        @include position(relative);
-        font-size: 12px;
-        color: #000;
-        text-align: left;
-        height: 40px;
-
-        button {
-          width: 100%;
-          font-size: 12px;
-          color: #000;
-          text-align: left;
-
-          &.link {
-            height: 40px;
-            background: url('#{$base-img-path}/ico_arrow.png') 90% center no-repeat;
-            background-size: 9px 12px;
-          }
-
-          &.toggle {
-            @include position(relative);
-            width: 100%;
-            height: 40px;
-            background: url('#{$base-img-path}/ico_toggle-off.svg') 98% center no-repeat;
-            background-size: 14px 10px;
-
-            &.active {
-              background: url('#{$base-img-path}/ico_toggle-on.svg') 98% center no-repeat;
-              background-size: 14px 10px;
-            }
-          }
-        }
-
-        .small-layer {
-          @include position(absolute, $top: 35px, $left: 0px);
-          @include border-radius(3px);
-          z-index: 10;
-          background: #fff;
-          overflow: hidden;
-          -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
-
-          li {
-            min-width: 150px;
-            border-top: 1px solid #d1d1d1;
-
-            &:first-child {
-              border-top: 0;
-            }
-          }
-        }
-      }
-
-      tfoot {
-        th, td {
-          border-top: 1px solid #d1d1d1;
-          font-size: 14px;
-          font-weight: 700;
-          text-align: left;
-          background: #fff;
-          color: #000;
-          height: auto;
-          padding: 10px 0 15px 0;
         }
       }
     }
   }
 
-  &__bt {
-    padding: 0 10px 20px 10px;
-    button {
-      width: 100%;
-      height: 48px;
-      line-height: 48px;
-      text-align: center;
-      background: #00a64e;
-      color: #fff;
-      font-size: 14px;
-      font-weight: 700;
-      @include border-radius(48px);
-    }
-  }
-
-  &__item-tips {
+  &__price-tip {
+    font-size: 12px;
+    line-height: 150%;
+    padding: 10px;
+    background: #e8e8e8;
     border-top: 1px solid #d1d1d1;
-    background: #f9f9f9;
-    padding: 20px 10px;
-
-    p {
-      @include position(relative);
-      font-size: 14px;
-      padding-left: 35px;
-      line-height: 150%;
-
-      span {
-        border: 1px solid red;
-        @include size(22px);
-        @include position(absolute, $top: 5px, $left: 0px);
-      }
-
-      img {
-        @include size(22px);
-      }
-    }
-
-    ul {
-      margin: 25px 0;
-    }
-
-    li {
-      font-size: 12px;
-      font-weight: 700;
-      color: #3c9800;
-      margin: 10px 20px;
-
-      img {
-        width: 100%;
-      }
-    }
-
-    button {
-      width: 100%;
-      height: 48px;
-      line-height: 48px;
-      text-align: center;
-      background: #3c9800;
-      color: #fff;
-      font-size: 14px;
-      font-weight: 700;
-      @include border-radius(48px);
-    }
-  }
-
-  &__bag {
-    @include position(relative);
-    padding: 20px 10px;
-    background: #fff;
-
-    .details__items {
-      padding: 0;
-      box-shadow: none !important;
-    }
-  }
-
-  &__bag-tit {
-    margin-bottom: 20px;
-    min-height: 70px;
-
-    .thumb {
-      border: 1px solid red;
-      @include position(absolute, $top: 20px, $left: 10px);
-      @include size(66px);
-    }
-
-    .txt {
-      font-size: 14px;
-      line-height: 130%;
-      margin-left: 80px;
-    }
-  }
-
-  &__bag-list {
-
   }
 
   &__meal-list {

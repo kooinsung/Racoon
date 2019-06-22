@@ -180,78 +180,78 @@
 <link rel="stylesheet" href="../assets/js/ui.js">
 
 <script>
-    window.onscroll = function () {
-        var body = document.body;
-        if (window.pageYOffset > 45) {
-            body.classList.add("scrolling");
-            console.log("a");
-        } else {
-            body.classList.remove("scrolling");
-            console.log("b");
-        }
+  window.onscroll = function () {
+    var body = document.body;
+    if (window.pageYOffset > 45) {
+      body.classList.add("scrolling");
+      console.log("a");
+    } else {
+      body.classList.remove("scrolling");
+      console.log("b");
+    }
     }
 
-    $(function () {
+  $(function () {
 
-        var swiper = new Swiper('.banners__items .swiper-container', {
-            pagination: {
-                el: '.banners__items .swiper-pagination',
-            },
-        });
+    var swiper = new Swiper('.banners__items .swiper-container', {
+      pagination: {
+        el: '.banners__items .swiper-pagination',
+      },
+    });
 
-        $("#slider").slider({
-            range: "max",
-            min: 1,
-            max: 14,
-            step: 1,
-            create: function (event, ui) {
-            },
-            slide: function (event, ui) {
-            }
-        });
+    $("#slider").slider({
+      range: "max",
+      min: 1,
+      max: 14,
+      step: 1,
+      create: function (event, ui) {
+      },
+      slide: function (event, ui) {
+      }
+    });
 
-        $("#calendars-inline-stage").datepicker({
-            minDate: 0,
-            numberOfMonths: [8, 1],
-            dateFormat: "MM dd일 (DD)",
-            beforeShowDay: function (date) {
-                var date1 = $.datepicker.parseDate("MM dd일 (DD)", $("#dep-range").val());
-                var date2 = $.datepicker.parseDate("MM dd일 (DD)", $("#arr-range").val());
+    $("#calendars-inline-stage").datepicker({
+      minDate: 0,
+      numberOfMonths: [8, 1],
+      dateFormat: "MM dd일 (DD)",
+      beforeShowDay: function (date) {
+        var date1 = $.datepicker.parseDate("MM dd일 (DD)", $("#dep-range").val());
+        var date2 = $.datepicker.parseDate("MM dd일 (DD)", $("#arr-range").val());
 
-                if (date1 && date && (date1.getTime() == date.getTime())) {
-                    return [true, 'ui-state-selected-range ui-range-start', ''];
-                }
-                if (date2 && date && (date2.getTime() == date.getTime())) {
-                    return [true, 'ui-state-selected-range ui-range-end', ''];
-                }
+        if (date1 && date && (date1.getTime() == date.getTime())) {
+          return [true, 'ui-state-selected-range ui-range-start', ''];
+        }
+        if (date2 && date && (date2.getTime() == date.getTime())) {
+          return [true, 'ui-state-selected-range ui-range-end', ''];
+        }
 
-                if (date >= date1 && date <= date2) {
-                    return [true, 'ui-state-selected-range', ''];
-                }
-                var d = date.getTime();
+        if (date >= date1 && date <= date2) {
+          return [true, 'ui-state-selected-range', ''];
+        }
+        var d = date.getTime();
 
-                return [true, '', ''];
-                //return [true, date1 && ((date.getTime() == date1.getTime()) || (date2 && date >= date1 && date <= date2)) ? "dp-highlight" : ""];/
-            },
-            onSelect: function (dateText, inst) {
-                var date1 = $.datepicker.parseDate("MM dd일 (DD)", $("#dep-range").val());
-                var date2 = $.datepicker.parseDate("MM dd일 (DD)", $("#arr-range").val());
-                var selectedDate = $.datepicker.parseDate("MM dd일 (DD)", dateText);
+        return [true, '', ''];
+        //return [true, date1 && ((date.getTime() == date1.getTime()) || (date2 && date >= date1 && date <= date2)) ? "dp-highlight" : ""];/
+      },
+      onSelect: function (dateText, inst) {
+        var date1 = $.datepicker.parseDate("MM dd일 (DD)", $("#dep-range").val());
+        var date2 = $.datepicker.parseDate("MM dd일 (DD)", $("#arr-range").val());
+        var selectedDate = $.datepicker.parseDate("MM dd일 (DD)", dateText);
 
-                if (!date1 || date2) {
-                    $("#dep-range").val(dateText);
-                    $("#arr-range").val("");
-                    $(this).datepicker();
-                } else if (selectedDate < date1) {
-                    $("#arr-range").val($("#dep-range").val());
-                    $("#dep-range").val(dateText);
-                    $(this).datepicker();
-                } else {
-                    $("#arr-range").val(dateText);
-                    $(this).datepicker();
-                }
-            }
-        });
+        if (!date1 || date2) {
+          $("#dep-range").val(dateText);
+          $("#arr-range").val("");
+          $(this).datepicker();
+        } else if (selectedDate < date1) {
+          $("#arr-range").val($("#dep-range").val());
+          $("#dep-range").val(dateText);
+          $(this).datepicker();
+        } else {
+          $("#arr-range").val(dateText);
+          $(this).datepicker();
+        }
+      }
+    });
     });
 </script>
 </body>
