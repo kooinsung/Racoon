@@ -2191,7 +2191,6 @@
               }
             }
           }
-
           &:disabled {
             & + label {
               &:before {
@@ -2342,33 +2341,6 @@
 
 .sub {
   background: #f9f9f9;
-
-  //.search-trips-form {
-  //  background: #00a64e;
-  //  padding: 15px 20px 8px 20px;
-  //  font-size: 0;
-  //
-  //  &__row {
-  //    height: 32px;
-  //    margin-bottom: 12px;
-  //  }
-  //
-  //  &__input {
-  //    @include position(relative);
-  //    display: block;
-  //
-  //    &:before {
-  //      display: none;
-  //    }
-  //
-  //    input {
-  //      text-align: center;
-  //      height: 32px;
-  //      text-indent: 0;
-  //    }
-  //  }
-  //}
-
   &.scrolling {
     .trip-info {
       @include position(fixed, $top: 45px, $left: 0px, $right: 0px);
