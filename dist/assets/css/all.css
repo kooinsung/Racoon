@@ -3172,6 +3172,10 @@ button.swiper-pagination-bullet {
     color: #00a64e;
 }
 
+.details {
+    padding-top: 45px;
+}
+
 .details__items {
     background: #fff;
     padding-bottom: 15px;
