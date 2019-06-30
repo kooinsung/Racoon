@@ -2341,6 +2341,89 @@
   }
 }
 
+.loading {
+  @include position(fixed, $top: 0px, $left: 0px, $right: 0px, $bottom: 0px);
+  z-index: 1000;
+  background: #ffe155;
+
+  .walking {
+    @include center-both;
+
+    img {
+      width: 90px;
+    }
+  }
+}
+
+.gate {
+  @include position(fixed, $top: 0px, $left: 0px, $right: 0px, $bottom: 0px);
+  z-index: 1000;
+  background: #fff;
+  text-align: center;
+
+  .gate-inner {
+    @include center-both;
+  }
+
+  .walking {
+    display: block;
+    width: 100%;
+
+    img {
+      width: 90px;
+    }
+  }
+
+  .full-logo {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .follow {
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 20px;
+    line-height: 150%;
+  }
+
+  .trips {
+    width: 320px;
+    border: 1px solid #d1d1d1;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 25px;
+
+    .box1 {
+      background: #ffe155;
+      padding: 15px 0;
+    }
+
+    .box2 {
+      padding: 15px 0;
+    }
+
+    .t1 {
+      font-size: 18px;
+      font-weight: 700;
+      display: block;
+    }
+
+    .t2 {
+      font-size: 14px;
+      display: block;
+    }
+
+    .t3 {
+      font-size: 14px;
+    }
+
+    .t4 {
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+}
+
 .sub {
   background: #f9f9f9;
   &.scrolling {
