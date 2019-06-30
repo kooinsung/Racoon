@@ -23,98 +23,231 @@
 
 <body class="sub">
   <header class="header">
-    <button type="button" class="header__close">close</button>
-    <strong class="header__tit">위탁 수하물 정보</strong>
+      <h1 class=header__logo><a href="" class=header__logo-link>RACOON</a></h1>
   </header>
 
   <div class="container">
     <div class="content">
-      <div class="details">
-        <div class="details__bag">
-          <div class="details__bag-tit">
-            <span class="thumb"><img src="" alt=""></span>
-            <p class="txt">수하물 사전 구매는 제주항공 콜센터 1600-6200 또는 제주항공 홈페이지를 통해 구매 가능합니다. </p>
-          </div>
-          <div class="details__items">
-            <div class="details__item">
-              <div class="details__item-tit">
-                <p><strong>가는편</strong> 2019년 4월 9일 (화)</p>
-                <em>현지 시간</em>
-              </div>
-              <div class="details__item-view">
-                <div class="details__item-airline">
-                  <span class="thumb"><img src="../assets/images/img_7c.png" alt=""></span>제주항공 7C 2101
-                </div>
-                <div class="details__item-sdu">
-                  <div class="sdu sdu-dep">
-                    <strong class="three-code">ICN</strong>
-                    <span class="time">오전 9:55</span>
-                  </div>
-                  <div class="sdu-info">
-                    <span class="info1">보잉 737</span>
-                    <span class="info2">직항, 3시간 40분</span>
-                  </div>
-                  <div class="sdu sdu-arr">
-                    <strong class="three-code">HKG</strong>
-                    <span class="time">오후 12:35</span>
-                  </div>
-                </div>
-                <div class="details__item-tips">
-                  <p>
-                    <span><img src="" alt=""></span>
-                    고객님께서 구매하실 항공권은 무료 위탁수하물이 제공되지 않는 특가 항공권이예요.
-                  </p>
-                  <ul>
-                    <li>편도 당 수하물 15kg 사전 구매 시 \30,000</li>
-                    <li>편도 당 수하물 15kg 공항 구매 시 \45,000</li>
-                  </ul>
-                  <button type="button">위탁 수하물 구매하기</button>
-                </div>
-              </div>
+        <div class="search-trips-form">
+            <div class="search-trips-form__check-trips">
+          <span class="search-trips-form__check-trip-item">
+            <input type="radio" id="rt" name="trip-type" checked="checked">
+            <label for="rt">왕복</label>
+          </span>
+                <span class="search-trips-form__check-trip-item">
+            <input type="radio" name="trip-type" id="ow">
+            <label for="ow">편도</label>
+          </span>
             </div>
-            <div class="details__item">
-              <div class="details__item-tit">
-                <p><strong>오는편</strong> 2019년 4월 12일 (화)</p>
-                <em>현지 시간</em>
-              </div>
-              <div class="details__item-view">
-                <div class="details__item-airline">
-                  <span class="thumb"><img src="../assets/images/img_7c.png" alt=""></span>제주항공 7C 2101
-                </div>
-                <div class="details__item-sdu">
-                  <div class="sdu sdu-dep">
-                    <strong class="three-code">ICN</strong>
-                    <span class="time">오전 9:55</span>
-                  </div>
-                  <div class="sdu-info">
-                    <span class="info1">보잉 737</span>
-                    <span class="info2">직항, 3시간 40분</span>
-                  </div>
-                  <div class="sdu sdu-arr">
-                    <strong class="three-code">HKG</strong>
-                    <span class="time">오후 12:35</span>
-                  </div>
-                </div>
-                <div class="details__item-tips">
-                  <p>
-                    <span><img src="" alt=""></span>
-                    고객님께서 구매하실 항공권은 무료 위탁수하물이 제공되지 않는 특가 항공권이예요.
-                  </p>
-                  <ul>
-                    <li>편도 당 수하물 15kg 사전 구매 시 \30,000</li>
-                    <li>편도 당 수하물 15kg 공항 구매 시 \45,000</li>
-                  </ul>
-                  <button type="button">위탁 수하물 구매하기</button>
-                </div>
-              </div>
+            <div class="search-trips-form__row">
+          <span class="search-trips-form__input search-trips-form__input-dep">
+            <input type="text" placeholder="어디서 출발하시나요?">
+          </span>
             </div>
-          </div>
+            <div class="search-trips-form__row">
+          <span class="search-trips-form__input search-trips-form__input-arr">
+            <input type="text" placeholder="어디에 도착하시나요?">
+          </span>
+            </div>
+            <div class="search-trips-form__row">
+                <div class="search-trips-form__col">
+            <span class="search-trips-form__input search-trips-form__input-date">
+              <input type="text" placeholder="가는 날짜">
+            </span>
+                </div>
+                <div class="search-trips-form__col">
+            <span class="search-trips-form__input search-trips-form__input-date">
+              <input type="text" placeholder="오는 날짜">
+            </span>
+                </div>
+            </div>
+            <div class="search-trips-form__row">
+                <div class="search-trips-form__col">
+            <span class="search-trips-form__input search-trips-form__input-seat-count">
+              <input type="text" placeholder="1명" value="1명">
+            </span>
+                    <div class="search-trips-form__seat-count-layer">
+                        <div class="dl-items">
+                            <dl>
+                                <dt>성인</dt>
+                                <dd>
+                                    <div class="person-form">
+                                        <button type="button" class="subtract">-</button>
+                                        <input type="text" value="1" placeholder="">
+                                        <button type="button" class="add">+</button>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>아동 <em>만 2-17세</em></dt>
+                                <dd>
+                                    <div class="person-form">
+                                        <button type="button" class="subtract">-</button>
+                                        <input type="text" value="0" placeholder="">
+                                        <button type="button" class="add">+</button>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>아동 <em>만 2세 미만</em></dt>
+                                <dd>
+                                    <div class="person-form">
+                                        <button type="button" class="subtract">-</button>
+                                        <input type="text" value="0" placeholder="">
+                                        <button type="button" class="add">+</button>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <button type="button" class="success">완료</button>
+                    </div>
+                </div>
+                <div class="search-trips-form__col">
+            <span class="search-trips-form__input search-trips-form__input-seat search-trips-form__input-seat--disabled">
+              <input type="text" placeholder="이코노미" disabled="disabled">
+            </span>
+                </div>
+            </div>
+            <div class="search-trips-form__bt">
+                <button type="button">항공권 검색 GO!</button>
+            </div>
+            <div class="search-trips-form__tips">
+                추가 수하물과 기내식 최저가가 포함된 예상 가격까지 라쿤이 알려드려요!
+            </div>
         </div>
-      </div>
+
+        <div class="banners">
+            <strong class="banners__tit">특가 이벤트</strong>
+            <div class="banners__items">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="" class="banners__link">
+                                <span class="banners__thumb"><img src="../assets/images/img_banner.png" alt=""></span>
+                                <div class="banners__txts">
+                                    <em class="banners__airline">항공사명</em>
+                                    <strong class="banners__copy">이벤트 헤드 카피 </strong>
+                                    <span class="banners__date">2019.07.01 - 2019.07.31</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="" class="banners__link">
+                                <span class="banners__thumb"><img src="../assets/images/img_banner.png" alt=""></span>
+                                <div class="banners__txts">
+                                    <em class="banners__airline">항공사명</em>
+                                    <strong class="banners__copy">이벤트 헤드 카피 </strong>
+                                    <span class="banners__date">2019.07.01 - 2019.07.31</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="quick">
+            <ul>
+                <li class="quick__srch actived"><a href=""><span>검색</span></a></li>
+                <li class="quick__special-price"><a href=""><span>특가</span></a></li>
+                <li class="quick__profile"><a href=""><span>프로필</span></a></li>
+            </ul>
+        </div>
     </div>
   </div>
 
 
+  <div class="layers">
+      <div class="layers__header">
+          <button type="button" class="layers__close">close</button>
+          <h2 class="layers__tit">위탁 수하물 정보</h2>
+      </div>
+      <div class="layers__body">
+          <div class="details">
+              <div class="details__bag">
+                  <div class="details__bag-tit">
+                      <span class="thumb"><img src="" alt=""></span>
+                      <p class="txt">수하물 사전 구매는 제주항공 콜센터 1600-6200 또는 제주항공 홈페이지를 통해 구매 가능합니다. </p>
+                  </div>
+                  <div class="details__items">
+                      <div class="details__item">
+                          <div class="details__item-tit">
+                              <p><strong>가는편</strong> 2019년 4월 9일 (화)</p>
+                              <em>현지 시간</em>
+                          </div>
+                          <div class="details__item-view">
+                              <div class="details__item-airline">
+                                  <span class="thumb"><img src="../assets/images/img_7c.png" alt=""></span>제주항공 7C 2101
+                              </div>
+                              <div class="details__item-sdu">
+                                  <div class="sdu sdu-dep">
+                                      <strong class="three-code">ICN</strong>
+                                      <span class="time">오전 9:55</span>
+                                  </div>
+                                  <div class="sdu-info">
+                                      <span class="info1">보잉 737</span>
+                                      <span class="info2">직항, 3시간 40분</span>
+                                  </div>
+                                  <div class="sdu sdu-arr">
+                                      <strong class="three-code">HKG</strong>
+                                      <span class="time">오후 12:35</span>
+                                  </div>
+                              </div>
+                              <div class="details__item-tips">
+                                  <p>
+                                      <span><img src="" alt=""></span>
+                                      고객님께서 구매하실 항공권은 무료 위탁수하물이 제공되지 않는 특가 항공권이예요.
+                                  </p>
+                                  <ul>
+                                      <li>편도 당 수하물 15kg 사전 구매 시 \30,000</li>
+                                      <li>편도 당 수하물 15kg 공항 구매 시 \45,000</li>
+                                  </ul>
+                                  <button type="button">위탁 수하물 구매하기</button>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="details__item">
+                          <div class="details__item-tit">
+                              <p><strong>오는편</strong> 2019년 4월 12일 (화)</p>
+                              <em>현지 시간</em>
+                          </div>
+                          <div class="details__item-view">
+                              <div class="details__item-airline">
+                                  <span class="thumb"><img src="../assets/images/img_7c.png" alt=""></span>제주항공 7C 2101
+                              </div>
+                              <div class="details__item-sdu">
+                                  <div class="sdu sdu-dep">
+                                      <strong class="three-code">ICN</strong>
+                                      <span class="time">오전 9:55</span>
+                                  </div>
+                                  <div class="sdu-info">
+                                      <span class="info1">보잉 737</span>
+                                      <span class="info2">직항, 3시간 40분</span>
+                                  </div>
+                                  <div class="sdu sdu-arr">
+                                      <strong class="three-code">HKG</strong>
+                                      <span class="time">오후 12:35</span>
+                                  </div>
+                              </div>
+                              <div class="details__item-tips">
+                                  <p>
+                                      <span><img src="" alt=""></span>
+                                      고객님께서 구매하실 항공권은 무료 위탁수하물이 제공되지 않는 특가 항공권이예요.
+                                  </p>
+                                  <ul>
+                                      <li>편도 당 수하물 15kg 사전 구매 시 \30,000</li>
+                                      <li>편도 당 수하물 15kg 공항 구매 시 \45,000</li>
+                                  </ul>
+                                  <button type="button">위탁 수하물 구매하기</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 
   <script src="../assets/js/jquery-1.12.4.js"></script>
   <script src="../assets/js/jquery-ui.js"></script>
@@ -122,20 +255,22 @@
   <link rel="stylesheet" href="../assets/js/ui.js">
 
   <script>
-    $(function() {
-      $(window).scroll(function() {
-        if ($(window).scrollTop() >= 45) {
-          $('body').addClass('scrolling');
-        } else {
-          $('body').removeClass('scrolling');
-        }
-      });
+    window.onscroll = function () {
+      var body = document.body;
+      if (window.pageYOffset > 45) {
+        body.classList.add("scrolling");
+      } else {
+        body.classList.remove("scrolling");
+      }
+    }
 
-        var swiper = new Swiper('.banners__items .swiper-container', {
-            pagination: {
-                el: '.banners__items .swiper-pagination',
-            },
-        });
+    $(function () {
+
+      var swiper = new Swiper('.banners__items .swiper-container', {
+        pagination: {
+          el: '.banners__items .swiper-pagination',
+        },
+      });
 
       $("#slider").slider({
         range: "max",
