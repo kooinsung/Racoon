@@ -23,230 +23,343 @@
 
 <body class="sub">
   <header class="header">
-      <h1 class=header__logo><a href="" class=header__logo-link>RACOON</a></h1>
+    <h1 class=header__logo><a href="" class=header__logo-link>RACOON</a></h1>
   </header>
 
   <div class="container">
     <div class="content">
-        <div class="search-trips-form">
-            <div class="search-trips-form__check-trips">
+      <div class="search-trips-form">
+        <div class="search-trips-form__check-trips">
           <span class="search-trips-form__check-trip-item">
             <input type="radio" id="rt" name="trip-type" checked="checked">
             <label for="rt">왕복</label>
           </span>
-                <span class="search-trips-form__check-trip-item">
+          <span class="search-trips-form__check-trip-item">
             <input type="radio" name="trip-type" id="ow">
             <label for="ow">편도</label>
           </span>
-            </div>
-            <div class="search-trips-form__row">
+        </div>
+        <div class="search-trips-form__row">
           <span class="search-trips-form__input search-trips-form__input-dep">
             <input type="text" placeholder="어디서 출발하시나요?">
           </span>
-            </div>
-            <div class="search-trips-form__row">
+        </div>
+        <div class="search-trips-form__row">
           <span class="search-trips-form__input search-trips-form__input-arr">
             <input type="text" placeholder="어디에 도착하시나요?">
           </span>
-            </div>
-            <div class="search-trips-form__row">
-                <div class="search-trips-form__col">
+        </div>
+        <div class="search-trips-form__row">
+          <div class="search-trips-form__col">
             <span class="search-trips-form__input search-trips-form__input-date">
               <input type="text" placeholder="가는 날짜">
             </span>
-                </div>
-                <div class="search-trips-form__col">
+          </div>
+          <div class="search-trips-form__col">
             <span class="search-trips-form__input search-trips-form__input-date">
               <input type="text" placeholder="오는 날짜">
             </span>
-                </div>
-            </div>
-            <div class="search-trips-form__row">
-                <div class="search-trips-form__col">
+          </div>
+        </div>
+        <div class="search-trips-form__row">
+          <div class="search-trips-form__col">
             <span class="search-trips-form__input search-trips-form__input-seat-count">
               <input type="text" placeholder="1명" value="1명">
             </span>
-                    <div class="search-trips-form__seat-count-layer">
-                        <div class="dl-items">
-                            <dl>
-                                <dt>성인</dt>
-                                <dd>
-                                    <div class="person-form">
-                                        <button type="button" class="subtract">-</button>
-                                        <input type="text" value="1" placeholder="">
-                                        <button type="button" class="add">+</button>
-                                    </div>
-                                </dd>
-                            </dl>
-                            <dl>
-                                <dt>아동 <em>만 2-17세</em></dt>
-                                <dd>
-                                    <div class="person-form">
-                                        <button type="button" class="subtract">-</button>
-                                        <input type="text" value="0" placeholder="">
-                                        <button type="button" class="add">+</button>
-                                    </div>
-                                </dd>
-                            </dl>
-                            <dl>
-                                <dt>아동 <em>만 2세 미만</em></dt>
-                                <dd>
-                                    <div class="person-form">
-                                        <button type="button" class="subtract">-</button>
-                                        <input type="text" value="0" placeholder="">
-                                        <button type="button" class="add">+</button>
-                                    </div>
-                                </dd>
-                            </dl>
-                        </div>
-                        <button type="button" class="success">완료</button>
+            <div class="search-trips-form__seat-count-layer">
+              <div class="dl-items">
+                <dl>
+                  <dt>성인</dt>
+                  <dd>
+                    <div class="person-form">
+                      <button type="button" class="subtract">-</button>
+                      <input type="text" value="1" placeholder="">
+                      <button type="button" class="add">+</button>
                     </div>
-                </div>
-                <div class="search-trips-form__col">
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>아동 <em>만 2-17세</em></dt>
+                  <dd>
+                    <div class="person-form">
+                      <button type="button" class="subtract">-</button>
+                      <input type="text" value="0" placeholder="">
+                      <button type="button" class="add">+</button>
+                    </div>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>아동 <em>만 2세 미만</em></dt>
+                  <dd>
+                    <div class="person-form">
+                      <button type="button" class="subtract">-</button>
+                      <input type="text" value="0" placeholder="">
+                      <button type="button" class="add">+</button>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+              <button type="button" class="success">완료</button>
+            </div>
+          </div>
+          <div class="search-trips-form__col">
             <span class="search-trips-form__input search-trips-form__input-seat search-trips-form__input-seat--disabled">
               <input type="text" placeholder="이코노미" disabled="disabled">
             </span>
-                </div>
-            </div>
-            <div class="search-trips-form__bt">
-                <button type="button">항공권 검색 GO!</button>
-            </div>
-            <div class="search-trips-form__tips">
-                추가 수하물과 기내식 최저가가 포함된 예상 가격까지 라쿤이 알려드려요!
-            </div>
+          </div>
         </div>
+        <div class="search-trips-form__bt">
+          <button type="button">항공권 검색 GO!</button>
+        </div>
+        <div class="search-trips-form__tips">
+          추가 수하물과 기내식 최저가가 포함된 예상 가격까지 라쿤이 알려드려요!
+        </div>
+      </div>
 
-        <div class="banners">
-            <strong class="banners__tit">특가 이벤트</strong>
-            <div class="banners__items">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <a href="" class="banners__link">
-                                <span class="banners__thumb"><img src="../assets/images/img_banner.png" alt=""></span>
-                                <div class="banners__txts">
-                                    <em class="banners__airline">항공사명</em>
-                                    <strong class="banners__copy">이벤트 헤드 카피 </strong>
-                                    <span class="banners__date">2019.07.01 - 2019.07.31</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="" class="banners__link">
-                                <span class="banners__thumb"><img src="../assets/images/img_banner.png" alt=""></span>
-                                <div class="banners__txts">
-                                    <em class="banners__airline">항공사명</em>
-                                    <strong class="banners__copy">이벤트 헤드 카피 </strong>
-                                    <span class="banners__date">2019.07.01 - 2019.07.31</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
+      <div class="banners">
+        <strong class="banners__tit">특가 이벤트</strong>
+        <div class="banners__items">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="" class="banners__link">
+                  <span class="banners__thumb"><img src="../assets/images/img_banner.png" alt=""></span>
+                  <div class="banners__txts">
+                    <em class="banners__airline">항공사명</em>
+                    <strong class="banners__copy">이벤트 헤드 카피 </strong>
+                    <span class="banners__date">2019.07.01 - 2019.07.31</span>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="" class="banners__link">
+                  <span class="banners__thumb"><img src="../assets/images/img_banner.png" alt=""></span>
+                  <div class="banners__txts">
+                    <em class="banners__airline">항공사명</em>
+                    <strong class="banners__copy">이벤트 헤드 카피 </strong>
+                    <span class="banners__date">2019.07.01 - 2019.07.31</span>
+                  </div>
+                </a>
+              </div>
             </div>
+            <div class="swiper-pagination"></div>
+          </div>
         </div>
+      </div>
 
-        <div class="quick">
-            <ul>
-                <li class="quick__srch actived"><a href=""><span>검색</span></a></li>
-                <li class="quick__special-price"><a href=""><span>특가</span></a></li>
-                <li class="quick__profile"><a href=""><span>프로필</span></a></li>
-            </ul>
-        </div>
+      <div class="quick">
+        <ul>
+          <li class="quick__srch actived"><a href=""><span>검색</span></a></li>
+          <li class="quick__special-price"><a href=""><span>특가</span></a></li>
+          <li class="quick__profile"><a href=""><span>프로필</span></a></li>
+        </ul>
+      </div>
     </div>
   </div>
 
 
+
   <div class="layers">
-      <div class="layers__header">
-          <button type="button" class="layers__close">close</button>
-          <h2 class="layers__tit">위탁 수하물 정보</h2>
-      </div>
-      <div class="layers__body">
-          <div class="details">
-              <div class="details__bag">
-                  <div class="details__bag-tit">
-                      <span class="thumb"><img src="" alt=""></span>
-                      <p class="txt">수하물 사전 구매는 제주항공 콜센터 1600-6200 또는 제주항공 홈페이지를 통해 구매 가능합니다. </p>
-                  </div>
-                  <div class="details__items">
-                      <div class="details__item">
-                          <div class="details__item-tit">
-                              <p><strong>가는편</strong> 2019년 4월 9일 (화)</p>
-                              <em>현지 시간</em>
-                          </div>
-                          <div class="details__item-view">
-                              <div class="details__item-airline">
-                                  <span class="thumb"><img src="../assets/images/img_7c.png" alt=""></span>제주항공 7C 2101
-                              </div>
-                              <div class="details__item-sdu">
-                                  <div class="sdu sdu-dep">
-                                      <strong class="three-code">ICN</strong>
-                                      <span class="time">오전 9:55</span>
-                                  </div>
-                                  <div class="sdu-info">
-                                      <span class="info1">보잉 737</span>
-                                      <span class="info2">직항, 3시간 40분</span>
-                                  </div>
-                                  <div class="sdu sdu-arr">
-                                      <strong class="three-code">HKG</strong>
-                                      <span class="time">오후 12:35</span>
-                                  </div>
-                              </div>
-                              <div class="details__item-tips">
-                                  <p>
-                                      <span><img src="" alt=""></span>
-                                      고객님께서 구매하실 항공권은 무료 위탁수하물이 제공되지 않는 특가 항공권이예요.
-                                  </p>
-                                  <ul>
-                                      <li>편도 당 수하물 15kg 사전 구매 시 \30,000</li>
-                                      <li>편도 당 수하물 15kg 공항 구매 시 \45,000</li>
-                                  </ul>
-                                  <button type="button">위탁 수하물 구매하기</button>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="details__item">
-                          <div class="details__item-tit">
-                              <p><strong>오는편</strong> 2019년 4월 12일 (화)</p>
-                              <em>현지 시간</em>
-                          </div>
-                          <div class="details__item-view">
-                              <div class="details__item-airline">
-                                  <span class="thumb"><img src="../assets/images/img_7c.png" alt=""></span>제주항공 7C 2101
-                              </div>
-                              <div class="details__item-sdu">
-                                  <div class="sdu sdu-dep">
-                                      <strong class="three-code">ICN</strong>
-                                      <span class="time">오전 9:55</span>
-                                  </div>
-                                  <div class="sdu-info">
-                                      <span class="info1">보잉 737</span>
-                                      <span class="info2">직항, 3시간 40분</span>
-                                  </div>
-                                  <div class="sdu sdu-arr">
-                                      <strong class="three-code">HKG</strong>
-                                      <span class="time">오후 12:35</span>
-                                  </div>
-                              </div>
-                              <div class="details__item-tips">
-                                  <p>
-                                      <span><img src="" alt=""></span>
-                                      고객님께서 구매하실 항공권은 무료 위탁수하물이 제공되지 않는 특가 항공권이예요.
-                                  </p>
-                                  <ul>
-                                      <li>편도 당 수하물 15kg 사전 구매 시 \30,000</li>
-                                      <li>편도 당 수하물 15kg 공항 구매 시 \45,000</li>
-                                  </ul>
-                                  <button type="button">위탁 수하물 구매하기</button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+    <div class="layers__header">
+      <button type="button" class="layers__close">close</button>
+      <h2 class="layers__tit">항공사명 위탁 수하물 정보</h2>
+    </div>
+    <div class="layers__body">
+      <div class="details">
+        <div class="details__entrust-bag">
+          <div class="details__entrust-bag-info1">
+            <strong>라쿤 tip!</strong>
+            <p>수하물 사전 구매는 제주항공 콜센터 1600-6200 또는 제주항공 홈페이지를 통해 구매 가능합니다. </p>
           </div>
+          <div class="details__entrust-bag-info2">
+            <div class="details__entrust-bag-tit">
+              <strong>가는편</strong><em>9월 16일 (월)</em>
+            </div>
+            <div class="details__entrust-bag-info-box">
+              <div class="trips">
+                <div class="airline"><img src="../assets/images/img_7C.svg" alt="">제주항공 7C 2101</div>
+                <div class="trip-item">
+                  <div class="departure">
+                    <strong>ICN</strong>
+                    <span>서울</span>
+                  </div>
+                  <div class="arrival">
+                    <strong>HKG</strong>
+                    <span>홍콩</span>
+                  </div>
+                </div>
+              </div>
+              <div class="entrust-bag-view">
+                <p class="comment">
+                  고객님께서 구매하실 항공권은 무료 위탁 수하물이 제공되지 않는 특가 항공권이예요.
+                </p>
+                <strong class="price">
+                  편도 당 수하물 15kg 사전 구매 시 \30,000<br>
+                  편도 당 수하물 15kg 공항 구매 시 \45,000
+                </strong>
+                <button type="button" class="more">사전 위탁 수하물 구매하러 가기</button>
+                <div class="pet-info">
+                  <button type="button" class="pet-toggle is-actived">반려동물 동반 여행 정보</button>
+                  <div class="pet-bag-info-module">
+                    <!-- 공통 모됼 -->
+                    <strong class="tit-module">항공사명 반려동물 동반 고객</strong>
+                    <div class="img-module"><img src="../assets/images/img_pets.png" alt=""></div>
+                    <ul class="list-module">
+                      <li>동반 가능한 반려동물: 기내 반입 시 생후 8주, 수하물로 위탁 시 생후 16주 이상의 애완용 <span>개, 고양이, 새</span></li>
+                      <li>동반　가능한 반려동물 수: <span>탑승객 1인당 기내 반입 1마리, 위탁 수하물 2마리</span> (단, 한 쌍의 새, 6개월 미만의 개 2마리 또는 고양이
+                        2마리는 하나의 운송용기에 넣어 운송할 수 있습니다.)
+                      </li>
+                      <li>목적지 및 기종별 제한 사항에 따라 운송이 제한될 수 있으므로 서비스센터로 문의해 주시기 바랍니다.</li>
+                    </ul>
+                    <table class="tb-module1">
+                      <colgroup>
+                        <col style="width:33.33%">
+                        <col style="width:33.33%">
+                        <col style="width:33.33%">
+                      </colgroup>
+                      <thead>
+                      <tr>
+                        <th>항공사명</th>
+                        <th>국내선</th>
+                        <th>국제선</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <td>기내 반입</td>
+                        <td class="ok">가능</td>
+                        <!--td class="not">불가능</td-->
+                        <td class="ok">가능</td>
+                      </tr>
+                      <tr>
+                        <td>위탁</td>
+                        <td class="ok">가능</td>
+                        <td class="ok">가능</td>
+                      </tr>
+                      </tbody>
+                    </table>
+                    <strong class="tit-module">국내선 기내 반입 요금 및 조건</strong>
+                    <ul class="list-module">
+                      <li>요금: <span>\20,000</span></li>
+                      <li>조건: 반려동물 + 운송용기 (케이지) 무게 = <span>7kg 미만</span>만 가능</li>
+                    </ul>
+                    <strong class="tit-module">국내선 위탁 요금 및 조건</strong>
+                    <ul class="list-module">
+                      <li>요금 및 조건: <span>32kg 이내 \30,000/건, 33kg~45kg \60,000</span></li>
+                    </ul>
+                    <strong class="tit-module">국제선 기내 반입 요금 및 조건</strong>
+                    <table class="tb-module2">
+                      <colgroup>
+                        <col>
+                        <col style="width:95px">
+                      </colgroup>
+                      <thead>
+                      <tr>
+                        <th>여정</th>
+                        <th>기내 반입 요금<br>(32kg 이하)</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <td>일본/중국/홍콩/대만/마카오/몽골</td>
+                        <td class="td-price">\100,000</td>
+                      </tr>
+                      <tr>
+                        <td>동남아/괌/사이판</td>
+                        <td class="td-price">\150,000</td>
+                      </tr>
+                      <tr>
+                        <td>유럽/중동/아프리카/대양주</td>
+                        <td class="td-price">\200,000</td>
+                      </tr>
+                      <tr>
+                        <td>브라질 출/도착</td>
+                        <td class="td-price">\175,000</td>
+                      </tr>
+                      <tr>
+                        <td>미주</td>
+                        <td class="td-price">\200,000</td>
+                      </tr>
+                      </tbody>
+                    </table>
+                    <strong class="tit-module">국제선 위탁 요금 및 조건</strong>
+                    <table class="tb-module2">
+                      <colgroup>
+                        <col>
+                        <col style="width:95px">
+                      </colgroup>
+                      <thead>
+                      <tr>
+                        <th>여정</th>
+                        <th>기내 반입 요금<br>(32kg 이하)</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <td>일본/중국/홍콩/대만/마카오/몽골</td>
+                        <td class="td-price">\200,000</td>
+                      </tr>
+                      <tr>
+                        <td>동남아/괌/사이판</td>
+                        <td class="td-price">\300,000</td>
+                      </tr>
+                      <tr>
+                        <td>유럽/중동/아프리카/대양주</td>
+                        <td class="td-price">\400,000</td>
+                      </tr>
+                      <tr>
+                        <td>브라질 출/도착</td>
+                        <td class="td-price">\350,000</td>
+                      </tr>
+                      <tr>
+                        <td>미주</td>
+                        <td class="td-price">\400,000</td>
+                      </tr>
+                      </tbody>
+                    </table>
+                    <button type="button" class="button-module">반려동물 정보 자세히 보러가기</button>
+                    <!-- //공통 모됼 -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="details__entrust-bag-info2">
+            <div class="details__entrust-bag-tit">
+              <strong>오는편</strong><em>9월 16일 (월)</em>
+            </div>
+            <div class="details__entrust-bag-info-box">
+              <div class="trips">
+                <div class="airline"><img src="../assets/images/img_7C.svg" alt="">제주항공 7C 2101</div>
+                <div class="trip-item">
+                  <div class="departure">
+                    <strong>ICN</strong>
+                    <span>서울</span>
+                  </div>
+                  <div class="arrival">
+                    <strong>HKG</strong>
+                    <span>홍콩</span>
+                  </div>
+                </div>
+              </div>
+              <div class="entrust-bag-view">
+                <p class="comment">
+                  고객님께서 구매하실 항공권은 무료 위탁 수하물이 제공되지 않는 특가 항공권이예요.
+                </p>
+                <strong class="price">
+                  편도 당 수하물 15kg 사전 구매 시 \30,000<br>
+                  편도 당 수하물 15kg 공항 구매 시 \45,000
+                </strong>
+                <button type="button" class="more">사전 위탁 수하물 구매하러 가기</button>
+                <div class="pet-info">
+                  <button type="button" class="pet-toggle">반려동물 동반 여행 정보</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
   </div>
 
   <script src="../assets/js/jquery-1.12.4.js"></script>

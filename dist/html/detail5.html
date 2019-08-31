@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="utf-8">
-    <meta name="format-detection" content="telephone=no"/>
-    <meta name="viewport"
-          content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="viewport"
+        content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta http-equiv="Cache-Control" content="no-cache">
   <meta http-equiv="Pragma" content="no-cache">
@@ -29,199 +29,217 @@
 
 <div class="container">
     <div class="content">
-        <div class="search-trips-form">
-            <div class="search-trips-form__check-trips">
+      <div class="search-trips-form">
+        <div class="search-trips-form__check-trips">
           <span class="search-trips-form__check-trip-item">
             <input type="radio" id="rt" name="trip-type" checked="checked">
             <label for="rt">왕복</label>
           </span>
-                <span class="search-trips-form__check-trip-item">
+          <span class="search-trips-form__check-trip-item">
             <input type="radio" name="trip-type" id="ow">
             <label for="ow">편도</label>
           </span>
-            </div>
-            <div class="search-trips-form__row">
+        </div>
+        <div class="search-trips-form__row">
           <span class="search-trips-form__input search-trips-form__input-dep">
             <input type="text" placeholder="어디서 출발하시나요?">
           </span>
-            </div>
-            <div class="search-trips-form__row">
+        </div>
+        <div class="search-trips-form__row">
           <span class="search-trips-form__input search-trips-form__input-arr">
             <input type="text" placeholder="어디에 도착하시나요?">
           </span>
-            </div>
-            <div class="search-trips-form__row">
-                <div class="search-trips-form__col">
+        </div>
+        <div class="search-trips-form__row">
+          <div class="search-trips-form__col">
             <span class="search-trips-form__input search-trips-form__input-date">
               <input type="text" placeholder="가는 날짜">
             </span>
-                </div>
-                <div class="search-trips-form__col">
+          </div>
+          <div class="search-trips-form__col">
             <span class="search-trips-form__input search-trips-form__input-date">
               <input type="text" placeholder="오는 날짜">
             </span>
-                </div>
-            </div>
-            <div class="search-trips-form__row">
-                <div class="search-trips-form__col">
+          </div>
+        </div>
+        <div class="search-trips-form__row">
+          <div class="search-trips-form__col">
             <span class="search-trips-form__input search-trips-form__input-seat-count">
               <input type="text" placeholder="1명" value="1명">
             </span>
-                    <div class="search-trips-form__seat-count-layer">
-                        <div class="dl-items">
-                            <dl>
-                                <dt>성인</dt>
-                                <dd>
-                                    <div class="person-form">
-                                        <button type="button" class="subtract">-</button>
-                                        <input type="text" value="1" placeholder="">
-                                        <button type="button" class="add">+</button>
-                                    </div>
-                                </dd>
-                            </dl>
-                            <dl>
-                                <dt>아동 <em>만 2-17세</em></dt>
-                                <dd>
-                                    <div class="person-form">
-                                        <button type="button" class="subtract">-</button>
-                                        <input type="text" value="0" placeholder="">
-                                        <button type="button" class="add">+</button>
-                                    </div>
-                                </dd>
-                            </dl>
-                            <dl>
-                                <dt>아동 <em>만 2세 미만</em></dt>
-                                <dd>
-                                    <div class="person-form">
-                                        <button type="button" class="subtract">-</button>
-                                        <input type="text" value="0" placeholder="">
-                                        <button type="button" class="add">+</button>
-                                    </div>
-                                </dd>
-                            </dl>
-                        </div>
-                        <button type="button" class="success">완료</button>
+            <div class="search-trips-form__seat-count-layer">
+              <div class="dl-items">
+                <dl>
+                  <dt>성인</dt>
+                  <dd>
+                    <div class="person-form">
+                      <button type="button" class="subtract">-</button>
+                      <input type="text" value="1" placeholder="">
+                      <button type="button" class="add">+</button>
                     </div>
-                </div>
-                <div class="search-trips-form__col">
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>아동 <em>만 2-17세</em></dt>
+                  <dd>
+                    <div class="person-form">
+                      <button type="button" class="subtract">-</button>
+                      <input type="text" value="0" placeholder="">
+                      <button type="button" class="add">+</button>
+                    </div>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>아동 <em>만 2세 미만</em></dt>
+                  <dd>
+                    <div class="person-form">
+                      <button type="button" class="subtract">-</button>
+                      <input type="text" value="0" placeholder="">
+                      <button type="button" class="add">+</button>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+              <button type="button" class="success">완료</button>
+            </div>
+          </div>
+          <div class="search-trips-form__col">
             <span class="search-trips-form__input search-trips-form__input-seat search-trips-form__input-seat--disabled">
               <input type="text" placeholder="이코노미" disabled="disabled">
             </span>
-                </div>
-            </div>
-            <div class="search-trips-form__bt">
-                <button type="button">항공권 검색 GO!</button>
-            </div>
-            <div class="search-trips-form__tips">
-                추가 수하물과 기내식 최저가가 포함된 예상 가격까지 라쿤이 알려드려요!
-            </div>
+          </div>
         </div>
+        <div class="search-trips-form__bt">
+          <button type="button">항공권 검색 GO!</button>
+        </div>
+        <div class="search-trips-form__tips">
+          추가 수하물과 기내식 최저가가 포함된 예상 가격까지 라쿤이 알려드려요!
+        </div>
+      </div>
 
-        <div class="banners">
-            <strong class="banners__tit">특가 이벤트</strong>
-            <div class="banners__items">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <a href="" class="banners__link">
-                                <span class="banners__thumb"><img src="../assets/images/img_banner.png" alt=""></span>
-                                <div class="banners__txts">
-                                    <em class="banners__airline">항공사명</em>
-                                    <strong class="banners__copy">이벤트 헤드 카피 </strong>
-                                    <span class="banners__date">2019.07.01 - 2019.07.31</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="" class="banners__link">
-                                <span class="banners__thumb"><img src="../assets/images/img_banner.png" alt=""></span>
-                                <div class="banners__txts">
-                                    <em class="banners__airline">항공사명</em>
-                                    <strong class="banners__copy">이벤트 헤드 카피 </strong>
-                                    <span class="banners__date">2019.07.01 - 2019.07.31</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
+      <div class="banners">
+        <strong class="banners__tit">특가 이벤트</strong>
+        <div class="banners__items">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="" class="banners__link">
+                  <span class="banners__thumb"><img src="../assets/images/img_banner.png" alt=""></span>
+                  <div class="banners__txts">
+                    <em class="banners__airline">항공사명</em>
+                    <strong class="banners__copy">이벤트 헤드 카피 </strong>
+                    <span class="banners__date">2019.07.01 - 2019.07.31</span>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="" class="banners__link">
+                  <span class="banners__thumb"><img src="../assets/images/img_banner.png" alt=""></span>
+                  <div class="banners__txts">
+                    <em class="banners__airline">항공사명</em>
+                    <strong class="banners__copy">이벤트 헤드 카피 </strong>
+                    <span class="banners__date">2019.07.01 - 2019.07.31</span>
+                  </div>
+                </a>
+              </div>
             </div>
+            <div class="swiper-pagination"></div>
+          </div>
         </div>
+      </div>
 
-        <div class="quick">
-            <ul>
-                <li class="quick__srch actived"><a href=""><span>검색</span></a></li>
-                <li class="quick__special-price"><a href=""><span>특가</span></a></li>
-                <li class="quick__profile"><a href=""><span>프로필</span></a></li>
-            </ul>
-        </div>
+      <div class="quick">
+        <ul>
+          <li class="quick__srch actived"><a href=""><span>검색</span></a></li>
+          <li class="quick__special-price"><a href=""><span>특가</span></a></li>
+          <li class="quick__profile"><a href=""><span>프로필</span></a></li>
+        </ul>
+      </div>
     </div>
 </div>
 
 
 <div class="layers">
     <div class="layers__header">
-        <button type="button" class="layers__close">close</button>
-        <h2 class="layers__tit">기내식 정보</h2>
+      <button type="button" class="layers__close">close</button>
+      <h2 class="layers__tit">항공사명 기내식 정보</h2>
     </div>
     <div class="layers__body">
-        <div class="details">
-            <div class="details__bag">
-                <div class="details__bag-tit">
-                    <span class="thumb"><img src="" alt=""></span>
-                    <p class="txt">기내식 사전 구매는 제주항공 홈페이지를 통해 구매 가능합니다.
-                        최소 출발 4일 전 1인당 1개까지 사전 주문 가능합니다.</p>
+      <div class="details">
+        <div class="details__meal">
+          <div class="details__meal-info1">
+            <strong>라쿤 tip!</strong>
+            <p>기내식 사전 구매는 제주항공 홈페이지를 통해 하실 수 있습니다. 최초 출발 2일 전 (출발일 제외) 1인당 1개 사전 주문 가능합니다.</p>
+          </div>
+          <div class="details__meal-info3">
+            <div class="details__meal-list-group">
+              <strong class="tit">제주항공 기내식 메뉴 </strong>
+              <div class="choice">
+                <button type="button" class="target is-actived">노선 별 보기</button>
+                <div class="choice-list">
+                  <ul>
+                    <li>
+                      <button type="button" class="is-actived">전체</button>
+                    </li>
+                    <li>
+                      <button type="button">인천/부산</button>
+                    </li>
+                    <li>
+                      <button type="button">괌/사이판</button>
+                    </li>
+                    <li>
+                      <button type="button">김포</button>
+                    </li>
+                    <li>
+                      <button type="button">대구</button>
+                    </li>
+                    <li>
+                      <button type="button">청주</button>
+                    </li>
+                    <li>
+                      <button type="button">무안</button>
+                    </li>
+                  </ul>
+                  <button button="button" class="success">완료</button>
                 </div>
-                <div class="details__meal-list">
-                    <strong class="tit">제주항공 기내식 메뉴</strong>
-                    <ul class="list">
-                        <li>
-                            <div class="in">
-                                <span class="name">메뉴명</span>
-                                <span class="thumb"><img src="../assets/images/img_pic2.png" alt=""></span>
-                                <strong class="price">\10,000</strong>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="in">
-                                <span class="name">메뉴명</span>
-                                <span class="thumb"><img src="../assets/images/img_pic2.png" alt=""></span>
-                                <strong class="price">\10,000</strong>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="in">
-                                <span class="name">메뉴명</span>
-                                <span class="thumb"><img src="../assets/images/img_pic2.png" alt=""></span>
-                                <strong class="price">\10,000</strong>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="in">
-                                <span class="name">메뉴명</span>
-                                <span class="thumb"><img src="../assets/images/img_pic2.png" alt=""></span>
-                                <strong class="price">\10,000</strong>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="in">
-                                <span class="name">메뉴명</span>
-                                <span class="thumb"><img src="../assets/images/img_pic2.png" alt=""></span>
-                                <strong class="price">\10,000</strong>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="in">
-                                <span class="name">메뉴명</span>
-                                <span class="thumb"><img src="../assets/images/img_pic2.png" alt=""></span>
-                                <strong class="price">\10,000</strong>
-                            </div>
-                        </li>
-                    </ul>
-                    <button type="button">구매하기</button>
-                </div>
+              </div>
+              <div class="list">
+                <ul>
+                  <li>
+                    <a href="">
+                      <img src="../assets/images/img_meal-list1.jpg" alt="">
+                      <strong>여름 보양식 삼계탕 </strong>
+                      <span>\18,000</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="../assets/images/img_meal-list2.jpg" alt="">
+                      <strong>패밀리 세트</strong>
+                      <span>\29,000</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="../assets/images/img_meal-list3.jpg" alt="">
+                      <strong>커플메뉴</strong>
+                      <span>\24,000</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="../assets/images/img_meal-list4.jpg" alt="">
+                      <strong>오색 비빔밥</strong>
+                      <span>\15,000</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <button type="button" class="buy">사전 기내식 구매하러 가기</button>
             </div>
+          </div>
         </div>
+      </div>
     </div>
 </div>
 
