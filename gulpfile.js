@@ -58,7 +58,7 @@ function styles() {
   // .pipe(gulpSass({outputStyle: 'compact'}).on('error', gulpSass.logError))
   .pipe(gulpSass({
     outputStyle: 'compact'
-  }))
+  }).on('error', handleError))
   // .pipe(gulpInsert.prepend('@charset "UTF-8";\n'))
   .pipe(gulp.dest(paths.styles.dest))
   .pipe(gulpConcat('alla.min.css'))
@@ -133,6 +133,7 @@ function clean() {
 //watch
 function watch() {
   browserSync.init({
+    port: 3333,
     server: {
       baseDir: paths.root.dest + "/",
       index: "./html/index.html"
@@ -143,6 +144,11 @@ function watch() {
   gulp.watch(paths.scripts.file, scripts);
   gulp.watch(paths.images.file, images);
   gulp.watch(paths.html.file, html).on('change', browserSync.reload);
+}
+
+function handleError(err) {
+  console.log(err);
+  this.emit('end');
 }
 
 // var build = gulp.parallel(clean, styles, scripts, images, html, watch);
