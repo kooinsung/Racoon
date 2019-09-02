@@ -3107,6 +3107,232 @@ button.swiper-pagination-bullet {
     color: #0b6f55;
 }
 
+.layers__utils {
+    margin: 0 20px;
+    background: #fff;
+    padding-top: 55px;
+    padding-bottom: 30px;
+}
+
+.layers__sort li {
+    padding: 15px 0;
+    border-top: 1px solid #d1d1d1;
+}
+
+.layers__sort li:first-child {
+    border-top: 0;
+}
+
+.layers__sort input {
+    opacity: 0;
+    position: absolute;
+}
+
+.layers__sort input + label {
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 21px;
+    color: #000;
+    padding-left: 25px;
+}
+
+.layers__sort input + label:before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    box-sizing: border-box;
+    border: 1px solid #d3d3d3;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    position: absolute;
+    top: 1px;
+    left: 0px;
+}
+
+.layers__sort input + label strong {
+    display: block;
+    line-height: 150%;
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+.layers__sort input + label span {
+    font-weight: 700;
+}
+
+.layers__sort input:checked + label {
+    color: #0b704e;
+}
+
+.layers__sort input:checked + label:before {
+    border: 1px solid #06a852;
+}
+
+.layers__sort input:checked + label:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    background: #06a852;
+}
+
+.layers__filter {
+    margin: 0 10px;
+    padding: 10px 0;
+    font-size: 0;
+}
+
+.layers__filter-group {
+    padding: 15px 0;
+    border-top: 1px solid #d1d1d1;
+}
+
+.layers__filter-group:first-child {
+    border-top: 0;
+}
+
+.layers__filter-tit {
+    position: relative;
+    width: 100%;
+    text-align: left;
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    background: url("../images/ico_toggle-off.svg") 98% center no-repeat;
+    background-size: 14px 10px;
+}
+
+.layers__filter-tit.active {
+    background: url("../images/ico_toggle-on.svg") 98% center no-repeat;
+    background-size: 14px 10px;
+}
+
+.layers__filter-inner {
+    position: relative;
+}
+
+.layers__filter4 {
+    padding-top: 10px;
+    min-height: 24px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.layers__filter4 .time {
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.layers__filter4 .time span {
+    font-size: 12px;
+}
+
+.layers__filter-item {
+    margin-top: 12px;
+}
+
+.layers__filter-item input {
+    opacity: 0;
+    position: absolute;
+}
+
+.layers__filter-item input + label {
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 21px;
+    color: #000;
+    padding-left: 25px;
+}
+
+.layers__filter-item input + label:before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    box-sizing: border-box;
+    border: 1px solid #d3d3d3;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    position: absolute;
+    top: 1px;
+    left: 0px;
+}
+
+.layers__filter-item input + label strong {
+    display: block;
+    line-height: 150%;
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+.layers__filter-item input + label span {
+    font-weight: 700;
+}
+
+.layers__filter-item input:checked + label {
+    color: #0b704e;
+}
+
+.layers__filter-item input:checked + label:before {
+    border: 1px solid #06a852;
+}
+
+.layers__filter-item input:checked + label:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    background: #06a852;
+}
+
+.layers__filter-row-price {
+    position: absolute;
+    top: -25px;
+    right: 40px;
+}
+
+.layers__filter-row-price strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.layers__filter-row-price li {
+    font-size: 12px;
+    line-height: 21px;
+    margin-top: 12px;
+}
+
+.layers .yellow-button {
+    display: block;
+    margin-top: 50px;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: #ffe155;
+    font-size: 14px;
+    color: #0b6f55;
+    text-align: center;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+}
+
 .alerts {
     position: fixed;
     top: 0;
