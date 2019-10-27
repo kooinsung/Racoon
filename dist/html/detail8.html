@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="viewport"
+        content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="Description" content="">
+  <meta property="og:title" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <link rel="shortcut icon" href="" type="image/x-icon">
+  <link rel="stylesheet" href="../assets/css/all.min.css">
+
+</head>
+
+<body class="sub">
+<header class="header">
+  <h1 class=header__logo><a href="" class=header__logo-link>RACOON</a></h1>
+</header>
+
+<div class="container">
+  <div class="content">
+    <div class="search-trips-form">
+      <div class="search-trips-form__check-trips">
+          <span class="search-trips-form__check-trip-item">
+            <input type="radio" id="rt" name="trip-type" checked="checked">
+            <label for="rt">왕복</label>
+          </span>
+        <span class="search-trips-form__check-trip-item">
+            <input type="radio" name="trip-type" id="ow">
+            <label for="ow">편도</label>
+          </span>
+      </div>
+      <div class="search-trips-form__row">
+          <span class="search-trips-form__input search-trips-form__input-dep">
+            <input type="text" placeholder="어디서 출발하시나요?">
+          </span>
+      </div>
+      <div class="search-trips-form__row">
+          <span class="search-trips-form__input search-trips-form__input-arr">
+            <input type="text" placeholder="어디에 도착하시나요?">
+          </span>
+      </div>
+      <div class="search-trips-form__row">
+        <div class="search-trips-form__col">
+            <span class="search-trips-form__input search-trips-form__input-date">
+              <input type="text" placeholder="가는 날짜">
+            </span>
+        </div>
+        <div class="search-trips-form__col">
+            <span class="search-trips-form__input search-trips-form__input-date">
+              <input type="text" placeholder="오는 날짜">
+            </span>
+        </div>
+      </div>
+      <div class="search-trips-form__row">
+        <div class="search-trips-form__col">
+            <span class="search-trips-form__input search-trips-form__input-seat-count">
+              <input type="text" placeholder="1명" value="1명">
+            </span>
+          <div class="search-trips-form__seat-count-layer">
+            <div class="dl-items">
+              <dl>
+                <dt>성인</dt>
+                <dd>
+                  <div class="person-form">
+                    <button type="button" class="subtract">-</button>
+                    <input type="text" value="1" placeholder="">
+                    <button type="button" class="add">+</button>
+                  </div>
+                </dd>
+              </dl>
+              <dl>
+                <dt>아동 <em>만 2-17세</em></dt>
+                <dd>
+                  <div class="person-form">
+                    <button type="button" class="subtract">-</button>
+                    <input type="text" value="0" placeholder="">
+                    <button type="button" class="add">+</button>
+                  </div>
+                </dd>
+              </dl>
+              <dl>
+                <dt>아동 <em>만 2세 미만</em></dt>
+                <dd>
+                  <div class="person-form">
+                    <button type="button" class="subtract">-</button>
+                    <input type="text" value="0" placeholder="">
+                    <button type="button" class="add">+</button>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+            <button type="button" class="success">완료</button>
+          </div>
+        </div>
+        <div class="search-trips-form__col">
+            <span
+                class="search-trips-form__input search-trips-form__input-seat search-trips-form__input-seat--disabled">
+              <input type="text" placeholder="이코노미" disabled="disabled">
+            </span>
+        </div>
+      </div>
+      <div class="search-trips-form__bt">
+        <button type="button">항공권 검색 GO!</button>
+      </div>
+      <div class="search-trips-form__tips">
+        추가 수하물과 기내식 최저가가 포함된 예상 가격까지 라쿤이 알려드려요!
+      </div>
+    </div>
+
+    <div class="banners">
+      <strong class="banners__tit">특가 이벤트</strong>
+      <div class="banners__items">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="" class="banners__link">
+                <span class="banners__thumb"><img src="../assets/images/img_banner.png" alt=""></span>
+                <div class="banners__txts">
+                  <em class="banners__airline">항공사명</em>
+                  <strong class="banners__copy">이벤트 헤드 카피 </strong>
+                  <span class="banners__date">2019.07.01 - 2019.07.31</span>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="" class="banners__link">
+                <span class="banners__thumb"><img src="../assets/images/img_banner.png" alt=""></span>
+                <div class="banners__txts">
+                  <em class="banners__airline">항공사명</em>
+                  <strong class="banners__copy">이벤트 헤드 카피 </strong>
+                  <span class="banners__date">2019.07.01 - 2019.07.31</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quick">
+      <ul>
+        <li class="quick__srch actived"><a href=""><span>검색</span></a></li>
+        <li class="quick__special-price"><a href=""><span>특가</span></a></li>
+        <li class="quick__profile"><a href=""><span>프로필</span></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="layers">
+  <div class="layers__header">
+    <button type="button" class="layers__close">close</button>
+    <h2 class="layers__tit">마일리지 / 포인트 사용 방식</h2>
+  </div>
+  <div class="layers__body">
+    <div class="details">
+      <div class="details__mileage">
+        <div class="details__mileage-info1">
+          <strong>라쿤 tip!</strong>
+          <span>진에어 나비포인트</span>
+          <p>나비포인트 200 포인트부터 제주도 왕복 무료 항공권 획득 가능! (국제선 무료 왕복 항공권은 제공 안됨) </p>
+        </div>
+        <div class="details__mileage-info2">
+          <div class="info">
+            <dl class="txts">
+              <dt>포인트 사용 기준</dt>
+              <dd>누적 적립된 포인트는 노선별 사용 기준에 따라 편도 보너스 항공권(주중/주말)으로 구분하여 사용 가능합니다.</dd>
+              <dd>보너스 항공권은 일련번호의 쿠폰 형태로 발급되며, 진에어 홈페이지/모바일을 통해 1개월 안에 자유롭게 사용하시면 됩니다.</dd>
+              <dd class="another">
+                <table class="tb-module1">
+                  <colgroup>
+                    <col style="width:50%;">
+                    <col style="width:50%;">
+                  </colgroup>
+                  <thead>
+                  <tr>
+                    <th>항공운임</th>
+                    <th>유류할증료 및<br>공항시설 사용료</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>운임 전체 결제만 가능</td>
+                    <td>사용불가</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </dd>
+            </dl>
+          </div>
+          <div class="info">
+            <dl class="txts">
+              <dt>항공운임 사용 기준(편도)</dt>
+              <dd class="another">
+                <table class="tb-module1">
+                  <colgroup>
+                    <col style="width:33.33%;">
+                    <col style="width:33.33%;">
+                    <col style="width:33.33%;">
+                  </colgroup>
+                  <thead>
+                  <tr>
+                    <th>구분</th>
+                    <th>요일 기준</th>
+                    <th>사용 포인트</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td rowspan="2">국내선 편도</td>
+                    <td>월화수목</td>
+                    <td>100P</td>
+                  </tr>
+                  <tr>
+                    <td>금토일</td>
+                    <td>150P</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">국내선 왕복</td>
+                    <td>월화수목</td>
+                    <td>200P</td>
+                  </tr>
+                  <tr>
+                    <td>금토일</td>
+                    <td>300P</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </dd>
+            </dl>
+          </div>
+          <div class="info">
+            <dl class="txts">
+              <dt>유의 사항</dt>
+              <dd>포인트 사용 시 유효기간 만료 임박 포인트부터 순서대로 적용됩니다.</dd>
+              <dd>보너스 항공권 쿠폰의 유류세 및 공항세는 이용자 본인 부담입니다.</dd>
+              <dd>성수기 기간에는 보너스 항공권 사용이 불가합니다.*보너스 항공권 쿠폰 사용불가 기간 (출발일 기준)
+                <div class="noti">*2019년: 연초(1/1), 설날(2/2~2/7), 봄방학/삼일절(2/23~3/2), 어린이날/어버일날(5/4~5/7), 현충일(6/6~6/8),
+                  여름휴가(7/20~8/17), 추석(9/11~9/16), 개천절/한글날(10/3~10/9), 연말(12/31)
+                </div>
+              </dd>
+              <dd>보너스 항공권 쿠폰을 이용한 예약 변경은 불가하오니 환불 후 재구매하여 주시기 바라며, 예약 취소 시 쿠폰 사용 유효기간 내의 쿠폰에 한해서만 환불이 가능하며, 사용 유효기간이 지난
+                경우 쿠폰은 자동 소멸됩니다.
+              </dd>
+              <dd>보너스 항공권 쿠폰 사용 유효기간*발권 유효기간: 보너스 항공권 쿠폰 발행 후 1개월*탑승 유효기간: 보너스 항공권 쿠폰 발행 후 4개월</dd>
+              <dd>환불된 보너스 항공권 쿠폰을 포인트로 재환급하는 경우, 포인트 유효기간 이내의 포인트만 환급이 가능하며 유효기간이 지난 경우 자동 소멸됩니다. (포인트 유효기간: 적립일로부터
+                3년)
+              </dd>
+              <dd>타인과 포인트 합산은 불가합니다.</dd>
+            </dl>
+          </div>
+        </div>
+        <div class="details__mileage-button">
+          <button type="button" class="buy">진에어 포인트 더 알아보기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../assets/js/jquery-1.12.4.js"></script>
+<script src="../assets/js/jquery-ui.js"></script>
+<script src="../assets/js/swiper.js"></script>
+<link rel="stylesheet" href="../assets/js/ui.js">
+
+<script>
+  window.onscroll = function () {
+    var body = document.body;
+    if (window.pageYOffset > 45) {
+      body.classList.add("scrolling");
+    } else {
+      body.classList.remove("scrolling");
+    }
+  }
+
+  $(function () {
+
+    var swiper = new Swiper('.banners__items .swiper-container', {
+      pagination: {
+        el: '.banners__items .swiper-pagination',
+      },
+    });
+
+    $("#slider").slider({
+      range: "max",
+      min: 1,
+      max: 14,
+      step: 1,
+      create: function (event, ui) {
+      },
+      slide: function (event, ui) {
+      }
+    });
+
+    $("#calendars-inline-stage").datepicker({
+      minDate: 0,
+      numberOfMonths: [8, 1],
+      dateFormat: "MM dd일 (DD)",
+      beforeShowDay: function (date) {
+        var date1 = $.datepicker.parseDate("MM dd일 (DD)", $("#dep-range").val());
+        var date2 = $.datepicker.parseDate("MM dd일 (DD)", $("#arr-range").val());
+
+        if (date1 && date && (date1.getTime() == date.getTime())) {
+          return [true, 'ui-state-selected-range ui-range-start', ''];
+        }
+        if (date2 && date && (date2.getTime() == date.getTime())) {
+          return [true, 'ui-state-selected-range ui-range-end', ''];
+        }
+
+        if (date >= date1 && date <= date2) {
+          return [true, 'ui-state-selected-range', ''];
+        }
+        var d = date.getTime();
+
+        return [true, '', ''];
+        //return [true, date1 && ((date.getTime() == date1.getTime()) || (date2 && date >= date1 && date <= date2)) ? "dp-highlight" : ""];/
+      },
+      onSelect: function (dateText, inst) {
+        var date1 = $.datepicker.parseDate("MM dd일 (DD)", $("#dep-range").val());
+        var date2 = $.datepicker.parseDate("MM dd일 (DD)", $("#arr-range").val());
+        var selectedDate = $.datepicker.parseDate("MM dd일 (DD)", dateText);
+
+        if (!date1 || date2) {
+          $("#dep-range").val(dateText);
+          $("#arr-range").val("");
+          $(this).datepicker();
+        } else if (selectedDate < date1) {
+          $("#arr-range").val($("#dep-range").val());
+          $("#dep-range").val(dateText);
+          $(this).datepicker();
+        } else {
+          $("#arr-range").val(dateText);
+          $(this).datepicker();
+        }
+      }
+    });
+  });
+</script>
+</body>
+
+</html>
