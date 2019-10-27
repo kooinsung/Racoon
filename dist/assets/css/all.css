@@ -1437,6 +1437,12 @@ button.swiper-pagination-bullet {
     color: #0b704e;
 }
 
+.kill {
+    position: fixed !important;
+    top: -9999px !important;
+    right: -9999px !important;
+}
+
 .container {
     padding-top: 45px;
     padding-bottom: 53px;
@@ -1798,6 +1804,18 @@ button.swiper-pagination-bullet {
     background-size: 23px 24px;
 }
 
+.trip-info:after {
+    content: '';
+    width: 24px;
+    height: 23px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    margin-top: -12px;
+    background: url("../images/ico_search.png") center center no-repeat;
+    background-size: 24px 23px;
+}
+
 .trip-info strong {
     display: block;
     font-size: 18px;
@@ -1973,38 +1991,19 @@ button.swiper-pagination-bullet {
     background: rgba(96, 96, 96, 0.7);
 }
 
-.filter-menus ul {
-    display: inline-block;
-}
-
-.filter-menus ul:first-child {
-    float: left;
-}
-
-.filter-menus ul:first-child li {
-    margin-left: 10px;
-}
-
-.filter-menus ul:first-child a {
-    padding: 0 15px;
-    font-weight: 700;
-}
-
-.filter-menus ul:last-child {
-    float: right;
-    margin-right: 10px;
-}
-
-.filter-menus ul:last-child a {
-    padding: 0 25px;
-}
-
 .filter-menus li {
     position: relative;
     display: inline-block;
     vertical-align: top;
     text-align: center;
     height: 40px;
+    width: 50%;
+    box-sizing: border-box;
+    border-left: 1px solid #d8d8d8;
+}
+
+.filter-menus li:first-child {
+    border-left: 0;
 }
 
 .filter-menus a {
@@ -2051,6 +2050,7 @@ button.swiper-pagination-bullet {
     border-top: 1px solid #e5ca4c;
     -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+    padding-top: 15px;
 }
 
 .expected-layer.fixed {
@@ -2059,6 +2059,143 @@ button.swiper-pagination-bullet {
     right: 0px;
     left: 0px;
     z-index: 210;
+}
+
+.expected-layer__txt {
+    font-size: 14px;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 15px;
+    line-height: 150%;
+}
+
+.expected-layer__row {
+    font-size: 0;
+}
+
+.expected-layer__col {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.expected-layer__col:first-child .expected-layer__col-inner {
+    margin-right: 5px;
+}
+
+.expected-layer__col:last-child .expected-layer__col-inner {
+    margin-left: 5px;
+}
+
+.expected-layer__col dl {
+    text-align: center;
+}
+
+.expected-layer__col dl dt {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    height: 95px;
+    padding: 10px 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid #00a64e;
+}
+
+.expected-layer__col dl dt.bag {
+    background: url("../images/ico_bag3.png") center 30px no-repeat;
+    background-size: 36px 56px;
+}
+
+.expected-layer__col dl dt.meal {
+    background: url("../images/ico_meal3.png") center 40px no-repeat;
+    background-size: 56px 31px;
+}
+
+.expected-layer__col dl dd {
+    display: inline-block;
+    width: 50%;
+    box-sizing: border-box;
+    border-left: 1px solid #00a64e;
+    padding: 10px 0;
+}
+
+.expected-layer__col dl dd.not-line {
+    border-left: 0;
+}
+
+.expected-layer__col .info {
+    text-align: center;
+    margin: 10px 0 10px 0;
+}
+
+.expected-layer__col .info li {
+    height: 30px;
+    display: inline-grid;
+    vertical-align: top;
+    margin: 0 10px;
+}
+
+.expected-layer__col .info li.bag15 {
+    width: 20px;
+    height: 30px;
+    background: url("../images/ico_bag15.svg") center center no-repeat;
+    background-size: 20px 30px;
+}
+
+.expected-layer__col .info li.bag20 {
+    width: 20px;
+    height: 30px;
+    background: url("../images/ico_bag20.svg") center center no-repeat;
+    background-size: 20px 30px;
+}
+
+.expected-layer__col .info li.bag23 {
+    width: 20px;
+    height: 30px;
+    background: url("../images/ico_bag23.svg") center center no-repeat;
+    background-size: 20px 30px;
+}
+
+.expected-layer__col .info li.bag32 {
+    width: 20px;
+    height: 30px;
+    background: url("../images/ico_bag30.svg") center center no-repeat;
+    background-size: 20px 30px;
+}
+
+.expected-layer__col .info li.hot-meal {
+    width: 30px;
+    height: 30px;
+    background: url("../images/ico_hot-meal.svg") center center no-repeat;
+    background-size: 30px 25px;
+}
+
+.expected-layer__col .info li.cold-meal {
+    width: 26px;
+    height: 30px;
+    background: url("../images/ico_cold-meal.svg") center center no-repeat;
+    background-size: 26px 26px;
+}
+
+.expected-layer__col .info span {
+    font-size: 12px;
+    display: block;
+    margin: 10px 10px 0 10px;
+}
+
+.expected-layer__col .toggle-tit {
+    font-size: 12px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.expected-layer__col-inner {
+    background: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.1);
 }
 
 .expected-layer table {
@@ -2074,7 +2211,8 @@ button.swiper-pagination-bullet {
 }
 
 .expected-layer table thead th.long {
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: 700;
     text-align: left;
 }
 
@@ -2110,9 +2248,9 @@ button.swiper-pagination-bullet {
     background-size: 42px 23px;
 }
 
-.expected-layer button {
+.expected-layer .button button {
     display: block;
-    width: 188px;
+    width: 100%;
     height: 31px;
     box-sizing: border-box;
     border: 1px solid #0b6f55;
@@ -2130,8 +2268,8 @@ button.swiper-pagination-bullet {
     position: relative;
     display: block;
     vertical-align: top;
-    width: 25px;
-    height: 16px;
+    width: 40px;
+    height: 20px;
     margin: 0 auto;
 }
 
@@ -2144,8 +2282,8 @@ button.swiper-pagination-bullet {
 .switch-toggle label {
     cursor: pointer;
     text-indent: -9999px;
-    width: 25px;
-    height: 16px;
+    width: 40px;
+    height: 20px;
     background: #d1d1d1;
     display: inline-block;
     -webkit-border-radius: 16px;
@@ -2159,10 +2297,10 @@ button.swiper-pagination-bullet {
 .switch-toggle label:after {
     content: '';
     position: absolute;
-    top: 0px;
+    top: -1px;
     left: -1px;
-    width: 14px;
-    height: 14px;
+    width: 20px;
+    height: 20px;
     background: #fff;
     -webkit-border-radius: 14px;
     -moz-border-radius: 14px;
@@ -2184,7 +2322,7 @@ button.swiper-pagination-bullet {
 }
 
 .switch-toggle label:active:after {
-    width: 14px;
+    width: 20px;
 }
 
 .price-sort {
@@ -2356,11 +2494,47 @@ button.swiper-pagination-bullet {
 .search-result__item-airline {
     font-size: 10px;
     color: #606060;
-    padding: 10px 10px 0 10px;
+    padding: 10px 10px 0 10px !important;
+    text-align: left;
+}
+
+.search-result__item-price strong {
+    display: block;
+    font-size: 11px;
+    background: #e8e8e8;
+    border-radius: 25px;
+    line-height: 25px;
+}
+
+.search-result__item-total-price strong {
+    display: block;
+    font-size: 11px;
+    background: #ffe155;
+    border-radius: 25px;
+    line-height: 25px;
+    color: #0b6f55;
 }
 
 .search-result__item-infos {
     position: relative;
+}
+
+.search-result__item-infos > table {
+    width: 100%;
+}
+
+.search-result__item-infos > table thead th {
+    padding: 10px 5px 5px 5px;
+    font-size: 14px;
+}
+
+.search-result__item-infos > table tbody td {
+    padding: 5px;
+    text-align: center;
+}
+
+.search-result__item-infos > table tbody td.left {
+    text-align: left;
 }
 
 .search-result__item-info1 {
@@ -2450,28 +2624,14 @@ button.swiper-pagination-bullet {
     margin-top: 5px;
 }
 
-.search-result__item-info2 {
-    position: absolute;
-    top: 50%;
-    right: 90px;
-    transform: translateY(-50%);
-}
-
 .search-result__item-info2 .price {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
-}
-
-.search-result__item-info3 {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    margin-top: 10px;
 }
 
 .search-result__item-info3 .opts {
     font-size: 0;
+    text-align: left;
 }
 
 .search-result__item-info3 .opts li {
@@ -2540,12 +2700,50 @@ button.swiper-pagination-bullet {
     background-size: 26px 26px;
 }
 
+.search-result__item-info3 .opts.in .bag.bag15 {
+    background: url("../images/ico_bag15-2.svg") center center no-repeat;
+    background-size: 20px 30px;
+}
+
+.search-result__item-info3 .opts.in .bag.bag20 {
+    background: url("../images/ico_bag20-2.svg") center center no-repeat;
+    background-size: 20px 30px;
+}
+
+.search-result__item-info3 .opts.in .bag.bag23 {
+    background: url("../images/ico_bag23-2.svg") center center no-repeat;
+    background-size: 20px 30px;
+}
+
+.search-result__item-info3 .opts.in .bag.bag32 {
+    background: url("../images/ico_bag30-2.svg") center center no-repeat;
+    background-size: 20px 30px;
+}
+
+.search-result__item-info3 .opts.in .hot-meal {
+    background: url("../images/ico_hot-meal-2.svg") center center no-repeat;
+    background-size: 30px 25px;
+}
+
+.search-result__item-info3 .opts.in .cold-meal {
+    background: url("../images/ico_cold-meal-2.svg") center center no-repeat;
+    background-size: 26px 26px;
+}
+
 .search-result__item-info3 .price {
     display: block;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
-    display: block;
     margin: 5px 0 20px 0;
+    text-align: left;
+}
+
+.search-result__item-info3 .price.in {
+    color: #00a64e;
+}
+
+.search-result__item-info3 .point {
+    text-align: left;
 }
 
 .search-result__item-info3 .point strong {
@@ -2569,6 +2767,13 @@ button.swiper-pagination-bullet {
 
 .search-result__item-info3 .point em {
     font-size: 10px;
+}
+
+.search-result__item-info3 .multiply {
+    font-size: 12px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 5px;
 }
 
 .util-dims {
@@ -2808,6 +3013,14 @@ button.swiper-pagination-bullet {
     left: 0px;
     background: #fff;
     z-index: 400;
+}
+
+.layers.second {
+    z-index: 401;
+}
+
+.layers.third {
+    z-index: 402;
 }
 
 .layers__header {
@@ -3705,6 +3918,8 @@ button.swiper-pagination-bullet {
     width: 41px;
     height: 30px;
     margin-top: -15px;
+    background: url("../images/img_flight.png") center center no-repeat;
+    background-size: 41px 30px;
 }
 
 .details__reservation-info .txts {
@@ -3772,7 +3987,9 @@ button.swiper-pagination-bullet {
     vertical-align: top;
     width: 15px;
     height: 15px;
-    margin: 5px 0 0 5px;
+    margin: 7px 0 0 5px;
+    background: url("../images/ico_att.png") center center no-repeat;
+    background-size: 15px 15px;
 }
 
 .details__reservation-tip p {
@@ -3810,11 +4027,11 @@ button.swiper-pagination-bullet {
     position: absolute;
     top: 50%;
     left: 16px;
-    width: 44px;
+    width: 42px;
     height: 34px;
     margin-top: -17px;
-    background: url("../images/ico_racoon.svg") center center no-repeat;
-    background-size: 44px 36px;
+    background: url("../images/img_racoon-head2.png") center center no-repeat;
+    background-size: 42px 34px;
 }
 
 .details__price-tit:after {
@@ -3880,6 +4097,8 @@ button.swiper-pagination-bullet {
     width: 15px;
     height: 15px;
     margin: 0 0 0 5px;
+    background: url("../images/ico_att.png") center center no-repeat;
+    background-size: 15px 15px;
 }
 
 .details__price-opt table tfoot td {
@@ -4659,6 +4878,140 @@ button.swiper-pagination-bullet {
 }
 
 .details__meal-list-group .buy {
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    background: #00a64e;
+    -webkit-border-radius: 46px;
+    -moz-border-radius: 46px;
+    border-radius: 46px;
+}
+
+.details__mileage {
+    padding: 15px 20px 0 20px;
+}
+
+.details__mileage .tb-module1 {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.details__mileage .tb-module1 thead th {
+    font-size: 12px;
+    padding: 10px 0;
+    background: #00a64e;
+    color: #fff;
+    line-height: 130%;
+    border-top: 1px solid #d1d1d1;
+    border-left: 1px solid #d1d1d1;
+}
+
+.details__mileage .tb-module1 thead th:first-child {
+    border-left: 0;
+}
+
+.details__mileage .tb-module1 tbody td {
+    font-size: 12px;
+    padding: 10px 0;
+    line-height: 130%;
+    border-top: 1px solid #d1d1d1;
+    border-left: 1px solid #d1d1d1;
+}
+
+.details__mileage .tb-module1 tbody td:first-child {
+    border-left: 0;
+}
+
+.details__mileage-info1 {
+    position: relative;
+    padding: 10px 10px 15px 120px;
+    background: #ffe155 url("../images/img_mileage-tip.png") 17px 15px no-repeat;
+    background-size: 88px 86px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.details__mileage-info1 strong {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0b6f55;
+    display: block;
+}
+
+.details__mileage-info1 span {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+}
+
+.details__mileage-info1 p {
+    font-size: 14px;
+    margin: 5px 0 0 0;
+    line-height: 140%;
+}
+
+.details__mileage-info2 .info {
+    margin: 25px 0 0 0;
+}
+
+.details__mileage-info2 .txts dt {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0b6f55;
+}
+
+.details__mileage-info2 .txts dd {
+    position: relative;
+    font-size: 14px;
+    line-height: 150%;
+    margin-top: 7px;
+    padding-left: 10px;
+}
+
+.details__mileage-info2 .txts dd:before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    background: #000;
+    border-radius: 2px;
+}
+
+.details__mileage-info2 .txts dd.another {
+    padding-left: 0;
+}
+
+.details__mileage-info2 .txts dd.another:before {
+    display: none;
+}
+
+.details__mileage-info2 .txts .noti {
+    font-size: 12px;
+    color: #00a64e;
+    line-height: 140%;
+}
+
+.details__mileage-info2 .txts .tip {
+    font-size: 12px;
+    line-height: 150%;
+    margin-top: 10px;
+}
+
+.details__mileage-button {
+    margin: 30px 0 0 0;
+}
+
+.details__mileage-button .buy {
     width: 100%;
     height: 46px;
     line-height: 46px;

@@ -98,9 +98,6 @@
         <div class="search-trips-form__bt">
           <button type="button">항공권 검색 GO!</button>
         </div>
-        <div class="search-trips-form__tips">
-          추가 수하물과 기내식 최저가가 포함된 예상 가격까지 라쿤이 알려드려요!
-        </div>
       </div>
     </div>
     <div class="price-sort">
@@ -137,220 +134,202 @@
         <li><a href="">정렬</a></li>
         <li><a href="">필터</a></li>
       </ul>
-      <ul>
-        <li><a href="">항공권 가격</a></li>
-        <li class="filter-menus__expected filter-menus__expected--selected"><a href="">예상 가격</a></li>
-      </ul>
     </div>
 
     <div class="expected-layer">
-      <table>
-        <colgroup>
-          <col style="">
-          <col style="width:50px;">
-          <col style="width:50px;">
-        </colgroup>
-        <thead>
-        <tr>
-          <th class="long">예상 가격 포함 여부를 선택해주세요!</th>
-          <th>가는편</th>
-          <th>오는편</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr class="bag">
-          <td class="txt">
-            <strong>추가 위탁 수하물 １개 기준</strong>
-            <em>항공사와 노선에 따라 15~32kg 무게 상이</em>
-          </td>
-          <td>
-            <span class="switch-toggle"><input type="checkbox" id="switch1"/><label for="switch1">Toggle</label></span>
-          </td>
-          <td>
-            <span class="switch-toggle"><input type="checkbox" id="switch2"/><label for="switch2">Toggle</label></span>
-          </td>
-        </tr>
-        <tr class="meal">
-          <td class="txt">
-            <strong>기내식 최저가 기준</strong>
-            <em>항공사와 노선에 따라 핫밀, 콜드밀 상이</em>
-          </td>
-          <td>
-            <span class="switch-toggle"><input type="checkbox" id="switch3"/><label for="switch3">Toggle</label></span>
-          </td>
-          <td>
-            <span class="switch-toggle"><input type="checkbox" id="switch4"/><label for="switch4">Toggle</label></span>
-          </td>
-        </tr>
-        </tbody>
-      </table>
-      <button type="button">완료</button>
+      <p class="expected-layer__txt">위탁 수하물 1개와 기내식 최저가가 포함된 총 예상 가격을 라쿤이 알려드려요! 포함 여부를 선택해주세요.</p>
+      <div class="expected-layer__row">
+        <div class="expected-layer__col">
+          <div class="expected-layer__col-inner">
+            <dl>
+              <dt class="bag">위탁 수하물 1개 기준</dt>
+              <dd class="not-line"><strong class="toggle-tit">가는편</strong><span class="switch-toggle"><input
+                  type="checkbox" id="switch1"/><label for="switch1">Toggle</label></span></dd>
+              <dd><strong class="toggle-tit">오는편</strong><span class="switch-toggle"><input type="checkbox"
+                                                                                            id="switch2"/><label
+                  for="switch2">Toggle</label></span></dd>
+            </dl>
+          </div>
+          <div class="info">
+            <ul>
+              <li class="bag15">15kg</li>
+              <li class="bag23">23kg</li>
+              <li class="bag32">32kg</li>
+            </ul>
+            <span>항공사와 노선에 따라 15kg, 23kg, 32kg 등 무게 상이</span>
+          </div>
+        </div>
+        <div class="expected-layer__col">
+          <div class="expected-layer__col-inner">
+            <dl>
+              <dt class="meal">기내식 최저가 기준</dt>
+              <dd class="not-line"><strong class="toggle-tit">가는편</strong><span class="switch-toggle"><input
+                  type="checkbox" id="switch3"/><label for="switch3">Toggle</label></span></dd>
+              <dd><strong class="toggle-tit">오는편</strong><span class="switch-toggle"><input type="checkbox"
+                                                                                            id="switch4"/><label
+                  for="switch4">Toggle</label></span></dd>
+            </dl>
+          </div>
+          <div class="info">
+            <ul>
+              <li class="hot-meal">hot meal</li>
+              <li class="cold-meal">cold meal</li>
+            </ul>
+            <span>항공사와 노선에 따라 핫밀, 콜드밀 상이</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="button">
+        <button type="button">완료</button>
+      </div>
     </div>
 
     <div class="search-result">
       <div class="search-result__item">
-        <h2 class="search-result__item-airline">제주항공</h2>
         <div class="search-result__item-infos">
-          <div class="search-result__item-info1">
-            <div class="summary-group">
-              <div class="summary1">
-                <strong class="logo"><img src="../assets/images/img_7c.png" alt=""></strong>
-                <div>
-                  <span class="time">09:55 - 12:35</span>
-                  <ul class="opts">
-                    <li class="wifi">wifi</li>
-                    <li class="entertainment">entertainment</li>
-                    <li class="seat">기본</li>
-                  </ul>
+          <table>
+            <thead>
+            <tr>
+              <th class="search-result__item-airline">제주항공</th>
+              <th class="search-result__item-price"><strong>항공권 가격</strong></th>
+              <th class="search-result__item-total-price"><strong>총 포함 가격</strong></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td class="left">
+                <div class="search-result__item-info1">
+                  <div class="summary-group">
+                    <div class="summary1">
+                      <strong class="logo"><img src="../assets/images/img_7c.png" alt=""></strong>
+                      <div>
+                        <span class="time">09:55 - 12:35</span>
+                        <ul class="opts">
+                          <li class="wifi">wifi</li>
+                          <li class="entertainment">entertainment</li>
+                          <li class="seat">기본</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="summary2">
+                      ICN-HKG, 직항, 3h 40m<br>
+                      B737
+                    </div>
+                  </div>
+                  <div class="summary-group">
+                    <div class="summary1">
+                      <strong class="logo"><img src="../assets/images/img_7c.png" alt=""></strong>
+                      <div>
+                        <span class="time">09:55 - 12:35</span>
+                        <ul class="opts">
+                          <li class="wifi"></li>
+                          <li class="entertainment"></li>
+                          <li class="seat">기본</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="summary2">
+                      ICN-HKG, 직항, 3h 40m<br>
+                      B737
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="summary2">
-                ICN-HKG, 직항, 3h 40m<br>
-                B737
-              </div>
-            </div>
-            <div class="summary-group">
-              <div class="summary1">
-                <strong class="logo"><img src="../assets/images/img_7c.png" alt=""></strong>
-                <div>
-                  <span class="time">09:55 - 12:35</span>
-                  <ul class="opts">
-                    <li class="wifi"></li>
-                    <li class="entertainment"></li>
-                    <li class="seat">기본</li>
-                  </ul>
+              </td>
+              <td>
+                <div class="search-result__item-info2">
+                  <strong class="price">\221,300</strong>
                 </div>
-              </div>
-              <div class="summary2">
-                ICN-HKG, 직항, 3h 40m<br>
-                B737
-              </div>
-            </div>
-          </div>
-          <div class="search-result__item-info2">
-            <strong class="price">\221,300</strong>
-          </div>
-          <div class="search-result__item-info3">
-            <ul class="opts">
-              <li class="bag bag15">bag</li>
-              <li class="hot-meal">meal</li>
-            </ul>
-            <strong class="price">\331,300</strong>
-            <div class="point">
-              <strong>88,888</strong>
-              <em>포인트 적립</em>
-            </div>
-          </div>
+              </td>
+              <td>
+                <div class="search-result__item-info3">
+                  <ul class="opts in">
+                    <li class="bag bag15">bag</li>
+                    <li class="hot-meal">meal</li>
+                  </ul>
+                  <strong class="price in">\3,331,300</strong>
+                  <div class="point">
+                    <strong>88,888</strong>
+                    <em>포인트 적립</em>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
         </div>
       </div>
       <div class="search-result__item">
-        <h2 class="search-result__item-airline">홍콩익스프레스</h2>
         <div class="search-result__item-infos">
-          <div class="search-result__item-info1">
-            <div class="summary-group">
-              <div class="summary1">
-                <strong class="logo"><img src="../assets/images/img_hk.png" alt=""></strong>
-                <div>
-                  <span class="time">09:55 - 12:35 <em class="plus">+1</em></span>
-                  <ul class="opts">
-                    <li class="wifi">wifi</li>
-                    <li class="entertainment">entertainment</li>
-                    <li class="seat">기본</li>
-                  </ul>
+          <table>
+            <thead>
+            <tr>
+              <th class="search-result__item-airline">홍콩익스프레스</th>
+              <th class="search-result__item-price"><strong>항공권 가격</strong></th>
+              <th class="search-result__item-total-price"><strong>총 포함 가격</strong></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td class="left">
+                <div class="search-result__item-info1">
+                  <div class="summary-group">
+                    <div class="summary1">
+                      <strong class="logo"><img src="../assets/images/img_hk.png" alt=""></strong>
+                      <div>
+                        <span class="time">09:55 - 12:35 <em class="plus">+1</em></span>
+                        <ul class="opts">
+                          <li class="wifi">wifi</li>
+                          <li class="entertainment">entertainment</li>
+                          <li class="seat">기본</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="summary2">
+                      ICN-HKG, 직항, 3h 40m<br>
+                      B737
+                    </div>
+                  </div>
+                  <div class="summary-group">
+                    <div class="summary1">
+                      <strong class="logo"><img src="../assets/images/img_hk.png" alt=""></strong>
+                      <div>
+                        <span class="time">09:55 - 12:35</span>
+                        <ul class="opts">
+                          <li class="wifi"></li>
+                          <li class="entertainment"></li>
+                          <li class="seat">기본</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="summary2">
+                      ICN-HKG, 직항, 3h 40m<br>
+                      B737
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="summary2">
-                ICN-HKG, 직항, 3h 40m<br>
-                B737
-              </div>
-            </div>
-            <div class="summary-group">
-              <div class="summary1">
-                <strong class="logo"><img src="../assets/images/img_hk.png" alt=""></strong>
-                <div>
-                  <span class="time">09:55 - 12:35</span>
-                  <ul class="opts">
-                    <li class="wifi"></li>
-                    <li class="entertainment"></li>
-                    <li class="seat">기본</li>
-                  </ul>
+              </td>
+              <td>
+                <div class="search-result__item-info2">
+                  <strong class="price">\221,300</strong>
                 </div>
-              </div>
-              <div class="summary2">
-                ICN-HKG, 직항, 3h 40m<br>
-                B737
-              </div>
-            </div>
-          </div>
-          <div class="search-result__item-info2">
-            <strong class="price">\221,300</strong>
-          </div>
-          <div class="search-result__item-info3">
-            <ul class="opts">
-              <li class="bag bag20">bag</li>
-              <li class="cold-meal">meal</li>
-            </ul>
-            <strong class="price">\331,300</strong>
-            <div class="point">
-              <strong>88,888</strong>
-              <em>포인트 적립</em>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="search-result__item">
-        <h2 class="search-result__item-airline">중화항공</h2>
-        <div class="search-result__item-infos">
-          <div class="search-result__item-info1">
-            <div class="summary-group">
-              <div class="summary1">
-                <strong class="logo"><img src="../assets/images/img_ci.png" alt=""></strong>
-                <div>
-                  <span class="time">09:55 - 12:35 <em class="plus">+1</em></span>
+              </td>
+              <td>
+                <div class="search-result__item-info3">
                   <ul class="opts">
-                    <li class="wifi">wifi</li>
-                    <li class="entertainment">entertainment</li>
-                    <li class="seat">기본</li>
+                    <li class="bag bag20 dubble">bag</li>
+                    <li class="cold-meal">meal</li>
                   </ul>
+                  <strong class="price">\331,300</strong>
+                  <div class="point">
+                    <strong>88,888</strong>
+                    <em>포인트 적립</em>
+                  </div>
                 </div>
-              </div>
-              <div class="summary2">
-                ICN-HKG, 직항, 3h 40m<br>
-                B737
-              </div>
-            </div>
-            <div class="summary-group">
-              <div class="summary1">
-                <strong class="logo"><img src="../assets/images/img_ci.png" alt=""></strong>
-                <div>
-                  <span class="time">09:55 - 12:35</span>
-                  <ul class="opts">
-                    <li class="wifi"></li>
-                    <li class="entertainment"></li>
-                    <li class="seat">기본</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="summary2">
-                ICN-HKG, 직항, 3h 40m<br>
-                B737
-              </div>
-            </div>
-          </div>
-          <div class="search-result__item-info2">
-            <strong class="price">\221,300</strong>
-          </div>
-          <div class="search-result__item-info3">
-            <ul class="opts">
-              <li class="bag bag23 dubble">bag</li>
-              <li class="cold-meal">meal</li>
-            </ul>
-            <strong class="price">\331,300</strong>
-            <div class="point">
-              <strong>88,888</strong>
-              <em>포인트 적립</em>
-            </div>
-          </div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
