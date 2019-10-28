@@ -836,7 +836,7 @@ button.swiper-pagination-bullet { border: none; margin: 0; padding: 0; -webkit-b
 
 .search-result__item-info1 .summary2 { line-height: 150%; font-size: 10px; color: #606060; margin-top: 5px; }
 
-.search-result__item-info2 .price { font-size: 14px; font-weight: 700; }
+.search-result__item-info2 .price { font-size: 14px; font-weight: 700; margin-bottom: 20px; display: block; }
 
 .search-result__item-info3 .opts { font-size: 0; text-align: left; }
 
