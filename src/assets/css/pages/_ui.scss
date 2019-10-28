@@ -869,6 +869,8 @@
     display: block;
     border-bottom: 3px solid #d1d1d1;
     padding: 15px 0 15px 20px;
+    box-sizing: border-box;
+    height:65px;
   }
 
   dl {
