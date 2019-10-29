@@ -852,9 +852,11 @@ button.swiper-pagination-bullet { border: none; margin: 0; padding: 0; -webkit-b
 
 .search-result__item-info3 .opts .bag.bag23 { width: 20px; height: 30px; background: url("../images/ico_bag23.svg") center center no-repeat; background-size: 20px 30px; }
 
-.search-result__item-info3 .opts .bag.bag32 { width: 20px; height: 30px; background: url("../images/ico_bag30.svg") center center no-repeat; background-size: 20px 30px; }
+.search-result__item-info3 .opts .bag.bag30 { width: 20px; height: 30px; background: url("../images/ico_bag30.svg") center center no-repeat; background-size: 20px 30px; }
 
-.search-result__item-info3 .opts .bag.dubble:before { content: 'x2'; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); font-size: 12px; font-weight: 700; }
+.search-result__item-info3 .opts .bag.bag32 { width: 20px; height: 30px; background: url("../images/ico_bag32.svg") center center no-repeat; background-size: 20px 30px; }
+
+.search-result__item-info3 .opts .bag.double:before { content: 'x2'; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); font-size: 12px; font-weight: 700; }
 
 .search-result__item-info3 .opts .hot-meal { width: 30px; height: 25px; background: url("../images/ico_hot-meal.svg") center center no-repeat; background-size: 30px 25px; }
 
@@ -866,7 +868,9 @@ button.swiper-pagination-bullet { border: none; margin: 0; padding: 0; -webkit-b
 
 .search-result__item-info3 .opts.in .bag.bag23 { background: url("../images/ico_bag23-2.svg") center center no-repeat; background-size: 20px 30px; }
 
-.search-result__item-info3 .opts.in .bag.bag32 { background: url("../images/ico_bag30-2.svg") center center no-repeat; background-size: 20px 30px; }
+.search-result__item-info3 .opts.in .bag.bag30 { background: url("../images/ico_bag30-2.svg") center center no-repeat; background-size: 20px 30px; }
+
+.search-result__item-info3 .opts.in .bag.bag32 { background: url("../images/ico_bag32-2.svg") center center no-repeat; background-size: 20px 30px; }
 
 .search-result__item-info3 .opts.in .hot-meal { background: url("../images/ico_hot-meal-2.svg") center center no-repeat; background-size: 30px 25px; }
 
