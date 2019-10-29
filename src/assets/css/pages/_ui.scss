@@ -1218,14 +1218,21 @@
           background-size: 20px 30px;
         }
 
-        &.bag32 {
+        &.bag30 {
           width: 20px;
           height: 30px;
           background: url('#{$base-img-path}/ico_bag30.svg') center center no-repeat;
           background-size: 20px 30px;
         }
 
-        &.dubble {
+        &.bag32 {
+          width: 20px;
+          height: 30px;
+          background: url('#{$base-img-path}/ico_bag32.svg') center center no-repeat;
+          background-size: 20px 30px;
+        }
+
+        &.double {
           &:before {
             content: 'x2';
             @include position(absolute, $top: -15px, $left: 50%);
@@ -1268,8 +1275,13 @@
             background-size: 20px 30px;
           }
 
-          &.bag32 {
+          &.bag30 {
             background: url('#{$base-img-path}/ico_bag30-2.svg') center center no-repeat;
+            background-size: 20px 30px;
+          }
+
+          &.bag32 {
+            background: url('#{$base-img-path}/ico_bag32-2.svg') center center no-repeat;
             background-size: 20px 30px;
           }
         }
