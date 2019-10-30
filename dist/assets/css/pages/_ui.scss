@@ -573,9 +573,18 @@
   padding: 0 20px 18px 20px;
   background: #ffe155;
   border-top: 1px solid #e5ca4c;
-  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
   padding-top: 15px;
+  &.default{
+    padding: 0 0 18px 0;
+    background: #00a64e;
+    border-top: 1px solid #00a64e;
+    .expected-layer__txt{
+      color:#fff;
+    }
+    .expected-layer__col .info span{
+      color:#fff;
+    }
+  }
   &.fixed {
     @include position(fixed, $top: 220px, $left: 0px, $right: 0px);
     z-index: 210;
@@ -704,6 +713,7 @@
         font-size: 12px;
         display: block;
         margin: 10px 10px 0 10px;
+        line-height:150%;
       }
     }
 

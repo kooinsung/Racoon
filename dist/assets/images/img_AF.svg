@@ -1,17 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="70" height="70">
-    <path fill="none" d="M0 0h70v70H0z"/>
-    <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="600.55" y1="748.456" x2="600.55" y2="766.656"
-                    gradientTransform="translate(-542 -722)">
-        <stop offset=".335" stop-color="#ee2d31"/>
-        <stop offset=".692" stop-color="#e62126"/>
-        <stop offset=".784" stop-color="#a51e22"/>
-        <stop offset=".872" stop-color="#9d1d20"/>
-        <stop offset=".955" stop-color="#941b1e"/>
-        <stop offset="1" stop-color="#801518"/>
-    </linearGradient>
-    <path fill="url(#a)"
-          d="M62.6 26.5l-9.699 14C51.6 42.3 49.6 44.1 47.1 44.3v.4h6.6c2.899 0 4.899-1.9 6.3-3.9l10-14.3h-7.4z"/>
-    <path fill="#1A2652"
-          d="M31.7 44.5v-18h18.9v3.1H36.9v5.5h13.4v3.3H36.9v6.1h-5.2zM22 42.3c-.7-1.1-1.3-2-1.3-2H8.4l-2.8 4.2H.8l11.8-17.6h5.1l12.4 17.6h-3.9c-2.4 0-3.4-1.1-4.2-2.2zm-11.6-4.9h8.3l-4.1-6.3-3.6 5.2-.6 1.1z"/>
-    <path fill="none" d="M0 0h70v70H0z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="70" height="70"><path fill="none" d="M0 0h70v70H0z"/><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="600.55" y1="748.456" x2="600.55" y2="766.656" gradientTransform="translate(-542 -722)"><stop offset=".335" stop-color="#ee2d31"/><stop offset=".692" stop-color="#e62126"/><stop offset=".784" stop-color="#a51e22"/><stop offset=".872" stop-color="#9d1d20"/><stop offset=".955" stop-color="#941b1e"/><stop offset="1" stop-color="#801518"/></linearGradient><path fill="url(#a)" d="M62.6 26.5l-9.699 14C51.6 42.3 49.6 44.1 47.1 44.3v.4h6.6c2.899 0 4.899-1.9 6.3-3.9l10-14.3h-7.4z"/><path fill="#1A2652" d="M31.7 44.5v-18h18.9v3.1H36.9v5.5h13.4v3.3H36.9v6.1h-5.2zM22 42.3c-.7-1.1-1.3-2-1.3-2H8.4l-2.8 4.2H.8l11.8-17.6h5.1l12.4 17.6h-3.9c-2.4 0-3.4-1.1-4.2-2.2zm-11.6-4.9h8.3l-4.1-6.3-3.6 5.2-.6 1.1z"/><path fill="none" d="M0 0h70v70H0z"/></svg>

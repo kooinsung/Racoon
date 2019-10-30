@@ -660,7 +660,13 @@ button.swiper-pagination-bullet { border: none; margin: 0; padding: 0; -webkit-b
 
 .filter-menus__expected--selected a:before { background: url("../images/ico_toggle-off.svg") center center no-repeat; background-size: 14px 10px; }
 
-.expected-layer { padding: 0 20px 18px 20px; background: #ffe155; border-top: 1px solid #e5ca4c; -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1); box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1); padding-top: 15px; }
+.expected-layer { padding: 0 20px 18px 20px; background: #ffe155; border-top: 1px solid #e5ca4c; padding-top: 15px; }
+
+.expected-layer.default { padding: 0 0 18px 0; background: #00a64e; border-top: 1px solid #00a64e; }
+
+.expected-layer.default .expected-layer__txt { color: #fff; }
+
+.expected-layer.default .expected-layer__col .info span { color: #fff; }
 
 .expected-layer.fixed { position: fixed; top: 220px; right: 0px; left: 0px; z-index: 210; }
 
@@ -702,7 +708,7 @@ button.swiper-pagination-bullet { border: none; margin: 0; padding: 0; -webkit-b
 
 .expected-layer__col .info li.cold-meal { width: 26px; height: 30px; background: url("../images/ico_cold-meal.svg") center center no-repeat; background-size: 26px 26px; }
 
-.expected-layer__col .info span { font-size: 12px; display: block; margin: 10px 10px 0 10px; }
+.expected-layer__col .info span { font-size: 12px; display: block; margin: 10px 10px 0 10px; line-height: 150%; }
 
 .expected-layer__col .toggle-tit { font-size: 12px; font-weight: 700; display: block; margin-bottom: 5px; }
 
