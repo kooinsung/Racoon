@@ -23,7 +23,7 @@
 
 <body class="main">
   <header class="header">
-      <h1 class=header__logo><a href="" class=header__logo-link>RACOON</a></h1>
+    <h1 class=header__logo><a href="" class=header__logo-link>RACOON</a></h1>
   </header>
 
   <div class="container">
@@ -133,7 +133,7 @@
     </div>
   </div>
   <div class="layers__calendars-selected">
-      <button type="button">선택 완료</button>
+    <button type="button">선택 완료</button>
   </div>
 
   <script src="../assets/js/jquery-1.12.4.js"></script>
@@ -142,7 +142,7 @@
   <link rel="stylesheet" href="../assets/js/ui.js">
 
   <script>
-    window.onscroll = function () {
+    window.onscroll = function() {
       var body = document.body;
       if (window.pageYOffset > 45) {
         body.classList.add("scrolling");
@@ -151,7 +151,7 @@
       }
     }
 
-    $(function () {
+    $(function() {
 
       var swiper = new Swiper('.banners__items .swiper-container', {
         pagination: {
@@ -164,17 +164,15 @@
         min: 1,
         max: 14,
         step: 1,
-        create: function (event, ui) {
-        },
-        slide: function (event, ui) {
-        }
+        create: function(event, ui) {},
+        slide: function(event, ui) {}
       });
 
       $("#calendars-inline-stage").datepicker({
         minDate: 0,
         numberOfMonths: [8, 1],
         dateFormat: "MM dd일 (DD)",
-        beforeShowDay: function (date) {
+        beforeShowDay: function(date) {
           var date1 = $.datepicker.parseDate("MM dd일 (DD)", $("#dep-range").val());
           var date2 = $.datepicker.parseDate("MM dd일 (DD)", $("#arr-range").val());
 
@@ -193,7 +191,7 @@
           return [true, '', ''];
           //return [true, date1 && ((date.getTime() == date1.getTime()) || (date2 && date >= date1 && date <= date2)) ? "dp-highlight" : ""];/
         },
-        onSelect: function (dateText, inst) {
+        onSelect: function(dateText, inst) {
           var date1 = $.datepicker.parseDate("MM dd일 (DD)", $("#dep-range").val());
           var date2 = $.datepicker.parseDate("MM dd일 (DD)", $("#arr-range").val());
           var selectedDate = $.datepicker.parseDate("MM dd일 (DD)", dateText);
