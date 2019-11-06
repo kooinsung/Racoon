@@ -207,23 +207,10 @@
   }
 
   &__seat-count-layer {
-    @include position(absolute, $top: 60px, $left: 0px, $right: 0px);
+    @include position(absolute, $top: 46px, $left: 0px, $right: 0px);
     z-index: 50;
     height: 207px;
     background: #fff;
-    @include border-radius(10px);
-    -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
-
-    &:before {
-      content: '';
-      @include position(absolute, $top: -8px, $left: 70px);
-      width: 18px;
-      height: 9px;
-      background: url('#{$base-img-path}/ico_angle.png') center center no-repeat;
-      background-size: 18px 9px;
-    }
-
     .dl-items {
       dl {
         @include position(relative);
