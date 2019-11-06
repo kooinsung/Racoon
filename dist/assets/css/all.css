@@ -646,7 +646,7 @@ button.swiper-pagination-bullet { border: none; margin: 0; padding: 0; -webkit-b
 
 .filter-menus.is-clicked:before { content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 1; background: rgba(96, 96, 96, 0.7); }
 
-.filter-menus li { position: relative; display: inline-block; vertical-align: top; text-align: center; height: 40px; width: 50%; box-sizing: border-box; border-left: 1px solid #d8d8d8; }
+.filter-menus li { position: relative; vertical-align: top; display: block; text-align: center; height: 40px; box-sizing: border-box; border-left: 1px solid #d8d8d8; }
 
 .filter-menus li:first-child { border-left: 0; }
 
