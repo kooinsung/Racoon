@@ -2235,6 +2235,17 @@
         display: block;
         margin-top: 5px;
       }
+      .date{
+        font-size:12px;
+        color:#606060;
+        &.point{
+          color:#00a64a;
+        }
+      }
+      .add{
+        font-size:12px;
+        color:#00a64a;
+      }
     }
 
     .sdu-total-time {
@@ -3141,6 +3152,67 @@
       }
     }
 
+    .meal-lists{
+      padding:20px 8px;
+      ul{
+        font-size:0;
+      }
+      li{
+        display:inline-block;
+        vertical-align: top;
+        width:50%;
+        box-sizing: border-box;
+        margin-bottom:20px;
+        .in{
+          padding:0 8px;
+          display:block;
+        }
+        img{
+          width:100%;
+          border:1px solid #d1d1d1;
+        }
+        strong{
+          display:block;
+          font-weight:normal;
+          font-size:14px;
+          margin-top:5px;
+        }
+        span{
+          display:block;
+          font-size:14px;
+          color:#00a64e;
+          margin-top:5px;
+        }
+      }
+    }
+    .meal-list-more{
+      position: relative;
+      text-align: center;
+      display: block;
+      width: 120px;
+      font-size: 12px;
+      color: #0b6f55;
+      height: 24px;
+      border-radius: 24px;
+      line-height: 24px;
+      margin: 0 auto 13px auto;
+      background: #ffe155;
+      &:after {
+        content: '';
+        width: 13px;
+        height: 8px;
+        display: inline-block;
+        margin-left: 5px;
+        background: url('#{$base-img-path}/ico_toggle-off.svg') 99% center no-repeat;
+        background-size: 14px 10px;
+      }
+      &.active {
+        &:after {
+          background: url('#{$base-img-path}/ico_toggle-on.svg') 99% center no-repeat;
+          background-size: 14px 10px;
+        }
+      }
+    }
     .meal-view {
       padding: 20px 10px;
 
@@ -3181,10 +3253,22 @@
         font-weight: bold;
         background: #00a64e;
         @include border-radius(46px);
+        margin-top:0;
       }
     }
   }
-
+  .more {
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    background: #00a64e;
+    @include border-radius(46px);
+    margin-top:20px;
+  }
   &__meal-info3 {
     margin: 30px 0 0 0;
   }
