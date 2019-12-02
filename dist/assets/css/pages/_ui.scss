@@ -1235,6 +1235,38 @@
             font-weight: 700;
           }
         }
+
+        &.in {
+
+            &.bag15 {
+              background: url('#{$base-img-path}/ico_bag15-2.svg') center center no-repeat;
+              background-size: 20px 30px;
+            }
+
+            &.bag20 {
+              background: url('#{$base-img-path}/ico_bag20-2.svg') center center no-repeat;
+              background-size: 20px 30px;
+            }
+
+            &.bag23 {
+              background: url('#{$base-img-path}/ico_bag23-2.svg') center center no-repeat;
+              background-size: 20px 30px;
+            }
+
+            &.bag30 {
+              background: url('#{$base-img-path}/ico_bag30-2.svg') center center no-repeat;
+              background-size: 20px 30px;
+            }
+
+            &.bag32 {
+              background: url('#{$base-img-path}/ico_bag32-2.svg') center center no-repeat;
+              background-size: 20px 30px;
+            }
+
+
+
+
+        }
       }
 
       .hot-meal {
@@ -1242,6 +1274,12 @@
         height: 25px;
         background: url('#{$base-img-path}/ico_hot-meal.svg') center center no-repeat;
         background-size: 30px 25px;
+        &.in{
+          &.hot-meal {
+            background: url('#{$base-img-path}/ico_hot-meal-2.svg') center center no-repeat;
+            background-size: 30px 25px;
+          }
+        }
       }
 
       .cold-meal {
@@ -1249,47 +1287,14 @@
         height: 26px;
         background: url('#{$base-img-path}/ico_cold-meal.svg') center center no-repeat;
         background-size: 26px 26px;
+        &.in{
+          &.cold-meal {
+            background: url('#{$base-img-path}/ico_cold-meal-2.svg') center center no-repeat;
+            background-size: 26px 26px;
+          }
+        }
       }
 
-      &.in {
-        .bag {
-
-          &.bag15 {
-            background: url('#{$base-img-path}/ico_bag15-2.svg') center center no-repeat;
-            background-size: 20px 30px;
-          }
-
-          &.bag20 {
-            background: url('#{$base-img-path}/ico_bag20-2.svg') center center no-repeat;
-            background-size: 20px 30px;
-          }
-
-          &.bag23 {
-            background: url('#{$base-img-path}/ico_bag23-2.svg') center center no-repeat;
-            background-size: 20px 30px;
-          }
-
-          &.bag30 {
-            background: url('#{$base-img-path}/ico_bag30-2.svg') center center no-repeat;
-            background-size: 20px 30px;
-          }
-
-          &.bag32 {
-            background: url('#{$base-img-path}/ico_bag32-2.svg') center center no-repeat;
-            background-size: 20px 30px;
-          }
-        }
-
-        .hot-meal {
-          background: url('#{$base-img-path}/ico_hot-meal-2.svg') center center no-repeat;
-          background-size: 30px 25px;
-        }
-
-        .cold-meal {
-          background: url('#{$base-img-path}/ico_cold-meal-2.svg') center center no-repeat;
-          background-size: 26px 26px;
-        }
-      }
     }
 
     .price {

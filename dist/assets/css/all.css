@@ -862,23 +862,23 @@ button.swiper-pagination-bullet { border: none; margin: 0; padding: 0; -webkit-b
 
 .search-result__item-info3 .opts .bag.double:before { content: 'x2'; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); font-size: 12px; font-weight: 700; }
 
+.search-result__item-info3 .opts .bag.in.bag15 { background: url("../images/ico_bag15-2.svg") center center no-repeat; background-size: 20px 30px; }
+
+.search-result__item-info3 .opts .bag.in.bag20 { background: url("../images/ico_bag20-2.svg") center center no-repeat; background-size: 20px 30px; }
+
+.search-result__item-info3 .opts .bag.in.bag23 { background: url("../images/ico_bag23-2.svg") center center no-repeat; background-size: 20px 30px; }
+
+.search-result__item-info3 .opts .bag.in.bag30 { background: url("../images/ico_bag30-2.svg") center center no-repeat; background-size: 20px 30px; }
+
+.search-result__item-info3 .opts .bag.in.bag32 { background: url("../images/ico_bag32-2.svg") center center no-repeat; background-size: 20px 30px; }
+
 .search-result__item-info3 .opts .hot-meal { width: 30px; height: 25px; background: url("../images/ico_hot-meal.svg") center center no-repeat; background-size: 30px 25px; }
+
+.search-result__item-info3 .opts .hot-meal.in.hot-meal { background: url("../images/ico_hot-meal-2.svg") center center no-repeat; background-size: 30px 25px; }
 
 .search-result__item-info3 .opts .cold-meal { width: 26px; height: 26px; background: url("../images/ico_cold-meal.svg") center center no-repeat; background-size: 26px 26px; }
 
-.search-result__item-info3 .opts.in .bag.bag15 { background: url("../images/ico_bag15-2.svg") center center no-repeat; background-size: 20px 30px; }
-
-.search-result__item-info3 .opts.in .bag.bag20 { background: url("../images/ico_bag20-2.svg") center center no-repeat; background-size: 20px 30px; }
-
-.search-result__item-info3 .opts.in .bag.bag23 { background: url("../images/ico_bag23-2.svg") center center no-repeat; background-size: 20px 30px; }
-
-.search-result__item-info3 .opts.in .bag.bag30 { background: url("../images/ico_bag30-2.svg") center center no-repeat; background-size: 20px 30px; }
-
-.search-result__item-info3 .opts.in .bag.bag32 { background: url("../images/ico_bag32-2.svg") center center no-repeat; background-size: 20px 30px; }
-
-.search-result__item-info3 .opts.in .hot-meal { background: url("../images/ico_hot-meal-2.svg") center center no-repeat; background-size: 30px 25px; }
-
-.search-result__item-info3 .opts.in .cold-meal { background: url("../images/ico_cold-meal-2.svg") center center no-repeat; background-size: 26px 26px; }
+.search-result__item-info3 .opts .cold-meal.in.cold-meal { background: url("../images/ico_cold-meal-2.svg") center center no-repeat; background-size: 26px 26px; }
 
 .search-result__item-info3 .price { display: block; font-size: 14px; font-weight: 700; margin: 5px 0 20px 0; text-align: left; }
 
