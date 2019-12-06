@@ -19,7 +19,7 @@ input, textarea, select, td, th { vertical-align: middle; }
 
 hr { display: none; }
 
-a { margin: 0; padding: 0; border: 0; background: transparent; text-decoration: none; color: #000; }
+a { margin: 0; padding: 0; border: 0; background: transparent; text-decoration: none; color: #000; outline: none; }
 
 em, address { font-style: normal; }
 
@@ -891,6 +891,14 @@ button.swiper-pagination-bullet { border: none; margin: 0; padding: 0; -webkit-b
 .search-result__item-info3 .point strong:before { content: ''; position: absolute; top: 0px; left: 0px; width: 16px; height: 17px; background: url("../images/ico_point.svg") center center no-repeat; background-size: 16px 17px; }
 
 .search-result__item-info3 .point em { font-size: 10px; }
+
+.search-result__item-info3 .mileage { text-align: left; }
+
+.search-result__item-info3 .mileage strong { position: relative; display: block; padding-left: 20px; font-size: 10px; line-height: 17px; }
+
+.search-result__item-info3 .mileage strong:before { content: ''; position: absolute; top: 0px; left: 0px; width: 16px; height: 17px; background: url("../images/ico_mileage.svg") center center no-repeat; background-size: 16px 17px; }
+
+.search-result__item-info3 .mileage em { font-size: 10px; }
 
 .search-result__item-info3 .multiply { font-size: 12px; font-weight: 700; display: block; margin-bottom: 5px; }
 
