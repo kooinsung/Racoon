@@ -1334,6 +1334,31 @@
       }
     }
 
+    .mileage {
+      text-align: left;
+      strong {
+        @include position(relative);
+        display: block;
+        padding-left: 20px;
+        font-size: 10px;
+        line-height: 17px;
+
+        &:before {
+          content: '';
+          @include position(absolute, $top: 0px, $left: 0px);
+          width: 16px;
+          height: 17px;
+          background: url('#{$base-img-path}/ico_mileage.svg') center center no-repeat;
+          background-size: 16px 17px;
+
+        }
+      }
+
+      em {
+        font-size: 10px;
+      }
+    }
+
     .multiply {
       font-size: 12px;
       font-weight: 700;
