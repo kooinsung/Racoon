@@ -20,6 +20,8 @@ time, mark, audio, video, textarea {
 body, html {
   @include size(100%);
   -webkit-font-smoothing: antialiased;
+  max-width:750px;
+  margin:0 auto;
 }
 
 main, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
