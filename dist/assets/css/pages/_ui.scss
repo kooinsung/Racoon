@@ -405,6 +405,8 @@
   border-top: 1px solid #d1d1d1;
   font-size: 0px;
   background: #fff;
+  max-width:750px;
+  margin:0 auto;
   li {
     display: inline-block;
     width: 33.33%;
@@ -1592,6 +1594,8 @@
     z-index: 400;
     background: #fff;
     border-bottom: 1px solid #0b6f55;
+    max-width:750px;
+    margin:0 auto;
   }
 
   &__close {
@@ -1612,7 +1616,12 @@
   }
 
   &__form {
+    max-width:750px;
+    margin:0 auto;
+
     .search-trips-form {
+      max-width:710px;
+      margin:0 auto;
       @include position(fixed, $top: 45px, $left: 0px, $right: 0px);
       @include placeholder() {
         color: #a5a5a5;
@@ -1827,7 +1836,8 @@
     border-top: 1px solid #e1e1e1;
     -webkit-box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.1);
-
+    max-width:750px;
+    margin:0 auto;
     table {
       width: 100%;
 
@@ -1848,7 +1858,8 @@
     padding: 12px 20px;
     -webkit-box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.1);
     box-shadow: 0px -2px 5px -1px rgba(0, 0, 0, 0.1);
-
+    max-width:750px;
+    margin:0 auto;
     button {
       width: 100%;
       height: 40px;
@@ -1863,10 +1874,14 @@
   }
 
   &__utils {
-    margin: 0 20px;
     background: #fff;
     padding-top: 55px;
     padding-bottom: 30px;
+    max-width:750px;
+    margin:0 auto;
+    .layer__filter {
+      margin:0 20px;
+    }
   }
 
   &__sort {
@@ -2088,6 +2103,8 @@
     background: #fff;
     @include border-radius(10px);
     padding: 35px 0 25px 0;
+    max-width:750px;
+    margin:0 auto;
   }
 
   &__txts {
@@ -2172,6 +2189,8 @@
   background: #fff;
   padding-top: 45px;
   padding-bottom: 100px;
+  max-width:750px;
+  margin:0 auto;
   &__items {
     background: #fff;
     padding-bottom: 15px;
@@ -4083,16 +4102,22 @@
     .trip-info {
       @include position(fixed, $top: 45px, $left: 0px, $right: 0px);
       z-index: 210;
+      max-width:750px;
+      margin:0 auto;
     }
 
     .price-sort {
       @include position(fixed, $top: 115px, $left: 0px, $right: 0px);
       z-index: 210;
+      max-width:750px;
+      margin:0 auto;
     }
 
     .filter-menus {
       @include position(fixed, $top: 180px, $left: 0px, $right: 0px);
       z-index: 210;
+      max-width:750px;
+      margin:0 auto;
     }
   }
 }
