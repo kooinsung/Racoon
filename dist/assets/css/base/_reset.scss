@@ -22,10 +22,10 @@ body, html {
   -webkit-font-smoothing: antialiased;
   max-width:750px;
   margin:0 auto;
-  -webkit-text-size-adjust: auto;
+  -webkit-text-size-adjust: none;
 }
 
-*{-webkit-text-size-adjust: auto;}
+*{-webkit-text-size-adjust: none;}
 
 main, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
