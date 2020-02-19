@@ -15,6 +15,6 @@ jobs:
       - name: Deplopy
         uses: maxheld83/ghpages@v0.2.1
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_PAT: ${{ secrets.GITHUB_API_KEY }}
-          BUILD_DIR: dist
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+            BRANCH: gh-pages 
+            FOLDER: dist
