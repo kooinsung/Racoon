@@ -1,17 +1,17 @@
-name: CI
+name: Deploy to GitHub Pages
 
-on: [push]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
-  build:
-
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+      - name: Deplopy
+        uses: JamesIves/github-pages-deploy-action@master
+        with:
+          BASE_BRANCH: master
+          BRANCH: gh-pages
+          FOLDER: dist
