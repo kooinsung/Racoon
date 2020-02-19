@@ -15,8 +15,9 @@ jobs:
           persist-credentials: false
 
       - name: Deplopy
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: maxheld83/ghpages@v0.2.1
         with:
-          ACCESS_TOKEN: ${{ ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_PAT: ${{ secrets.GITHUB_API_KEY }}
           BRANCH: gh-pages
           FOLDER: dist
