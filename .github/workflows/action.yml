@@ -12,7 +12,7 @@ jobs:
       - name: Deplopy
         uses: JamesIves/github-pages-deploy-action@master
         with:
-          ACCESS_TOKEN: ${{ ACCESS_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BASE_BRANCH: master
           BRANCH: gh-pages
           FOLDER: dist
