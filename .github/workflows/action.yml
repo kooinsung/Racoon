@@ -12,9 +12,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
-      - name: Deplopy
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          SSH: true
-          BRANCH: gh-pages
-          FOLDER: dist
+      - name: Build and Deploy
+          uses: JamesIves/github-pages-deploy-action@releases/v3
+          with:
+            ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+            BRANCH: gh-pages
+            FOLDER: dist
