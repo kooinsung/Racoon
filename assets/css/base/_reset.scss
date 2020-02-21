@@ -1,0 +1,124 @@
+/* reset */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p,
+a, address, del, em, img, strong,
+dl, dt, dd, ol, ul, li, fieldset, form,
+label, legend, table, caption, tbody, tfoot,
+thead, tr, th, td, article, aside, canvas, details,
+embed, figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video, textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  background: transparent;
+  font-family: 'Nanum Square', 'Apple SD Gothic Neo', Dotum, '돋움', sans-serif;
+  font-weight: 400;
+}
+
+body, html {
+  @include size(100%);
+  -webkit-font-smoothing: antialiased;
+  max-width:750px;
+  margin:0 auto;
+  -webkit-text-size-adjust: none;
+}
+
+*{-webkit-text-size-adjust: none;}
+
+main, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+input, select, textarea, button {
+  font-family: 'Nanum Square', 'Apple SD Gothic Neo', Dotum, '돋움', sans-serif;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+input, textarea, select, td, th {
+  vertical-align: middle;
+}
+
+hr {
+  display: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-decoration: none;
+  color: #000;
+  outline:none;
+}
+
+em, address {
+  font-style: normal;
+}
+
+fieldset {
+  border: 0;
+  vertical-align: top;
+}
+
+button {
+  display: inline-block;
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+select {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+  @include box-sizing(border-box);
+  @include prefix(appearance, none, 'webkit');
+  @include border-radius(0px);
+}
+
+input[type=checkbox], input[type=radio], input[type=text], input[type=password], input[type=email] {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+  @include border-radius(0px);
+  @include box-sizing(border-box);
+  @include prefix(appearance, none, 'webkit');
+}
+
+legend, .blind {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  @include size(1px);
+}
+
+.pl10 {
+  padding-left: 10px !important;
+}
+
+.center {
+  text-align: center !important;
+}

@@ -1,0 +1,53 @@
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 200;
+  height: 45px;
+  background: #fff;
+  border-bottom: 1px solid #0b704e;
+  box-sizing: border-box;
+  max-width:750px;
+  margin:0 auto;
+  &__logo {
+    display: block;
+    font-size: 0;
+  }
+
+  &__logo-link {
+    display: block;
+    width: 147px;
+    height: 45px;
+    background: url('#{$base-img-path}/img_logo.png') 11px center no-repeat;
+    background-size: 125px 35px;
+  }
+
+  &__back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 56px;
+    height: 45px;
+    background: url('#{$base-img-path}/ico_back.svg') center center no-repeat;
+    background-size: 10px 18px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 56px;
+    height: 45px;
+    background: url('#{$base-img-path}/ico_close.png') center center no-repeat;
+    background-size: 14px 15px;
+  }
+
+  &__tit {
+    display: block;
+    line-height: 45px;
+    text-align: center;
+    font-size: 14px;
+    color: #0b704e;
+  }
+}
