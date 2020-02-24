@@ -978,6 +978,66 @@ button.swiper-pagination-bullet { border: none; margin: 0; padding: 0; -webkit-b
 
 .layers.third { z-index: 402; }
 
+.layers.alert { z-index: 403; bottom: 0; background: transparent; }
+
+.layers.alert:before { content: ''; position: fixed; top: 0px; right: 0px; bottom: 0px; left: 0px; background: rgba(96, 96, 96, 0.85); }
+
+.layers.alert .alert-inner { position: absolute; top: 50%; left: 10px; right: 10px; -webkit-transform: translate(0, -50%); transform: translate(0, -50%); margin: 0 10px; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; overflow: hidden; }
+
+.layers.alert .alert-button { position: absolute; top: 0px; left: 0px; width: 50px; height: 50px; background: url("../images/ico_close.svg") center center no-repeat; background-size: 14px 15px; }
+
+.layers.alert .alert-title { display: block; height: 50px; line-height: 50px; background: #ffe155; text-align: center; font-size: 18px; color: #00a64e; }
+
+.layers.alert .alert-body { background: #fff; }
+
+.layers.alert .alert-body .name { display: block; line-height: 30px; text-align: center; font-size: 14px; font-weight: bold; border-bottom: 1px solid #d1d1d1; }
+
+.layers.alert .alert-body .info1 { font-size: 0; }
+
+.layers.alert .alert-body .info1 dl { border-top: 1px solid #e8e8e8; display: table; width: 100%; box-sizing: border-box; padding: 0 10px; }
+
+.layers.alert .alert-body .info1 dl:first-child { border-top: 0; }
+
+.layers.alert .alert-body .info1 dl.price dt { background: url("../images/ico_flight3.png") 0 center no-repeat; background-size: 25px 22px; }
+
+.layers.alert .alert-body .info1 dl.bag dt { background: url("../images/ico_bag4.png") 3px center no-repeat; background-size: 17px 25px; }
+
+.layers.alert .alert-body .info1 dl.meal dt { background: url("../images/ico_meal4.png") 0 center no-repeat; background-size: 26px 14px; }
+
+.layers.alert .alert-body .info1 dl.total-price dt { font-size: 16px; font-weight: 700; background: url("../images/ico_total-price.png") 1px center no-repeat; background-size: 23px 17px; }
+
+.layers.alert .alert-body .info1 dl.total-price dd { font-size: 16px; font-weight: 700; }
+
+.layers.alert .alert-body .info1 dt { width: 55%; display: table-cell; vertical-align: middle; font-size: 14px; padding: 13px 0 13px 32px; }
+
+.layers.alert .alert-body .info1 dd { width: 45%; display: table-cell; vertical-align: middle; font-size: 14px; padding: 13px 0 13px 0; }
+
+.layers.alert .alert-body .info2 { padding: 0 10px 25px 10px; }
+
+.layers.alert .alert-body .info2 p { margin: 10px 15px; font-size: 14px; line-height: 150%; text-align: center; }
+
+.layers.alert .alert-body .info2 button { width: 100%; height: 36px; line-height: 36px; -webkit-border-radius: 36px; -moz-border-radius: 36px; border-radius: 36px; text-align: center; background: #0b6f55; color: #fff; font-size: 14px; font-weight: 700; }
+
+.layers.alert .alert-body .info2 .service { text-align: center; margin: 20px 0 25px 0; }
+
+.layers.alert .alert-body .info2 .service li { display: inline-block; vertical-align: top; font-size: 0; height: 38px; margin: 0 5px; }
+
+.layers.alert .alert-body .info2 .service li.bag { width: 25px; background: url("../images/ico_support-bag.png") center center no-repeat; background-size: 25px 38px; }
+
+.layers.alert .alert-body .info2 .service li.meal { width: 36px; background: url("../images/ico_support-meal.png") center center no-repeat; background-size: 36px 30px; }
+
+.layers.alert .alert-body .info2 .service li.seat { width: 25px; background: url("../images/ico_support-seat.png") center center no-repeat; background-size: 25px 34px; }
+
+.layers.alert .alert-body .info2 .service li.mileage { width: 32px; background: url("../images/ico_support-mileage.png") center center no-repeat; background-size: 32px 33px; }
+
+.layers.alert .alert-body .info2 .service li.dog { width: 38px; background: url("../images/ico_support-dog.png") center center no-repeat; background-size: 38px 26px; }
+
+.layers.alert .alert-body .bottom { padding: 10px 10px 20px 10px; }
+
+.layers.alert .alert-body .bottom .go { width: 100%; height: 36px; line-height: 36px; -webkit-border-radius: 36px; -moz-border-radius: 36px; border-radius: 36px; text-align: center; background: #00a64e; color: #fff; font-size: 14px; font-weight: 700; }
+
+.layers.alert .alert-body .bottom .tip { margin: 10px 10px 0 10px; font-size: 14px; color: #00a64e; line-height: 150%; text-align: center; }
+
 .layers__header { position: fixed; top: 0px; right: 0px; left: 0px; z-index: 400; background: #fff; border-bottom: 1px solid #0b6f55; max-width: 750px; margin: 0 auto; }
 
 .layers__close { position: absolute; top: 0px; left: 0px; width: 56px; height: 45px; background: url("../images/ico_close.svg") center center no-repeat; background-size: 14px 15px; }
@@ -1254,7 +1314,17 @@ button.swiper-pagination-bullet { border: none; margin: 0; padding: 0; -webkit-b
 
 .details__reservation-list .txt strong { display: block; font-size: 18px; font-weight: 700; margin-top: 3px; }
 
-.details__reservation-list button { position: absolute; top: 50%; right: 10px; width: 122px; height: 36px; margin-top: -18px; line-height: 36px; -webkit-border-radius: 36px; -moz-border-radius: 36px; border-radius: 36px; background: #00a64e; color: #fff; font-size: 14px; font-weight: 700; }
+.details__reservation-list .bts { position: absolute; top: 50%; right: 10px; margin-top: -18px; height: 36px; }
+
+.details__reservation-list .bts button { position: relative; }
+
+.details__reservation-list .bts button:first-child { width: 36px; height: 36px; }
+
+.details__reservation-list .bts button:first-child:before { content: 'i'; position: absolute; top: 50%; left: 50%; margin-top: -10px; margin-left: -10px; width: 20px; height: 20px; line-height: 20px; font-weight: bold; border: 1px solid #00a64e; color: #00a64e; font-size: 15px; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; }
+
+.details__reservation-list .bts button:first-child:after { content: ''; }
+
+.details__reservation-list .bts button:last-child { width: 122px; height: 36px; line-height: 36px; -webkit-border-radius: 36px; -moz-border-radius: 36px; border-radius: 36px; background: #00a64e; color: #fff; font-size: 14px; font-weight: 700; }
 
 .details__reservation-tip strong { display: block; padding: 0 10px; height: 30px; line-height: 30px; font-size: 12px; color: #00a64e; }
 

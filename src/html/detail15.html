@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <include src="../include/meta.html"></include>
+</head>
+
+<body class="sub">
+<include src="../include/header.html"></include>
+
+<div class="container">
+  <div class="content">
+    <div class="search-trips-form">
+      <div class="search-trips-form__check-trips">
+        <span class="search-trips-form__check-trip-item">
+          <input type="radio" id="rt" name="trip-type" checked="checked">
+          <label for="rt">왕복</label>
+        </span>
+        <span class="search-trips-form__check-trip-item">
+          <input type="radio" name="trip-type" id="ow">
+          <label for="ow">편도</label>
+        </span>
+      </div>
+      <div class="search-trips-form__row">
+        <span class="search-trips-form__input search-trips-form__input-dep">
+          <input type="text" placeholder="어디서 출발하시나요?">
+        </span>
+      </div>
+      <div class="search-trips-form__row">
+        <span class="search-trips-form__input search-trips-form__input-arr">
+          <input type="text" placeholder="어디에 도착하시나요?">
+        </span>
+      </div>
+      <div class="search-trips-form__row">
+        <div class="search-trips-form__col">
+          <span class="search-trips-form__input search-trips-form__input-date">
+            <input type="text" placeholder="가는 날짜">
+          </span>
+        </div>
+        <div class="search-trips-form__col">
+          <span class="search-trips-form__input search-trips-form__input-date">
+            <input type="text" placeholder="오는 날짜">
+          </span>
+        </div>
+      </div>
+      <div class="search-trips-form__row">
+        <div class="search-trips-form__col">
+          <span class="search-trips-form__input search-trips-form__input-seat-count">
+            <input type="text" placeholder="1명" value="1명">
+          </span>
+          <div class="search-trips-form__seat-count-layer">
+            <div class="dl-items">
+              <dl>
+                <dt>성인</dt>
+                <dd>
+                  <div class="person-form">
+                    <button type="button" class="subtract">-</button>
+                    <input type="text" value="1" placeholder="">
+                    <button type="button" class="add">+</button>
+                  </div>
+                </dd>
+              </dl>
+              <dl>
+                <dt>아동 <em>만 2-17세</em></dt>
+                <dd>
+                  <div class="person-form">
+                    <button type="button" class="subtract">-</button>
+                    <input type="text" value="0" placeholder="">
+                    <button type="button" class="add">+</button>
+                  </div>
+                </dd>
+              </dl>
+              <dl>
+                <dt>아동 <em>만 2세 미만</em></dt>
+                <dd>
+                  <div class="person-form">
+                    <button type="button" class="subtract">-</button>
+                    <input type="text" value="0" placeholder="">
+                    <button type="button" class="add">+</button>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+            <button type="button" class="success">완료</button>
+          </div>
+        </div>
+        <div class="search-trips-form__col">
+          <span class="search-trips-form__input search-trips-form__input-seat search-trips-form__input-seat--disabled">
+            <input type="text" placeholder="이코노미" disabled="disabled">
+          </span>
+        </div>
+      </div>
+      <div class="search-trips-form__bt">
+        <button type="button">항공권 검색 GO!</button>
+      </div>
+      <div class="search-trips-form__tips">
+        추가 수하물과 기내식 최저가가 포함된 예상 가격까지 라쿤이 알려드려요!
+      </div>
+    </div>
+
+    <div class="banners">
+      <strong class="banners__tit">특가 이벤트</strong>
+      <div class="banners__items">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="" class="banners__link">
+                <span class="banners__thumb"><img src="../assets/images/img_banner.png" alt=""></span>
+                <div class="banners__txts">
+                  <em class="banners__airline">항공사명</em>
+                  <strong class="banners__copy">이벤트 헤드 카피 </strong>
+                  <span class="banners__date">2019.07.01 - 2019.07.31</span>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="" class="banners__link">
+                <span class="banners__thumb"><img src="../assets/images/img_banner.png" alt=""></span>
+                <div class="banners__txts">
+                  <em class="banners__airline">항공사명</em>
+                  <strong class="banners__copy">이벤트 헤드 카피 </strong>
+                  <span class="banners__date">2019.07.01 - 2019.07.31</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quick">
+      <ul>
+        <li class="quick__srch actived"><a href=""><span>검색</span></a></li>
+        <li class="quick__special-price"><a href=""><span>특가</span></a></li>
+        <li class="quick__profile"><a href=""><span>프로필</span></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<include src="../include/footer.html"></include>
+
+<div class="layers alert">
+  <div class="alert-inner">
+    <button type="button" class="alert-button">close</button>
+    <strong class="alert-title">요금 명세</strong>
+    <div class="alert-body">
+      <strong class="name">티웨이항공</strong>
+      <div class="info1">
+        <dl class="price">
+          <dt>항공권 가격</dt>
+          <dd>\228,440</dd>
+        </dl>
+        <dl class="bag">
+          <dt>무료 위탁 수화물</dt>
+          <dd>갈때 1개 포함<br>올때 불포함</dd>
+        </dl>
+        <dl class="meal">
+          <dt>기내식</dt>
+          <dd>불포함</dd>
+        </dl>
+        <dl class="total-price">
+          <dt>총 가격</dt>
+          <dd>\228,440</dd>
+        </dl>
+      </div>
+      <div class="bottom">
+        <button type="button" class="go">예약하러 GO!</button>
+        <p class="tip">항공사 공식 홈페이지에서 수하물, 기내식 등의 부대 서비스가 포함된 금액으로 구매 가능합니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<include src="../include/scripts.html"></include>
+</body>
+</html>
