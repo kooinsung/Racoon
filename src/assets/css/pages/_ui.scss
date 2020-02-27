@@ -2663,6 +2663,27 @@
       min-height: 36px;
       padding: 10px 0 10px 10px;
       border-bottom: 1px solid #d1d1d1;
+      &.homepage{
+        .txt{
+          em, strong {
+            color: #0b6f55;
+          }
+        }
+        .bts{
+          button{
+            &:first-child{
+              &:before{
+                border:1px solid #0b6f55;
+                color:#0b6f55;
+              }
+            }
+
+            &:last-child{
+              background: #0b6f55;
+            }
+          }
+        }
+      }
     }
 
     .txt {
