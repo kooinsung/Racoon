@@ -1310,6 +1310,12 @@ button.swiper-pagination-bullet { border: none; margin: 0; padding: 0; -webkit-b
 
 .details__reservation-list li { position: relative; min-height: 36px; padding: 10px 0 10px 10px; border-bottom: 1px solid #d1d1d1; }
 
+.details__reservation-list li.homepage .txt em, .details__reservation-list li.homepage .txt strong { color: #0b6f55; }
+
+.details__reservation-list li.homepage .bts button:first-child:before { border: 1px solid #0b6f55; color: #0b6f55; }
+
+.details__reservation-list li.homepage .bts button:last-child { background: #0b6f55; }
+
 .details__reservation-list .txt em { font-size: 12px; }
 
 .details__reservation-list .txt strong { display: block; font-size: 18px; font-weight: 700; margin-top: 3px; }
