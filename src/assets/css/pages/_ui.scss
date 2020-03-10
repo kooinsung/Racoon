@@ -2953,7 +2953,6 @@
     line-height: 150%;
     background: #00a64e;
     padding: 17px 10px 17px 75px;
-
     &:before {
       content: '';
       @include position(absolute, $top: 50%, $left: 16px);
@@ -2963,7 +2962,6 @@
       background: url('#{$base-img-path}/img_racoon-head2.png') center center no-repeat;
       background-size: 42px 34px;
     }
-
     &:after {
       content: '';
       width: 12px;
@@ -2984,16 +2982,13 @@
           &.center {
             text-align: center;
           }
-
           &:first-child {
             padding-left: 10px;
           }
-
           &:last-child {
             padding-left: 10px;
           }
         }
-
         .default {
           th {
             font-size: 14px;
@@ -3002,7 +2997,6 @@
             padding-top: 5px;
           }
         }
-
         .tit {
           th {
             font-size: 14px;
@@ -3013,7 +3007,6 @@
           }
         }
       }
-
       tfoot {
         th {
           padding-left: 10px;

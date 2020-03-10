@@ -61,11 +61,11 @@ function styles() {
   }).on('error', handleError))
   // .pipe(gulpInsert.prepend('@charset "UTF-8";\n'))
   .pipe(gulp.dest(paths.styles.dest))
-  .pipe(gulpConcat('alla.min.css'))
-  .pipe(gulpRename({
-    basename: 'all',
-    suffix: '.min'
-  }))
+  .pipe(gulpConcat('all.min.css'))
+  // .pipe(gulpRename({
+  //   basename: 'all',
+  //   suffix: '.min'
+  // }))
   .pipe(gulpAutoprefixer({
     browsers: ['last 2 versions'],
     cascade: false
@@ -143,6 +143,7 @@ function watch() {
   gulp.watch(paths.styles.file, styles);
   gulp.watch(paths.scripts.file, scripts);
   gulp.watch(paths.images.file, images);
+  // gulp.watch(paths.html.files, html).on('change', browserSync.reload);
   gulp.watch(paths.html.file, html).on('change', browserSync.reload);
 }
 
