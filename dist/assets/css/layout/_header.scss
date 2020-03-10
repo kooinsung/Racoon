@@ -4,7 +4,7 @@
   right: 0;
   left: 0;
   z-index: 200;
-  height: 45px;
+  height: 64px;
   background: #fff;
   border-bottom: 1px solid #0b704e;
   box-sizing: border-box;
@@ -17,10 +17,10 @@
 
   &__logo-link {
     display: block;
-    width: 147px;
-    height: 45px;
-    background: url('#{$base-img-path}/img_logo.png') 11px center no-repeat;
-    background-size: 125px 35px;
+    width: 184px;
+    height: 64px;
+    background: url('#{$base-img-path}/img_logo.png') 10px center no-repeat;
+    background-size: 164px 34px;
   }
 
   &__back {
