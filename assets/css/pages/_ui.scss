@@ -5,13 +5,13 @@
 }
 
 .container {
-  padding-top: 45px;
-  padding-bottom: 53px;
+  padding-top: 64px;
+  padding-bottom: 30px;
 }
 
 .search-trips-form {
   background: #00a64e;
-  padding: 20px;
+  padding: 20px 20px 50px 20px;
   font-size: 0;
 
   &__default {
@@ -117,7 +117,7 @@
     input {
       width: 100%;
       height: 44px;
-      font-size: 14px;
+      font-size: 16px;
       text-indent: 43px;
       @include placeholder() {
         color: #000;
@@ -170,6 +170,23 @@
           color: #a5a5a5;
         }
       }
+    }
+  }
+
+  &__middle-txt{
+    @include position(relative);
+    font-size: 14px;
+    text-align: center;
+    color:#fff;
+    line-height:150%;
+    margin:5px 0 10px 0;
+    &:after{
+      content:'';
+      display:block;
+      margin:10px auto 0 auto;
+      width:55px;height:44px;
+      background: url('#{$base-img-path}/img_racoon-head.png') center center no-repeat;
+      background-size: 55px 44px;
     }
   }
 
@@ -400,6 +417,7 @@
 }
 
 .quick {
+  display: none;
   @include position(fixed, $bottom: 0px, $left: 0px, $right: 0px);
   z-index: 500;
   border-top: 1px solid #d1d1d1;
@@ -561,7 +579,7 @@
   border-top: 1px solid #e5ca4c;
   padding-top: 15px;
   &.default{
-    padding: 0 0 18px 0;
+    padding: 0;
     background: #00a64e;
     border-top: 1px solid #00a64e;
     .expected-layer__txt{
@@ -611,20 +629,20 @@
 
       dt {
         display: block;
-        font-size: 12px;
+        font-size: 15px;
         font-weight: 700;
-        height: 95px;
+        height: 105px;
         padding: 10px 0;
         box-sizing: border-box;
         border-bottom: 1px solid #00a64e;
 
         &.bag {
-          background: url('#{$base-img-path}/ico_bag3.png') center 30px no-repeat;
+          background: url('#{$base-img-path}/ico_bag3.png') center 35px no-repeat;
           background-size: 36px 56px;
         }
 
         &.meal {
-          background: url('#{$base-img-path}/ico_meal3.png') center 40px no-repeat;
+          background: url('#{$base-img-path}/ico_meal3.png') center 45px no-repeat;
           background-size: 56px 31px;
         }
       }
@@ -1070,6 +1088,7 @@
 
       tbody {
         td {
+          position: relative;
           padding: 5px;
           text-align: center;
 
@@ -1171,12 +1190,12 @@
     .price {
       font-size: 14px;
       font-weight: 700;
-      margin-bottom:20px;
       display:block;
     }
   }
 
   &__item-info3 {
+    margin-top:-35px;
     .opts {
       font-size: 0;
       text-align: left;
@@ -1303,7 +1322,7 @@
       display: block;
       font-size: 14px;
       font-weight: 700;
-      margin: 5px 0 20px 0;
+      margin: 5px 0 0 0;
       text-align: left;
 
       &.in {
@@ -1311,53 +1330,46 @@
       }
     }
 
-    .point {
-      text-align: left;
-      strong {
-        @include position(relative);
-        display: block;
-        padding-left: 20px;
-        font-size: 10px;
-        line-height: 17px;
-
-        &:before {
-          content: '';
-          @include position(absolute, $top: 0px, $left: 0px);
-          width: 16px;
-          height: 17px;
-          background: url('#{$base-img-path}/ico_point.svg') center center no-repeat;
-          background-size: 16px 17px;
-
+    .pm{
+      @include position(absolute, $bottom: 30px, $left: 0px);
+      .point, .mileage{
+        text-align: left;
+        margin:3px 0;
+        strong {
+          @include position(relative);
+          display: block;
+          padding-left: 20px;
+          font-size: 10px;
+          line-height: 17px;
+          letter-spacing: -0.5px;
+          &:before {
+            content: '';
+            @include position(absolute, $top: 0px, $left: 0px);
+            width: 16px;
+            height: 17px;
+            background: url('#{$base-img-path}/ico_point.svg') center center no-repeat;
+            background-size: 16px 17px;
+          }
+        }
+        em {
+          font-size: 10px;
         }
       }
-
-      em {
-        font-size: 10px;
-      }
-    }
-
-    .mileage {
-      text-align: left;
-      strong {
-        @include position(relative);
-        display: block;
-        padding-left: 20px;
-        font-size: 10px;
-        line-height: 17px;
-
-        &:before {
-          content: '';
-          @include position(absolute, $top: 0px, $left: 0px);
-          width: 16px;
-          height: 17px;
-          background: url('#{$base-img-path}/ico_mileage.svg') center center no-repeat;
-          background-size: 16px 17px;
-
+      .point{
+        strong {
+          &:before {
+            background: url('#{$base-img-path}/ico_point.svg') center center no-repeat;
+            background-size: 16px 17px;
+          }
         }
       }
-
-      em {
-        font-size: 10px;
+      .mileage{
+        strong {
+          &:before {
+            background: url('#{$base-img-path}/ico_mileage.svg') center center no-repeat;
+            background-size: 16px 17px;
+          }
+        }
       }
     }
 
@@ -2661,8 +2673,11 @@
     li {
       @include position(relative);
       min-height: 36px;
-      padding: 10px 0 10px 10px;
+      padding: 10px 0 10px 0;
       border-bottom: 1px solid #d1d1d1;
+      &.new{
+        padding:0;
+      }
       &.homepage{
         .txt{
           em, strong {
@@ -2687,6 +2702,7 @@
     }
 
     .txt {
+      margin-left:10px;
       em {
         font-size: 12px;
       }
@@ -2738,6 +2754,157 @@
         }
       }
     }
+    .inner{
+      @include position(relative);
+      padding:10px 0;
+    }
+    .continue{
+      @include position(absolute, $top: 50%, $right: 10px);
+      margin-top: -18px;
+      width: 123px;
+      height:36px;
+      background:#ffe155;
+      @include border-radius(36px);
+      text-align: center;
+      font-size:14px;
+      color:#0b6f55;
+      font-weight:700;
+    }
+    .continue-box{
+      background:#ffe155;
+      dl{
+        @include position(relative);
+        min-height: 40px;
+        border-top:1px solid #d1d1d1;
+        padding:5px 0;
+        display: table;
+        width: 100%;
+        &.total-price{
+          color:#00a64e;
+          dt{
+            font-weight:700;
+            padding-left:10px;
+          }
+          dd{
+            font-weight:700;
+          }
+        }
+        &.tips{
+          padding:10px 0;
+          dt{
+            font-size:12px;
+            line-height:150%;
+            padding-left:10px;
+          }
+        }
+      }
+      dt{
+        font-size:14px;
+        display:table-cell;
+        vertical-align: middle;
+        padding-left:40px;
+        &.price{
+          background: url('#{$base-img-path}/ico_flight3.png') 10px center no-repeat;
+          background-size: 24px 22px;
+        }
+        &.bag{
+          background: url('#{$base-img-path}/ico_bag4.png') 14px center no-repeat;
+          background-size: 17px 25px;
+        }
+        &.meal {
+          background: url('#{$base-img-path}/ico_meal4.png') 10px center no-repeat;
+          background-size: 26px 14px;
+        }
+      }
+      dd{
+        //@include position(absolute, $top: 0, $right: 0px);
+        width: 130px;
+        font-size:14px;
+        display:table-cell;
+        vertical-align: middle;
+        padding-right:10px;
+        span{
+          display:block;
+          font-size:14px;
+          line-height:130%;
+        }
+
+        button{
+          @include position(absolute, $top: 50%, $right: 10px);
+          margin-top: -18px;
+          width: 123px;
+          height:36px;
+          background:#00a64e;
+          @include border-radius(36px);
+          text-align: center;
+          font-size:14px;
+          color:#fff;
+          font-weight:700;
+        }
+      }
+    }
+
+    .homepage-tips{
+      padding:15px 10px;
+      strong{
+        display:block;
+        font-size: 14px;
+        line-height: 150%;
+        text-align: center;
+      }
+      .service{
+        text-align:center;
+        margin:20px 0 20px 0;
+        li{
+          position: relative;
+          min-height: 38px;
+          padding: 0;
+          border:0;
+          display:inline-block;
+          vertical-align: top;
+          font-size:0;
+          height:38px;
+          margin:0 5px;
+          &.bag{
+            width:25px;
+            background: url('#{$base-img-path}/ico_support-bag.png') center center no-repeat;
+            background-size: 25px 38px;
+          }
+          &.meal{
+            width:36px;
+            background: url('#{$base-img-path}/ico_support-meal.png') center center no-repeat;
+            background-size: 36px 30px;
+          }
+          &.seat{
+            width:25px;
+            background: url('#{$base-img-path}/ico_support-seat.png') center center no-repeat;
+            background-size: 25px 34px;
+          }
+          &.mileage{
+            width:32px;
+            background: url('#{$base-img-path}/ico_support-mileage.png') center center no-repeat;
+            background-size: 32px 33px;
+          }
+          &.dog{
+            width:38px;
+            background: url('#{$base-img-path}/ico_support-dog.png') center center no-repeat;
+            background-size: 38px 26px;
+          }
+        }
+      }
+      button{
+        width:100%;
+        display: block;
+        height: 37px;
+        line-height: 37px;
+        text-align:center;
+        background:#00a64e;
+        color:#fff;
+        @include border-radius(37px);
+        font-weight:700;
+        font-size:14px;
+      }
+    }
   }
 
   &__reservation-tip {
@@ -2749,16 +2916,16 @@
       font-size: 12px;
       color: #00a64e;
 
-      &:after {
-        content: '';
-        display: inline-block;
-        vertical-align: top;
-        width: 15px;
-        height: 15px;
-        margin: 7px 0 0 5px;
-        background: url('#{$base-img-path}/ico_att.png') center center no-repeat;
-        background-size: 15px 15px;
-      }
+      //&:after {
+      //  content: '';
+      //  display: inline-block;
+      //  vertical-align: top;
+      //  width: 15px;
+      //  height: 15px;
+      //  margin: 7px 0 0 5px;
+      //  background: url('#{$base-img-path}/ico_att.png') center center no-repeat;
+      //  background-size: 15px 15px;
+      //}
     }
 
     p {

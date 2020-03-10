@@ -474,11 +474,41 @@ button.swiper-pagination-bullet { border: none; margin: 0; padding: 0; -webkit-b
 
 .swiper-container-coverflow .swiper-wrapper { /* Windows 8 IE 10 fix */ -ms-perspective: 1200px; }
 
-.header { position: fixed; top: 0; right: 0; left: 0; z-index: 200; height: 45px; background: #fff; border-bottom: 1px solid #0b704e; box-sizing: border-box; max-width: 750px; margin: 0 auto; }
+.footer { background: #e8e8e8; padding: 30px 20px; }
+
+.footer .sns { text-align: center; font-size: 0; }
+
+.footer .sns li { display: inline-block; margin: 0 8px; }
+
+.footer .sns a { display: block; width: 24px; height: 24px; text-indent: -9999px; }
+
+.footer .sns a.fb { background: url("../images/img_facebook.png") center center no-repeat; background-size: 24px 24px; }
+
+.footer .sns a.ig { background: url("../images/img_instagram.png") center center no-repeat; background-size: 24px 24px; }
+
+.footer .sns a.nb { background: url("../images/img_naver-blog.png") center center no-repeat; background-size: 24px 24px; }
+
+.footer .company-name { display: block; text-align: center; font-size: 12px; margin: 20px 0 0 0; }
+
+.footer .infos { margin: 15px 0 0 0; }
+
+.footer .infos button { width: 100%; height: 30px; background: url("../images/ico_toggle-on3.png") center center no-repeat; background-size: 10px 7px; }
+
+.footer .infos button.on { background: url("../images/ico_toggle-off3.png") center center no-repeat; background-size: 10px 7px; }
+
+.footer .infos dl { font-size: 11px; padding: 4px 0; }
+
+.footer .infos dt { display: inline-block; }
+
+.footer .infos dd { display: inline-block; }
+
+.footer .copyright { font-size: 11px; color: #606060; margin: 30px 0 0 0; text-align: center; }
+
+.header { position: fixed; top: 0; right: 0; left: 0; z-index: 200; height: 64px; background: #fff; border-bottom: 1px solid #0b704e; box-sizing: border-box; max-width: 750px; margin: 0 auto; }
 
 .header__logo { display: block; font-size: 0; }
 
-.header__logo-link { display: block; width: 147px; height: 45px; background: url("../images/img_logo.png") 11px center no-repeat; background-size: 125px 35px; }
+.header__logo-link { display: block; width: 184px; height: 64px; background: url("../images/img_logo.png") 10px center no-repeat; background-size: 164px 34px; }
 
 .header__back { position: absolute; top: 0; left: 0; width: 56px; height: 45px; background: url("../images/ico_back.svg") center center no-repeat; background-size: 10px 18px; }
 
@@ -488,9 +518,9 @@ button.swiper-pagination-bullet { border: none; margin: 0; padding: 0; -webkit-b
 
 .kill { position: fixed !important; top: -9999px !important; right: -9999px !important; }
 
-.container { padding-top: 45px; padding-bottom: 53px; }
+.container { padding-top: 64px; padding-bottom: 30px; }
 
-.search-trips-form { background: #00a64e; padding: 20px; font-size: 0; }
+.search-trips-form { background: #00a64e; padding: 20px 20px 50px 20px; font-size: 0; }
 
 .search-trips-form__check-trips { margin-bottom: 14px; }
 
@@ -522,7 +552,7 @@ button.swiper-pagination-bullet { border: none; margin: 0; padding: 0; -webkit-b
 
 .search-trips-form__input:before { content: ''; width: 43px; height: 44px; position: absolute; top: 0px; left: 0px; }
 
-.search-trips-form__input input { width: 100%; height: 44px; font-size: 14px; text-indent: 43px; }
+.search-trips-form__input input { width: 100%; height: 44px; font-size: 16px; text-indent: 43px; }
 
 .search-trips-form__input input.placeholder { color: #000; font-size: 14px; }
 
@@ -551,6 +581,10 @@ button.swiper-pagination-bullet { border: none; margin: 0; padding: 0; -webkit-b
 .search-trips-form__input-seat--disabled input:disabled::-moz-placeholder { color: #a5a5a5; }
 
 .search-trips-form__input-seat--disabled input:disabled::-webkit-input-placeholder { color: #a5a5a5; }
+
+.search-trips-form__middle-txt { position: relative; font-size: 14px; text-align: center; color: #fff; line-height: 150%; margin: 5px 0 10px 0; }
+
+.search-trips-form__middle-txt:after { content: ''; display: block; margin: 10px auto 0 auto; width: 55px; height: 44px; background: url("../images/img_racoon-head.png") center center no-repeat; background-size: 55px 44px; }
 
 .search-trips-form__bt button { width: 100%; height: 48px; line-height: 48px; -webkit-border-radius: 48px; -moz-border-radius: 48px; border-radius: 48px; text-align: center; font-size: 16px; color: #0b6f55; font-weight: 700; background: #ffe155; }
 
@@ -620,7 +654,7 @@ button.swiper-pagination-bullet { border: none; margin: 0; padding: 0; -webkit-b
 
 .banners .swiper-pagination-bullet-active { background: #00a64e; opacity: 1; }
 
-.quick { position: fixed; right: 0px; bottom: 0px; left: 0px; z-index: 500; border-top: 1px solid #d1d1d1; font-size: 0px; background: #fff; max-width: 750px; margin: 0 auto; }
+.quick { display: none; position: fixed; right: 0px; bottom: 0px; left: 0px; z-index: 500; border-top: 1px solid #d1d1d1; font-size: 0px; background: #fff; max-width: 750px; margin: 0 auto; }
 
 .quick li { display: inline-block; width: 33.33%; }
 
@@ -662,7 +696,7 @@ button.swiper-pagination-bullet { border: none; margin: 0; padding: 0; -webkit-b
 
 .expected-layer { padding: 0 20px 18px 20px; background: #ffe155; border-top: 1px solid #e5ca4c; padding-top: 15px; }
 
-.expected-layer.default { padding: 0 0 18px 0; background: #00a64e; border-top: 1px solid #00a64e; }
+.expected-layer.default { padding: 0; background: #00a64e; border-top: 1px solid #00a64e; }
 
 .expected-layer.default .expected-layer__txt { color: #fff; }
 
@@ -682,11 +716,11 @@ button.swiper-pagination-bullet { border: none; margin: 0; padding: 0; -webkit-b
 
 .expected-layer__col dl { text-align: center; }
 
-.expected-layer__col dl dt { display: block; font-size: 12px; font-weight: 700; height: 95px; padding: 10px 0; box-sizing: border-box; border-bottom: 1px solid #00a64e; }
+.expected-layer__col dl dt { display: block; font-size: 15px; font-weight: 700; height: 105px; padding: 10px 0; box-sizing: border-box; border-bottom: 1px solid #00a64e; }
 
-.expected-layer__col dl dt.bag { background: url("../images/ico_bag3.png") center 30px no-repeat; background-size: 36px 56px; }
+.expected-layer__col dl dt.bag { background: url("../images/ico_bag3.png") center 35px no-repeat; background-size: 36px 56px; }
 
-.expected-layer__col dl dt.meal { background: url("../images/ico_meal3.png") center 40px no-repeat; background-size: 56px 31px; }
+.expected-layer__col dl dt.meal { background: url("../images/ico_meal3.png") center 45px no-repeat; background-size: 56px 31px; }
 
 .expected-layer__col dl dd { display: inline-block; width: 50%; box-sizing: border-box; border-left: 1px solid #00a64e; padding: 10px 0; }
 
@@ -810,7 +844,7 @@ button.swiper-pagination-bullet { border: none; margin: 0; padding: 0; -webkit-b
 
 .search-result__item-infos > table thead th { padding: 10px 5px 5px 5px; font-size: 14px; }
 
-.search-result__item-infos > table tbody td { padding: 5px; text-align: center; }
+.search-result__item-infos > table tbody td { position: relative; padding: 5px; text-align: center; }
 
 .search-result__item-infos > table tbody td.left { text-align: left; }
 
@@ -842,7 +876,9 @@ button.swiper-pagination-bullet { border: none; margin: 0; padding: 0; -webkit-b
 
 .search-result__item-info1 .summary2 { line-height: 150%; font-size: 10px; color: #606060; margin-top: 5px; }
 
-.search-result__item-info2 .price { font-size: 14px; font-weight: 700; margin-bottom: 20px; display: block; }
+.search-result__item-info2 .price { font-size: 14px; font-weight: 700; display: block; }
+
+.search-result__item-info3 { margin-top: -35px; }
 
 .search-result__item-info3 .opts { font-size: 0; text-align: left; }
 
@@ -882,25 +918,23 @@ button.swiper-pagination-bullet { border: none; margin: 0; padding: 0; -webkit-b
 
 .search-result__item-info3 .opts .cold-meal.in.cold-meal { background: url("../images/ico_cold-meal-2.svg") center center no-repeat; background-size: 26px 26px; }
 
-.search-result__item-info3 .price { display: block; font-size: 14px; font-weight: 700; margin: 5px 0 20px 0; text-align: left; }
+.search-result__item-info3 .price { display: block; font-size: 14px; font-weight: 700; margin: 5px 0 0 0; text-align: left; }
 
 .search-result__item-info3 .price.in { color: #00a64e; }
 
-.search-result__item-info3 .point { text-align: left; }
+.search-result__item-info3 .pm { position: absolute; bottom: 30px; left: 0px; }
 
-.search-result__item-info3 .point strong { position: relative; display: block; padding-left: 20px; font-size: 10px; line-height: 17px; }
+.search-result__item-info3 .pm .point, .search-result__item-info3 .pm .mileage { text-align: left; margin: 3px 0; }
 
-.search-result__item-info3 .point strong:before { content: ''; position: absolute; top: 0px; left: 0px; width: 16px; height: 17px; background: url("../images/ico_point.svg") center center no-repeat; background-size: 16px 17px; }
+.search-result__item-info3 .pm .point strong, .search-result__item-info3 .pm .mileage strong { position: relative; display: block; padding-left: 20px; font-size: 10px; line-height: 17px; letter-spacing: -0.5px; }
 
-.search-result__item-info3 .point em { font-size: 10px; }
+.search-result__item-info3 .pm .point strong:before, .search-result__item-info3 .pm .mileage strong:before { content: ''; position: absolute; top: 0px; left: 0px; width: 16px; height: 17px; background: url("../images/ico_point.svg") center center no-repeat; background-size: 16px 17px; }
 
-.search-result__item-info3 .mileage { text-align: left; }
+.search-result__item-info3 .pm .point em, .search-result__item-info3 .pm .mileage em { font-size: 10px; }
 
-.search-result__item-info3 .mileage strong { position: relative; display: block; padding-left: 20px; font-size: 10px; line-height: 17px; }
+.search-result__item-info3 .pm .point strong:before { background: url("../images/ico_point.svg") center center no-repeat; background-size: 16px 17px; }
 
-.search-result__item-info3 .mileage strong:before { content: ''; position: absolute; top: 0px; left: 0px; width: 16px; height: 17px; background: url("../images/ico_mileage.svg") center center no-repeat; background-size: 16px 17px; }
-
-.search-result__item-info3 .mileage em { font-size: 10px; }
+.search-result__item-info3 .pm .mileage strong:before { background: url("../images/ico_mileage.svg") center center no-repeat; background-size: 16px 17px; }
 
 .search-result__item-info3 .multiply { font-size: 12px; font-weight: 700; display: block; margin-bottom: 5px; }
 
@@ -1308,13 +1342,17 @@ button.swiper-pagination-bullet { border: none; margin: 0; padding: 0; -webkit-b
 
 .details__reservation-info .txts span { font-size: 11px; }
 
-.details__reservation-list li { position: relative; min-height: 36px; padding: 10px 0 10px 10px; border-bottom: 1px solid #d1d1d1; }
+.details__reservation-list li { position: relative; min-height: 36px; padding: 10px 0 10px 0; border-bottom: 1px solid #d1d1d1; }
+
+.details__reservation-list li.new { padding: 0; }
 
 .details__reservation-list li.homepage .txt em, .details__reservation-list li.homepage .txt strong { color: #0b6f55; }
 
 .details__reservation-list li.homepage .bts button:first-child:before { border: 1px solid #0b6f55; color: #0b6f55; }
 
 .details__reservation-list li.homepage .bts button:last-child { background: #0b6f55; }
+
+.details__reservation-list .txt { margin-left: 10px; }
 
 .details__reservation-list .txt em { font-size: 12px; }
 
@@ -1332,9 +1370,59 @@ button.swiper-pagination-bullet { border: none; margin: 0; padding: 0; -webkit-b
 
 .details__reservation-list .bts button:last-child { width: 122px; height: 36px; line-height: 36px; -webkit-border-radius: 36px; -moz-border-radius: 36px; border-radius: 36px; background: #00a64e; color: #fff; font-size: 14px; font-weight: 700; }
 
-.details__reservation-tip strong { display: block; padding: 0 10px; height: 30px; line-height: 30px; font-size: 12px; color: #00a64e; }
+.details__reservation-list .inner { position: relative; padding: 10px 0; }
 
-.details__reservation-tip strong:after { content: ''; display: inline-block; vertical-align: top; width: 15px; height: 15px; margin: 7px 0 0 5px; background: url("../images/ico_att.png") center center no-repeat; background-size: 15px 15px; }
+.details__reservation-list .continue { position: absolute; top: 50%; right: 10px; margin-top: -18px; width: 123px; height: 36px; background: #ffe155; -webkit-border-radius: 36px; -moz-border-radius: 36px; border-radius: 36px; text-align: center; font-size: 14px; color: #0b6f55; font-weight: 700; }
+
+.details__reservation-list .continue-box { background: #ffe155; }
+
+.details__reservation-list .continue-box dl { position: relative; min-height: 40px; border-top: 1px solid #d1d1d1; padding: 5px 0; display: table; width: 100%; }
+
+.details__reservation-list .continue-box dl.total-price { color: #00a64e; }
+
+.details__reservation-list .continue-box dl.total-price dt { font-weight: 700; padding-left: 10px; }
+
+.details__reservation-list .continue-box dl.total-price dd { font-weight: 700; }
+
+.details__reservation-list .continue-box dl.tips { padding: 10px 0; }
+
+.details__reservation-list .continue-box dl.tips dt { font-size: 12px; line-height: 150%; padding-left: 10px; }
+
+.details__reservation-list .continue-box dt { font-size: 14px; display: table-cell; vertical-align: middle; padding-left: 40px; }
+
+.details__reservation-list .continue-box dt.price { background: url("../images/ico_flight3.png") 10px center no-repeat; background-size: 24px 22px; }
+
+.details__reservation-list .continue-box dt.bag { background: url("../images/ico_bag4.png") 14px center no-repeat; background-size: 17px 25px; }
+
+.details__reservation-list .continue-box dt.meal { background: url("../images/ico_meal4.png") 10px center no-repeat; background-size: 26px 14px; }
+
+.details__reservation-list .continue-box dd { width: 130px; font-size: 14px; display: table-cell; vertical-align: middle; padding-right: 10px; }
+
+.details__reservation-list .continue-box dd span { display: block; font-size: 14px; line-height: 130%; }
+
+.details__reservation-list .continue-box dd button { position: absolute; top: 50%; right: 10px; margin-top: -18px; width: 123px; height: 36px; background: #00a64e; -webkit-border-radius: 36px; -moz-border-radius: 36px; border-radius: 36px; text-align: center; font-size: 14px; color: #fff; font-weight: 700; }
+
+.details__reservation-list .homepage-tips { padding: 15px 10px; }
+
+.details__reservation-list .homepage-tips strong { display: block; font-size: 14px; line-height: 150%; text-align: center; }
+
+.details__reservation-list .homepage-tips .service { text-align: center; margin: 20px 0 20px 0; }
+
+.details__reservation-list .homepage-tips .service li { position: relative; min-height: 38px; padding: 0; border: 0; display: inline-block; vertical-align: top; font-size: 0; height: 38px; margin: 0 5px; }
+
+.details__reservation-list .homepage-tips .service li.bag { width: 25px; background: url("../images/ico_support-bag.png") center center no-repeat; background-size: 25px 38px; }
+
+.details__reservation-list .homepage-tips .service li.meal { width: 36px; background: url("../images/ico_support-meal.png") center center no-repeat; background-size: 36px 30px; }
+
+.details__reservation-list .homepage-tips .service li.seat { width: 25px; background: url("../images/ico_support-seat.png") center center no-repeat; background-size: 25px 34px; }
+
+.details__reservation-list .homepage-tips .service li.mileage { width: 32px; background: url("../images/ico_support-mileage.png") center center no-repeat; background-size: 32px 33px; }
+
+.details__reservation-list .homepage-tips .service li.dog { width: 38px; background: url("../images/ico_support-dog.png") center center no-repeat; background-size: 38px 26px; }
+
+.details__reservation-list .homepage-tips button { width: 100%; display: block; height: 37px; line-height: 37px; text-align: center; background: #00a64e; color: #fff; -webkit-border-radius: 37px; -moz-border-radius: 37px; border-radius: 37px; font-weight: 700; font-size: 14px; }
+
+.details__reservation-tip strong { display: block; padding: 0 10px; height: 30px; line-height: 30px; font-size: 12px; color: #00a64e; }
 
 .details__reservation-tip p { border-top: 1px solid #d1d1d1; padding: 8px 10px; line-height: 150%; font-size: 12px; background: #e8e8e8; -webkit-box-shadow: inset 0px 2px 10px 0px rgba(0, 0, 0, 0.1); box-shadow: inset 0px 2px 10px 0px rgba(0, 0, 0, 0.1); }
 
