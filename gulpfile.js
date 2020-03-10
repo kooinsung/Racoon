@@ -57,7 +57,7 @@ function styles() {
   .pipe(gulpWait(500))
   // .pipe(gulpSass({outputStyle: 'compact'}).on('error', gulpSass.logError))
   .pipe(gulpSass({
-    outputStyle: 'compact'
+    outputStyle: 'expanded'
   }).on('error', handleError))
   // .pipe(gulpInsert.prepend('@charset "UTF-8";\n'))
   .pipe(gulp.dest(paths.styles.dest))
