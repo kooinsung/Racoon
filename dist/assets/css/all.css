@@ -3546,6 +3546,7 @@ button.swiper-pagination-bullet {
 .layers__form .search-trips-form {
   max-width: 710px;
   margin: 0 auto;
+  padding-bottom: 20px;
   position: fixed;
   top: 45px;
   right: 0px;
