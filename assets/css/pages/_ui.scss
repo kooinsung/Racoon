@@ -1818,6 +1818,7 @@
     .search-trips-form {
       max-width:710px;
       margin:0 auto;
+      padding-bottom:20px;
       @include position(fixed, $top: 45px, $left: 0px, $right: 0px);
       @include placeholder() {
         color: #a5a5a5;
