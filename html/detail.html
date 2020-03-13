@@ -202,15 +202,14 @@
       <div class="details">
         <div class="details__price">
           <div class="details__price-tit">
-            라쿤 계산기로 항공권에 부가 서비스를 더한
-            예상 금액을 확인해보세요!
+            플라잉라쿤 계산기로 항공권에 부가 서비스를 더한 예상 금액을 확인해보세요!
           </div>
           <div class="details__price-opt">
             <table>
               <colgroup>
                 <col style="width:110px;">
-                <col style="width:45px;">
-                <col style="width:45px;">
+                <col style="width:40px;">
+                <col style="width:40px;">
                 <col>
               </colgroup>
               <tfoot>
@@ -234,8 +233,7 @@
               <tbody>
                 <tr>
                   <td>기내 수하물</td>
-                  <td colspan="2" class="center">10kg까지 무료</td>
-                  <td class="link"></td>
+                  <td colspan="3" class=" refresh link">10kg까지 무료</td>
                 </tr>
                 <tr>
                   <td>위탁 수하물</td>
@@ -271,36 +269,36 @@
                 </tr>
                 <tr>
                   <td>
-                    <button type="button" class="toggle">좌석 사전 구매</button>
-                    <div class="small-layer" style="display:none;">
-                      <ul>
-                        <li>
-                          <span class="seat-radio">
-                            <input type="radio" id="seat-radio1" name="se-radio">
-                            <label for="seat-radio1">앞 / 비상구 좌석</label>
-                          </span>
-                        </li>
-                        <li>
-                          <span class="seat-radio">
-                            <input type="radio" id="seat-radio2" name="se-radio">
-                            <label for="seat-radio2">A 구역</label>
-                          </span>
-                        </li>
-                        <li>
-                          <span class="seat-radio">
-                            <input type="radio" id="seat-radio3" name="se-radio">
-                            <label for="seat-radio3">B 구역</label>
-                          </span>
-                        </li>
-                        <li>
-                          <span class="seat-radio">
-                            <input type="radio" id="seat-radio4" name="se-radio">
-                            <label for="seat-radio4">C 구역</label>
-                          </span>
-                        </li>
-                      </ul>
-                      <button type="button">완료</button>
-                    </div>
+                    <button type="button" class="toggle">좌석 사전 구매</button> <!-- 선택시 active 추가 -->
+                    <!--                    <div class="small-layer" style="">-->
+                    <!--                      <ul>-->
+                    <!--                        <li>-->
+                    <!--                        <span class="seat-radio">-->
+                    <!--                          <input type="radio" id="seat-radio1" name="se-radio">-->
+                    <!--                          <label for="seat-radio1">앞 / 비상구 좌석</label>-->
+                    <!--                        </span>-->
+                    <!--                        </li>-->
+                    <!--                        <li>-->
+                    <!--                        <span class="seat-radio">-->
+                    <!--                          <input type="radio" id="seat-radio2" name="se-radio">-->
+                    <!--                          <label for="seat-radio2">A 구역</label>-->
+                    <!--                        </span>-->
+                    <!--                        </li>-->
+                    <!--                        <li>-->
+                    <!--                        <span class="seat-radio">-->
+                    <!--                          <input type="radio" id="seat-radio3" name="se-radio">-->
+                    <!--                          <label for="seat-radio3">B 구역</label>-->
+                    <!--                        </span>-->
+                    <!--                        </li>-->
+                    <!--                        <li>-->
+                    <!--                        <span class="seat-radio">-->
+                    <!--                          <input type="radio" id="seat-radio4" name="se-radio">-->
+                    <!--                          <label for="seat-radio4">C 구역</label>-->
+                    <!--                        </span>-->
+                    <!--                        </li>-->
+                    <!--                      </ul>-->
+                    <!--                      <button type="button">완료</button>-->
+                    <!--                    </div>-->
                   </td>
                   <td>
                     <span class="opt-check">
@@ -316,18 +314,125 @@
                   </td>
                   <td class="link">\0</td>
                 </tr>
+                <tr class="seat-choices">
+                  <td colspan="4">
+                    <ul>
+                      <li>
+                        <input type="radio" id="seat-choice1" name="seat-choice" />
+                        <label for="seat-choice1">Jini Front (앞쪽 Zone)</label>
+                      </li>
+                      <li>
+                        <input type="radio" id="seat-choice2" name="seat-choice" />
+                        <label for="seat-choice2">Jini Standard (뒤쪽 Zone)</label>
+                      </li>
+                      <li>
+                        <input type="radio" id="seat-choice3" name="seat-choice" />
+                        <label for="seat-choice3">ZONE C (뒤쪽 Zone)</label>
+                      </li>
+                      <li>
+                        <input type="radio" id="seat-choice4" name="seat-choice" />
+                        <label for="seat-choice4">Jini Stretch / Jini Exit (매 앞좌석/비상구열)</label>
+                      </li>
+                      <li>
+                        <input type="radio" id="seat-choice5" name="seat-choice" />
+                        <label for="seat-choice5">프리미엄 컴포트</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="seat-choice6" name="seat-choice" />
+                        <label for="seat-choice6">Jini Exit (No Recline-비상구열 등받이고정)</label>
+                      </li>
+                    </ul>
+                    <div class="bt">
+                      <button type="button">완료</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="mileage">
+                  <td class="mileage-tit">예상 마일리지</td>
+                  <td colspan="3" class="mileage-list">
+                    <ul>
+                      <li>
+                        <a href="">대한항공 1,500 마일</a>
+                        <span>(델타항공 V class 적립률 70%)</span>
+                      </li>
+                      <li>
+                        <a href="">아시아나 2,000 마일</a>
+                        <span>(타이항공 V class 적립률 50%)</span>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
                 <tr>
-                  <td>마일리지 / 포인트</td>
-                  <td colspan="3" class="refresh link">
-                    플라잉 블루 5000마일<br>
-                    또는 대한항공 3000마일
+                  <td><button type="button" class="toggle">반려동물</button></td>
+                  <td colspan="3" class="refresh link">기내 가능, 위탁 가능 </td>
+                </tr>
+                <tr class="pet-option-list">
+                  <td colspan="4">
+                    <table>
+                      <colgroup>
+                        <col style="width:110px;">
+                        <col style="width:40px;">
+                        <col style="width:40px;">
+                        <col>
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <td>┗ 기내 <em>(7kg 미만)</em></td>
+                          <td>
+                            <span class="opt-check">
+                              <input type="checkbox" id="in-pet-checks1">
+                              <label for="in-pet-checks1">&nbsp</label>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="opt-check">
+                              <input type="checkbox" id="in-pet-checks2">
+                              <label for="in-pet-checks2">&nbsp</label>
+                            </span>
+                          </td>
+                          <td>\80,000</td>
+                        </tr>
+                        <tr>
+                          <td>┗ 위탁 <em>(32kg 이하)</em></td>
+                          <td>
+                            <span class="opt-check">
+                              <input type="checkbox" id="in-pet-checks3">
+                              <label for="in-pet-checks3">&nbsp</label>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="opt-check">
+                              <input type="checkbox" id="in-pet-checks4">
+                              <label for="in-pet-checks4">&nbsp</label>
+                            </span>
+                          </td>
+                          <td>\0</td>
+                        </tr>
+                        <tr>
+                          <td>┗ 위탁 <em>(33~45kg)</em></td>
+                          <td>
+                            <span class="opt-check">
+                              <input type="checkbox" id="in-pet-checks5">
+                              <label for="in-pet-checks5">&nbsp</label>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="opt-check">
+                              <input type="checkbox" id="in-pet-checks6">
+                              <label for="in-pet-checks6">&nbsp</label>
+                            </span>
+                          </td>
+                          <td>\0</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
           <div class="details__price-tip">
-            부가 서비스 등이 포함되어 계산된 가격은 예상 합계 금액으로, 세부 항목 별로 정확한 가격이 상이할 수 있습니다. 자세한 가격 정책은 항공사 홈페이지를 참고해주세요!
+            수하물, 기내식 등 모든 부가 서비스가 포함되어 계산된 가격은 예상 합계 금액으로, 세부 항목 별로 정확한 가격이 상이하거나 항공사 프로모션에 따라 변할 수 있습니다. 반려동물의 경우 목적지, 기종, 무게 등에 따라 가격이나 동반 가능 여부가 달라질 수 있습니다. 수하물, 기내식, 마일리지, 반려동물 등 자세한 부가 서비스 정책은 각 항공사 홈페이지를 꼭 확인해주시기 바랍니다.
           </div>
           <!--<div class="details__price-default">-->
           <!--<table>-->
