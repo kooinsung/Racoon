@@ -1658,7 +1658,6 @@ button.swiper-pagination-bullet {
 
 .container {
   padding-top: 64px;
-  padding-bottom: 30px;
 }
 
 .search-trips-form {
@@ -6525,7 +6524,7 @@ button.swiper-pagination-bullet {
 
 .sub.scrolling .price-sort {
   position: fixed;
-  top: 115px;
+  top: 135px;
   right: 0px;
   left: 0px;
   z-index: 210;
@@ -6535,7 +6534,7 @@ button.swiper-pagination-bullet {
 
 .sub.scrolling .filter-menus {
   position: fixed;
-  top: 180px;
+  top: 200px;
   right: 0px;
   left: 0px;
   z-index: 210;
