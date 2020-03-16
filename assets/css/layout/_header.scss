@@ -28,7 +28,7 @@
     top: 0;
     left: 0;
     width: 56px;
-    height: 45px;
+    height: 64px;
     background: url('#{$base-img-path}/ico_back.svg') center center no-repeat;
     background-size: 10px 18px;
   }
@@ -38,14 +38,14 @@
     top: 0;
     left: 0;
     width: 56px;
-    height: 45px;
+    height: 64px;
     background: url('#{$base-img-path}/ico_close.png') center center no-repeat;
     background-size: 14px 15px;
   }
 
   &__tit {
     display: block;
-    line-height: 45px;
+    line-height: 64px;
     text-align: center;
     font-size: 14px;
     color: #0b704e;

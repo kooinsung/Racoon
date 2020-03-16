@@ -1627,7 +1627,7 @@ button.swiper-pagination-bullet {
   top: 0;
   left: 0;
   width: 56px;
-  height: 45px;
+  height: 64px;
   background: url("../images/ico_back.svg") center center no-repeat;
   background-size: 10px 18px;
 }
@@ -1637,14 +1637,14 @@ button.swiper-pagination-bullet {
   top: 0;
   left: 0;
   width: 56px;
-  height: 45px;
+  height: 64px;
   background: url("../images/ico_close.png") center center no-repeat;
   background-size: 14px 15px;
 }
 
 .header__tit {
   display: block;
-  line-height: 45px;
+  line-height: 64px;
   text-align: center;
   font-size: 14px;
   color: #0b704e;
@@ -6515,7 +6515,7 @@ button.swiper-pagination-bullet {
 
 .sub.scrolling .trip-info {
   position: fixed;
-  top: 45px;
+  top: 64px;
   right: 0px;
   left: 0px;
   z-index: 210;

@@ -4592,7 +4592,7 @@
   background: #f9f9f9;
   &.scrolling {
     .trip-info {
-      @include position(fixed, $top: 45px, $left: 0px, $right: 0px);
+      @include position(fixed, $top: 64px, $left: 0px, $right: 0px);
       z-index: 210;
       max-width:750px;
       margin:0 auto;
