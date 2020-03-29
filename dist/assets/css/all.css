@@ -4989,7 +4989,7 @@ button.swiper-pagination-bullet {
 }
 
 .details__price-opt .seat-choices li input {
-  position: absolute;
+  position: fixed;
   top: -9999px;
   left: -9999px;
 }

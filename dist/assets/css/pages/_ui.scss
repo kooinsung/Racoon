@@ -3162,7 +3162,7 @@
           border-bottom:1px solid #e8e8e8;
         }
         input {
-          @include position(absolute, $top: -9999px, $left: -9999px);
+          @include position(fixed, $top: -9999px, $left: -9999px);
 
           & + label {
             @include position(relative);
