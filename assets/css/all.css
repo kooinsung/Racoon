@@ -1678,7 +1678,7 @@ button.swiper-pagination-bullet {
 }
 
 .search-trips-form__check-trip-item input {
-  position: absolute;
+  position: fixed;
   top: -9999px;
   left: -9999px;
 }
@@ -2659,7 +2659,9 @@ button.swiper-pagination-bullet {
 
 .info-tips__checks dd input {
   opacity: 0;
-  position: absolute;
+  position: fixed;
+  top: -9999px;
+  left: -9999px;
 }
 
 .info-tips__checks dd input + label {
@@ -3082,7 +3084,9 @@ button.swiper-pagination-bullet {
 
 .in-layer__sort input {
   opacity: 0;
-  position: absolute;
+  position: fixed;
+  top: -9999px;
+  left: -9999px;
 }
 
 .in-layer__sort input + label {
@@ -3198,7 +3202,9 @@ button.swiper-pagination-bullet {
 
 .in-layer__filter-item input {
   opacity: 0;
-  position: absolute;
+  position: fixed;
+  top: -9999px;
+  left: -9999px;
 }
 
 .in-layer__filter-item input + label {
@@ -3842,7 +3848,9 @@ button.swiper-pagination-bullet {
 
 .layers__sort input {
   opacity: 0;
-  position: absolute;
+  position: fixed;
+  top: -9999px;
+  left: -9999px;
 }
 
 .layers__sort input + label {
@@ -3958,7 +3966,9 @@ button.swiper-pagination-bullet {
 
 .layers__filter-item input {
   opacity: 0;
-  position: absolute;
+  position: fixed;
+  top: -9999px;
+  left: -9999px;
 }
 
 .layers__filter-item input + label {
@@ -4972,29 +4982,95 @@ button.swiper-pagination-bullet {
   background-size: 14px 10px;
 }
 
-.details__price-opt .seat-choices {
+.details__price-opt .seat-choices, .details__price-opt .pet-choices {
   border-bottom: 1px solid #e8e8e8;
 }
 
-.details__price-opt .seat-choices td {
+.details__price-opt .seat-choices td, .details__price-opt .pet-choices td {
   padding-right: 10px;
 }
 
-.details__price-opt .seat-choices li {
+.details__price-opt .seat-choices .trip-choice-buttons, .details__price-opt .pet-choices .trip-choice-buttons {
+  text-align: center;
+  position: relative;
+  padding: 10px 35px;
   border-top: 1px solid #e8e8e8;
+  font-size: 0;
 }
 
-.details__price-opt .seat-choices li:last-child {
-  border-bottom: 1px solid #e8e8e8;
+.details__price-opt .seat-choices .trip-choice-buttons span, .details__price-opt .pet-choices .trip-choice-buttons span {
+  width: 50%;
+  display: inline-block;
 }
 
-.details__price-opt .seat-choices li input {
+.details__price-opt .seat-choices .trip-choice-buttons span:first-child label, .details__price-opt .pet-choices .trip-choice-buttons span:first-child label {
+  margin-right: 5px;
+}
+
+.details__price-opt .seat-choices .trip-choice-buttons span:last-child label, .details__price-opt .pet-choices .trip-choice-buttons span:last-child label {
+  margin-left: 5px;
+}
+
+.details__price-opt .seat-choices .trip-choice-buttons input, .details__price-opt .pet-choices .trip-choice-buttons input {
   position: fixed;
   top: -9999px;
   left: -9999px;
 }
 
-.details__price-opt .seat-choices li input + label {
+.details__price-opt .seat-choices .trip-choice-buttons input + label, .details__price-opt .pet-choices .trip-choice-buttons input + label {
+  display: block;
+  height: 32px;
+  line-height: 32px;
+  -webkit-border-radius: 32px;
+  -moz-border-radius: 32px;
+  border-radius: 32px;
+  border: 1px solid #d1d1d1;
+  font-weight: 700;
+  text-align: center;
+  font-size: 14px;
+  color: #d1d1d1;
+  cursor: pointer;
+}
+
+.details__price-opt .seat-choices .trip-choice-buttons input:checked + label, .details__price-opt .pet-choices .trip-choice-buttons input:checked + label {
+  color: #1baf60;
+  border: 1px solid #1baf60;
+}
+
+.details__price-opt .seat-choices .choice-title, .details__price-opt .pet-choices .choice-title {
+  position: relative;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 10px 0 10px;
+  border-top: 1px solid #e8e8e8;
+}
+
+.details__price-opt .seat-choices .choice-title span, .details__price-opt .pet-choices .choice-title span {
+  margin-left: 20px;
+}
+
+.details__price-opt .seat-choices .choice-title a, .details__price-opt .pet-choices .choice-title a {
+  text-indent: -9999px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background: url("../images/ico_right-arrow.svg") center center no-repeat;
+  background-size: 9px 14px;
+}
+
+.details__price-opt .seat-choices .choice-items li, .details__price-opt .pet-choices .choice-items li {
+  border-top: 1px solid #e8e8e8;
+}
+
+.details__price-opt .seat-choices .choice-items li input, .details__price-opt .pet-choices .choice-items li input {
+  position: fixed;
+  top: -9999px;
+  left: -9999px;
+}
+
+.details__price-opt .seat-choices .choice-items li input + label, .details__price-opt .pet-choices .choice-items li input + label {
   position: relative;
   display: block;
   height: 45px;
@@ -5005,26 +5081,8 @@ button.swiper-pagination-bullet {
   cursor: pointer;
 }
 
-.details__price-opt .seat-choices li input:checked + label {
+.details__price-opt .seat-choices .choice-items li input:checked + label, .details__price-opt .pet-choices .choice-items li input:checked + label {
   color: #00a64e;
-}
-
-.details__price-opt .seat-choices .bt {
-  margin: 20px 10px;
-}
-
-.details__price-opt .seat-choices button {
-  width: 100%;
-  height: 40px;
-  line-height: 40px;
-  -webkit-border-radius: 40px;
-  -moz-border-radius: 40px;
-  border-radius: 40px;
-  border: 1px solid #1baf60;
-  font-weight: 700;
-  text-align: center;
-  font-size: 14px;
-  color: #1baf60;
 }
 
 .details__price-opt .mileage-tit {
@@ -5133,7 +5191,7 @@ button.swiper-pagination-bullet {
 }
 
 .details__price-opt .seat-radio input {
-  position: absolute;
+  position: fixed;
   top: -9999px;
   left: -9999px;
 }
