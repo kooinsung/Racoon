@@ -26,6 +26,7 @@
     <h1 class=header__logo><a href="" class=header__logo-link>RACOON</a></h1>
   </header>
 
+
   <div class="container">
     <div class="content">
       <div class="search-trips-form">
@@ -316,7 +317,21 @@
                 </tr>
                 <tr class="seat-choices">
                   <td colspan="4">
-                    <ul>
+                    <div class="trip-choice-buttons">
+                      <span>
+                        <input type="radio" id="trip-choice-buttons1" name="trip-choice-buttons1" checked="checked" />
+                        <label for="trip-choice-buttons1">가는편</label>
+                      </span>
+                      <span>
+                        <input type="radio" id="trip-choice-buttons2" name="trip-choice-buttons1" />
+                        <label for="trip-choice-buttons2">오는편</label>
+                      </span>
+                    </div>
+                    <div class="choice-title">
+                      <strong>진에어 좌석 종류</strong>
+                      <a href="">link</a>
+                    </div>
+                    <ul class="choice-items">
                       <li>
                         <input type="radio" id="seat-choice1" name="seat-choice" />
                         <label for="seat-choice1">Jini Front (앞쪽 Zone)</label>
@@ -342,9 +357,6 @@
                         <label for="seat-choice6">Jini Exit (No Recline-비상구열 등받이고정)</label>
                       </li>
                     </ul>
-                    <div class="bt">
-                      <button type="button">완료</button>
-                    </div>
                   </td>
                 </tr>
                 <tr class="mileage">
@@ -364,70 +376,114 @@
                 </tr>
                 <tr>
                   <td><button type="button" class="toggle">반려동물</button></td>
-                  <td colspan="3" class="refresh link">기내 가능, 위탁 가능 </td>
+                  <td>
+                    <span class="opt-check">
+                      <input type="checkbox" disabled="disabled" id="in-pet-checks7" checked="checked">
+                      <label for="in-pet-checks7">&nbsp</label>
+                    </span>
+                  </td>
+                  <td>
+                    <span class="opt-check">
+                      <input type="checkbox" disabled="disabled" id="in-pet-checks8">
+                      <label for="in-pet-checks8">&nbsp</label>
+                    </span>
+                  </td>
+                  <td class="">\0</td>
                 </tr>
-                <tr class="pet-option-list">
+                <tr class="pet-choices">
                   <td colspan="4">
-                    <table>
-                      <colgroup>
-                        <col style="width:110px;">
-                        <col style="width:40px;">
-                        <col style="width:40px;">
-                        <col>
-                      </colgroup>
-                      <tbody>
-                        <tr>
-                          <td>┗ 기내 <em>(7kg 미만)</em></td>
-                          <td>
-                            <span class="opt-check">
-                              <input type="checkbox" id="in-pet-checks1">
-                              <label for="in-pet-checks1">&nbsp</label>
-                            </span>
-                          </td>
-                          <td>
-                            <span class="opt-check">
-                              <input type="checkbox" id="in-pet-checks2">
-                              <label for="in-pet-checks2">&nbsp</label>
-                            </span>
-                          </td>
-                          <td>\80,000</td>
-                        </tr>
-                        <tr>
-                          <td>┗ 위탁 <em>(32kg 이하)</em></td>
-                          <td>
-                            <span class="opt-check">
-                              <input type="checkbox" id="in-pet-checks3">
-                              <label for="in-pet-checks3">&nbsp</label>
-                            </span>
-                          </td>
-                          <td>
-                            <span class="opt-check">
-                              <input type="checkbox" id="in-pet-checks4">
-                              <label for="in-pet-checks4">&nbsp</label>
-                            </span>
-                          </td>
-                          <td>\0</td>
-                        </tr>
-                        <tr>
-                          <td>┗ 위탁 <em>(33~45kg)</em></td>
-                          <td>
-                            <span class="opt-check">
-                              <input type="checkbox" id="in-pet-checks5">
-                              <label for="in-pet-checks5">&nbsp</label>
-                            </span>
-                          </td>
-                          <td>
-                            <span class="opt-check">
-                              <input type="checkbox" id="in-pet-checks6">
-                              <label for="in-pet-checks6">&nbsp</label>
-                            </span>
-                          </td>
-                          <td>\0</td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    <div class="trip-choice-buttons">
+                      <span>
+                        <input type="radio" id="trip-choice-buttons3" name="trip-choice-buttons2" checked="checked" />
+                        <label for="trip-choice-buttons3">가는편</label>
+                      </span>
+                      <span>
+                        <input type="radio" id="trip-choice-buttons4" name="trip-choice-buttons2" />
+                        <label for="trip-choice-buttons4">오는편</label>
+                      </span>
+                    </div>
+                    <div class="choice-title">
+                      <strong>아시아나항공</strong><span>기내 가능, 위탁 가능</span>
+                      <a href="">link</a>
+                    </div>
+                    <ul class="choice-items">
+                      <li>
+                        <input type="radio" id="pet-choice1" name="pet-choice" />
+                        <label for="pet-choice1">기내 (7kg 미만)</label>
+                      </li>
+                      <li>
+                        <input type="radio" id="pet-choice2" name="pet-choice" />
+                        <label for="pet-choice2">위탁 (32kg 이하)</label>
+                      </li>
+                      <li>
+                        <input type="radio" id="pet-choice3" name="pet-choice" />
+                        <label for="pet-choice3">위탁 (33~45kg)</label>
+                      </li>
+                    </ul>
                   </td>
                 </tr>
+                <!--                <tr class="pet-option-list">-->
+                <!--                  <td colspan="4">-->
+                <!--                    <table>-->
+                <!--                      <colgroup>-->
+                <!--                        <col style="width:110px;">-->
+                <!--                        <col style="width:40px;">-->
+                <!--                        <col style="width:40px;">-->
+                <!--                        <col>-->
+                <!--                      </colgroup>-->
+                <!--                      <tbody>-->
+                <!--                        <tr>-->
+                <!--                          <td>┗ 기내 <em>(7kg 미만)</em></td>-->
+                <!--                          <td>-->
+                <!--                            <span class="opt-check">-->
+                <!--                              <input type="checkbox" id="in-pet-checks1">-->
+                <!--                              <label for="in-pet-checks1">&nbsp</label>-->
+                <!--                            </span>-->
+                <!--                                  </td>-->
+                <!--                                  <td>-->
+                <!--                            <span class="opt-check">-->
+                <!--                              <input type="checkbox" id="in-pet-checks2">-->
+                <!--                              <label for="in-pet-checks2">&nbsp</label>-->
+                <!--                            </span>-->
+                <!--                          </td>-->
+                <!--                          <td>\80,000</td>-->
+                <!--                        </tr>-->
+                <!--                        <tr>-->
+                <!--                          <td>┗ 위탁 <em>(32kg 이하)</em></td>-->
+                <!--                          <td>-->
+                <!--                            <span class="opt-check">-->
+                <!--                              <input type="checkbox" id="in-pet-checks3">-->
+                <!--                              <label for="in-pet-checks3">&nbsp</label>-->
+                <!--                            </span>-->
+                <!--                          </td>-->
+                <!--                          <td>-->
+                <!--                            <span class="opt-check">-->
+                <!--                              <input type="checkbox" id="in-pet-checks4">-->
+                <!--                              <label for="in-pet-checks4">&nbsp</label>-->
+                <!--                            </span>-->
+                <!--                          </td>-->
+                <!--                          <td>\0</td>-->
+                <!--                        </tr>-->
+                <!--                        <tr>-->
+                <!--                          <td>┗ 위탁 <em>(33~45kg)</em></td>-->
+                <!--                          <td>-->
+                <!--                            <span class="opt-check">-->
+                <!--                              <input type="checkbox" id="in-pet-checks5">-->
+                <!--                              <label for="in-pet-checks5">&nbsp</label>-->
+                <!--                            </span>-->
+                <!--                          </td>-->
+                <!--                          <td>-->
+                <!--                            <span class="opt-check">-->
+                <!--                              <input type="checkbox" id="in-pet-checks6">-->
+                <!--                              <label for="in-pet-checks6">&nbsp</label>-->
+                <!--                            </span>-->
+                <!--                          </td>-->
+                <!--                          <td>\0</td>-->
+                <!--                        </tr>-->
+                <!--                      </tbody>-->
+                <!--                    </table>-->
+                <!--                  </td>-->
+                <!--                </tr>-->
               </tbody>
             </table>
           </div>

@@ -27,7 +27,7 @@
     margin-right: 15px;
 
     input {
-      @include position(absolute, $top: -9999px, $left: -9999px);
+      @include position(fixed, $top: -9999px, $left: -9999px);
 
       & + label {
         @include position(relative);
@@ -970,7 +970,7 @@
 
       input {
         opacity: 0;
-        @include position(absolute);
+        @include position(fixed, $top:-9999px, $left:-9999px);
 
         & + label {
           width: 34px;
@@ -1407,7 +1407,7 @@
 
     input {
       opacity: 0;
-      @include position(absolute);
+      @include position(fixed, $top:-9999px, $left:-9999px);
 
       & + label {
         @include position(relative);
@@ -1517,7 +1517,7 @@
 
     input {
       opacity: 0;
-      @include position(absolute);
+      @include position(fixed, $top:-9999px, $left:-9999px);
 
       & + label {
         @include position(relative);
@@ -2094,7 +2094,7 @@
 
     input {
       opacity: 0;
-      @include position(absolute);
+      @include position(fixed, $top:-9999px, $left:-9999px);
 
       & + label {
         @include position(relative);
@@ -2204,7 +2204,7 @@
 
     input {
       opacity: 0;
-      @include position(absolute);
+      @include position(fixed, $top:-9999px, $left:-9999px);
 
       & + label {
         @include position(relative);
@@ -3151,50 +3151,98 @@
       }
     }
 
-    .seat-choices{
+    .seat-choices, .pet-choices{
       border-bottom:1px solid #e8e8e8;
       td{
         padding-right:10px;
       }
-      li{
+      .trip-choice-buttons{
+        text-align: center;
+        @include position(relative);
+        padding: 10px 35px;
         border-top:1px solid #e8e8e8;
-        &:last-child{
-          border-bottom:1px solid #e8e8e8;
+        font-size:0;
+        span{
+          width:50%;
+          display:inline-block;
+          &:first-child{
+            label{
+              margin-right:5px;
+            }
+          }
+          &:last-child{
+            label{
+              margin-left:5px;
+            }
+          }
         }
         input {
           @include position(fixed, $top: -9999px, $left: -9999px);
 
           & + label {
-            @include position(relative);
-            display: block;
-            height: 45px;
-            line-height: 45px;
-            padding: 0 10px 0 10px;
-            font-size: 13px;
-            color: #000;
+            display:block;
+            height: 32px;
+            line-height:32px;
+            @include border-radius(32px);
+            border:1px solid #d1d1d1;
+            font-weight:700;
+            text-align:center;
+            font-size:14px;
+            color:#d1d1d1;
             cursor: pointer;
+
           }
 
           &:checked {
             & + label {
-              color: #00a64e;
+              color:#1baf60;
+              border:1px solid #1baf60;
             }
           }
         }
       }
-      .bt{
-        margin:20px 10px;
+      .choice-title{
+        @include position(relative);
+        height: 45px;
+        line-height: 45px;
+        padding: 0 10px 0 10px;
+        border-top:1px solid #e8e8e8;
+        span{
+          margin-left:20px;
+        }
+        a{
+          text-indent:-9999px;
+          @include position(absolute, $top:0, $right:0);
+          width:45px;
+          height:45px;
+          background: url('#{$base-img-path}/ico_right-arrow.svg') center center no-repeat;
+          background-size: 9px 14px;
+        }
       }
-      button{
-        width:100%;
-        height: 40px;
-        line-height:40px;
-        @include border-radius(40px);
-        border:1px solid #1baf60;
-        font-weight:700;
-        text-align:center;
-        font-size:14px;
-        color:#1baf60;
+      .choice-items{
+        li{
+          border-top:1px solid #e8e8e8;
+          input {
+            @include position(fixed, $top: -9999px, $left: -9999px);
+
+            & + label {
+              @include position(relative);
+              display: block;
+              height: 45px;
+              line-height: 45px;
+              padding: 0 10px 0 10px;
+              font-size: 13px;
+              color: #000;
+              cursor: pointer;
+            }
+
+            &:checked {
+              & + label {
+                color: #00a64e;
+              }
+            }
+          }
+        }
       }
     }
 
@@ -3290,7 +3338,7 @@
       display: block;
 
       input {
-        @include position(absolute, $top: -9999px, $left: -9999px);
+        @include position(fixed, $top: -9999px, $left: -9999px);
 
         & + label {
           @include position(relative);
