@@ -3250,11 +3250,13 @@
       vertical-align: top;
       padding-top: 15px;
       padding-bottom:15px;
+      height: auto;
     }
 
     .mileage-list{
       padding-top:15px;
       padding-bottom:15px;
+      height: auto;
       li{
         margin-top:10px;
         &:first-child{
