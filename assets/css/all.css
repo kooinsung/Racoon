@@ -5089,11 +5089,13 @@ button.swiper-pagination-bullet {
   vertical-align: top;
   padding-top: 15px;
   padding-bottom: 15px;
+  height: auto;
 }
 
 .details__price-opt .mileage-list {
   padding-top: 15px;
   padding-bottom: 15px;
+  height: auto;
 }
 
 .details__price-opt .mileage-list li {
