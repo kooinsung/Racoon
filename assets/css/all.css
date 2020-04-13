@@ -5106,11 +5106,16 @@ button.swiper-pagination-bullet {
   margin-top: 0px;
 }
 
+.details__price-opt .mileage-list li > a:last-child {
+  margin-bottom: 0;
+}
+
 .details__price-opt .mileage-list a {
   position: relative;
   display: block;
   font-size: 14px;
   color: #00a64e;
+  margin-bottom: 10px;
 }
 
 .details__price-opt .mileage-list a:after {
@@ -5126,7 +5131,6 @@ button.swiper-pagination-bullet {
 }
 
 .details__price-opt .mileage-list span {
-  margin-top: 10px;
   display: block;
   font-size: 14px;
 }
