@@ -3262,12 +3262,20 @@
         &:first-child{
           margin-top:0px;
         }
+        >a{
+          &:first-child{
+          }
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
       }
       a{
         @include position(relative);
         display:block;
         font-size:14px;
         color:#00a64e;
+        margin-bottom:10px;
         &:after {
           content: '';
           @include position(absolute, $top: 50%, $right: 20px);
@@ -3279,7 +3287,6 @@
         }
       }
       span{
-        margin-top:10px;
         display:block;
         font-size:14px;
       }
