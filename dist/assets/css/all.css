@@ -1517,7 +1517,7 @@ button.swiper-pagination-bullet {
 }
 
 .footer {
-  background: #e8e8e8;
+  background: #f9f9f9;
   padding: 30px 20px;
 }
 
@@ -1602,7 +1602,7 @@ button.swiper-pagination-bullet {
   right: 0;
   left: 0;
   z-index: 200;
-  height: 64px;
+  height: 60px;
   background: #fff;
   border-bottom: 1px solid #0b704e;
   box-sizing: border-box;
@@ -1618,9 +1618,9 @@ button.swiper-pagination-bullet {
 .header__logo-link {
   display: block;
   width: 184px;
-  height: 64px;
+  height: 60px;
   background: url("../images/img_logo.png") 10px center no-repeat;
-  background-size: 164px 34px;
+  background-size: 160px 34px;
 }
 
 .header__back {
@@ -1628,7 +1628,7 @@ button.swiper-pagination-bullet {
   top: 0;
   left: 0;
   width: 56px;
-  height: 64px;
+  height: 60px;
   background: url("../images/ico_back.svg") center center no-repeat;
   background-size: 10px 18px;
 }
@@ -1638,14 +1638,14 @@ button.swiper-pagination-bullet {
   top: 0;
   left: 0;
   width: 56px;
-  height: 64px;
+  height: 60px;
   background: url("../images/ico_close.png") center center no-repeat;
   background-size: 14px 15px;
 }
 
 .header__tit {
   display: block;
-  line-height: 64px;
+  line-height: 60px;
   text-align: center;
   font-size: 14px;
   color: #0b704e;
@@ -1658,13 +1658,17 @@ button.swiper-pagination-bullet {
 }
 
 .container {
-  padding-top: 64px;
+  padding-top: 60px;
 }
 
 .search-trips-form {
   background: #00a64e;
-  padding: 20px 20px 50px 20px;
+  padding: 20px 20px 20px 20px;
   font-size: 0;
+}
+
+.search-trips-form.yellow {
+  background: #ffe155;
 }
 
 .search-trips-form__check-trips {
@@ -1772,7 +1776,7 @@ button.swiper-pagination-bullet {
 .search-trips-form__input input {
   width: 100%;
   height: 44px;
-  font-size: 16px;
+  font-size: 14px;
   text-indent: 43px;
 }
 
@@ -1874,6 +1878,11 @@ button.swiper-pagination-bullet {
   color: #0b6f55;
   font-weight: 700;
   background: #ffe155;
+}
+
+.search-trips-form__bt.green button {
+  background: #00a64e;
+  color: #fff;
 }
 
 .search-trips-form__tips {
@@ -2000,6 +2009,147 @@ button.swiper-pagination-bullet {
   font-size: 14px;
   font-weight: 700;
   color: #00a64e;
+}
+
+.search-trips-form .search-trips-default {
+  text-align: center;
+  padding: 5px 0 20px 0;
+}
+
+.search-trips-form .search-trips-default .imgs {
+  display: table;
+  width: 100%;
+}
+
+.search-trips-form .search-trips-default img {
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
+.search-trips-form .search-trips-default p {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.search-trips-service {
+  background: #ffe155;
+  padding: 20px 20px 20px 20px;
+  font-size: 0;
+}
+
+.search-trips-service .main-title {
+  font-size: 20px;
+  color: #0b6f55;
+  font-weight: 700;
+}
+
+.search-trips-service .main-txt {
+  margin: 15px 0;
+  font-size: 14px;
+  color: #0b6f55;
+  line-height: 150%;
+}
+
+.search-trips-service .main-txt strong {
+  font-weight: 700;
+}
+
+.search-trips-service .service-box {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.1);
+}
+
+.search-trips-service .service-box .row-block {
+  position: relative;
+  height: 70px;
+  padding-left: 75px;
+}
+
+.search-trips-service .service-box .row-block.bag {
+  background: url("../images/ico_bag3.png") 19px center no-repeat;
+  background-size: 32px 48px;
+}
+
+.search-trips-service .service-box .row-block.meal {
+  background: url("../images/ico_meal3.png") 10px center no-repeat;
+  background-size: 49px 27px;
+}
+
+.search-trips-service .service-box .txts {
+  padding: 17px 0 0 0;
+}
+
+.search-trips-service .service-box .txts strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.search-trips-service .service-box .txts span {
+  display: block;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.search-trips-service .service-box .switch-toggles {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+
+.search-trips-service .service-box .switch-toggles dl {
+  display: inline-block;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.search-trips-service .service-box .switch-toggles dt {
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.search-trips-service .service-tips {
+  position: relative;
+  font-size: 12px;
+  display: table;
+  padding: 0 20px 0 0;
+  margin: 5px 0;
+}
+
+.search-trips-service .service-tips .icon {
+  display: table-cell;
+  width: 75px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.search-trips-service .service-tips .txt {
+  line-height: 150%;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.search-trips-service .service-tip-expand {
+  width: 100%;
+  height: 30px;
+  background: url("../images/ico_toggle-off.svg") center center no-repeat;
+  background-size: 14px 10px;
+}
+
+.search-trips-service .service-tip-expand.actived {
+  background: url("../images/ico_toggle-on.svg") center center no-repeat;
+  background-size: 14px 10px;
+}
+
+.search-trips-service .search-trips-form__bt {
+  margin-top: 30px;
 }
 
 .trip-info {
