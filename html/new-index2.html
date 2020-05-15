@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="Description" content="">
+  <meta property="og:title" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <link rel="shortcut icon" href="" type="image/x-icon">
+  <link rel="stylesheet" href="../assets/css/all.min.css">
+
+</head>
+
+<body class="main">
+  <header class="header">
+    <h1 class=header__logo><a href="" class=header__logo-link>RACOON</a></h1>
+  </header>
+
+
+  <div class="container">
+    <div class="content">
+      <div class="trip-info">
+        <strong>인천 (ICN) - 홍콩 (HKG)</strong>
+        <span>4월 9일 - 4월 12일, 1명</span>
+      </div>
+      <div class="search-trips-form">
+        <div class="search-trips-form__check-trips">
+          <span class="search-trips-form__check-trip-item">
+            <input type="radio" id="rt" name="trip-type" checked="checked">
+            <label for="rt">왕복</label>
+          </span>
+          <span class="search-trips-form__check-trip-item">
+            <input type="radio" name="trip-type" id="ow">
+            <label for="ow">편도</label>
+          </span>
+        </div>
+        <div class="search-trips-form__row">
+          <span class="search-trips-form__input search-trips-form__input-dep">
+            <input type="text" placeholder="어디서 출발하시나요?">
+          </span>
+        </div>
+        <div class="search-trips-form__row">
+          <span class="search-trips-form__input search-trips-form__input-arr">
+            <input type="text" placeholder="어디에 도착하시나요?">
+          </span>
+        </div>
+        <div class="search-trips-form__row">
+          <div class="search-trips-form__col">
+            <span class="search-trips-form__input search-trips-form__input-date">
+              <input type="text" placeholder="가는 날짜">
+            </span>
+          </div>
+          <div class="search-trips-form__col">
+            <span class="search-trips-form__input search-trips-form__input-date">
+              <input type="text" placeholder="오는 날짜">
+            </span>
+          </div>
+        </div>
+        <div class="search-trips-form__row">
+          <div class="search-trips-form__col">
+            <span class="search-trips-form__input search-trips-form__input-seat-count">
+              <input type="text" placeholder="1명" value="1명">
+            </span>
+            <div class="search-trips-form__seat-count-layer" style="display:none;">
+              <div class="dl-items">
+                <dl>
+                  <dt>성인</dt>
+                  <dd>
+                    <div class="person-form">
+                      <button type="button" class="subtract">-</button>
+                      <input type="text" value="1" placeholder="">
+                      <button type="button" class="add">+</button>
+                    </div>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>아동 <em>만 2-17세</em></dt>
+                  <dd>
+                    <div class="person-form">
+                      <button type="button" class="subtract">-</button>
+                      <input type="text" value="0" placeholder="">
+                      <button type="button" class="add">+</button>
+                    </div>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>아동 <em>만 2세 미만</em></dt>
+                  <dd>
+                    <div class="person-form">
+                      <button type="button" class="subtract">-</button>
+                      <input type="text" value="0" placeholder="">
+                      <button type="button" class="add">+</button>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+              <button type="button" class="success">완료</button>
+            </div>
+          </div>
+          <div class="search-trips-form__col">
+            <span class="search-trips-form__input search-trips-form__input-seat search-trips-form__input-seat--disabled">
+              <input type="text" placeholder="이코노미" disabled="disabled">
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="search-trips-service">
+        <strong class="main-title">수하물 및 기내식</strong>
+        <p class="main-txt">
+          위탁 수하물과 기내식이 포함된 <strong>총 예상 가격</strong>으로 비교해 보세요. 사전 구매 가격 포함 여부를 선택해주세요.
+        </p>
+        <div class="service-box">
+          <div class="row-block bag">
+            <div class="txts">
+              <strong>위탁 수화물</strong>
+              <span>1개 기준</span>
+            </div>
+            <div class="switch-toggles">
+              <dl>
+                <dt>가는편</dt>
+                <dd>
+                  <span class="switch-toggle"><input type="checkbox" id="switch1" /><label for="switch1">Toggle</label></span>
+                </dd>
+              </dl>
+              <dl>
+                <dt>오는편</dt>
+                <dd>
+                  <span class="switch-toggle"><input type="checkbox" id="switch2" /><label for="switch2">Toggle</label></span>
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <div class="service-tips" style="display:none;">
+            <span class="icon"><img src="../assets/images/ico_bag15.svg" height="30" alt=""></span>
+            <span class="txt">15kg, 20kg, 23kg, 30kg 등 수하물 무게를 확인해 주세요.</span>
+          </div>
+          <button type="button" class="service-tip-expand"></button>
+        </div>
+        <div class="service-box">
+          <div class="row-block meal">
+            <div class="txts">
+              <strong>기내식</strong>
+              <span>최저가 기준</span>
+            </div>
+            <div class="switch-toggles">
+              <dl>
+                <dt>가는편</dt>
+                <dd>
+                  <span class="switch-toggle"><input type="checkbox" id="switch1" /><label for="switch1">Toggle</label></span>
+                </dd>
+              </dl>
+              <dl>
+                <dt>오는편</dt>
+                <dd>
+                  <span class="switch-toggle"><input type="checkbox" id="switch2" /><label for="switch2">Toggle</label></span>
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <div class="service-tips">
+            <span class="icon"><img src="../assets/images/ico_hot-meal.svg" height="25" alt=""></span>
+            <span class="txt">핫밀: 따뜻하게 데워 제공되는 기내식 </span>
+          </div>
+          <div class="service-tips">
+            <span class="icon"><img src="../assets/images/ico_cold-meal.svg" height="26" alt=""></span>
+            <span class="txt">콜드밀: 따뜻하게 데우지 않고 제공되는 기내식 </span>
+          </div>
+          <button type="button" class="service-tip-expand actived"></button>
+        </div>
+
+        <div class="search-trips-form__bt green">
+          <button type="button">항공권 검색 GO!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="sns">
+      <ul>
+        <li><a href="https://www.facebook.com/FlyingRacoonMaster/" class="fb" target="_blank">facebook</a></li>
+        <li><a href="https://www.instagram.com/_flyingracoon.com_/" class="ig" target="_blank">instagram</a></li>
+        <li><a href="https://blog.naver.com/tripwithracoon" class="nb" target="_blank">blog</a></li>
+      </ul>
+    </div>
+    <strong class="company-name">(주) 플라잉오프</strong>
+    <div class="infos">
+      <button type="button" class="on">toggle</button>
+      <div class="info-box">
+        <dl>
+          <dt>사업자등록번호: </dt>
+          <dd>204-87-01150</dd>
+        </dl>
+        <dl>
+          <dt>주소: </dt>
+          <dd>서울시 종로구 삼봉로 81 10</dd>
+        </dl>
+        <dl>
+          <dt>대표이사: </dt>
+          <dd>강선희</dd>
+        </dl>
+        <dl>
+          <dt>이메일: </dt>
+          <dd>hello@flyingracoon.com</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2020 Flying Racoon. All Rights Reserved.
+    </div>
+  </footer>
+
+  <script src="../assets/js/jquery-1.12.4.js"></script>
+  <script src="../assets/js/jquery-ui.js"></script>
+  <script src="../assets/js/swiper.js"></script>
+  <link rel="stylesheet" href="../assets/js/ui.js">
+
+  <script>
+    window.onscroll = function() {
+      var body = document.body;
+      if (window.pageYOffset > 45) {
+        body.classList.add("scrolling");
+      } else {
+        body.classList.remove("scrolling");
+      }
+    }
+
+    $(function() {
+
+      var swiper = new Swiper('.banners__items .swiper-container', {
+        pagination: {
+          el: '.banners__items .swiper-pagination',
+        },
+      });
+
+      $("#slider").slider({
+        range: "max",
+        min: 1,
+        max: 14,
+        step: 1,
+        create: function(event, ui) {},
+        slide: function(event, ui) {}
+      });
+
+      $("#calendars-inline-stage").datepicker({
+        minDate: 0,
+        numberOfMonths: [8, 1],
+        dateFormat: "MM dd일 (DD)",
+        beforeShowDay: function(date) {
+          var date1 = $.datepicker.parseDate("MM dd일 (DD)", $("#dep-range").val());
+          var date2 = $.datepicker.parseDate("MM dd일 (DD)", $("#arr-range").val());
+
+          if (date1 && date && (date1.getTime() == date.getTime())) {
+            return [true, 'ui-state-selected-range ui-range-start', ''];
+          }
+          if (date2 && date && (date2.getTime() == date.getTime())) {
+            return [true, 'ui-state-selected-range ui-range-end', ''];
+          }
+
+          if (date >= date1 && date <= date2) {
+            return [true, 'ui-state-selected-range', ''];
+          }
+          var d = date.getTime();
+
+          return [true, '', ''];
+          //return [true, date1 && ((date.getTime() == date1.getTime()) || (date2 && date >= date1 && date <= date2)) ? "dp-highlight" : ""];/
+        },
+        onSelect: function(dateText, inst) {
+          var date1 = $.datepicker.parseDate("MM dd일 (DD)", $("#dep-range").val());
+          var date2 = $.datepicker.parseDate("MM dd일 (DD)", $("#arr-range").val());
+          var selectedDate = $.datepicker.parseDate("MM dd일 (DD)", dateText);
+
+          if (!date1 || date2) {
+            $("#dep-range").val(dateText);
+            $("#arr-range").val("");
+            $(this).datepicker();
+          } else if (selectedDate < date1) {
+            $("#arr-range").val($("#dep-range").val());
+            $("#dep-range").val(dateText);
+            $(this).datepicker();
+          } else {
+            $("#arr-range").val(dateText);
+            $(this).datepicker();
+          }
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>
