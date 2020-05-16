@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <include src="../include/meta.html"></include>
+</head>
+
+<body class="sub">
+<include src="../include/header.html" ></include>
+
+
+<div class="container">
+  <div class="content">
+    <div class="trip-info">
+      <strong>인천 (ICN) - 홍콩 (HKG)</strong>
+      <span>4월 9일 - 4월 12일, 1명</span>
+    </div>
+    <div class="search-trips-form">
+      <div class="search-trips-form__check-trips">
+        <span class="search-trips-form__check-trip-item">
+          <input type="radio" id="rt" name="trip-type" checked="checked">
+          <label for="rt">왕복</label>
+        </span>
+        <span class="search-trips-form__check-trip-item">
+          <input type="radio" name="trip-type" id="ow">
+          <label for="ow">편도</label>
+        </span>
+      </div>
+      <div class="search-trips-form__row">
+        <span class="search-trips-form__input search-trips-form__input-dep">
+          <input type="text" placeholder="어디서 출발하시나요?">
+        </span>
+      </div>
+      <div class="search-trips-form__row">
+        <span class="search-trips-form__input search-trips-form__input-arr">
+          <input type="text" placeholder="어디에 도착하시나요?">
+        </span>
+      </div>
+      <div class="search-trips-form__row">
+        <div class="search-trips-form__col">
+          <span class="search-trips-form__input search-trips-form__input-date">
+            <input type="text" placeholder="가는 날짜">
+          </span>
+        </div>
+        <div class="search-trips-form__col">
+          <span class="search-trips-form__input search-trips-form__input-date">
+            <input type="text" placeholder="오는 날짜">
+          </span>
+        </div>
+      </div>
+      <div class="search-trips-form__row">
+        <div class="search-trips-form__col">
+          <span class="search-trips-form__input search-trips-form__input-seat-count">
+            <input type="text" placeholder="1명" value="1명">
+          </span>
+          <div class="search-trips-form__seat-count-layer" style="display:none;">
+            <div class="dl-items">
+              <dl>
+                <dt>성인</dt>
+                <dd>
+                  <div class="person-form">
+                    <button type="button" class="subtract">-</button>
+                    <input type="text" value="1" placeholder="">
+                    <button type="button" class="add">+</button>
+                  </div>
+                </dd>
+              </dl>
+              <dl>
+                <dt>아동 <em>만 2-17세</em></dt>
+                <dd>
+                  <div class="person-form">
+                    <button type="button" class="subtract">-</button>
+                    <input type="text" value="0" placeholder="">
+                    <button type="button" class="add">+</button>
+                  </div>
+                </dd>
+              </dl>
+              <dl>
+                <dt>아동 <em>만 2세 미만</em></dt>
+                <dd>
+                  <div class="person-form">
+                    <button type="button" class="subtract">-</button>
+                    <input type="text" value="0" placeholder="">
+                    <button type="button" class="add">+</button>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+            <button type="button" class="success">완료</button>
+          </div>
+        </div>
+        <div class="search-trips-form__col">
+          <span class="search-trips-form__input search-trips-form__input-seat search-trips-form__input-seat--disabled">
+            <input type="text" placeholder="이코노미" disabled="disabled">
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="search-trips-service">
+      <strong class="main-title">수하물 및 기내식</strong>
+      <p class="main-txt">
+        위탁 수하물과 기내식이 포함된 <strong>총 예상 가격</strong>으로 비교해 보세요. 사전 구매 가격 포함 여부를 선택해주세요.
+      </p>
+      <div class="service-box">
+        <div class="row-block bag">
+          <div class="txts">
+            <strong>위탁 수화물</strong>
+            <span>1개 기준</span>
+          </div>
+          <div class="switch-toggles">
+            <dl>
+              <dt>가는편</dt>
+              <dd>
+                <span class="switch-toggle"><input type="checkbox" id="switch1"/><label for="switch1">Toggle</label></span>
+              </dd>
+            </dl>
+            <dl>
+              <dt>오는편</dt>
+              <dd>
+                <span class="switch-toggle"><input type="checkbox" id="switch2"/><label for="switch2">Toggle</label></span>
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <div class="service-tips" style="display:none;">
+          <span class="icon"><img src="../assets/images/ico_bag15.svg" height="30" alt=""></span>
+          <span class="txt">15kg, 20kg, 23kg, 30kg 등 수하물 무게를 확인해 주세요.</span>
+        </div>
+        <button type="button" class="service-tip-expand"></button>
+      </div>
+      <div class="service-box">
+        <div class="row-block meal">
+          <div class="txts">
+            <strong>기내식</strong>
+            <span>최저가 기준</span>
+          </div>
+          <div class="switch-toggles">
+            <dl>
+              <dt>가는편</dt>
+              <dd>
+                <span class="switch-toggle"><input type="checkbox" id="switch1"/><label for="switch1">Toggle</label></span>
+              </dd>
+            </dl>
+            <dl>
+              <dt>오는편</dt>
+              <dd>
+                <span class="switch-toggle"><input type="checkbox" id="switch2"/><label for="switch2">Toggle</label></span>
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <div class="service-tips">
+          <span class="icon"><img src="../assets/images/ico_hot-meal.svg" height="25" alt=""></span>
+          <span class="txt">핫밀: 따뜻하게 데워 제공되는 기내식 </span>
+        </div>
+        <div class="service-tips">
+          <span class="icon"><img src="../assets/images/ico_cold-meal.svg" height="26" alt=""></span>
+          <span class="txt">콜드밀: 따뜻하게 데우지 않고 제공되는 기내식 </span>
+        </div>
+        <button type="button" class="service-tip-expand actived"></button>
+      </div>
+
+      <div class="search-trips-form__bt green">
+        <button type="button">항공권 검색 GO!</button>
+      </div>
+    </div>
+    <div class="search-result-options">
+      <ul>
+        <li><a href="">정렬 및 필터</a></li>
+        <li>
+          <a href="" class="actived">수하물 및 기내식</a>
+          <div class="option-layer">
+            <div>
+              asdfasfaf
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="search-result-info">
+      <span>초록색 아이콘은 유료,</span> 검은색 아이콘은 무료
+    </div>
+
+    <div class="search-result">
+      <div class="search-result__item">
+        <div class="search-result__item-infos">
+          <table>
+            <colgroup>
+              <col>
+              <col style="width:150px;">
+            </colgroup>
+            <thead>
+            <tr>
+              <th class="search-result__item-airline">제주항공 | 제주항공</th>
+              <th class="search-result__item-total-price"><strong>총 포함 예상</strong></th>
+            </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="left">
+                  <div class="search-result__item-info1">
+                    <div class="summary-group">
+                      <div class="summary1">
+                        <strong class="logo"><img src="../assets/images/img_7c.png" alt=""></strong>
+                        <div>
+                          <span class="time">09:55 - 12:35</span>
+                          <ul class="opts">
+                            <li class="wifi">wifi</li>
+                            <li class="entertainment">entertainment</li>
+                            <li class="seat">기본</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="summary2">
+                        ICN-HKG, 직항, 3h 40m<br>
+                        B737
+                      </div>
+                    </div>
+                    <div class="summary-group">
+                      <div class="summary1">
+                        <strong class="logo"><img src="../assets/images/img_7c.png" alt=""></strong>
+                        <div>
+                          <span class="time">09:55 - 12:35</span>
+                          <ul class="opts">
+                            <li class="wifi"></li>
+                            <li class="entertainment"></li>
+                            <li class="seat">기본</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="summary2">
+                        ICN-HKG, 직항, 3h 40m<br>
+                        B737
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="search-result__item-info3">
+                    <ul class="opts">
+                      <li class="in bag bag15">bag</li>
+                      <li class="in hot-meal">meal</li>
+                    </ul>
+                    <strong class="price in">\3,331,300</strong>
+                    <div class="pm">
+                      <div class="point">
+                        <strong>LJ 포인트 적립</strong>
+                      </div>
+                      <div class="mileage">
+                        <strong>KE 2,500</strong>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" class="search-result__item-buttons">
+                  <ul>
+                    <li><a href="">바로 예약 가기</a></li>
+                    <li><a href="">세부 정보 보기</a></li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="search-result__item">
+        <div class="search-result__item-infos">
+          <table>
+            <thead>
+            <tr>
+              <th class="search-result__item-airline">홍콩익스프레스 | 홍콩익스프레스</th>
+              <th class="search-result__item-total-price"><strong>총 포함 예상 가격</strong></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td class="left">
+                <div class="search-result__item-info1">
+                  <div class="summary-group">
+                    <div class="summary1">
+                      <strong class="logo"><img src="../assets/images/img_hk.png" alt=""></strong>
+                      <div>
+                        <span class="time">09:55 - 12:35 <em class="plus">+1</em></span>
+                        <ul class="opts">
+                          <li class="wifi">wifi</li>
+                          <li class="entertainment">entertainment</li>
+                          <li class="seat">기본</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="summary2">
+                      ICN-HKG, 직항, 3h 40m<br>
+                      B737
+                    </div>
+                  </div>
+                  <div class="summary-group">
+                    <div class="summary1">
+                      <strong class="logo"><img src="../assets/images/img_hk.png" alt=""></strong>
+                      <div>
+                        <span class="time">09:55 - 12:35</span>
+                        <ul class="opts">
+                          <li class="wifi"></li>
+                          <li class="entertainment"></li>
+                          <li class="seat">기본</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="summary2">
+                      ICN-HKG, 직항, 3h 40m<br>
+                      B737
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="search-result__item-info3">
+                  <ul class="opts">
+                    <li class="bag bag20 double">bag</li>
+                    <li class="cold-meal">meal</li>
+                  </ul>
+                  <strong class="price">\331,300</strong>
+                  <div class="pm">
+                    <div class="point">
+                      <strong>KE 적립 불가</strong>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<button type="button" class="top">top</button>
+<include src="../include/footer.html"></include>
+<include src="../include/scripts.html"></include>
+</body>
+</html>
