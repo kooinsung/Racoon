@@ -11,7 +11,7 @@
 
 .search-trips-form {
   background: #00a64e;
-  padding: 20px 20px 20px 20px;
+  padding: 20px 20px 30px 20px;
   font-size: 0;
   &.yellow{
     background: #ffe155;
@@ -337,7 +337,7 @@
 }
 .search-trips-service{
   background:#ffe155;
-  padding: 20px 20px 20px 20px;
+  padding: 20px 20px 30px 20px;
   font-size: 0;
   .main-title{
     font-size:20px;
@@ -437,7 +437,55 @@
     margin-top:30px;
   }
 }
-
+.search-result-options{
+  position:relative;
+  font-size:0;
+  > ul{
+    > li{
+      display:inline-block;
+      width:50%;
+      border-left:1px solid #e0e0e0;
+      box-sizing: border-box;
+      &:first-child{
+        border-left:0;
+      }
+    }
+    >a{
+      text-align:center;
+      display:block;
+      font-size:14px;
+      color:#0b6f55;
+      height:40px;
+      line-height:40px;
+      box-sizing: border-box;
+      border-bottom:1px solid #e0e0e0;
+      &.actived{
+        font-weight:700;
+      }
+    }
+  }
+  .option-layer{
+    position:absolute;
+    top:40px;
+    left:0;
+    right:0;
+    font-size:20px;
+    background:#ffe155;
+  }
+}
+.search-result-info{
+  font-size:14px;
+  height:40px;
+  line-height:40px;
+  border-bottom:1px solid #e0e0e0;
+  box-sizing: border-box;
+  background: url('#{$base-img-path}/img_racoon-head.png') 20px center no-repeat;
+  background-size: 27px 21px;
+  padding:0 20px 0 55px;
+  span{
+    color:#0b6f55;
+  }
+}
 .trip-info {
   @include position(relative);
   background: #00a64e;
@@ -1164,21 +1212,22 @@
 }
 
 .search-result {
-  padding: 10px;
-
+  padding: 10px 10px 20px 10px;
+  background:#f9f9f9;
   &__item {
     background: #fff;
-    @include border-radius(5px);
+    @include border-radius(10px);
     margin-bottom: 10px;
     -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
   }
 
   &__item-airline {
-    font-size: 10px;
+    font-size: 11px !important;
     color: #606060;
     padding: 10px 10px 0 10px !important;
     text-align: left;
+    vertical-align: top;
   }
 
   &__item-price {
@@ -1195,7 +1244,7 @@
     strong {
       display: block;
       font-size: 11px;
-      background: #ffe155;
+      background: #cceddc;
       border-radius: 25px;
       line-height: 25px;
       color: #0b6f55;
@@ -1211,7 +1260,6 @@
       thead {
         th {
           padding: 10px 5px 5px 5px;
-          font-size: 14px;
         }
       }
 
@@ -1234,16 +1282,16 @@
     width: 160px;
     .summary-group {
       padding: 10px 10px;
-
       .logo {
-        float: left;
-        margin-right: 10px;
-        width: 20px;
-        height: 20px;
+        position:absolute;
+        top:0;
+        left:0;
+        width: 22px;
+        height: 22px;
 
         img {
-          width: 20px;
-          height: 20px;
+          width: 22px;
+          height: 22px;
         }
       }
 
@@ -1255,19 +1303,22 @@
       }
 
       .plus {
-        font-size: 10px;
-        color: #00a64e;
+        font-size: 11px;
         display: inline-block;
         vertical-align: top;
+        font-weight:700;
       }
     }
 
     .summary1 {
       overflow: hidden;
-
+      position:relative;
+      > div{
+        margin:0 0 0 35px;
+      }
       .opts {
         font-size: 0;
-
+        margin-top:7px;
         li {
           display: inline-block;
           vertical-align: top;
@@ -1300,6 +1351,7 @@
             vertical-align: top;
             width: 13px;
             height: 18px;
+            margin-right:3px;
             background: url('#{$base-img-path}/ico_seat2.svg') center center no-repeat;
             background-size: 13px 18px;
           }
@@ -1309,9 +1361,9 @@
 
     .summary2 {
       line-height: 150%;
-      font-size: 10px;
+      font-size: 11px;
       color: #606060;
-      margin-top: 5px;
+      margin-top: 7px;
     }
   }
 
@@ -1324,7 +1376,6 @@
   }
 
   &__item-info3 {
-    margin-top:-35px;
     .opts {
       font-size: 0;
       text-align: left;
@@ -1460,7 +1511,8 @@
     }
 
     .pm{
-      @include position(absolute, $bottom: 30px, $left: 0px);
+      //@include position(absolute, $bottom: 30px, $left: 0px);
+      margin-top:20px;
       .point, .mileage{
         text-align: left;
         margin:3px 0;
@@ -1507,6 +1559,35 @@
       font-weight: 700;
       display: block;
       margin-bottom: 5px;
+    }
+  }
+
+  &__item-buttons{
+    padding:0 !important;
+    border-top:1px solid #e8e8e8;
+    ul{
+      width:100%;
+      display:block;
+      font-size:0;
+    }
+    li{
+      display:inline-block;
+      width:50%;
+      border-right:1px solid #e8e8e8;
+      box-sizing: border-box;
+      &:last-child{
+        border-right:0;
+        a{
+          color:#00a64e;
+        }
+      }
+    }
+    a{
+      display:block;
+      font-size:14px;
+      height:40px;
+      line-height:40px;
+      box-sizing: border-box;
     }
   }
 }
@@ -1590,13 +1671,13 @@
   }
 
   &__filter {
-    margin: 0 10px;
+    margin: 0 10px 0 10px;
     padding: 10px 0;
     font-size: 0;
   }
 
   &__filter-group {
-    padding: 15px 0;
+    //padding: 15px 0 15px 0;
     border-top: 1px solid #d1d1d1;
 
     &:first-child {
@@ -1611,11 +1692,12 @@
     display: block;
     font-size: 14px;
     font-weight: 700;
-    margin-bottom: 8px;
+    padding: 20px 0 20px 0;
     background: url('#{$base-img-path}/ico_toggle-off.svg') 98% center no-repeat;
     background-size: 14px 10px;
 
     &.active {
+      padding-bottom:5px;
       background: url('#{$base-img-path}/ico_toggle-on.svg') 98% center no-repeat;
       background-size: 14px 10px;
     }
@@ -1623,6 +1705,7 @@
 
   &__filter-inner {
     @include position(relative);
+    padding-bottom:20px;
   }
 
   &__filter4 {
@@ -1718,7 +1801,7 @@
 }
 
 .layers {
-  @include position(absolute, $top: 0px, $left: 0px, $right: 0px);
+  @include position(absolute, $top: 0px, $left: 0px, $right: 0px, $bottom: 0px);
   background: #fff;
   z-index: 400;
 
@@ -1921,19 +2004,20 @@
     border-bottom: 1px solid #0b6f55;
     max-width:750px;
     margin:0 auto;
+    box-sizing: border-box;
   }
 
   &__close {
     @include position(absolute, $top: 0px, $left: 0px);
     width: 56px;
-    height: 45px;
+    height: 60px;
     background: url('#{$base-img-path}/ico_close.svg') center center no-repeat;
     background-size: 14px 15px;
   }
 
   &__tit {
     display: block;
-    line-height: 45px;
+    line-height: 60px;
     text-align: center;
     font-size: 14px;
     color: #0b704e;
@@ -2201,20 +2285,28 @@
 
   &__utils {
     background: #fff;
-    padding-top: 55px;
-    padding-bottom: 70px;
+    padding-top: 60px;
+    //padding-bottom: 70px;
     max-width:750px;
     margin:0 auto;
     .layer__filter {
-      margin:0 20px;
+      margin:-15px 20px 0 20px;
     }
   }
 
-  &__sort {
+  &__content-title{
+    font-size:16px;
+    display:block;
+    font-weight:700;
+    padding:20px 20px 15px 20px;
+  }
 
+  &__sort {
+    margin:0 20px 0 20px;
+    padding-bottom:20px;
+    border-bottom:1px solid #e8e8e8;
     li {
-      padding: 15px 0;
-      border-top: 1px solid #d1d1d1;
+      padding: 5px 0;
 
       &:first-child {
         border-top: 0;
@@ -2242,16 +2334,12 @@
           @include border-radius(16px);
           @include position(absolute, $top: 1px, $left: 0px);
         }
-
-        strong {
-          display: block;
-          line-height: 150%;
-          font-size: 10px;
-          margin-top: 5px;
+        div{
+          font-size:12px;
         }
 
-        span {
-          font-weight: 700;
+        strong {
+          font-weight:700;
         }
       }
 
@@ -4804,4 +4892,14 @@
       margin:0 auto;
     }
   }
+}
+.top{
+  position:fixed;
+  bottom:10px;
+  right:10px;
+  z-index:150;
+  width:48px;
+  height:48px;
+  background: url('#{$base-img-path}/img_top.png') center center no-repeat;
+  background-size: 48px 48px;
 }
