@@ -2157,18 +2157,18 @@ button.swiper-pagination-bullet {
   font-size: 0;
 }
 
-.search-result-options > ul > li {
+.search-result-options > ul li {
   display: inline-block;
   width: 50%;
   border-left: 1px solid #e0e0e0;
   box-sizing: border-box;
 }
 
-.search-result-options > ul > li:first-child {
+.search-result-options > ul li:first-child {
   border-left: 0;
 }
 
-.search-result-options > ul > a {
+.search-result-options > ul a {
   text-align: center;
   display: block;
   font-size: 14px;
@@ -2179,7 +2179,7 @@ button.swiper-pagination-bullet {
   border-bottom: 1px solid #e0e0e0;
 }
 
-.search-result-options > ul > a.actived {
+.search-result-options > ul a.actived {
   font-weight: 700;
 }
 
@@ -2188,8 +2188,70 @@ button.swiper-pagination-bullet {
   top: 40px;
   left: 0;
   right: 0;
+  z-index: 10;
   font-size: 20px;
   background: #ffe155;
+  padding: 20px 20px;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.search-result-options .option-layer .box {
+  position: relative;
+  padding: 5px 0;
+}
+
+.search-result-options .option-layer .box .txt {
+  display: block;
+  font-size: 14px;
+  height: 43px;
+  line-height: 43px;
+  margin-right: 125px;
+  padding-left: 56px;
+}
+
+.search-result-options .option-layer .box.bag .txt {
+  background: url("../images/ico_bag5.png") 8px center no-repeat;
+  background-size: 29px 43px;
+}
+
+.search-result-options .option-layer .box.meal .txt {
+  background: url("../images/ico_meal5.png") 0 center no-repeat;
+  background-size: 44px 25px;
+}
+
+.search-result-options .option-layer .switch-toggles {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.search-result-options .option-layer .switch-toggles dl {
+  display: inline-block;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.search-result-options .option-layer .switch-toggles dt {
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.search-result-options .option-layer .button {
+  margin-top: 10px;
+}
+
+.search-result-options .option-layer .button button {
+  width: 100%;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  color: #0b6f55;
+  border: 1px solid #0b6f55;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 30px;
 }
 
 .search-result-info {
@@ -3799,7 +3861,7 @@ button.swiper-pagination-bullet {
   margin: 0 auto;
   padding-bottom: 20px;
   position: fixed;
-  top: 45px;
+  top: 60px;
   right: 0px;
   left: 0px;
   z-index: 400;
@@ -3827,7 +3889,7 @@ button.swiper-pagination-bullet {
 
 .layers__result {
   padding-bottom: 10px;
-  padding-top: 129px;
+  padding-top: 144px;
 }
 
 .layers__result ul {
@@ -4427,7 +4489,7 @@ button.swiper-pagination-bullet {
 
 .details {
   background: #fff;
-  padding-top: 45px;
+  padding-top: 70px;
   padding-bottom: 100px;
   max-width: 750px;
   margin: 0 auto;
@@ -5007,6 +5069,15 @@ button.swiper-pagination-bullet {
   font-size: 14px;
 }
 
+.details__more-option button {
+  width: 100%;
+  font-size: 12px;
+  color: #0b6f55;
+  text-align: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #d1d1d1;
+}
+
 .details__reservation-tip strong {
   display: block;
   padding: 0 10px;
@@ -5031,7 +5102,7 @@ button.swiper-pagination-bullet {
   -moz-border-radius: 10px;
   border-radius: 10px;
   overflow: hidden;
-  margin: 15px 10px 15px 10px;
+  margin: 0px 10px 15px 10px;
   background: #fff;
   -webkit-box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.1);
@@ -5074,6 +5145,10 @@ button.swiper-pagination-bullet {
   text-align: left;
 }
 
+.details__price-opt table thead th {
+  font-weight: 700;
+}
+
 .details__price-opt table thead th.center {
   text-align: center;
 }
@@ -5112,6 +5187,7 @@ button.swiper-pagination-bullet {
 .details__price-opt table tfoot th span {
   display: inline-block;
   position: relative;
+  font-weight: 700;
 }
 
 .details__price-opt table tfoot th span:after {

@@ -189,8 +189,42 @@
           <li>
             <a href="" class="actived">수하물 및 기내식</a>
             <div class="option-layer">
-              <div>
-                asdfasfaf
+              <div class="box bag">
+                <span class="txt">위탁 수화물 1개 기준</span>
+                <div class="switch-toggles">
+                  <dl>
+                    <dt>가는편</dt>
+                    <dd>
+                      <span class="switch-toggle"><input type="checkbox" id="switch1" /><label for="switch1">Toggle</label></span>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>오는편</dt>
+                    <dd>
+                      <span class="switch-toggle"><input type="checkbox" id="switch2" /><label for="switch2">Toggle</label></span>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="box meal">
+                <span class="txt">기내식 최저가 기준</span>
+                <div class="switch-toggles">
+                  <dl>
+                    <dt>가는편</dt>
+                    <dd>
+                      <span class="switch-toggle"><input type="checkbox" id="switch1" /><label for="switch1">Toggle</label></span>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>오는편</dt>
+                    <dd>
+                      <span class="switch-toggle"><input type="checkbox" id="switch2" /><label for="switch2">Toggle</label></span>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="button">
+                <button type="button">완료</button>
               </div>
             </div>
           </li>
@@ -287,6 +321,10 @@
         <div class="search-result__item">
           <div class="search-result__item-infos">
             <table>
+              <colgroup>
+                <col>
+                <col style="width:150px;">
+              </colgroup>
               <thead>
                 <tr>
                   <th class="search-result__item-airline">홍콩익스프레스 | 홍콩익스프레스</th>
@@ -348,6 +386,14 @@
                     </div>
                   </td>
                 </tr>
+                <tr>
+                  <td colspan="2" class="search-result__item-buttons">
+                    <ul>
+                      <li><a href="">바로 예약 가기</a></li>
+                      <li><a href="">세부 정보 보기</a></li>
+                    </ul>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -391,83 +437,86 @@
     </div>
   </footer>
 
-  <script src="../assets/js/jquery-1.12.4.js"></script>
-  <script src="../assets/js/jquery-ui.js"></script>
-  <script src="../assets/js/swiper.js"></script>
-  <link rel="stylesheet" href="../assets/js/ui.js">
+  <!--<script src="../assets/js/jquery-1.12.4.js"></script>
+<script src="../assets/js/jquery-ui.js"></script>
+<script src="../assets/js/swiper.js"></script>
+<link rel="stylesheet" href="../assets/js/ui.js">
 
-  <script>
-    window.onscroll = function() {
-      var body = document.body;
-      if (window.pageYOffset > 45) {
-        body.classList.add("scrolling");
-      } else {
-        body.classList.remove("scrolling");
-      }
+<script>
+
+    window.onscroll = function () {
+        var body = document.body;
+        if (window.pageYOffset > 45) {
+            body.classList.add("scrolling");
+        } else {
+            body.classList.remove("scrolling");
+        }
     }
 
-    $(function() {
+  $(function () {
 
-      var swiper = new Swiper('.banners__items .swiper-container', {
-        pagination: {
-          el: '.banners__items .swiper-pagination',
-        },
-      });
-
-      $("#slider").slider({
-        range: "max",
-        min: 1,
-        max: 14,
-        step: 1,
-        create: function(event, ui) {},
-        slide: function(event, ui) {}
-      });
-
-      $("#calendars-inline-stage").datepicker({
-        minDate: 0,
-        numberOfMonths: [8, 1],
-        dateFormat: "MM dd일 (DD)",
-        beforeShowDay: function(date) {
-          var date1 = $.datepicker.parseDate("MM dd일 (DD)", $("#dep-range").val());
-          var date2 = $.datepicker.parseDate("MM dd일 (DD)", $("#arr-range").val());
-
-          if (date1 && date && (date1.getTime() == date.getTime())) {
-            return [true, 'ui-state-selected-range ui-range-start', ''];
-          }
-          if (date2 && date && (date2.getTime() == date.getTime())) {
-            return [true, 'ui-state-selected-range ui-range-end', ''];
-          }
-
-          if (date >= date1 && date <= date2) {
-            return [true, 'ui-state-selected-range', ''];
-          }
-          var d = date.getTime();
-
-          return [true, '', ''];
-          //return [true, date1 && ((date.getTime() == date1.getTime()) || (date2 && date >= date1 && date <= date2)) ? "dp-highlight" : ""];/
-        },
-        onSelect: function(dateText, inst) {
-          var date1 = $.datepicker.parseDate("MM dd일 (DD)", $("#dep-range").val());
-          var date2 = $.datepicker.parseDate("MM dd일 (DD)", $("#arr-range").val());
-          var selectedDate = $.datepicker.parseDate("MM dd일 (DD)", dateText);
-
-          if (!date1 || date2) {
-            $("#dep-range").val(dateText);
-            $("#arr-range").val("");
-            $(this).datepicker();
-          } else if (selectedDate < date1) {
-            $("#arr-range").val($("#dep-range").val());
-            $("#dep-range").val(dateText);
-            $(this).datepicker();
-          } else {
-            $("#arr-range").val(dateText);
-            $(this).datepicker();
-          }
-        }
-      });
+    var swiper = new Swiper('.banners__items .swiper-container', {
+      pagination: {
+        el: '.banners__items .swiper-pagination',
+      },
     });
-  </script>
 
+    $("#slider").slider({
+      range: "max",
+      min: 1,
+      max: 14,
+      step: 1,
+      create: function (event, ui) {
+      },
+      slide: function (event, ui) {
+      }
+    });
+
+    $("#calendars-inline-stage").datepicker({
+      minDate: 0,
+      numberOfMonths: [8, 1],
+      dateFormat: "MM dd일 (DD)",
+      beforeShowDay: function (date) {
+        var date1 = $.datepicker.parseDate("MM dd일 (DD)", $("#dep-range").val());
+        var date2 = $.datepicker.parseDate("MM dd일 (DD)", $("#arr-range").val());
+
+        if (date1 && date && (date1.getTime() == date.getTime())) {
+          return [true, 'ui-state-selected-range ui-range-start', ''];
+        }
+        if (date2 && date && (date2.getTime() == date.getTime())) {
+          return [true, 'ui-state-selected-range ui-range-end', ''];
+        }
+
+        if (date >= date1 && date <= date2) {
+          return [true, 'ui-state-selected-range', ''];
+        }
+        var d = date.getTime();
+
+        return [true, '', ''];
+        //return [true, date1 && ((date.getTime() == date1.getTime()) || (date2 && date >= date1 && date <= date2)) ? "dp-highlight" : ""];/
+      },
+      onSelect: function (dateText, inst) {
+        var date1 = $.datepicker.parseDate("MM dd일 (DD)", $("#dep-range").val());
+        var date2 = $.datepicker.parseDate("MM dd일 (DD)", $("#arr-range").val());
+        var selectedDate = $.datepicker.parseDate("MM dd일 (DD)", dateText);
+
+        if (!date1 || date2) {
+          $("#dep-range").val(dateText);
+          $("#arr-range").val("");
+          $(this).datepicker();
+        } else if (selectedDate < date1) {
+          $("#arr-range").val($("#dep-range").val());
+          $("#dep-range").val(dateText);
+          $(this).datepicker();
+        } else {
+          $("#arr-range").val(dateText);
+          $(this).datepicker();
+        }
+      }
+    });
+  });
+</script>
+-->
 </body>
 
 </html>
