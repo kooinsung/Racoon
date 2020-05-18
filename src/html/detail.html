@@ -147,587 +147,334 @@
     </div>
     <div class="layers__body">
         <div class="details">
-            <div class="details__price">
-            <div class="details__price-tit">
-              플라잉라쿤 계산기로 항공권에 부가 서비스를 더한 예상 금액을 확인해보세요!
+          <div class="details__items">
+            <div class="details__item-tit">
+              <p><strong>ICN - BCN</strong> 9월 16일 (월)</p>
+              <em>총 15시간 20분</em>
             </div>
-            <div class="details__price-opt">
-              <table>
-                <colgroup>
-                  <col style="width:110px;">
-                  <col style="width:40px;">
-                  <col style="width:40px;">
-                  <col>
-                </colgroup>
-                <tfoot>
-                <tr>
-                  <th colspan="3"><span class="total-sum">예상 합계</span></th>
-                  <td>\331,300</td>
-                </tr>
-                </tfoot>
-                <thead>
-                <tr class="default">
-                  <th colspan="3">기본 항공권 가격</th>
-                  <th>\221,300</th>
-                </tr>
-                <tr class="tit">
-                  <th>부가 서비스</th>
-                  <th class="center">갈때</th>
-                  <th class="center">올때</th>
-                  <th>예상 가격</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <td>기내 수하물</td>
-                  <td colspan="3" class=" refresh link">10kg까지 무료</td>
-                </tr>
-                <tr>
-                  <td>위탁 수하물</td>
-                  <td>
-                  <span class="opt-check">
-                    <input type="checkbox" id="in-bag-checks3">
-                    <label for="in-bag-checks3">&nbsp</label>
-                  </span>
-                  </td>
-                  <td>
-                  <span class="opt-check">
-                    <input type="checkbox" id="in-bag-checks4">
-                    <label for="in-bag-checks4">&nbsp</label>
-                  </span>
-                  </td>
-                  <td class="link">\80,000</td>
-                </tr>
-                <tr>
-                  <td>기내식</td>
-                  <td>
-                  <span class="opt-check">
-                    <input type="checkbox" id="in-bag-checks5">
-                    <label for="in-bag-checks5">&nbsp</label>
-                  </span>
-                  </td>
-                  <td>
-                  <span class="opt-check">
-                    <input type="checkbox" id="in-bag-checks6">
-                    <label for="in-bag-checks6">&nbsp</label>
-                  </span>
-                  </td>
-                  <td class="link">\30,000</td>
-                </tr>
-                <tr>
-                  <td>
-                    <button type="button" class="toggle">좌석 사전 구매</button> <!-- 선택시 active 추가 -->
-<!--                    <div class="small-layer" style="">-->
-<!--                      <ul>-->
-<!--                        <li>-->
-<!--                        <span class="seat-radio">-->
-<!--                          <input type="radio" id="seat-radio1" name="se-radio">-->
-<!--                          <label for="seat-radio1">앞 / 비상구 좌석</label>-->
-<!--                        </span>-->
-<!--                        </li>-->
-<!--                        <li>-->
-<!--                        <span class="seat-radio">-->
-<!--                          <input type="radio" id="seat-radio2" name="se-radio">-->
-<!--                          <label for="seat-radio2">A 구역</label>-->
-<!--                        </span>-->
-<!--                        </li>-->
-<!--                        <li>-->
-<!--                        <span class="seat-radio">-->
-<!--                          <input type="radio" id="seat-radio3" name="se-radio">-->
-<!--                          <label for="seat-radio3">B 구역</label>-->
-<!--                        </span>-->
-<!--                        </li>-->
-<!--                        <li>-->
-<!--                        <span class="seat-radio">-->
-<!--                          <input type="radio" id="seat-radio4" name="se-radio">-->
-<!--                          <label for="seat-radio4">C 구역</label>-->
-<!--                        </span>-->
-<!--                        </li>-->
-<!--                      </ul>-->
-<!--                      <button type="button">완료</button>-->
-<!--                    </div>-->
-                  </td>
-                  <td>
-                  <span class="opt-check">
-                    <input type="checkbox" disabled="disabled" id="in-bag-checks7">
-                    <label for="in-bag-checks7">&nbsp</label>
-                  </span>
-                  </td>
-                  <td>
-                  <span class="opt-check">
-                    <input type="checkbox" disabled="disabled" id="in-bag-checks8">
-                    <label for="in-bag-checks8">&nbsp</label>
-                  </span>
-                  </td>
-                  <td class="link">\0</td>
-                </tr>
-                <tr class="seat-choices">
-                  <td colspan="4">
-                    <div class="trip-choice-buttons">
-                      <span>
-                        <input type="radio" id="trip-choice-buttons1" name="trip-choice-buttons1" checked="checked"/>
-                        <label for="trip-choice-buttons1">가는편</label>
-                      </span>
-                      <span>
-                        <input type="radio" id="trip-choice-buttons2" name="trip-choice-buttons1"/>
-                        <label for="trip-choice-buttons2">오는편</label>
-                      </span>
-                    </div>
-                    <div class="choice-title">
-                      <strong>진에어 좌석 종류</strong>
-                      <a href="">link</a>
-                    </div>
-                    <ul class="choice-items">
-                      <li>
-                        <input type="radio" id="seat-choice1" name="seat-choice"/>
-                        <label for="seat-choice1">Jini Front (앞쪽 Zone)</label>
-                      </li>
-                      <li>
-                        <input type="radio" id="seat-choice2" name="seat-choice"/>
-                        <label for="seat-choice2">Jini Standard (뒤쪽 Zone)</label>
-                      </li>
-                      <li>
-                        <input type="radio" id="seat-choice3" name="seat-choice"/>
-                        <label for="seat-choice3">ZONE C (뒤쪽 Zone)</label>
-                      </li>
-                      <li>
-                        <input type="radio" id="seat-choice4" name="seat-choice"/>
-                        <label for="seat-choice4">Jini Stretch / Jini Exit (매 앞좌석/비상구열)</label>
-                      </li>
-                      <li>
-                        <input type="radio" id="seat-choice5" name="seat-choice"/>
-                        <label for="seat-choice5">프리미엄 컴포트</label>
-                      </li>
-                      <li>
-                        <input type="radio" id="seat-choice6" name="seat-choice"/>
-                        <label for="seat-choice6">Jini Exit (No Recline-비상구열 등받이고정)</label>
-                      </li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr class="mileage">
-                  <td class="mileage-tit">예상 마일리지</td>
-                  <td colspan="3" class="mileage-list">
-                    <ul>
-                      <li>
-                        <a href="">대한항공 1,500 마일</a>
-                        <span>(델타항공 V class 적립률 70%)</span>
-                      </li>
-                      <li>
-                         <a href="">아시아나 2,000 마일</a>
-                        <span>(타이항공 V class 적립률 50%)</span>
-                      </li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
-                  <td><button type="button" class="toggle">반려동물</button></td>
-                  <td>
-                    <span class="opt-check">
-                      <input type="checkbox" disabled="disabled" id="in-pet-checks7" checked="checked">
-                      <label for="in-pet-checks7">&nbsp</label>
-                    </span>
-                  </td>
-                  <td>
-                    <span class="opt-check">
-                      <input type="checkbox" disabled="disabled" id="in-pet-checks8">
-                      <label for="in-pet-checks8">&nbsp</label>
-                    </span>
-                  </td>
-                  <td class="">\0</td>
-                </tr>
-                <tr class="pet-choices">
-                  <td colspan="4">
-                    <div class="trip-choice-buttons">
-                      <span>
-                        <input type="radio" id="trip-choice-buttons3" name="trip-choice-buttons2" checked="checked"/>
-                        <label for="trip-choice-buttons3">가는편</label>
-                      </span>
-                      <span>
-                        <input type="radio" id="trip-choice-buttons4" name="trip-choice-buttons2"/>
-                        <label for="trip-choice-buttons4">오는편</label>
-                      </span>
-                    </div>
-                    <div class="choice-title">
-                      <strong>아시아나항공</strong><span>기내 가능, 위탁 가능</span>
-                      <a href="">link</a>
-                    </div>
-                    <ul class="choice-items">
-                      <li>
-                        <input type="radio" id="pet-choice1" name="pet-choice"/>
-                        <label for="pet-choice1">기내 (7kg 미만)</label>
-                      </li>
-                      <li>
-                        <input type="radio" id="pet-choice2" name="pet-choice"/>
-                        <label for="pet-choice2">위탁 (32kg 이하)</label>
-                      </li>
-                      <li>
-                        <input type="radio" id="pet-choice3" name="pet-choice"/>
-                        <label for="pet-choice3">위탁 (33~45kg)</label>
-                      </li>
-                    </ul>
-                  </td>
-                </tr>
-<!--                <tr class="pet-option-list">-->
-<!--                  <td colspan="4">-->
-<!--                    <table>-->
-<!--                      <colgroup>-->
-<!--                        <col style="width:110px;">-->
-<!--                        <col style="width:40px;">-->
-<!--                        <col style="width:40px;">-->
-<!--                        <col>-->
-<!--                      </colgroup>-->
-<!--                      <tbody>-->
-<!--                        <tr>-->
-<!--                          <td>┗ 기내 <em>(7kg 미만)</em></td>-->
-<!--                          <td>-->
-<!--                            <span class="opt-check">-->
-<!--                              <input type="checkbox" id="in-pet-checks1">-->
-<!--                              <label for="in-pet-checks1">&nbsp</label>-->
-<!--                            </span>-->
-<!--                                  </td>-->
-<!--                                  <td>-->
-<!--                            <span class="opt-check">-->
-<!--                              <input type="checkbox" id="in-pet-checks2">-->
-<!--                              <label for="in-pet-checks2">&nbsp</label>-->
-<!--                            </span>-->
-<!--                          </td>-->
-<!--                          <td>\80,000</td>-->
-<!--                        </tr>-->
-<!--                        <tr>-->
-<!--                          <td>┗ 위탁 <em>(32kg 이하)</em></td>-->
-<!--                          <td>-->
-<!--                            <span class="opt-check">-->
-<!--                              <input type="checkbox" id="in-pet-checks3">-->
-<!--                              <label for="in-pet-checks3">&nbsp</label>-->
-<!--                            </span>-->
-<!--                          </td>-->
-<!--                          <td>-->
-<!--                            <span class="opt-check">-->
-<!--                              <input type="checkbox" id="in-pet-checks4">-->
-<!--                              <label for="in-pet-checks4">&nbsp</label>-->
-<!--                            </span>-->
-<!--                          </td>-->
-<!--                          <td>\0</td>-->
-<!--                        </tr>-->
-<!--                        <tr>-->
-<!--                          <td>┗ 위탁 <em>(33~45kg)</em></td>-->
-<!--                          <td>-->
-<!--                            <span class="opt-check">-->
-<!--                              <input type="checkbox" id="in-pet-checks5">-->
-<!--                              <label for="in-pet-checks5">&nbsp</label>-->
-<!--                            </span>-->
-<!--                          </td>-->
-<!--                          <td>-->
-<!--                            <span class="opt-check">-->
-<!--                              <input type="checkbox" id="in-pet-checks6">-->
-<!--                              <label for="in-pet-checks6">&nbsp</label>-->
-<!--                            </span>-->
-<!--                          </td>-->
-<!--                          <td>\0</td>-->
-<!--                        </tr>-->
-<!--                      </tbody>-->
-<!--                    </table>-->
-<!--                  </td>-->
-<!--                </tr>-->
-                </tbody>
-              </table>
+            <div class="details__item">
+              <div class="details__item-view">
+                <div class="details__item-airline">
+                  <span class="thumb"><img src="../assets/images/img_AF.svg" alt=""></span>에어프랑스 261
+                </div>
+                <div class="details__item-sdu">
+                  <div class="sdu sdu-dep">
+                    <strong class="three-code">ICN</strong>
+                    <span class="time">14:35</span>
+                  </div>
+                  <div class="sdu-total-time">
+                    <strong>12시간</strong>
+                  </div>
+                  <div class="sdu sdu-arr">
+                    <strong class="three-code">CDG</strong>
+                    <span class="time">19:35</span>
+                  </div>
+                </div>
+                <button type="button" class="details__item-toggle active">자세한 정보</button>
+                <div class="details__item-detail">
+                  <ul>
+                    <li><span class="ico i1"></span>B777-200/200ER</li>
+                    <li><span class="ico i2"></span>위탁 수하물 있음</li>
+                    <li><span class="ico i3"></span>Wi-fi 있음</li>
+                    <li><span class="ico i4"></span>기내 엔터테인먼트 있음</li>
+                    <li><span class="ico i5"></span>좌석 레그룸 넓음</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="details__item-vi">
+                CDG 샤를드골국제공항 1시간 30분 경유
+              </div>
+              <div class="details__item-view">
+                <div class="details__item-airline">
+                  <span class="thumb"><img src="../assets/images/img_AF.svg" alt=""></span>에어프랑스 1448
+                </div>
+                <div class="details__item-sdu">
+                  <div class="sdu sdu-dep">
+                    <strong class="three-code">CDG</strong>
+                    <span class="time">21:05</span>
+                  </div>
+                  <div class="sdu-total-time">
+                    <strong>1시간 50분</strong>
+                  </div>
+                  <div class="sdu sdu-arr">
+                    <strong class="three-code">BCN</strong>
+                    <span class="time">22:55</span>
+                    <em class="date">12월 17일</em>
+                  </div>
+                </div>
+                <button type="button" class="details__item-toggle active">자세한 정보</button>
+                <div class="details__item-detail" v>
+                  <ul>
+                    <li><span class="ico i1"></span>A320-100/200</li>
+                    <li><span class="ico i5"></span>좌석 레그룸 기본</li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div class="details__price-tip">
-              수하물, 기내식 등 모든 부가 서비스가 포함되어 계산된 가격은 예상 합계 금액으로, 세부 항목 별로 정확한 가격이 상이하거나 항공사 프로모션에 따라 변할 수 있습니다. 반려동물의 경우 목적지, 기종, 무게 등에 따라 가격이나 동반 가능 여부가 달라질 수 있습니다. 수하물, 기내식, 마일리지, 반려동물 등 자세한 부가 서비스 정책은 각 항공사 홈페이지를 꼭 확인해주시기 바랍니다.
-            </div>
-            <!--<div class="details__price-default">-->
-            <!--<table>-->
-            <!--<colgroup>-->
-            <!--<col style="width:105px;">-->
-            <!--<col>-->
-            <!--<col>-->
-            <!--<col style="width:150px;">-->
-            <!--</colgroup>-->
-            <!--<thead>-->
-            <!--<tr>-->
-            <!--<th colspan="3" class="pl10">기본 항공권 가격</th>-->
-            <!--<th>\221,300</th>-->
-            <!--</tr>-->
-            <!--</thead>-->
-            <!--</table>-->
-            <!--</div>-->
-            <!--<div class="details__price-opt">-->
-            <!--<table>-->
-            <!--<colgroup>-->
-            <!--<col style="width:105px;">-->
-            <!--<col>-->
-            <!--<col>-->
-            <!--<col style="width:150px;">-->
-            <!--</colgroup>-->
-            <!--<thead>-->
-            <!--<tr>-->
-            <!--<th class="pl10">부가 서비스</th>-->
-            <!--<th class="center">가는편</th>-->
-            <!--<th class="center">오는편</th>-->
-            <!--<th>예상 가격</th>-->
-            <!--</tr>-->
-            <!--</thead>-->
-            <!--<tbody>-->
-            <!--<tr>-->
-            <!--<td class="pl10">기내 수화물</td>-->
-            <!--<td class="center">-->
-            <!--<span class="opt-check">-->
-            <!--<input type="checkbox" id="in-bag-checks1">-->
-            <!--<label for="in-bag-checks1">&nbsp</label>-->
-            <!--</span>-->
-            <!--</td>-->
-            <!--<td class="center">-->
-            <!--<span class="opt-check">-->
-            <!--<input type="checkbox" id="in-bag-checks2">-->
-            <!--<label for="in-bag-checks2">&nbsp</label>-->
-            <!--</span>-->
-            <!--</td>-->
-            <!--<td>-->
-            <!--<button type="button" class="link">10kg까지 무료</button>-->
-            <!--</td>-->
-            <!--</tr>-->
-            <!--<tr>-->
-            <!--<td class="pl10">위탁 수화물</td>-->
-            <!--<td class="center">-->
-            <!--<span class="opt-check">-->
-            <!--<input type="checkbox" id="out-bag-checks1">-->
-            <!--<label for="out-bag-checks1">&nbsp</label>-->
-            <!--</span>-->
-            <!--</td>-->
-            <!--<td class="center">-->
-            <!--<span class="opt-check">-->
-            <!--<input type="checkbox" id="out-bag-checks2">-->
-            <!--<label for="out-bag-checks2">&nbsp</label>-->
-            <!--</span>-->
-            <!--</td>-->
-            <!--<td>-->
-            <!--<button type="button" class="link">\80,000</button>-->
-            <!--</td>-->
-            <!--</tr>-->
-            <!--<tr>-->
-            <!--<td class="pl10">기내식</td>-->
-            <!--<td class="center">-->
-            <!--<span class="opt-check">-->
-            <!--<input type="checkbox" id="meal-checks1">-->
-            <!--<label for="meal-checks1">&nbsp</label>-->
-            <!--</span>-->
-            <!--</td>-->
-            <!--<td class="center">-->
-            <!--<span class="opt-check">-->
-            <!--<input type="checkbox" id="meal-checks2">-->
-            <!--<label for="meal-checks2">&nbsp</label>-->
-            <!--</span>-->
-            <!--</td>-->
-            <!--<td>-->
-            <!--<button type="button" class="link">\30,000</button>-->
-            <!--</td>-->
-            <!--</tr>-->
-            <!--<tr>-->
-            <!--<td class="pl10">-->
-            <!--<button type="button" class="toggle">좌석 사전 구매</button>-->
-            <!--<div class="small-layer">-->
-            <!--<ul>-->
-            <!--<li>-->
-            <!--<span class="seat-radio">-->
-            <!--<input type="radio" id="seat-radio1" name="se-radio">-->
-            <!--<label for="seat-radio1">앞 좌석 / 비상구 좌석</label>-->
-            <!--</span>-->
-            <!--</li>-->
-            <!--<li>-->
-            <!--<span class="seat-radio">-->
-            <!--<input type="radio" id="seat-radio2" name="se-radio">-->
-            <!--<label for="seat-radio2">A</label>-->
-            <!--</span>-->
-            <!--</li>-->
-            <!--<li>-->
-            <!--<span class="seat-radio">-->
-            <!--<input type="radio" id="seat-radio3" name="se-radio">-->
-            <!--<label for="seat-radio3">B</label>-->
-            <!--</span>-->
-            <!--</li>-->
-            <!--<li>-->
-            <!--<span class="seat-radio">-->
-            <!--<input type="radio" id="seat-radio4" name="se-radio">-->
-            <!--<label for="seat-radio4">C</label>-->
-            <!--</span>-->
-            <!--</li>-->
-            <!--</ul>-->
-            <!--</div>-->
-            <!--</td>-->
-            <!--<td class="center">-->
-            <!--<span class="opt-check">-->
-            <!--<input type="checkbox" id="seat-checks1">-->
-            <!--<label for="seat-checks1">&nbsp</label>-->
-            <!--</span>-->
-            <!--</td>-->
-            <!--<td class="center">-->
-            <!--<span class="opt-check">-->
-            <!--<input type="checkbox" id="seat-checks2">-->
-            <!--<label for="seat-checks2">&nbsp</label>-->
-            <!--</span>-->
-            <!--</td>-->
-            <!--<td>-->
-            <!--<button type="button" class="link">\0</button>-->
-            <!--</td>-->
-            <!--</tr>-->
-            <!--<tr>-->
-            <!--<td class="pl10">마일리지/포인트</td>-->
-            <!--<td class="center">-->
-            <!--<span class="opt-check">-->
-            <!--<input type="checkbox" id="point-checks1">-->
-            <!--<label for="point-checks1">&nbsp</label>-->
-            <!--</span>-->
-            <!--</td>-->
-            <!--<td class="center">-->
-            <!--<span class="opt-check">-->
-            <!--<input type="checkbox" id="point-checks2">-->
-            <!--<label for="point-checks2">&nbsp</label>-->
-            <!--</span>-->
-            <!--</td>-->
-            <!--<td>-->
-            <!--<button type="button" class="link"><em>리플레쉬</em>포인트 50P</button>-->
-            <!--</td>-->
-            <!--</tr>-->
-            <!--</tbody>-->
-            <!--<tfoot>-->
-            <!--<tr>-->
-            <!--<th colspan="3" class="pl10">합계</th>-->
-            <!--<td>\331,300</td>-->
-            <!--</tr>-->
-            <!--</tfoot>-->
-            <!--</table>-->
-            <!--</div>-->
           </div>
-            <div class="details__items">
-                <div class="details__item-tit">
-                    <p><strong>ICN - BCN</strong> 9월 16일 (월)</p>
-                    <em>총 15시간 20분</em>
-                </div>
-                <div class="details__item">
-                    <div class="details__item-view">
-                        <div class="details__item-airline">
-                            <span class="thumb"><img src="../assets/images/img_AF.svg" alt=""></span>에어프랑스 261
-                        </div>
-                        <div class="details__item-sdu">
-                            <div class="sdu sdu-dep">
-                                <strong class="three-code">ICN</strong>
-                                <span class="time">14:35</span>
-                            </div>
-                            <div class="sdu-total-time">
-                                <strong>12시간</strong>
-                            </div>
-                            <div class="sdu sdu-arr">
-                                <strong class="three-code">CDG</strong>
-                                <span class="time">19:35</span>
-                            </div>
-                        </div>
-                        <button type="button" class="details__item-toggle active">자세한 정보</button>
-                        <div class="details__item-detail">
-                            <ul>
-                                <li><span class="ico i1"></span>B777-200/200ER</li>
-                                <li><span class="ico i2"></span>위탁 수하물 있음</li>
-                                <li><span class="ico i3"></span>Wi-fi 있음</li>
-                                <li><span class="ico i4"></span>기내 엔터테인먼트 있음</li>
-                                <li><span class="ico i5"></span>좌석 레그룸 넓음</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="details__item-vi">
-                        CDG 샤를드골국제공항 1시간 30분 경유
-                    </div>
-                    <div class="details__item-view">
-                        <div class="details__item-airline">
-                            <span class="thumb"><img src="../assets/images/img_AF.svg" alt=""></span>에어프랑스 1448
-                        </div>
-                        <div class="details__item-sdu">
-                            <div class="sdu sdu-dep">
-                                <strong class="three-code">CDG</strong>
-                                <span class="time">21:05</span>
-                            </div>
-                            <div class="sdu-total-time">
-                                <strong>1시간 50분</strong>
-                            </div>
-                            <div class="sdu sdu-arr">
-                                <strong class="three-code">BCN</strong>
-                                <span class="time">22:55</span>
-                                <em class="date">12월 17일</em>
-                            </div>
-                        </div>
-                        <button type="button" class="details__item-toggle active">자세한 정보</button>
-                        <div class="details__item-detail" v>
-                            <ul>
-                                <li><span class="ico i1"></span>A320-100/200</li>
-                                <li><span class="ico i5"></span>좌석 레그룸 기본</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+          <div class="details__items">
+            <div class="details__item-tit">
+              <p><strong>BCN - ICN</strong> 9월 23일 (월)</p>
+              <em>총 14시간 10분</em>
             </div>
-            <div class="details__items">
-                <div class="details__item-tit">
-                    <p><strong>BCN - ICN</strong> 9월 23일 (월)</p>
-                    <em>총 14시간 10분</em>
+            <div class="details__item">
+              <div class="details__item-view">
+                <div class="details__item-airline">
+                  <span class="thumb"><img src="../assets/images/img_AF.svg" alt=""></span>에어프랑스 1149
                 </div>
-                <div class="details__item">
-                    <div class="details__item-view">
-                        <div class="details__item-airline">
-                            <span class="thumb"><img src="../assets/images/img_AF.svg" alt=""></span>에어프랑스 1149
-                        </div>
-                        <div class="details__item-sdu">
-                            <div class="sdu sdu-dep">
-                                <strong class="three-code">BCN</strong>
-                                <span class="time">14:35</span>
-                            </div>
-                            <div class="sdu-total-time">
-                                <strong>2시간</strong>
-                            </div>
-                            <div class="sdu sdu-arr">
-                                <strong class="three-code">CDG</strong>
-                                <span class="time">19:35</span>
-                            </div>
-                        </div>
-                        <button type="button" class="details__item-toggle active">자세한 정보</button>
-                        <div class="details__item-detail">
-                            <ul>
-                                <li><span class="ico i1"></span>A320-100/200</li>
-                                <li><span class="ico i5"></span>좌석 레그룸 넓음</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="details__item-vi">
-                        CDG 샤를드골국제공항 1시간 30분 경유
-                    </div>
-                    <div class="details__item-view">
-                        <div class="details__item-airline">
-                            <span class="thumb"><img src="../assets/images/img_AF.svg" alt=""></span>에어프랑스 1448
-                        </div>
-                        <div class="details__item-sdu">
-                            <div class="sdu sdu-dep">
-                                <strong class="three-code">CDG</strong>
-                                <span class="time">21:05</span>
-                            </div>
-                            <div class="sdu-total-time">
-                                <strong>1시간 50분</strong>
-                            </div>
-                            <div class="sdu sdu-arr">
-                                <strong class="three-code">BCN</strong>
-                                <span class="time">22:55 <em class="add">+1</em></span>
-                              <em class="date point">12월 17일</em>
-                            </div>
-                        </div>
-                        <button type="button" class="details__item-toggle active">자세한 정보</button>
-                        <div class="details__item-detail">
-                            <ul>
-                                <li><span class="ico i1"></span>B777-200/200ER</li>
-                                <li><span class="ico i2"></span>위탁 수하물 있음</li>
-                                <li><span class="ico i3"></span>Wi-fi 있음</li>
-                                <li><span class="ico i4"></span>기내 엔터테인먼트 있음</li>
-                                <li><span class="ico i5"></span>좌석 레그룸 넓음</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="details__item-sdu">
+                  <div class="sdu sdu-dep">
+                    <strong class="three-code">BCN</strong>
+                    <span class="time">14:35</span>
+                  </div>
+                  <div class="sdu-total-time">
+                    <strong>2시간</strong>
+                  </div>
+                  <div class="sdu sdu-arr">
+                    <strong class="three-code">CDG</strong>
+                    <span class="time">19:35</span>
+                  </div>
                 </div>
+                <button type="button" class="details__item-toggle active">자세한 정보</button>
+                <div class="details__item-detail">
+                  <ul>
+                    <li><span class="ico i1"></span>A320-100/200</li>
+                    <li><span class="ico i5"></span>좌석 레그룸 넓음</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="details__item-vi">
+                CDG 샤를드골국제공항 1시간 30분 경유
+              </div>
+              <div class="details__item-view">
+                <div class="details__item-airline">
+                  <span class="thumb"><img src="../assets/images/img_AF.svg" alt=""></span>에어프랑스 1448
+                </div>
+                <div class="details__item-sdu">
+                  <div class="sdu sdu-dep">
+                    <strong class="three-code">CDG</strong>
+                    <span class="time">21:05</span>
+                  </div>
+                  <div class="sdu-total-time">
+                    <strong>1시간 50분</strong>
+                  </div>
+                  <div class="sdu sdu-arr">
+                    <strong class="three-code">BCN</strong>
+                    <span class="time">22:55 <em class="add">+1</em></span>
+                    <em class="date point">12월 17일</em>
+                  </div>
+                </div>
+                <button type="button" class="details__item-toggle active">자세한 정보</button>
+                <div class="details__item-detail">
+                  <ul>
+                    <li><span class="ico i1"></span>B777-200/200ER</li>
+                    <li><span class="ico i2"></span>위탁 수하물 있음</li>
+                    <li><span class="ico i3"></span>Wi-fi 있음</li>
+                    <li><span class="ico i4"></span>기내 엔터테인먼트 있음</li>
+                    <li><span class="ico i5"></span>좌석 레그룸 넓음</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+            <div class="details__price">
+              <div class="details__price-tit">
+                플라잉라쿤 계산기로 항공권에 부가 서비스를 더한 예상 금액을 확인해보세요!
+              </div>
+              <div class="details__price-opt">
+                <table>
+                  <colgroup>
+                    <col style="width:110px;">
+                    <col style="width:40px;">
+                    <col style="width:40px;">
+                    <col>
+                  </colgroup>
+                  <tfoot>
+                  <tr>
+                    <th colspan="3"><span class="total-sum">예상 합계</span></th>
+                    <td>\331,300</td>
+                  </tr>
+                  </tfoot>
+                  <thead>
+                  <tr class="default">
+                    <th colspan="3">기본 항공권 가격</th>
+                    <th>\221,300</th>
+                  </tr>
+                  <tr class="tit">
+                    <th>부가 서비스</th>
+                    <th class="center">갈때</th>
+                    <th class="center">올때</th>
+                    <th>예상 가격</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>기내 수하물</td>
+                    <td colspan="3" class=" refresh link">10kg까지 무료</td>
+                  </tr>
+                  <tr>
+                    <td>위탁 수하물</td>
+                    <td>
+                    <span class="opt-check">
+                      <input type="checkbox" id="in-bag-checks3">
+                      <label for="in-bag-checks3">&nbsp</label>
+                    </span>
+                    </td>
+                    <td>
+                    <span class="opt-check">
+                      <input type="checkbox" id="in-bag-checks4">
+                      <label for="in-bag-checks4">&nbsp</label>
+                    </span>
+                    </td>
+                    <td class="link">\80,000</td>
+                  </tr>
+                  <tr>
+                    <td>기내식</td>
+                    <td>
+                    <span class="opt-check">
+                      <input type="checkbox" id="in-bag-checks5">
+                      <label for="in-bag-checks5">&nbsp</label>
+                    </span>
+                    </td>
+                    <td>
+                    <span class="opt-check">
+                      <input type="checkbox" id="in-bag-checks6">
+                      <label for="in-bag-checks6">&nbsp</label>
+                    </span>
+                    </td>
+                    <td class="link">\30,000</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button type="button" class="toggle">좌석 사전 구매</button> <!-- 선택시 active 추가 -->
+                    </td>
+                    <td>
+                    <span class="opt-check">
+                      <input type="checkbox" disabled="disabled" id="in-bag-checks7">
+                      <label for="in-bag-checks7">&nbsp</label>
+                    </span>
+                    </td>
+                    <td>
+                    <span class="opt-check">
+                      <input type="checkbox" disabled="disabled" id="in-bag-checks8">
+                      <label for="in-bag-checks8">&nbsp</label>
+                    </span>
+                    </td>
+                    <td class="link">\0</td>
+                  </tr>
+                  <tr class="seat-choices">
+                    <td colspan="4">
+                      <div class="trip-choice-buttons">
+                        <span>
+                          <input type="radio" id="trip-choice-buttons1" name="trip-choice-buttons1" checked="checked"/>
+                          <label for="trip-choice-buttons1">가는편</label>
+                        </span>
+                        <span>
+                          <input type="radio" id="trip-choice-buttons2" name="trip-choice-buttons1"/>
+                          <label for="trip-choice-buttons2">오는편</label>
+                        </span>
+                      </div>
+                      <div class="choice-title">
+                        <strong>진에어 좌석 종류</strong>
+                        <a href="">link</a>
+                      </div>
+                      <ul class="choice-items">
+                        <li>
+                          <input type="radio" id="seat-choice1" name="seat-choice"/>
+                          <label for="seat-choice1">Jini Front (앞쪽 Zone)</label>
+                        </li>
+                        <li>
+                          <input type="radio" id="seat-choice2" name="seat-choice"/>
+                          <label for="seat-choice2">Jini Standard (뒤쪽 Zone)</label>
+                        </li>
+                        <li>
+                          <input type="radio" id="seat-choice3" name="seat-choice"/>
+                          <label for="seat-choice3">ZONE C (뒤쪽 Zone)</label>
+                        </li>
+                        <li>
+                          <input type="radio" id="seat-choice4" name="seat-choice"/>
+                          <label for="seat-choice4">Jini Stretch / Jini Exit (매 앞좌석/비상구열)</label>
+                        </li>
+                        <li>
+                          <input type="radio" id="seat-choice5" name="seat-choice"/>
+                          <label for="seat-choice5">프리미엄 컴포트</label>
+                        </li>
+                        <li>
+                          <input type="radio" id="seat-choice6" name="seat-choice"/>
+                          <label for="seat-choice6">Jini Exit (No Recline-비상구열 등받이고정)</label>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr class="mileage">
+                    <td class="mileage-tit">예상 마일리지</td>
+                    <td colspan="3" class="mileage-list">
+                      <ul>
+                        <li>
+                          <a href="">대한항공 1,500 마일</a>
+                          <span>(델타항공 V class 적립률 70%)</span>
+                        </li>
+                        <li>
+                           <a href="">아시아나 2,000 마일</a>
+                          <span>(타이항공 V class 적립률 50%)</span>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><button type="button" class="toggle">반려동물</button></td>
+                    <td>
+                      <span class="opt-check">
+                        <input type="checkbox" disabled="disabled" id="in-pet-checks7" checked="checked">
+                        <label for="in-pet-checks7">&nbsp</label>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="opt-check">
+                        <input type="checkbox" disabled="disabled" id="in-pet-checks8">
+                        <label for="in-pet-checks8">&nbsp</label>
+                      </span>
+                    </td>
+                    <td class="">\0</td>
+                  </tr>
+                  <tr class="pet-choices">
+                    <td colspan="4">
+                      <div class="trip-choice-buttons">
+                        <span>
+                          <input type="radio" id="trip-choice-buttons3" name="trip-choice-buttons2" checked="checked"/>
+                          <label for="trip-choice-buttons3">가는편</label>
+                        </span>
+                        <span>
+                          <input type="radio" id="trip-choice-buttons4" name="trip-choice-buttons2"/>
+                          <label for="trip-choice-buttons4">오는편</label>
+                        </span>
+                      </div>
+                      <div class="choice-title">
+                        <strong>아시아나항공</strong><span>기내 가능, 위탁 가능</span>
+                        <a href="">link</a>
+                      </div>
+                      <ul class="choice-items">
+                        <li>
+                          <input type="radio" id="pet-choice1" name="pet-choice"/>
+                          <label for="pet-choice1">기내 (7kg 미만)</label>
+                        </li>
+                        <li>
+                          <input type="radio" id="pet-choice2" name="pet-choice"/>
+                          <label for="pet-choice2">위탁 (32kg 이하)</label>
+                        </li>
+                        <li>
+                          <input type="radio" id="pet-choice3" name="pet-choice"/>
+                          <label for="pet-choice3">위탁 (33~45kg)</label>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="details__price-tip">
+                수하물, 기내식 등 모든 부가 서비스가 포함되어 계산된 가격은 예상 합계 금액으로, 세부 항목 별로 정확한 가격이 상이하거나 항공사 프로모션에 따라 변할 수 있습니다. 반려동물의 경우 목적지, 기종, 무게 등에 따라 가격이나 동반 가능 여부가 달라질 수 있습니다. 수하물, 기내식, 마일리지, 반려동물 등 자세한 부가 서비스 정책은 각 항공사 홈페이지를 꼭 확인해주시기 바랍니다.
+              </div>
             </div>
             <div class="details__reservation">
                 <div class="details__reservation-info">
@@ -738,27 +485,6 @@
                 </div>
                 <div class="details__reservation-list">
                     <ul>
-                        <li>
-                            <div class="txt">
-                                <em>에어프랑스</em>
-                                <strong>\900,000</strong>
-                            </div>
-                            <div class="bts">
-                              <button type="button">i</button>
-                              <button type="button">예약하러 GO!</button>
-                            </div>
-                        </li>
-                        <li class="homepage">
-                            <div class="txt">
-                                <em>익스피디아</em>
-                                <strong>공식 홈페이지 가기</strong>
-                            </div>
-                          <div class="bts">
-                            <button type="button">i</button>
-                            <button type="button">예약하러 GO!</button>
-                          </div>
-                        </li>
-
                         <li class="new">
                           <div class="inner">
                             <div class="txt">
@@ -796,30 +522,11 @@
                             </dl>
                           </div>
                         </li>
-                      <li class="new homepage">
-                        <div class="inner">
-                          <div class="txt">
-                            <em>티웨이항공</em>
-                            <strong>공식 홈페이지 가기</strong>
-                          </div>
-                          <button type="button" class="continue">계속</button>
-                        </div>
-                        <div class="continue-box">
-                          <div class="homepage-tips">
-                            <strong>항공사 공식 홈페이지에서 수하물, 기내식, 좌석 지정 등의 부대 서비스가 포함된 금액으로 구매 가능합니다.</strong>
-                            <ul class="service">
-                              <li class="bag">bag</li>
-                              <li class="meal">meal</li>
-                              <li class="seat">seat</li>
-                              <li class="mileage">mileage</li>
-                              <li class="dog">dog</li>
-                            </ul>
-                            <button type="button">항공사 공홈 GO!</button>
-                          </div>
-                        </div>
-                      </li>
                     </ul>
                 </div>
+              <div class="details__more-option">
+                <button type="button">3개 옵션 더 보기</button>
+              </div>
                 <div class="details__reservation-tip">
                     <strong>예약 전 확인 사항 </strong>
                     <p>게시 항공권 가격에는 항공료와 세금 및 수수료가 포함되어 있습니다. 예약 전 부가 서비스 추가 요금 및 이용 약관을 꼭 확인해주세요! 플라잉라쿤은 항공 상품 정보를 제공, 중개하는 메타서치 비즈니스로, 항공권 판매 관련 책임은 각 해당 판매처에 있습니다.</p>

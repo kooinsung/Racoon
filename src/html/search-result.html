@@ -168,9 +168,43 @@
         <li><a href="">정렬 및 필터</a></li>
         <li>
           <a href="" class="actived">수하물 및 기내식</a>
-          <div class="option-layer" style="display: none">
-            <div>
-              asdfasfaf
+          <div class="option-layer">
+            <div class="box bag">
+              <span class="txt">위탁 수화물 1개 기준</span>
+              <div class="switch-toggles">
+                <dl>
+                  <dt>가는편</dt>
+                  <dd>
+                    <span class="switch-toggle"><input type="checkbox" id="switch1"/><label for="switch1">Toggle</label></span>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>오는편</dt>
+                  <dd>
+                    <span class="switch-toggle"><input type="checkbox" id="switch2"/><label for="switch2">Toggle</label></span>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div class="box meal">
+              <span class="txt">기내식 최저가 기준</span>
+              <div class="switch-toggles">
+                <dl>
+                  <dt>가는편</dt>
+                  <dd>
+                    <span class="switch-toggle"><input type="checkbox" id="switch1"/><label for="switch1">Toggle</label></span>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>오는편</dt>
+                  <dd>
+                    <span class="switch-toggle"><input type="checkbox" id="switch2"/><label for="switch2">Toggle</label></span>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div class="button">
+              <button type="button">완료</button>
             </div>
           </div>
         </li>
@@ -267,6 +301,10 @@
       <div class="search-result__item">
         <div class="search-result__item-infos">
           <table>
+            <colgroup>
+              <col>
+              <col style="width:150px;">
+            </colgroup>
             <thead>
             <tr>
               <th class="search-result__item-airline">홍콩익스프레스 | 홍콩익스프레스</th>
@@ -328,6 +366,14 @@
                 </div>
               </td>
             </tr>
+            <tr>
+              <td colspan="2" class="search-result__item-buttons">
+                <ul>
+                  <li><a href="">바로 예약 가기</a></li>
+                  <li><a href="">세부 정보 보기</a></li>
+                </ul>
+              </td>
+            </tr>
             </tbody>
           </table>
         </div>
@@ -337,6 +383,6 @@
 </div>
 <button type="button" class="top">top</button>
 <include src="../include/footer.html"></include>
-<include src="../include/scripts.html"></include>
+<!--<include src="../include/scripts.html"></include>-->
 </body>
 </html>
