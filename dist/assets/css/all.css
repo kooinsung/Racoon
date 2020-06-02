@@ -6917,7 +6917,7 @@ button.swiper-pagination-bullet {
 
 .sub.scrolling .trip-info {
   position: fixed;
-  top: 64px;
+  top: 60px;
   right: 0px;
   left: 0px;
   z-index: 210;
@@ -6926,6 +6926,16 @@ button.swiper-pagination-bullet {
 }
 
 .sub.scrolling .price-sort {
+  position: fixed;
+  top: 135px;
+  right: 0px;
+  left: 0px;
+  z-index: 210;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.sub.scrolling .search-result-options {
   position: fixed;
   top: 135px;
   right: 0px;
