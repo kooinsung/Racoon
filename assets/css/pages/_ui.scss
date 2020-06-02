@@ -4956,6 +4956,13 @@
       margin:0 auto;
     }
 
+    .search-result-options {
+      @include position(fixed, $top: 135px, $left: 0px, $right: 0px);
+      z-index: 210;
+      max-width:750px;
+      margin:0 auto;
+    }
+
     .filter-menus {
       @include position(fixed, $top: 200px, $left: 0px, $right: 0px);
       z-index: 210;
