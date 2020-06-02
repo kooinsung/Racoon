@@ -2155,6 +2155,7 @@ button.swiper-pagination-bullet {
 .search-result-options {
   position: relative;
   font-size: 0;
+  background: #fff;
 }
 
 .search-result-options > ul li {
