@@ -1361,6 +1361,7 @@
         font-weight: 700;
         display: block;
         line-height: 100%;
+        line-height:22px;
       }
 
       .plus {
@@ -1374,6 +1375,7 @@
     .summary1 {
       overflow: hidden;
       position:relative;
+      min-height:22px;
       > div{
         margin:0 0 0 35px;
       }
@@ -2737,11 +2739,11 @@
 
   &__item-sdu {
     position: relative;
-    margin: 20px 0;
+    margin: 40px 0;
 
     .sdu {
       width: 100px;
-      @include center-h(34px);
+      @include center-h(45px);
 
       &-dep {
         left: 0;
@@ -3564,7 +3566,6 @@
         display:block;
         font-size:14px;
         color:#00a64e;
-        margin-bottom:10px;
         &:after {
           content: '';
           @include position(absolute, $top: 50%, $right: 20px);
@@ -3576,6 +3577,7 @@
         }
       }
       span{
+        margin-top:10px;
         display:block;
         font-size:14px;
       }

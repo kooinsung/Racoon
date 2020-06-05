@@ -3069,6 +3069,7 @@ button.swiper-pagination-bullet {
   font-weight: 700;
   display: block;
   line-height: 100%;
+  line-height: 22px;
 }
 
 .search-result__item-info1 .summary-group .plus {
@@ -3081,6 +3082,7 @@ button.swiper-pagination-bullet {
 .search-result__item-info1 .summary1 {
   overflow: hidden;
   position: relative;
+  min-height: 22px;
 }
 
 .search-result__item-info1 .summary1 > div {
@@ -4561,15 +4563,15 @@ button.swiper-pagination-bullet {
 
 .details__item-sdu {
   position: relative;
-  margin: 20px 0;
+  margin: 40px 0;
 }
 
 .details__item-sdu .sdu {
   width: 100px;
   position: absolute;
   top: 50%;
-  height: 34px;
-  margin-top: -17px;
+  height: 45px;
+  margin-top: -22.5px;
 }
 
 .details__item-sdu .sdu-dep {
@@ -5445,7 +5447,6 @@ button.swiper-pagination-bullet {
   display: block;
   font-size: 14px;
   color: #00a64e;
-  margin-bottom: 10px;
 }
 
 .details__price-opt .mileage-list a:after {
@@ -5461,6 +5462,7 @@ button.swiper-pagination-bullet {
 }
 
 .details__price-opt .mileage-list span {
+  margin-top: 10px;
   display: block;
   font-size: 14px;
 }
