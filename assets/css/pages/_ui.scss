@@ -4973,7 +4973,7 @@
     }
 
     .search-result-info {
-      @include position(fixed, $top: 200px, $left: 0px, $right: 0px);
+      @include position(fixed, $top: 170px, $left: 0px, $right: 0px);
       z-index: 210;
       max-width:750px;
       margin:0 auto;
