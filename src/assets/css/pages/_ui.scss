@@ -540,7 +540,7 @@
   line-height:40px;
   border-bottom:1px solid #e0e0e0;
   box-sizing: border-box;
-  background: url('#{$base-img-path}/img_racoon-head.png') 20px center no-repeat;
+  background:#fff url('#{$base-img-path}/img_racoon-head.png') 20px center no-repeat;
   background-size: 27px 21px;
   padding:0 20px 0 55px;
   span{
@@ -2350,6 +2350,7 @@
     //padding-bottom: 70px;
     max-width:750px;
     margin:0 auto;
+    padding-bottom: 100px;
     .layer__filter {
       margin:-15px 20px 0 20px;
     }
@@ -4965,6 +4966,13 @@
     }
 
     .filter-menus {
+      @include position(fixed, $top: 200px, $left: 0px, $right: 0px);
+      z-index: 210;
+      max-width:750px;
+      margin:0 auto;
+    }
+
+    .search-result-info {
       @include position(fixed, $top: 200px, $left: 0px, $right: 0px);
       z-index: 210;
       max-width:750px;
