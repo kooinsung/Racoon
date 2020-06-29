@@ -2998,7 +2998,7 @@ button.swiper-pagination-bullet {
 .search-result__item-airline {
   font-size: 11px !important;
   color: #606060;
-  padding: 10px 10px 0 10px !important;
+  padding: 10px 10px 0 15px !important;
   text-align: left;
   vertical-align: top;
 }
@@ -3011,12 +3011,17 @@ button.swiper-pagination-bullet {
   line-height: 25px;
 }
 
+.search-result__item-total-price {
+  padding-right: 10px !important;
+}
+
 .search-result__item-total-price strong {
   display: block;
   font-size: 11px;
   background: #cceddc;
   border-radius: 25px;
-  line-height: 25px;
+  height: 18px;
+  line-height: 18px;
   color: #0b6f55;
 }
 
@@ -3069,6 +3074,7 @@ button.swiper-pagination-bullet {
   font-weight: 700;
   display: block;
   line-height: 100%;
+  line-height: 22px;
 }
 
 .search-result__item-info1 .summary-group .plus {
@@ -3081,6 +3087,7 @@ button.swiper-pagination-bullet {
 .search-result__item-info1 .summary1 {
   overflow: hidden;
   position: relative;
+  min-height: 22px;
 }
 
 .search-result__item-info1 .summary1 > div {
@@ -3143,6 +3150,10 @@ button.swiper-pagination-bullet {
   display: block;
 }
 
+.search-result__item-info3 {
+  margin-left: 10px;
+}
+
 .search-result__item-info3 .opts {
   font-size: 0;
   text-align: left;
@@ -3163,38 +3174,38 @@ button.swiper-pagination-bullet {
 }
 
 .search-result__item-info3 .opts .bag.bag15 {
-  width: 20px;
-  height: 30px;
+  width: 22px;
+  height: 34px;
   background: url("../images/ico_bag15.svg") center center no-repeat;
-  background-size: 20px 30px;
+  background-size: 22px 34px;
 }
 
 .search-result__item-info3 .opts .bag.bag20 {
-  width: 20px;
-  height: 30px;
+  width: 22px;
+  height: 34px;
   background: url("../images/ico_bag20.svg") center center no-repeat;
-  background-size: 20px 30px;
+  background-size: 22px 34px;
 }
 
 .search-result__item-info3 .opts .bag.bag23 {
-  width: 20px;
-  height: 30px;
+  width: 22px;
+  height: 34px;
   background: url("../images/ico_bag23.svg") center center no-repeat;
-  background-size: 20px 30px;
+  background-size: 22px 34px;
 }
 
 .search-result__item-info3 .opts .bag.bag30 {
-  width: 20px;
-  height: 30px;
+  width: 22px;
+  height: 34px;
   background: url("../images/ico_bag30.svg") center center no-repeat;
-  background-size: 20px 30px;
+  background-size: 22px 34px;
 }
 
 .search-result__item-info3 .opts .bag.bag32 {
-  width: 20px;
-  height: 30px;
+  width: 22px;
+  height: 34px;
   background: url("../images/ico_bag32.svg") center center no-repeat;
-  background-size: 20px 30px;
+  background-size: 22px 34px;
 }
 
 .search-result__item-info3 .opts .bag.double:before {
@@ -3209,57 +3220,57 @@ button.swiper-pagination-bullet {
 
 .search-result__item-info3 .opts .bag.in.bag15 {
   background: url("../images/ico_bag15-2.svg") center center no-repeat;
-  background-size: 20px 30px;
+  background-size: 22px 34px;
 }
 
 .search-result__item-info3 .opts .bag.in.bag20 {
   background: url("../images/ico_bag20-2.svg") center center no-repeat;
-  background-size: 20px 30px;
+  background-size: 22px 34px;
 }
 
 .search-result__item-info3 .opts .bag.in.bag23 {
   background: url("../images/ico_bag23-2.svg") center center no-repeat;
-  background-size: 20px 30px;
+  background-size: 22px 34px;
 }
 
 .search-result__item-info3 .opts .bag.in.bag30 {
   background: url("../images/ico_bag30-2.svg") center center no-repeat;
-  background-size: 20px 30px;
+  background-size: 22px 34px;
 }
 
 .search-result__item-info3 .opts .bag.in.bag32 {
   background: url("../images/ico_bag32-2.svg") center center no-repeat;
-  background-size: 20px 30px;
+  background-size: 22px 34px;
 }
 
 .search-result__item-info3 .opts .hot-meal {
-  width: 30px;
-  height: 25px;
-  background: url("../images/ico_hot-meal.svg") center center no-repeat;
-  background-size: 30px 25px;
+  width: 34px;
+  height: 34px;
+  background: url("../images/ico_hot-meal.svg") center bottom no-repeat;
+  background-size: 34px 28px;
 }
 
 .search-result__item-info3 .opts .hot-meal.in.hot-meal {
-  background: url("../images/ico_hot-meal-2.svg") center center no-repeat;
-  background-size: 30px 25px;
+  background: url("../images/ico_hot-meal-2.svg") center bottom no-repeat;
+  background-size: 34px 28px;
 }
 
 .search-result__item-info3 .opts .cold-meal {
-  width: 26px;
-  height: 26px;
-  background: url("../images/ico_cold-meal.svg") center center no-repeat;
-  background-size: 26px 26px;
+  width: 29px;
+  height: 34px;
+  background: url("../images/ico_cold-meal.svg") center bottom no-repeat;
+  background-size: 29px 30px;
 }
 
 .search-result__item-info3 .opts .cold-meal.in.cold-meal {
-  background: url("../images/ico_cold-meal-2.svg") center center no-repeat;
-  background-size: 26px 26px;
+  background: url("../images/ico_cold-meal-2.svg") center bottom no-repeat;
+  background-size: 29px 30px;
 }
 
 .search-result__item-info3 .price {
   display: block;
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: bold;
   margin: 5px 0 0 0;
   text-align: left;
 }
@@ -4562,15 +4573,15 @@ button.swiper-pagination-bullet {
 
 .details__item-sdu {
   position: relative;
-  margin: 20px 0;
+  margin: 40px 0;
 }
 
 .details__item-sdu .sdu {
   width: 100px;
   position: absolute;
   top: 50%;
-  height: 34px;
-  margin-top: -17px;
+  height: 45px;
+  margin-top: -22.5px;
 }
 
 .details__item-sdu .sdu-dep {
@@ -4950,6 +4961,7 @@ button.swiper-pagination-bullet {
   display: table-cell;
   vertical-align: middle;
   padding-left: 40px;
+  padding-right: 20px;
 }
 
 .details__reservation-list .continue-box dt.price {
@@ -4968,7 +4980,7 @@ button.swiper-pagination-bullet {
 }
 
 .details__reservation-list .continue-box dd {
-  width: 130px;
+  width: 120px;
   font-size: 14px;
   display: table-cell;
   vertical-align: middle;
@@ -5446,7 +5458,6 @@ button.swiper-pagination-bullet {
   display: block;
   font-size: 14px;
   color: #00a64e;
-  margin-bottom: 10px;
 }
 
 .details__price-opt .mileage-list a:after {
@@ -5462,6 +5473,7 @@ button.swiper-pagination-bullet {
 }
 
 .details__price-opt .mileage-list span {
+  margin-top: 10px;
   display: block;
   font-size: 14px;
 }
