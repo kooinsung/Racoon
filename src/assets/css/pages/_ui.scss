@@ -1286,7 +1286,7 @@
   &__item-airline {
     font-size: 11px !important;
     color: #606060;
-    padding: 10px 10px 0 10px !important;
+    padding: 10px 10px 0 15px !important;
     text-align: left;
     vertical-align: top;
   }
@@ -1302,12 +1302,14 @@
   }
 
   &__item-total-price {
+    padding-right:10px !important;
     strong {
       display: block;
       font-size: 11px;
       background: #cceddc;
       border-radius: 25px;
-      line-height: 25px;
+      height:18px;
+      line-height: 18px;
       color: #0b6f55;
     }
   }
@@ -1439,6 +1441,7 @@
   }
 
   &__item-info3 {
+    margin-left:10px;
     .opts {
       font-size: 0;
       text-align: left;
@@ -1456,38 +1459,38 @@
         position: relative;
 
         &.bag15 {
-          width: 20px;
-          height: 30px;
+          width: 22px;
+          height: 34px;
           background: url('#{$base-img-path}/ico_bag15.svg') center center no-repeat;
-          background-size: 20px 30px;
+          background-size: 22px 34px;
         }
 
         &.bag20 {
-          width: 20px;
-          height: 30px;
+          width: 22px;
+          height: 34px;
           background: url('#{$base-img-path}/ico_bag20.svg') center center no-repeat;
-          background-size: 20px 30px;
+          background-size: 22px 34px;
         }
 
         &.bag23 {
-          width: 20px;
-          height: 30px;
+          width: 22px;
+          height: 34px;
           background: url('#{$base-img-path}/ico_bag23.svg') center center no-repeat;
-          background-size: 20px 30px;
+          background-size: 22px 34px;
         }
 
         &.bag30 {
-          width: 20px;
-          height: 30px;
+          width: 22px;
+          height: 34px;
           background: url('#{$base-img-path}/ico_bag30.svg') center center no-repeat;
-          background-size: 20px 30px;
+          background-size: 22px 34px;
         }
 
         &.bag32 {
-          width: 20px;
-          height: 30px;
+          width: 22px;
+          height: 34px;
           background: url('#{$base-img-path}/ico_bag32.svg') center center no-repeat;
-          background-size: 20px 30px;
+          background-size: 22px 34px;
         }
 
         &.double {
@@ -1504,27 +1507,27 @@
 
             &.bag15 {
               background: url('#{$base-img-path}/ico_bag15-2.svg') center center no-repeat;
-              background-size: 20px 30px;
+              background-size: 22px 34px;
             }
 
             &.bag20 {
               background: url('#{$base-img-path}/ico_bag20-2.svg') center center no-repeat;
-              background-size: 20px 30px;
+              background-size: 22px 34px;
             }
 
             &.bag23 {
               background: url('#{$base-img-path}/ico_bag23-2.svg') center center no-repeat;
-              background-size: 20px 30px;
+              background-size: 22px 34px;
             }
 
             &.bag30 {
               background: url('#{$base-img-path}/ico_bag30-2.svg') center center no-repeat;
-              background-size: 20px 30px;
+              background-size: 22px 34px;
             }
 
             &.bag32 {
               background: url('#{$base-img-path}/ico_bag32-2.svg') center center no-repeat;
-              background-size: 20px 30px;
+              background-size: 22px 34px;
             }
 
 
@@ -1534,27 +1537,27 @@
       }
 
       .hot-meal {
-        width: 30px;
-        height: 25px;
-        background: url('#{$base-img-path}/ico_hot-meal.svg') center center no-repeat;
-        background-size: 30px 25px;
+        width: 34px;
+        height: 34px;
+        background: url('#{$base-img-path}/ico_hot-meal.svg') center bottom no-repeat;
+        background-size: 34px 28px;
         &.in{
           &.hot-meal {
-            background: url('#{$base-img-path}/ico_hot-meal-2.svg') center center no-repeat;
-            background-size: 30px 25px;
+            background: url('#{$base-img-path}/ico_hot-meal-2.svg') center bottom no-repeat;
+            background-size: 34px 28px;
           }
         }
       }
 
       .cold-meal {
-        width: 26px;
-        height: 26px;
-        background: url('#{$base-img-path}/ico_cold-meal.svg') center center no-repeat;
-        background-size: 26px 26px;
+        width: 29px;
+        height: 34px;
+        background: url('#{$base-img-path}/ico_cold-meal.svg') center bottom no-repeat;
+        background-size: 29px 30px;
         &.in{
           &.cold-meal {
-            background: url('#{$base-img-path}/ico_cold-meal-2.svg') center center no-repeat;
-            background-size: 26px 26px;
+            background: url('#{$base-img-path}/ico_cold-meal-2.svg') center bottom no-repeat;
+            background-size: 29px 30px;
           }
         }
       }
@@ -1563,8 +1566,8 @@
 
     .price {
       display: block;
-      font-size: 14px;
-      font-weight: 700;
+      font-size: 16px;
+      font-weight: bold;
       margin: 5px 0 0 0;
       text-align: left;
 
@@ -3091,6 +3094,7 @@
         display:table-cell;
         vertical-align: middle;
         padding-left:40px;
+        padding-right: 20px;
         &.price{
           background: url('#{$base-img-path}/ico_flight3.png') 10px center no-repeat;
           background-size: 24px 22px;
@@ -3106,7 +3110,7 @@
       }
       dd{
         //@include position(absolute, $top: 0, $right: 0px);
-        width: 130px;
+        width: 120px;
         font-size:14px;
         display:table-cell;
         vertical-align: middle;
