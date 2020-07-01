@@ -540,11 +540,15 @@
   line-height:40px;
   border-bottom:1px solid #e0e0e0;
   box-sizing: border-box;
-  background:#fff url('#{$base-img-path}/img_racoon-head.png') 20px center no-repeat;
-  background-size: 27px 21px;
+  background:#fff;
   padding:0 20px 0 55px;
+  text-align: center;
   span{
+    display:inline-block;
     color:#0b6f55;
+    background:url('#{$base-img-path}/img_racoon-head.png') left center no-repeat;
+    background-size: 27px 21px;
+    padding-left:33px;
   }
 }
 .trip-info {
