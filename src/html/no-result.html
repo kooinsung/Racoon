@@ -4,8 +4,9 @@
   <include src="../include/meta.html"></include>
 </head>
 
-<body class="main">
-<include src="../include/header.html"></include>
+<body class="sub">
+<include src="../include/header.html" ></include>
+
 
 <div class="container">
   <div class="content">
@@ -97,9 +98,9 @@
     <div class="search-trips-service">
       <strong class="main-title">수하물 및 기내식</strong>
       <p class="main-txt">
-        위탁 수하물, 기내식, 좌석 서비스가 포함된 <strong>총 예상 가격</strong>으로 비교해 보세요. 사전 구매 가격 포함 여부를 선택해 주세요.
+        위탁 수하물과 기내식이 포함된 <strong>총 예상 가격</strong>으로 비교해 보세요. 사전 구매 가격 포함 여부를 선택해주세요.
       </p>
-      <div class="service-box">
+      <div class="service-box">하
         <div class="row-block bag">
           <div class="txts">
             <strong>위탁 수하물</strong>
@@ -120,7 +121,7 @@
             </dl>
           </div>
         </div>
-        <div class="service-tips" style="">
+        <div class="service-tips" style="display:none;">
           <span class="icon"><img src="../assets/images/ico_bag15.svg" height="30" alt=""></span>
           <span class="txt">15kg, 20kg, 23kg, 30kg 등 수하물 무게를 확인해 주세요.</span>
         </div>
@@ -153,34 +154,7 @@
         </div>
         <div class="service-tips">
           <span class="icon"><img src="../assets/images/ico_cold-meal.svg" height="26" alt=""></span>
-          <span class="txt">콜드밀: 따뜻하게 데우지 않고 제공되는 기내식</span>
-        </div>
-        <button type="button" class="service-tip-expand actived"></button>
-      </div>
-      <div class="service-box">
-        <div class="row-block seat">
-          <div class="txts">
-            <strong>좌석</strong>
-            <span>최저가 기준</span>
-          </div>
-          <div class="switch-toggles">
-            <dl>
-              <dt>가는편</dt>
-              <dd>
-                <span class="switch-toggle"><input type="checkbox" id="switch1"/><label for="switch1">Toggle</label></span>
-              </dd>
-            </dl>
-            <dl>
-              <dt>오는편</dt>
-              <dd>
-                <span class="switch-toggle"><input type="checkbox" id="switch2"/><label for="switch2">Toggle</label></span>
-              </dd>
-            </dl>
-          </div>
-        </div>
-        <div class="service-tips">
-          <span class="icon"><img src="../assets/images/ico_seat2.svg" height="28" alt=""></span>
-          <span class="txt">원하는 구역의 좌석을 사전에 지정할 수 있는 유료 서비스</span>
+          <span class="txt">콜드밀: 따뜻하게 데우지 않고 제공되는 기내식 </span>
         </div>
         <button type="button" class="service-tip-expand actived"></button>
       </div>
@@ -189,10 +163,64 @@
         <button type="button">항공권 검색 GO!</button>
       </div>
     </div>
+    <div class="search-result-options">
+      <ul>
+        <li><a href="">정렬 및 필터</a></li>
+        <li>
+          <a href="" class="actived">수하물 및 기내식</a>
+          <div class="option-layer" style="display:none;">
+            <div class="box bag">
+              <span class="txt">위탁 수하물 1개 기준</span>
+              <div class="switch-toggles">
+                <dl>
+                  <dt>가는편</dt>
+                  <dd>
+                    <span class="switch-toggle"><input type="checkbox" id="switch1"/><label for="switch1">Toggle</label></span>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>오는편</dt>
+                  <dd>
+                    <span class="switch-toggle"><input type="checkbox" id="switch2"/><label for="switch2">Toggle</label></span>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div class="box meal">
+              <span class="txt">기내식 최저가 기준</span>
+              <div class="switch-toggles">
+                <dl>
+                  <dt>가는편</dt>
+                  <dd>
+                    <span class="switch-toggle"><input type="checkbox" id="switch1"/><label for="switch1">Toggle</label></span>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>오는편</dt>
+                  <dd>
+                    <span class="switch-toggle"><input type="checkbox" id="switch2"/><label for="switch2">Toggle</label></span>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div class="button">
+              <button type="button">완료</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="search-result-info">
+      <span>초록색 아이콘은 유료,</span> 검은색 아이콘은 무료
+    </div>
+
+    <div class="search-result">
+      <p class="no-result">검색 결과가 없습니다.</p>
+    </div>
   </div>
 </div>
-
+<button type="button" class="top">top</button>
 <include src="../include/footer.html"></include>
-<include src="../include/scripts.html"></include>
+<!--<include src="../include/scripts.html"></include>-->
 </body>
 </html>

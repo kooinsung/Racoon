@@ -167,8 +167,8 @@
       <ul>
         <li><a href="">정렬 및 필터</a></li>
         <li>
-          <a href="" class="actived">수하물 및 기내식</a>
-          <div class="option-layer">
+          <a href="" class="actived">부가 서비스</a>
+          <div class="option-layer" style="">
             <div class="box bag">
               <span class="txt">위탁 수하물 1개 기준</span>
               <div class="switch-toggles">
@@ -188,6 +188,23 @@
             </div>
             <div class="box meal">
               <span class="txt">기내식 최저가 기준</span>
+              <div class="switch-toggles">
+                <dl>
+                  <dt>가는편</dt>
+                  <dd>
+                    <span class="switch-toggle"><input type="checkbox" id="switch1"/><label for="switch1">Toggle</label></span>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>오는편</dt>
+                  <dd>
+                    <span class="switch-toggle"><input type="checkbox" id="switch2"/><label for="switch2">Toggle</label></span>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div class="box seat">
+              <span class="txt">좌석 최저가 기준</span>
               <div class="switch-toggles">
                 <dl>
                   <dt>가는편</dt>
@@ -225,7 +242,7 @@
             <thead>
             <tr>
               <th class="search-result__item-airline">제주항공 | 제주항공</th>
-              <th class="search-result__item-total-price"><strong>총 포함 예상</strong></th>
+              <th class="search-result__item-total-price"><strong>총 포함 예상 가격</strong></th>
             </tr>
             </thead>
             <tbody>
@@ -273,6 +290,7 @@
                     <ul class="opts">
                       <li class="in bag bag15">bag</li>
                       <li class="in hot-meal">meal</li>
+                      <li class="in seat">seat</li>
                     </ul>
                     <strong class="price in">\3,331,300</strong>
                     <div class="pm">
@@ -356,6 +374,7 @@
                   <ul class="opts">
                     <li class="bag bag20 double">bag</li>
                     <li class="cold-meal">meal</li>
+                    <li class="seat">seat</li>
                   </ul>
                   <strong class="price">\331,300</strong>
                   <div class="pm">
