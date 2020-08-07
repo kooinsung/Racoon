@@ -232,7 +232,7 @@
   }
 
   &__seat-count-layer {
-    @include position(absolute, $top: 46px, $left: 0px, $right: 0px);
+    @include position(absolute, $top: 60px, $left: 0px, $right: 0px);
     z-index: 50;
     height: 207px;
     background: #fff;
@@ -364,13 +364,31 @@
       position:relative;
       height:70px;
       padding-left:75px;
+      &:before{
+        content:'';
+        position:absolute;
+        top:0;
+        left:0;
+        width:75px;
+        height:70px;
+      }
       &.bag{
-        background: url('#{$base-img-path}/ico_bag3.png') 19px center no-repeat;
-        background-size: 32px 48px;
+        &:before{
+          background: url('#{$base-img-path}/ico_bag3.svg') center center no-repeat;
+          background-size: 32px 48px;
+        }
       }
       &.meal{
-        background: url('#{$base-img-path}/ico_meal3.png') 10px center no-repeat;
-        background-size: 49px 27px;
+        &:before{
+          background: url('#{$base-img-path}/ico_meal3.svg') center center no-repeat;
+          background-size: 49px 27px;
+        }
+      }
+      &.seat{
+        &:before{
+          background: url('#{$base-img-path}/ico_seat3.svg') center center no-repeat;
+          background-size: 33px 44px;
+        }
       }
     }
     .txts{
@@ -489,14 +507,20 @@
       }
       &.bag{
         .txt{
-          background: url('#{$base-img-path}/ico_bag5.png') 8px center no-repeat;
+          background: url('#{$base-img-path}/ico_bag3.svg') 8px center no-repeat;
           background-size: 29px 43px;
         }
       }
       &.meal{
         .txt{
-          background: url('#{$base-img-path}/ico_meal5.png') 0 center no-repeat;
+          background: url('#{$base-img-path}/ico_meal3.svg') 0 center no-repeat;
           background-size: 44px 25px;
+        }
+      }
+      &.seat{
+        .txt{
+          background: url('#{$base-img-path}/ico_seat3.svg') 8px center no-repeat;
+          background-size: 29px 40px;
         }
       }
     }
@@ -549,6 +573,7 @@
     background:url('#{$base-img-path}/img_racoon-head.png') left center no-repeat;
     background-size: 27px 21px;
     padding-left:33px;
+    margin-left: -33px;
   }
 }
 .trip-info {
@@ -1279,6 +1304,12 @@
 .search-result {
   padding: 10px 10px 20px 10px;
   background:#f9f9f9;
+  .no-result{
+    text-align:center;
+    font-weight:bold;
+    padding:90px 0 100px 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
   &__item {
     background: #fff;
     @include border-radius(10px);
@@ -1445,14 +1476,14 @@
   }
 
   &__item-info3 {
-    margin-left:10px;
+    margin-left:7px;
     .opts {
       font-size: 0;
       text-align: left;
       li {
         display: inline-block;
         vertical-align: top;
-        margin-left: 5px;
+        margin-left: 10px;
 
         &:first-child {
           margin-left: 0;
@@ -1565,7 +1596,18 @@
           }
         }
       }
-
+      .seat {
+        width: 23px;
+        height: 34px;
+        background: url('#{$base-img-path}/ico_seat2.svg') center center no-repeat;
+        background-size: 23px 31px;
+        &.in{
+          &.seat {
+            background: url('#{$base-img-path}/ico_seat.svg') center bottom no-repeat;
+            background-size: 29px 30px;
+          }
+        }
+      }
     }
 
     .price {
@@ -2361,7 +2403,7 @@
     margin:0 auto;
     padding-bottom: 100px;
     .layer__filter {
-      margin:-15px 20px 0 20px;
+      margin:0 20px 0 20px;
     }
   }
 
@@ -2373,7 +2415,7 @@
   }
 
   &__sort {
-    margin:0 20px 0 20px;
+    margin:20px 20px 0 20px;
     padding-bottom:20px;
     border-bottom:1px solid #e8e8e8;
     li {
@@ -3110,6 +3152,10 @@
         &.meal {
           background: url('#{$base-img-path}/ico_meal4.png') 10px center no-repeat;
           background-size: 26px 14px;
+        }
+        &.seat {
+          background: url('#{$base-img-path}/ico_seat2.svg') 10px center no-repeat;
+          background-size: 17px 22px;
         }
       }
       dd{

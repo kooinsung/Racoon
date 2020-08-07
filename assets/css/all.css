@@ -1619,7 +1619,7 @@ button.swiper-pagination-bullet {
   display: block;
   width: 184px;
   height: 60px;
-  background: url("../images/img_logo.png") 10px center no-repeat;
+  background: url("../images/img_logo-hangul.svg") 10px center no-repeat;
   background-size: 160px 34px;
 }
 
@@ -1908,7 +1908,7 @@ button.swiper-pagination-bullet {
 
 .search-trips-form__seat-count-layer {
   position: absolute;
-  top: 46px;
+  top: 60px;
   right: 0px;
   left: 0px;
   z-index: 50;
@@ -2071,14 +2071,28 @@ button.swiper-pagination-bullet {
   padding-left: 75px;
 }
 
-.search-trips-service .service-box .row-block.bag {
-  background: url("../images/ico_bag3.png") 19px center no-repeat;
+.search-trips-service .service-box .row-block:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75px;
+  height: 70px;
+}
+
+.search-trips-service .service-box .row-block.bag:before {
+  background: url("../images/ico_bag3.svg") center center no-repeat;
   background-size: 32px 48px;
 }
 
-.search-trips-service .service-box .row-block.meal {
-  background: url("../images/ico_meal3.png") 10px center no-repeat;
+.search-trips-service .service-box .row-block.meal:before {
+  background: url("../images/ico_meal3.svg") center center no-repeat;
   background-size: 49px 27px;
+}
+
+.search-trips-service .service-box .row-block.seat:before {
+  background: url("../images/ico_seat3.svg") center center no-repeat;
+  background-size: 33px 44px;
 }
 
 .search-trips-service .service-box .txts {
@@ -2212,13 +2226,18 @@ button.swiper-pagination-bullet {
 }
 
 .search-result-options .option-layer .box.bag .txt {
-  background: url("../images/ico_bag5.png") 8px center no-repeat;
+  background: url("../images/ico_bag3.svg") 8px center no-repeat;
   background-size: 29px 43px;
 }
 
 .search-result-options .option-layer .box.meal .txt {
-  background: url("../images/ico_meal5.png") 0 center no-repeat;
+  background: url("../images/ico_meal3.svg") 0 center no-repeat;
   background-size: 44px 25px;
+}
+
+.search-result-options .option-layer .box.seat .txt {
+  background: url("../images/ico_seat3.svg") 8px center no-repeat;
+  background-size: 29px 40px;
 }
 
 .search-result-options .option-layer .switch-toggles {
@@ -2272,6 +2291,7 @@ button.swiper-pagination-bullet {
   background: url("../images/img_racoon-head.png") left center no-repeat;
   background-size: 27px 21px;
   padding-left: 33px;
+  margin-left: -33px;
 }
 
 .trip-info {
@@ -2989,6 +3009,13 @@ button.swiper-pagination-bullet {
   background: #f9f9f9;
 }
 
+.search-result .no-result {
+  text-align: center;
+  font-weight: bold;
+  padding: 90px 0 100px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
 .search-result__item {
   background: #fff;
   -webkit-border-radius: 10px;
@@ -3155,7 +3182,7 @@ button.swiper-pagination-bullet {
 }
 
 .search-result__item-info3 {
-  margin-left: 10px;
+  margin-left: 7px;
 }
 
 .search-result__item-info3 .opts {
@@ -3166,7 +3193,7 @@ button.swiper-pagination-bullet {
 .search-result__item-info3 .opts li {
   display: inline-block;
   vertical-align: top;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 .search-result__item-info3 .opts li:first-child {
@@ -3268,6 +3295,18 @@ button.swiper-pagination-bullet {
 
 .search-result__item-info3 .opts .cold-meal.in.cold-meal {
   background: url("../images/ico_cold-meal-2.svg") center bottom no-repeat;
+  background-size: 29px 30px;
+}
+
+.search-result__item-info3 .opts .seat {
+  width: 23px;
+  height: 34px;
+  background: url("../images/ico_seat2.svg") center center no-repeat;
+  background-size: 23px 31px;
+}
+
+.search-result__item-info3 .opts .seat.in.seat {
+  background: url("../images/ico_seat.svg") center bottom no-repeat;
   background-size: 29px 30px;
 }
 
@@ -4157,7 +4196,7 @@ button.swiper-pagination-bullet {
 }
 
 .layers__utils .layer__filter {
-  margin: -15px 20px 0 20px;
+  margin: 0 20px 0 20px;
 }
 
 .layers__content-title {
@@ -4168,7 +4207,7 @@ button.swiper-pagination-bullet {
 }
 
 .layers__sort {
-  margin: 0 20px 0 20px;
+  margin: 20px 20px 0 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #e8e8e8;
 }
@@ -4981,6 +5020,11 @@ button.swiper-pagination-bullet {
 .details__reservation-list .continue-box dt.meal {
   background: url("../images/ico_meal4.png") 10px center no-repeat;
   background-size: 26px 14px;
+}
+
+.details__reservation-list .continue-box dt.seat {
+  background: url("../images/ico_seat2.svg") 10px center no-repeat;
+  background-size: 17px 22px;
 }
 
 .details__reservation-list .continue-box dd {
