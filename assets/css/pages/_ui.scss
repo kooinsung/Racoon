@@ -904,12 +904,12 @@
         border-bottom: 1px solid #00a64e;
 
         &.bag {
-          background: url('#{$base-img-path}/ico_bag3.png') center 35px no-repeat;
+          background: url('#{$base-img-path}/ico_bag3.svg') center 35px no-repeat;
           background-size: 36px 56px;
         }
 
         &.meal {
-          background: url('#{$base-img-path}/ico_meal3.png') center 45px no-repeat;
+          background: url('#{$base-img-path}/ico_meal3.svg') center 45px no-repeat;
           background-size: 56px 31px;
         }
       }
