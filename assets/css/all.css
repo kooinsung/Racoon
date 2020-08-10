@@ -2625,12 +2625,12 @@ button.swiper-pagination-bullet {
 }
 
 .expected-layer__col dl dt.bag {
-  background: url("../images/ico_bag3.png") center 35px no-repeat;
+  background: url("../images/ico_bag3.svg") center 35px no-repeat;
   background-size: 36px 56px;
 }
 
 .expected-layer__col dl dt.meal {
-  background: url("../images/ico_meal3.png") center 45px no-repeat;
+  background: url("../images/ico_meal3.svg") center 45px no-repeat;
   background-size: 56px 31px;
 }
 
@@ -5307,8 +5307,7 @@ button.swiper-pagination-bullet {
 
 .details__price-opt table .opt-check input {
   position: absolute;
-  top: -9999px;
-  left: -9999px;
+  opacity: 0;
 }
 
 .details__price-opt table .opt-check input + label {
