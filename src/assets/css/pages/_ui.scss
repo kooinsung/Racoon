@@ -3430,7 +3430,8 @@
         display: block;
 
         input {
-          @include position(absolute, $top: -9999px, $left: -9999px);
+          @include position(absolute);
+          opacity: 0;
 
           & + label {
             @include position(relative);
