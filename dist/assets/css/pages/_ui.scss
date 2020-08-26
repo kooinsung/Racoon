@@ -2131,7 +2131,7 @@
     display: block;
     line-height: 60px;
     text-align: center;
-    font-size: 14px;
+    font-size: 16px;
     color: #0b704e;
 
   }
@@ -3430,7 +3430,8 @@
         display: block;
 
         input {
-          @include position(absolute, $top: -9999px, $left: -9999px);
+          @include position(absolute);
+          opacity: 0;
 
           & + label {
             @include position(relative);
