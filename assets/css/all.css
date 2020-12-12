@@ -3902,7 +3902,7 @@ button.swiper-pagination-bullet {
   display: block;
   line-height: 60px;
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   color: #0b704e;
 }
 
@@ -6882,14 +6882,152 @@ button.swiper-pagination-bullet {
   width: 90px;
 }
 
-.loading strong {
-  font-size: 18px;
-}
-
 .loading p {
   margin-top: 10px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 150%;
+}
+
+.skeletons {
+  position: relative;
+}
+
+.skeleton-ani {
+  position: relative;
+  overflow: hidden;
+  background: #cceddc;
+}
+
+.skeleton-ani::before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgba(255, 255, 255, 0.2)), to(transparent));
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  /* Adding animation */
+  animation: loading 1.2s infinite;
+}
+
+@keyframes loading {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.skeleton1 {
+  max-height: 36px;
+  padding: 9px 7px;
+  text-align: right;
+}
+
+.skeleton1 span {
+  display: inline-block;
+  width: 122px;
+  height: 18px;
+  border-radius: 18px;
+}
+
+.skeleton2 {
+  position: relative;
+  height: 168px;
+}
+
+.skeleton2 .left {
+  height: 168px;
+  padding-left: 10px;
+  margin-right: 136px;
+}
+
+.skeleton2 .left .left-ele {
+  position: relative;
+  width: 119px;
+  height: 53px;
+}
+
+.skeleton2 .left .left-ele:first-child {
+  margin-top: 4px;
+}
+
+.skeleton2 .left .left-ele:last-child {
+  margin-top: 34px;
+}
+
+.skeleton2 .left .left-ele li {
+  position: absolute;
+}
+
+.skeleton2 .left .left-ele li:nth-child(1) {
+  width: 22px;
+  height: 22px;
+  top: 0;
+  left: 0;
+}
+
+.skeleton2 .left .left-ele li:nth-child(2) {
+  width: 84px;
+  height: 13px;
+  top: 0;
+  right: 0;
+}
+
+.skeleton2 .left .left-ele li:nth-child(3) {
+  width: 84px;
+  height: 13px;
+  top: 21px;
+  right: 0;
+}
+
+.skeleton2 .left .left-ele li:nth-child(4) {
+  width: 119px;
+  height: 13px;
+  left: 0;
+  bottom: 0;
+}
+
+.skeleton2 .right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 136px;
+  height: 168px;
+}
+
+.skeleton2 .right ul {
+  text-align: center;
+  width: 102px;
+  font-size: 0;
+  margin: 39px 0 8px 16px;
+}
+
+.skeleton2 .right li {
+  display: inline-block;
+  width: 24px;
+  height: 34px;
+  margin: 0 5px;
+}
+
+.skeleton2 .right li:last-child {
+  display: block;
+  width: 92px;
+  height: 13px;
+  margin-top: 8px;
+}
+
+.skeleton3 {
+  border-top: 1px solid #e8e8e8;
+  height: 40px;
+}
+
+@keyframes load {
+  from {
+    left: -150px;
+  }
+  to {
+    left: 100%;
+  }
 }
 
 .gate {
